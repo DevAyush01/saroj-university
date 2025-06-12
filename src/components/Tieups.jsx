@@ -141,7 +141,7 @@ export default function CompaniesTieUps() {
           href="#apply"
           whileHover={{ scale: 1.05, x: 5 }}
           whileTap={{ scale: 0.95 }}
-          className="inline-flex items-center justify-center bg-blue-700 text-white font-semibold px-10 py-3 rounded-sm shadow-lg hover:bg-red-800 transition duration-300 text-base sm:text-lg"
+          className="inline-flex items-center justify-center bg-blue-700 text-white font-semibold px-10 py-3 rounded-sm shadow-lg hover:bg-blue-800 transition duration-300 text-base sm:text-lg"
         >
           APPLY NOW
           <ArrowRight className="ml-3 w-5 h-5" />

@@ -31,16 +31,15 @@ function Home() {
       <Layout>
         <FloatingAdmissionAlert/>
         <HeroSection/>
-        <NewsSection/>
+        <HiringPartnersSection />
         <CompaniesTieUps/>
-        <HeroSection  />
+        <NewsSection/>
         <Happenings />
         <TestimonialSlider />
         <WhyChooseUs />
         <ResearchPage />
         <EventsPage />
         
-        <HiringPartnersSection />
       </Layout>
     </>
   );

@@ -25,16 +25,15 @@ const navItems = [
     path: "/administration",
     subItems: [
       { title: "Chancellor", path: "/administration/chancellor" },
-      { title: "Pro Chancellor", path: "/administration/" },
+      { title: "Pro Chancellor", path: "/administration/pro-chancellor" },
       { title: "Vice Chancellor", path: "/administration/vice-chancellor" },
-      { title: "Registrar", path: "/administration/" },
-      { title: "Financial Officer", path: "/administration/" },
-      { title: "Controller of Examination (CoE)", path: "/administration/" },
-      { title: "Chief Vigilance Officer", path: "/administration/" },
-      { title: "Ombudsperson", path: "/administration/" },
-      { title: "Academic Leadership", path: "/administration/" },
-      { title: "Internal Complaint Committee", path: "/administration/" },
-      { title: "", path: "/" },
+      { title: "Registrar", path: "/administration/registrar" },
+      { title: "Financial Officer", path: "/administration/financial-officer" },
+      { title: "Controller of Examination (CoE)", path: "/administration/controller-exams" },
+      { title: "Chief Vigilance Officer", path: "/administration/chief-vigilance" },
+      { title: "Ombudsperson", path: "/administration/ombudsperson" },
+      { title: "Academic Leadership", path: "/administration/academic-leadership" },
+      { title: "Internal Complaint Committee", path: "/administration/internal-complaint" },
     ],
   },
   {
@@ -43,64 +42,81 @@ const navItems = [
     megaMenu: true,
     columns: [
       {
-        heading: "ENGINEERING & TECHNOLOGY",
+        heading: "COLLABORATION",
         items: [
-          { title: "B.Tech - Computer Science & Engineering", path: "/programs/btech-cse" },
-          { title: "B.Tech - Mechanical Engineering", path: "/programs/btech-me" },
-          { title: "B.Tech - Civil Engineering", path: "/programs/btech-ce" },
-          { title: "B.Tech - Electronics & Communication Engineering", path: "/programs/btech-ece" },
-          { title: "B.Tech - Electrical Engineering", path: "/programs/btech-ee" },
-          { title: "M.Tech - Computer Science & Engineering", path: "/programs/mtech-cse" },
+          { title: "B.Tech - CSE with AI & ML [Microsoft]", path: "/programs/btech-cse-ai-ml-microsoft" },
+          { title: "B.Tech - CSE with Data Science [Google]", path: "/programs/btech-cse-data-science-google" },
+          { title: "B.Tech - CSE Cyber Security [CNS/CFS]", path: "/programs/btech-cse-cyber-security" },
+          { title: "B.Tech - CSE with Cloud Computing [Google]", path: "/programs/btech-cse-cloud-computing" },
+          { title: "M.Tech - CSE with AI & ML [CSES]", path: "/programs/mtech-cse-ai-ml" },
+          { title: "BBA(H) - Business Analytics [KPMG]", path: "/programs/bba-business-analytics" },
+          { title: "MBA - Global Business Management [KPMG]", path: "/programs/mba-global-business" },
+          { title: "BBA Fintech + ACCA [Grant Thornton]", path: "/programs/bba-fintech-acca" },
+          { title: "MBA- Applied Finance", path: "/programs/mba-applied-finance" },
+          { title: "MBA Fintech", path: "/programs/mba-fintech" },
+          { title: "MBA - Data Science & AI [CSES]", path: "/programs/mba-data-science-ai" },
+          { title: "MBA Business Analytics [JEM]", path: "/programs/mba-business-analytics" },
+          { title: "B.Com(H) + ACCA [Grant Thornton]", path: "/programs/bcom-acca" },
+          { title: "BCAI(H) - Data Science [CSES]", path: "/programs/bcai-data-science" },
+          { title: "MCA - AI & ML [CSES]", path: "/programs/mca-ai-ml" },
         ],
       },
       {
-        heading: "MANAGEMENT",
+        heading: "ENGINEERING",
         items: [
-          { title: "BBA (Bachelor of Business Administration)", path: "/programs/bba" },
-          { title: "MBA (Master of Business Administration)", path: "/programs/mba" },
-          { title: "B.Com (Bachelor of Commerce)", path: "/programs/bcom" },
-          { title: "M.Com (Master of Commerce)", path: "/programs/mcom" },
+          { title: "B.Tech - Civil Engineering", path: "/programs/btech-civil" },
+          { title: "B.Tech - Mechanical Engineering", path: "/programs/btech-mechanical" },
+          { title: "B.Tech - Electronics and Communication Engineering", path: "/programs/btech-ece" },
+          { title: "B.Tech - Electrical Engineering", path: "/programs/btech-electrical" },
+          { title: "B.Tech - Biotechnology", path: "/programs/btech-biotech" },
+          { title: "M.Tech - CE Construction Technology & Management", path: "/programs/mtech-construction" },
+          { title: "M.Tech - CE Structural Engineering", path: "/programs/mtech-structural" },
         ],
       },
       {
-        heading: "COMPUTER APPLICATIONS",
+        heading: "BUSINESS",
         items: [
-          { title: "BCA (Bachelor of Computer Applications)", path: "/programs/bca" },
-          { title: "MCA (Master of Computer Applications)", path: "/programs/mca" },
+          { title: "BBA (Hons)", path: "/programs/bba" },
+          { title: "BBA-DM (Hons)", path: "/programs/bba-dm" },
+          { title: "BBA - Branding & Advertising (Hons)", path: "/programs/bba-branding" },
+          { title: "MBA", path: "/programs/mba" },
+          { title: "MBA (Strategic HR)", path: "/programs/mba-hr" },
+          { title: "MBA (Digital Marketing)", path: "/programs/mba-digital-marketing" },
         ],
       },
       {
-        heading: "LAW",
+        heading: "COMPUTING & SCIENCES",
         items: [
-          { title: "BA LLB (5 Years Integrated)", path: "/programs/ba-llb" },
-          { title: "BBA LLB (5 Years Integrated)", path: "/programs/bba-llb" },
-          { title: "LLB (3 Years)", path: "/programs/llb" },
-          { title: "LLM (Master of Laws)", path: "/programs/llm" },
+          { title: "BCA (Hons)", path: "/programs/bca" },
+          { title: "MCA", path: "/programs/mca" },
+          { title: "B.Sc. (Hons) - Animation, VFX & Gaming", path: "/programs/bsc-animation" },
+          { title: "B.Sc. (Hons) - Physics", path: "/programs/bsc-physics" },
+          { title: "B.Sc. (Hons) - Chemistry", path: "/programs/bsc-chemistry" },
+          { title: "B.Sc. (Hons) - Mathematics", path: "/programs/bsc-maths" },
+          { title: "M.Sc. Physics", path: "/programs/msc-physics" },
+          { title: "M.Sc. Chemistry", path: "/programs/msc-chemistry" },
+          { title: "M.Sc. Mathematics", path: "/programs/msc-maths" },
+          { title: "B.Sc. (Hons) - Data Science", path: "/programs/bsc-data-science" },
+          { title: "B.Sc. (Hons) - Biotechnology", path: "/programs/bsc-biotech" },
+          { title: "B.Sc. (Hons) - Forensic Science", path: "/programs/bsc-forensic" },
+          { title: "M.Sc. Data Science", path: "/programs/msc-data-science" },
+        ],
+      },
+      {
+        heading: "LEGAL & COMMERCE",
+        items: [
+          { title: "Bachelor of Law (LLB)", path: "/programs/llb" },
+          { title: "B.A.LL.B. (Hons) Integrated", path: "/programs/ba-llb" },
+          { title: "BBA.LL.B. (Hons) Integrated", path: "/programs/bba-llb" },
+          { title: "B.Com (Hons)", path: "/programs/bcom" },
+          { title: "BA. (Hons) - Liberal Arts", path: "/programs/ba-liberal-arts" },
+          { title: "B.A. Psychology (Hons.)", path: "/programs/ba-psychology" },
         ],
       },
       {
         heading: "PHARMACY",
         items: [
           { title: "B.Pharm (Bachelor of Pharmacy)", path: "/programs/bpharm" },
-          { title: "D.Pharm (Diploma in Pharmacy)", path: "/programs/dpharm" },
-          { title: "M.Pharm (Master of Pharmacy)", path: "/programs/mpharm" },
-        ],
-      },
-      {
-        heading: "SCIENCE",
-        items: [
-          { title: "B.Sc. - Physics, Chemistry, Mathematics", path: "/programs/bsc-pcm" },
-          { title: "B.Sc. - Biotechnology", path: "/programs/bsc-biotech" },
-          { title: "M.Sc. - Physics", path: "/programs/msc-physics" },
-          { title: "M.Sc. - Chemistry", path: "/programs/msc-chemistry" },
-          { title: "M.Sc. - Mathematics", path: "/programs/msc-maths" },
-        ],
-      },
-      {
-        heading: "EDUCATION",
-        items: [
-          { title: "B.Ed (Bachelor of Education)", path: "/programs/bed" },
-          { title: "D.El.Ed (Diploma in Elementary Education)", path: "/programs/deled" },
         ],
       },
     ],
@@ -153,6 +169,7 @@ function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef(null);
   const navRef = useRef(null);
 
@@ -171,29 +188,37 @@ function Header() {
   };
 
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setOpenSubmenu(null);
       }
     };
 
-    const handleMouseLeave = () => {
-      setOpenSubmenu(null);
-    };
-
+    window.addEventListener("scroll", handleScroll);
     document.addEventListener("mousedown", handleClickOutside);
-    navRef.current?.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
+      window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
-      navRef.current?.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
   return (
     <div ref={navRef}>
-      <nav className="fixed left-0 right-0 top-0 z-40 bg-transparent shadow-xl  text-gray-800">
-        <div className="max-w-8xl mx-auto px-4  py-4 ">
+      <nav 
+        className={`fixed left-0 right-0 top-0 z-40 shadow-xl  transition-all duration-300 ${
+          scrolled ? " py-2 bg-white text-gray-600" : "bg-transparent py-4 text-white"
+        }`}
+      >
+        <div className="max-w-8xl mx-auto px-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center" onClick={closeAllMenus}>
               <img src={logo} alt="SIU logo" className="h-16 w-auto" />
@@ -204,16 +229,19 @@ function Header() {
               ref={menuRef}
             >
               {navItems.map((item, index) => (
-                <li key={`${item.path}-${index}`} className="relative group">
+                <li 
+                  key={`${item.path}-${index}`} 
+                  className="relative"
+                  onMouseEnter={() => toggleSubmenu(index)}
+                  onMouseLeave={() => setOpenSubmenu(null)}
+                >
                   {item.subItems || item.megaMenu ? (
                     <div className="relative">
                       <button
-                        onMouseEnter={() => toggleSubmenu(index)}
-                        onFocus={() => toggleSubmenu(index)}
-                        className="flex items-center px-2 py-1 text-white relative
+                        className={`flex items-center px-2 py-1  relative
                                  before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                  before:bg-orange-500 before:transition-all before:duration-300
-                                 hover:before:w-full"
+                                 hover:before:w-full ${openSubmenu === index ? 'text-orange-500' : ''}`}
                       >
                         {item.title}
                         <ChevronDown
@@ -227,13 +255,11 @@ function Header() {
                         <div
                           className={`absolute left-0 mt-1 w-56 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-100 ${
                             openSubmenu === index
-                              ? "opacity-100 visible"
-                              : "opacity-0 invisible"
-                          } transition-opacity duration-300`}
-                          onMouseEnter={() => setOpenSubmenu(index)}
-                          onMouseLeave={() => setOpenSubmenu(null)}
+                              ? "opacity-100 visible translate-y-0"
+                              : "opacity-0 invisible -translate-y-2"
+                          } transition-all duration-300`}
                         >
-                          {item.subItems.map((subItem, subIndex) =>
+                          {item.subItems.map((subItem, subIndex) => 
                             subItem.target ? (
                               <a
                                 key={`${subItem.path}-${subIndex}`}
@@ -267,38 +293,49 @@ function Header() {
 
                       {item.megaMenu && (
                         <div
-                          className={`absolute left-1/2 -translate-x-1/2 mt-1 min-w-[1000px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-100 ${
+                          className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${
                             openSubmenu === index
-                              ? "opacity-100 visible"
-                              : "opacity-0 invisible"
-                          } transition-opacity duration-300`}
-                          onMouseEnter={() => setOpenSubmenu(index)}
-                          onMouseLeave={() => setOpenSubmenu(null)}
+                              ? "opacity-100 visible translate-y-0"
+                              : "opacity-0 invisible -translate-y-2"
+                          } transition-all duration-300`}
                         >
-                          <div className="grid grid-cols-4 gap-x-8 gap-y-4">
+                          <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white"></div>
+                          <div className="grid grid-cols-6 gap-x-8 gap-y-4">
                             {item.columns.map((column, colIndex) => (
-                              <div key={`${column.heading}-${colIndex}`}>
-                                <h3 className="font-bold text-lg text-blue-800 mb-3 border-b-2 border-orange-500 pb-1">
+                              <div key={`${column.heading}-${colIndex}`} className="relative">
+                                <h3 className="font-bold text-lg text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative">
                                   {column.heading}
+                                  <span className="absolute bottom-0 left-0 w-1/3 h-0.5 bg-gradient-to-r from-orange-500 to-transparent"></span>
                                 </h3>
-                                <ul>
+                                <ul className="space-y-2">
                                   {column.items.map((subItem, subItemIndex) => (
                                     <li key={`${subItem.path}-${subItemIndex}`} className="mb-1">
                                       <Link
                                         to={subItem.path}
-                                        className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center group relative"
+                                        className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-start group"
                                         onClick={closeAllMenus}
                                       >
+                                        <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                                         {subItem.title}
-                                        <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                          &rarr;
-                                        </span>
                                       </Link>
                                     </li>
                                   ))}
                                 </ul>
+                                {colIndex < item.columns.length - 1 && (
+                                  <div className="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent"></div>
+                                )}
                               </div>
                             ))}
+                          </div>
+                          <div className="mt-4 pt-4 border-t border-gray-100">
+                            <Link 
+                              to="/programs" 
+                              className="text-orange-500 font-medium hover:underline flex items-center"
+                              onClick={closeAllMenus}
+                            >
+                              View all programs
+                              <ChevronDown className="w-4 h-4 ml-1 transform rotate-90" />
+                            </Link>
                           </div>
                         </div>
                       )}
@@ -307,7 +344,7 @@ function Header() {
                     <Link
                       to={item.path}
                       className="px-2 py-1 relative
-                                 before:absolute before:-bottom-1 text-white before:left-0 before:w-0 before:h-0.5
+                                 before:absolute  before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                  before:bg-orange-500 before:transition-all before:duration-300
                                  hover:before:w-full"
                       onClick={closeAllMenus}
@@ -354,7 +391,7 @@ function Header() {
                       </button>
                       <div
                         className={`${
-                          openMobileSubmenu === index ? "max-h-96" : "max-h-0"
+                          openMobileSubmenu === index ? "max-h-[2000px]" : "max-h-0"
                         } overflow-hidden transition-all duration-300 ease-in-out`}
                       >
                         <ul className="pl-4 mt-1 space-y-1">
@@ -435,6 +472,8 @@ function Header() {
           </div>
         </div>
       </nav>
+      {/* Add padding to prevent content from being hidden behind the fixed navbar */}
+      <div className={`h-${scrolled ? '20' : '24'}`}></div>
     </div>
   );
 }
