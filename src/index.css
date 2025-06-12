@@ -1,3 +1,43 @@
 @import "tailwindcss";
+@import './css/fonts.css';
+
+.bg-primary {
+    background-color: #214A9A;
+  }
+  
+  .text-primary {
+    color: #214A9A;
+  }
+  
+  .border-primary {
+    border-color: #214A9A;
+  }
+  
+  .bg-secondary {
+    background-color: #f08f07;
+  }
+  
+  .text-secondary {
+    color: #f08f07;
+  }
+  
+  .border-secondary {
+    border-color: #f08f07;
+  }
+  .font-ancizar {
+    font-family: 'AncizarSans', sans-serif;
+  }
+  
+  .font-outfit {
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .font-robotoslab {
+    font-family: 'RobotoSlab', serif;
+  }
+  
+  .font-breeserif {
+    font-family: 'BreeSerif', serif;
+  }
 
 

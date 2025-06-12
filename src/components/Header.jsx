@@ -9,36 +9,33 @@ const navItems = [
     path: "/about",
     subItems: [
       { title: "About SIU", path: "/about/about-siu" },
-      { title: "Act and Statutes or MoA", path: "/about/" },
-      { title: "Institutional Development Plan", path: "/about/" },
-      { title: "Constituent Units", path: "/about/" },
-      { title: "Accreditation", path: "/about/" },
-      { title: "Recognition", path: "/about/" },
-      { title: "Annual Reports", path: "/about/" },
-      { title: "Annual Account", path: "/about/" },
-      { title: "Committees", path: "/about/" },
+      { title: "Act and Statutes or MoA", path: "/about/act-statutes" },
+      { title: "Institutional Development Plan", path: "/about/development-plan" },
+      { title: "Constituent Units", path: "/about/constituent-units" },
+      { title: "Accreditation", path: "/about/accreditation" },
+      { title: "Recognition", path: "/about/recognition" },
+      { title: "Annual Reports", path: "/about/annual-reports" },
+      { title: "Annual Account", path: "/about/annual-account" },
+      { title: "Committees", path: "/about/committees" },
       { title: "Mandatory Disclosure", path: "/about/mandatory-disclosure" },
-      { title: "", path: "/" },
     ],
   },
   {
     title: "Administration",
     path: "/administration",
     subItems: [
-      { title: "Chancellor", path: "/administration/" },
-      { title: "Pro Chancellor", path: "/administration/" },
-      { title: "Vice Chancellor", path: "/administration/" },
-      { title: "Registrar", path: "/administration/" },
-      { title: "Financial Officer", path: "/administration/" },
-      { title: "Controller of Examination (CoE)", path: "/administration/" },
-      { title: "Chief Vigilance Officer", path: "/administration/" },
-      { title: "Ombudsperson", path: "/administration/" },
-      { title: "Academic Leadership", path: "/administration/" },
-      { title: "Internal Complaint Committee", path: "/administration/" },
-      { title: "", path: "/" },
+      { title: "Chancellor", path: "/administration/chancellor" },
+      { title: "Pro Chancellor", path: "/administration/pro-chancellor" },
+      { title: "Vice Chancellor", path: "/administration/vice-chancellor" },
+      { title: "Registrar", path: "/administration/registrar" },
+      { title: "Financial Officer", path: "/administration/financial-officer" },
+      { title: "Controller of Examination (CoE)", path: "/administration/controller-exams" },
+      { title: "Chief Vigilance Officer", path: "/administration/chief-vigilance" },
+      { title: "Ombudsperson", path: "/administration/ombudsperson" },
+      { title: "Academic Leadership", path: "/administration/academic-leadership" },
+      { title: "Internal Complaint Committee", path: "/administration/internal-complaint" },
     ],
   },
-
   {
     title: "Programs",
     path: "/programs",
@@ -47,271 +44,79 @@ const navItems = [
       {
         heading: "COLLABORATION",
         items: [
-          {
-            title: "B.Tech - CSE with AI & ML",
-            path: "/programs/cse-ai-ml",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=MS",
-          },
-          {
-            title: "B.Tech - CSE with Data Science",
-            path: "/programs/cse-data-science",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=G",
-          },
-          {
-            title: "B.Tech - CSE Cyber Security",
-            path: "/programs/cse-cyber-security",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=QH",
-          },
-          {
-            title: "B.Tech - CSE with Cloud Computing",
-            path: "/programs/cse-cloud-computing",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=G",
-          },
-          {
-            title: "M.Tech - CSE with AI & ML",
-            path: "/programs/mtech-cse-ai-ml",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=S",
-          },
-          {
-            title: "BBA(H) - Business Analytics",
-            path: "/programs/bba-business-analytics",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=KPMG",
-          },
-          {
-            title: "MBA - Global Business Management",
-            path: "/programs/mba-global-business-management",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=KPMG",
-          },
+          { title: "B.Tech - CSE with AI & ML [Microsoft]", path: "/programs/btech-cse-ai-ml-microsoft" },
+          { title: "B.Tech - CSE with Data Science [Google]", path: "/programs/btech-cse-data-science-google" },
+          { title: "B.Tech - CSE Cyber Security [CNS/CFS]", path: "/programs/btech-cse-cyber-security" },
+          { title: "B.Tech - CSE with Cloud Computing [Google]", path: "/programs/btech-cse-cloud-computing" },
+          { title: "M.Tech - CSE with AI & ML [CSES]", path: "/programs/mtech-cse-ai-ml" },
+          { title: "BBA(H) - Business Analytics [KPMG]", path: "/programs/bba-business-analytics" },
+          { title: "MBA - Global Business Management [KPMG]", path: "/programs/mba-global-business" },
+          { title: "BBA Fintech + ACCA [Grant Thornton]", path: "/programs/bba-fintech-acca" },
+          { title: "MBA- Applied Finance", path: "/programs/mba-applied-finance" },
+          { title: "MBA Fintech", path: "/programs/mba-fintech" },
+          { title: "MBA - Data Science & AI [CSES]", path: "/programs/mba-data-science-ai" },
+          { title: "MBA Business Analytics [JEM]", path: "/programs/mba-business-analytics" },
+          { title: "B.Com(H) + ACCA [Grant Thornton]", path: "/programs/bcom-acca" },
+          { title: "BCAI(H) - Data Science [CSES]", path: "/programs/bcai-data-science" },
+          { title: "MCA - AI & ML [CSES]", path: "/programs/mca-ai-ml" },
         ],
       },
       {
         heading: "ENGINEERING",
         items: [
-          {
-            title: "B.Tech - CE",
-            path: "/programs/btech-ce",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=EN",
-          },
-          {
-            title: "B.Tech - Mechanical Engineering",
-            path: "/programs/btech-me",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=EN",
-          },
-          {
-            title: "B.Tech - Electronics and Communication Engineering",
-            path: "/programs/btech-ece",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=EN",
-          },
-          {
-            title: "B.Tech - Electrical Engineering",
-            path: "/programs/btech-ee",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=EN",
-          },
-        ],
-      },
-      {
-        heading: "APPLIED SCIENCES",
-        items: [
-          {
-            title: "B.Sc.(Hons./Hons. with Research) Data Science",
-            path: "/programs/bsc-applied-data-science",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=AS",
-          },
-          {
-            title: "B.Sc.(Hons./Hons. with Research) Biotechnology",
-            path: "/programs/bsc-applied-biotech",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=AS",
-          },
-          {
-            title: "B.Sc.(Hons./Hons. with Research) Forensic Science",
-            path: "/programs/bsc-forensic-science",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=AS",
-          },
-          {
-            title: "M.Sc. Data Science",
-            path: "/programs/msc-data-science",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=AS",
-          },
+          { title: "B.Tech - Civil Engineering", path: "/programs/btech-civil" },
+          { title: "B.Tech - Mechanical Engineering", path: "/programs/btech-mechanical" },
+          { title: "B.Tech - Electronics and Communication Engineering", path: "/programs/btech-ece" },
+          { title: "B.Tech - Electrical Engineering", path: "/programs/btech-electrical" },
+          { title: "B.Tech - Biotechnology", path: "/programs/btech-biotech" },
+          { title: "M.Tech - CE Construction Technology & Management", path: "/programs/mtech-construction" },
+          { title: "M.Tech - CE Structural Engineering", path: "/programs/mtech-structural" },
         ],
       },
       {
         heading: "BUSINESS",
         items: [
-          {
-            title: "BBA (Hons)",
-            path: "/programs/bba-hons-business",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=BS",
-          },
-          {
-            title: "BBA - DM(Hons)",
-            path: "/programs/bba-dm-hons",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=BS",
-          },
-          {
-            title: "BBA - Branding & Advertising (Hons)",
-            path: "/programs/bba-branding-advertising-hons",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=BS",
-          },
-          {
-            title: "MBA",
-            path: "/programs/mba-business",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=BS",
-          },
-          {
-            title: "MBA- (Strategic HR)",
-            path: "/programs/mba-strategic-hr",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=BS",
-          },
-          {
-            title: "MBA (Digital Marketing)",
-            path: "/programs/mba-digital-marketing-business",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=BS",
-          },
+          { title: "BBA (Hons)", path: "/programs/bba" },
+          { title: "BBA-DM (Hons)", path: "/programs/bba-dm" },
+          { title: "BBA - Branding & Advertising (Hons)", path: "/programs/bba-branding" },
+          { title: "MBA", path: "/programs/mba" },
+          { title: "MBA (Strategic HR)", path: "/programs/mba-hr" },
+          { title: "MBA (Digital Marketing)", path: "/programs/mba-digital-marketing" },
         ],
       },
       {
-        heading: "BASIC SCIENCES",
+        heading: "COMPUTING & SCIENCES",
         items: [
-          {
-            title: "B.Sc. (Hons./Hons. with Research) Physics",
-            path: "/programs/bsc-basic-physics",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=BSC",
-          },
-          {
-            title: "B.Sc. (Hons./Hons. with Research) Chemistry",
-            path: "/programs/bsc-basic-chemistry",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=BSC",
-          },
-          {
-            title: "M.Sc. Physics",
-            path: "/programs/msc-physics",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=BSC",
-          },
-          {
-            title: "M.Sc. Chemistry",
-            path: "/programs/msc-chemistry",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=BSC",
-          },
-          {
-            title: "M.Sc. Mathematics",
-            path: "/programs/msc-mathematics",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=BSC",
-          },
+          { title: "BCA (Hons)", path: "/programs/bca" },
+          { title: "MCA", path: "/programs/mca" },
+          { title: "B.Sc. (Hons) - Animation, VFX & Gaming", path: "/programs/bsc-animation" },
+          { title: "B.Sc. (Hons) - Physics", path: "/programs/bsc-physics" },
+          { title: "B.Sc. (Hons) - Chemistry", path: "/programs/bsc-chemistry" },
+          { title: "B.Sc. (Hons) - Mathematics", path: "/programs/bsc-maths" },
+          { title: "M.Sc. Physics", path: "/programs/msc-physics" },
+          { title: "M.Sc. Chemistry", path: "/programs/msc-chemistry" },
+          { title: "M.Sc. Mathematics", path: "/programs/msc-maths" },
+          { title: "B.Sc. (Hons) - Data Science", path: "/programs/bsc-data-science" },
+          { title: "B.Sc. (Hons) - Biotechnology", path: "/programs/bsc-biotech" },
+          { title: "B.Sc. (Hons) - Forensic Science", path: "/programs/bsc-forensic" },
+          { title: "M.Sc. Data Science", path: "/programs/msc-data-science" },
         ],
       },
       {
-        heading: "COMPUTER SCIENCE ENGINEERING",
+        heading: "LEGAL & COMMERCE",
         items: [
-          {
-            title: "B.Tech - Computer Science & Engineering",
-            path: "/programs/btech-cse-cs",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=CS",
-          },
-          {
-            title: "B.Tech - Information Technology",
-            path: "/programs/btech-it-cs",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=CS",
-          },
-        ],
-      },
-      {
-        heading: "COMPUTING",
-        items: [
-          {
-            title: "BCA (Hons)",
-            path: "/programs/bca-hons",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=CMP",
-          },
-          {
-            title: "MCA",
-            path: "/programs/mca",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=CMP",
-          },
-          {
-            title: "B.Sc. (Hons) - Animation, VFX & Gaming",
-            path: "/programs/bsc-animation-vfx-gaming",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=CMP",
-          },
-        ],
-      },
-      {
-        heading: "LEGAL STUDIES",
-        items: [
-          {
-            title: "Bachelor of Law (LLB)",
-            path: "/programs/llb-legal",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=LAW",
-          },
-          {
-            title: "BA.LLB. (Hons) Integrated",
-            path: "/programs/ballb-hons-integrated",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=LAW",
-          },
-          {
-            title: "BBA.LLB. (Hons) Integrated",
-            path: "/programs/bballb-hons-integrated",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=LAW",
-          },
-        ],
-      },
-      {
-        heading: "LIBERAL ARTS & BEHAVIORAL SCIENCE",
-        items: [
-          {
-            title: "BA. (Hons) - Liberal Arts",
-            path: "/programs/ba-liberal-arts-ls",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=LA",
-          },
-          {
-            title: "BA. Psychology (Hons.)",
-            path: "/programs/ba-psychology-ls",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=LA",
-          },
-        ],
-      },
-      {
-        heading: "MEDIA STUDIES",
-        items: [
-          {
-            title: "BA-IMC",
-            path: "/programs/ba-imc-media",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=MD",
-          },
-          {
-            title: "MA-Mass Communication",
-            path: "/programs/ma-mass-comm-media",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=MD",
-          },
-        ],
-      },
-      {
-        heading: "COMMERCE",
-        items: [
-          {
-            title: "B.Com (Hons)",
-            path: "/programs/bcom-hons-commerce",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=COM",
-          },
-          {
-            title: "M.Com",
-            path: "/programs/mcom-commerce",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=COM",
-          },
+          { title: "Bachelor of Law (LLB)", path: "/programs/llb" },
+          { title: "B.A.LL.B. (Hons) Integrated", path: "/programs/ba-llb" },
+          { title: "BBA.LL.B. (Hons) Integrated", path: "/programs/bba-llb" },
+          { title: "B.Com (Hons)", path: "/programs/bcom" },
+          { title: "BA. (Hons) - Liberal Arts", path: "/programs/ba-liberal-arts" },
+          { title: "B.A. Psychology (Hons.)", path: "/programs/ba-psychology" },
         ],
       },
       {
         heading: "PHARMACY",
         items: [
-          {
-            title: "B.Pharm () Bachelor of Pharmacy",
-            path: "/programs/bpharm-pharmacy",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=PH",
-          },
-          {
-            title: "M.Pharm",
-            path: "/programs/mpharm-pharmacy",
-            icon: "https://placehold.co/16x16/f0f0f0/000000?text=PH",
-          },
+          { title: "B.Pharm (Bachelor of Pharmacy)", path: "/programs/bpharm" },
         ],
       },
     ],
@@ -321,17 +126,12 @@ const navItems = [
     path: "/academics",
     subItems: [
       { title: "Academic Calendar", path: "/academics/academic-calendar" },
-      { title: "Statutes", path: "/academics" },
-      { title: "Library", path: "/academics" },
-      { title: "Faculty", path: "/academics" },
-      { title: "Syllabus", path: "/academics" },
-      { title: "Exam Schedule", path: "/academics" },
-      {
-        title: "Internal Quality Assurance Cell (IQAC)",
-        path: "/academics",
-      },
-      { title: "Industry Collaboration", path: "/academics" },
-      { title: "", path: "/" },
+      { title: "Statutes", path: "/academics/statutes" },
+      { title: "Library", path: "/academics/library" },
+      { title: "Faculty", path: "/academics/faculty" },
+      { title: "Exam Schedule", path: "/academics/exam-schedule" },
+      { title: "Internal Quality Assurance Cell (IQAC)", path: "/academics/iqac" },
+      { title: "Industry Collaboration", path: "/academics/industry-collaboration" },
     ],
   },
   {
@@ -341,27 +141,24 @@ const navItems = [
       { title: "Admission Process", path: "/admissions/admission-process" },
       { title: "Eligibility Criteria", path: "/admissions/admission-criteria" },
       { title: "Scholarship", path: "/admissions/scholarship" },
-      { title: "Admission Helpdesk", path: "/admissions/scholarship" },
-      { title: "", path: "/" },
+      { title: "Admission Helpdesk", path: "/admissions/helpdesk" },
     ],
   },
   { title: "Research and development", path: "/rnd" },
-
   {
     title: "Student Life",
     path: "/studentlife",
     subItems: [
-      { title: "Hostel Details", path: "/" },
-      { title: "Sports", path: "/" },
-      { title: "Scholarships", path: "/" },
-      { title: "Health Facilities", path: "/" },
-      { title: "Internal Complaint Committee", path: "/" },
-      { title: "Anti-Ragging Cell", path: "/" },
-      { title: "Mentoring Schema", path: "/" },
-      { title: "Facilities for differently-abled", path: "/" },
+      { title: "Hostel Details", path: "/studentlife/hostel" },
+      { title: "Sports", path: "/studentlife/sports" },
+      { title: "Scholarships", path: "/studentlife/scholarships" },
+      { title: "Health Facilities", path: "/studentlife/health" },
+      { title: "Internal Complaint Committee", path: "/studentlife/internal-complaint" },
+      { title: "Anti-Ragging Cell", path: "/studentlife/anti-ragging" },
+      { title: "Mentoring Schema", path: "/studentlife/mentoring" },
+      { title: "Facilities for differently-abled", path: "/studentlife/differently-abled" },
       { title: "Research and Development Cell", path: "/studentlife/RnD-cell" },
       { title: "Innovation Centre", path: "/studentlife/innovation-center" },
-      { title: "", path: "/" },
     ],
   },
   { title: "Contact Us", path: "/contact-us" },
@@ -371,7 +168,9 @@ function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef(null);
+  const navRef = useRef(null);
 
   const toggleSubmenu = (index) => {
     setOpenSubmenu(openSubmenu === index ? null : index);
@@ -388,42 +187,60 @@ function Header() {
   };
 
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setOpenSubmenu(null);
       }
     };
 
+    window.addEventListener("scroll", handleScroll);
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   return (
-    <div>
-      <nav
-        className=" fixed left-0 right-0 top-0 pt-10 z-40 shadow-xl bg-[#F8F9FA]"
+    <div ref={navRef}>
+      <nav 
+        className={`fixed left-0 right-0 top-0 z-40 shadow-xl  transition-all duration-300 ${
+          scrolled ? " py-2 bg-white text-gray-600" : "bg-transparent py-4 text-white"
+        }`}
       >
-        <div className="max-w-8xl mx-auto px-4 py-3">
-          <div className="flex items-center justify-between md:flex">
+        <div className="max-w-8xl mx-auto px-4">
+          <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center" onClick={closeAllMenus}>
               <img src={logo} alt="SIU logo" className="h-16 w-auto" />
             </Link>
 
             <ul
-              className="hidden md:flex space-x-2 text-xl items-center"
+              className="hidden font-outfit md:flex space-x-2 text-lg items-center"
               ref={menuRef}
             >
               {navItems.map((item, index) => (
-                <li key={item.path} className="relative group">
+                <li 
+                  key={`${item.path}-${index}`} 
+                  className="relative"
+                  onMouseEnter={() => toggleSubmenu(index)}
+                  onMouseLeave={() => setOpenSubmenu(null)}
+                >
                   {item.subItems || item.megaMenu ? (
                     <div className="relative">
                       <button
-                        onMouseEnter={() => toggleSubmenu(index)}
-                        onFocus={() => toggleSubmenu(index)}
-                        className="flex items-center text-gray-700 px-2 py-1 relative
+                        className={`flex items-center px-2 py-1  relative
                                  before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                  before:bg-orange-500 before:transition-all before:duration-300
-                                 hover:before:w-full"
+                                 hover:before:w-full ${openSubmenu === index ? 'text-orange-500' : ''}`}
                       >
                         {item.title}
                         <ChevronDown
@@ -437,20 +254,18 @@ function Header() {
                         <div
                           className={`absolute left-0 mt-1 w-56 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-100 ${
                             openSubmenu === index
-                              ? "opacity-100 visible"
-                              : "opacity-0 invisible"
-                          } transition-opacity duration-300`}
-                          onMouseEnter={() => setOpenSubmenu(index)}
-                          onMouseLeave={() => setOpenSubmenu(null)}
+                              ? "opacity-100 visible translate-y-0"
+                              : "opacity-0 invisible -translate-y-2"
+                          } transition-all duration-300`}
                         >
-                          {item.subItems.map((subItem) =>
+                          {item.subItems.map((subItem, subIndex) => 
                             subItem.target ? (
                               <a
-                                key={subItem.path}
+                                key={`${subItem.path}-${subIndex}`}
                                 href={subItem.path}
                                 target={subItem.target}
                                 rel={subItem.rel}
-                                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 relative
+                                className="block px-4 py-2 hover:bg-gray-100 relative
                                          before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                          before:bg-orange-500 before:transition-all before:duration-300
                                          hover:before:w-full"
@@ -460,9 +275,9 @@ function Header() {
                               </a>
                             ) : (
                               <Link
-                                key={subItem.path}
+                                key={`${subItem.path}-${subIndex}`}
                                 to={subItem.path}
-                                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 relative
+                                className="block px-4 py-2 hover:bg-gray-100 relative
                                          before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                          before:bg-orange-500 before:transition-all before:duration-300
                                          hover:before:w-full"
@@ -477,96 +292,49 @@ function Header() {
 
                       {item.megaMenu && (
                         <div
-                          className={`absolute left-1/2 -translate-x-1/2 mt-1 min-w-[1000px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-100 ${
+                          className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${
                             openSubmenu === index
-                              ? "opacity-100 visible"
-                              : "opacity-0 invisible"
-                          } transition-opacity duration-300`}
-                          onMouseEnter={() => setOpenSubmenu(index)}
-                          onMouseLeave={() => setOpenSubmenu(null)}
+                              ? "opacity-100 visible translate-y-0"
+                              : "opacity-0 invisible -translate-y-2"
+                          } transition-all duration-300`}
                         >
-                          <div className="grid grid-cols-5 gap-x-8 gap-y-4">
-                            {/* Left Section - Collaboration */}
-                            <div className="col-span-1">
-                              {/* Assuming Collaboration is always the first column in the data */}
-                              {item.columns[0] &&
-                                item.columns[0].heading === "COLLABORATION" && (
-                                  <div>
-                                    <h3 className="font-bold text-lg text-blue-800 mb-3 border-b-2 border-orange-500 pb-1">
-                                      {item.columns[0].heading}
-                                    </h3>
-                                    <ul>
-                                      {item.columns[0].items.map(
-                                        (subItem, subItemIndex) => (
-                                          <li key={subItemIndex} className="mb-1">
-                                            <Link
-                                              to={subItem.path}
-                                              className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center group relative"
-                                              onClick={closeAllMenus}
-                                            >
-                                              {subItem.icon && (
-                                                <img
-                                                  src={subItem.icon}
-                                                  alt={`${subItem.title} icon`}
-                                                  className="w-4 h-4 mr-2"
-                                                  onError={(e) => {
-                                                    e.target.onerror = null;
-                                                    e.target.src =
-                                                      "https://placehold.co/16x16/cccccc/white?text=?";
-                                                  }}
-                                                />
-                                              )}
-                                              {subItem.title}
-                                              <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                                &rarr;
-                                              </span>
-                                            </Link>
-                                          </li>
-                                        )
-                                      )}
-                                    </ul>
-                                  </div>
+                          <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white"></div>
+                          <div className="grid grid-cols-6 gap-x-8 gap-y-4">
+                            {item.columns.map((column, colIndex) => (
+                              <div key={`${column.heading}-${colIndex}`} className="relative">
+                                <h3 className="font-bold text-lg text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative">
+                                  {column.heading}
+                                  <span className="absolute bottom-0 left-0 w-1/3 h-0.5 bg-gradient-to-r from-orange-500 to-transparent"></span>
+                                </h3>
+                                <ul className="space-y-2">
+                                  {column.items.map((subItem, subItemIndex) => (
+                                    <li key={`${subItem.path}-${subItemIndex}`} className="mb-1">
+                                      <Link
+                                        to={subItem.path}
+                                        className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-start group"
+                                        onClick={closeAllMenus}
+                                      >
+                                        <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                                        {subItem.title}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                                {colIndex < item.columns.length - 1 && (
+                                  <div className="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent"></div>
                                 )}
-                            </div>
-
-                            {/* Right Section - Other Programs */}
-                            <div className="col-span-4 grid grid-cols-4 gap-x-8 gap-y-4">
-                              {item.columns.slice(1).map((column, colIndex) => (
-                                <div key={colIndex}>
-                                  <h3 className="font-bold text-lg text-blue-800 mb-3 border-b-2 border-orange-500 pb-1">
-                                    {column.heading}
-                                  </h3>
-                                  <ul>
-                                    {column.items.map((subItem, subItemIndex) => (
-                                      <li key={subItemIndex} className="mb-1">
-                                        <Link
-                                          to={subItem.path}
-                                          className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center group relative"
-                                          onClick={closeAllMenus}
-                                        >
-                                          {subItem.icon && (
-                                            <img
-                                              src={subItem.icon}
-                                              alt={`${subItem.title} icon`}
-                                              className="w-4 h-4 mr-2"
-                                              onError={(e) => {
-                                                e.target.onerror = null;
-                                                e.target.src =
-                                                  "https://placehold.co/16x16/cccccc/white?text=?";
-                                              }}
-                                            />
-                                          )}
-                                          {subItem.title}
-                                          <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                            &rarr;
-                                          </span>
-                                        </Link>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              ))}
-                            </div>
+                              </div>
+                            ))}
+                          </div>
+                          <div className="mt-4 pt-4 border-t border-gray-100">
+                            <Link 
+                              to="/programs" 
+                              className="text-orange-500 font-medium hover:underline flex items-center"
+                              onClick={closeAllMenus}
+                            >
+                              View all programs
+                              <ChevronDown className="w-4 h-4 ml-1 transform rotate-90" />
+                            </Link>
                           </div>
                         </div>
                       )}
@@ -574,8 +342,8 @@ function Header() {
                   ) : (
                     <Link
                       to={item.path}
-                      className="text-gray-700 px-2 py-1 relative
-                                 before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
+                      className="px-2 py-1 relative
+                                 before:absolute  before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                  before:bg-orange-500 before:transition-all before:duration-300
                                  hover:before:w-full"
                       onClick={closeAllMenus}
@@ -588,7 +356,7 @@ function Header() {
             </ul>
 
             <button
-              className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
+              className="md:hidden p-2 rounded-md hover:bg-gray-100"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? (
@@ -606,12 +374,12 @@ function Header() {
           >
             <ul className="pt-2 pb-4 space-y-1">
               {navItems.map((item, index) => (
-                <li key={item.path}>
+                <li key={`${item.path}-${index}-mobile`}>
                   {item.subItems || item.megaMenu ? (
                     <>
                       <button
                         onClick={() => toggleMobileSubmenu(index)}
-                        className="flex items-center justify-between w-full px-3 py-3 hover:bg-gray-50 text-gray-700"
+                        className="flex items-center justify-between w-full px-3 py-3 hover:bg-gray-50"
                       >
                         <span>{item.title}</span>
                         <ChevronDown
@@ -622,20 +390,20 @@ function Header() {
                       </button>
                       <div
                         className={`${
-                          openMobileSubmenu === index ? "max-h-96" : "max-h-0"
+                          openMobileSubmenu === index ? "max-h-[2000px]" : "max-h-0"
                         } overflow-hidden transition-all duration-300 ease-in-out`}
                       >
                         <ul className="pl-4 mt-1 space-y-1">
                           {item.subItems &&
                             !item.megaMenu &&
-                            item.subItems.map((subItem) => (
-                              <li key={subItem.path}>
+                            item.subItems.map((subItem, subIndex) => (
+                              <li key={`${subItem.path}-${subIndex}-mobile`}>
                                 {subItem.target ? (
                                   <a
                                     href={subItem.path}
                                     target={subItem.target}
                                     rel={subItem.rel}
-                                    className="block px-3 py-3 hover:bg-gray-50 text-gray-600 relative
+                                    className="block px-3 py-3 hover:bg-gray-50 relative
                                                 before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                                 before:bg-orange-500 before:transition-all before:duration-300
                                                 hover:before:w-full"
@@ -646,7 +414,7 @@ function Header() {
                                 ) : (
                                   <Link
                                     to={subItem.path}
-                                    className="block px-3 py-3 hover:bg-gray-50 text-gray-600 relative
+                                    className="block px-3 py-3 hover:bg-gray-50 relative
                                                 before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                                 before:bg-orange-500 before:transition-all before:duration-300
                                                 hover:before:w-full"
@@ -660,30 +428,18 @@ function Header() {
 
                           {item.megaMenu &&
                             item.columns.map((column, colIndex) => (
-                              <li key={colIndex}>
+                              <li key={`${column.heading}-${colIndex}-mobile`}>
                                 <h4 className="font-bold text-lg text-blue-800 mt-2 mb-1 px-3 border-b-2 border-orange-500 pb-1">
                                   {column.heading}
                                 </h4>
                                 <ul className="pl-4 space-y-1">
                                   {column.items.map((subItem, subItemIndex) => (
-                                    <li key={subItemIndex}>
+                                    <li key={`${subItem.path}-${subItemIndex}-mobile`}>
                                       <Link
                                         to={subItem.path}
-                                        className="block px-3 py-2 text-gray-600 hover:bg-gray-50 flex items-center group relative"
+                                        className="block px-3 py-2 hover:bg-gray-50 flex items-center group relative"
                                         onClick={closeAllMenus}
                                       >
-                                        {subItem.icon && (
-                                          <img
-                                            src={subItem.icon}
-                                            alt={`${subItem.title} icon`}
-                                            className="w-4 h-4 mr-2"
-                                            onError={(e) => {
-                                              e.target.onerror = null;
-                                              e.target.src =
-                                                "https://placehold.co/16x16/cccccc/white?text=?";
-                                            }}
-                                          />
-                                        )}
                                         {subItem.title}
                                         <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                           &rarr;
@@ -700,7 +456,7 @@ function Header() {
                   ) : (
                     <Link
                       to={item.path}
-                      className="block px-3 py-3 hover:bg-gray-50 text-gray-700 relative
+                      className="block px-3 py-3 hover:bg-gray-50 relative
                                  before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                  before:bg-orange-500 before:transition-all before:duration-300
                                  hover:before:w-full"
@@ -715,6 +471,8 @@ function Header() {
           </div>
         </div>
       </nav>
+      {/* Add padding to prevent content from being hidden behind the fixed navbar */}
+      <div className={`h-${scrolled ? '20' : '24'}`}></div>
     </div>
   );
 }

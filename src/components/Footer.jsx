@@ -7,124 +7,122 @@ import {
   Linkedin,
   Facebook,
 } from "lucide-react";
-import siuLogo from "../assets/logo.png";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaPhone, FaMapMarkerAlt, FaEnvelope, FaArrowUp } from 'react-icons/fa';
 
-function Footer() {
+const Footer = () => {
+  // Back to top functionality
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <footer className="w-full bg-black text-white">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-700 text-white pt-12">
+      <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* College Logo */}
-          <div className="flex flex-col items-start space-y-4">
-            <img
-              src={siuLogo}
-              alt="SIU Logo"
-              className="w-40 h-auto object-contain"
-            />
-            <p className="text-md text-white-700 max-w-2xl">
-              Saroj International University is committed to excellence in
-              education, empowering the future.
+          {/* University Info */}
+          <div className="lg:col-span-2">
+            <h3 className="text-xl font-bold mb-4 relative pb-2">
+              Saroj International University
+              <span className="absolute bottom-0 left-0 w-12 h-1 bg-yellow-400"></span>
+            </h3>
+            <p className="mb-4 text-gray-200">
+              Committed to excellence in education, empowering the future.
             </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-white  hover:text-yellow-400 transition-colors  duration-300 ">
+                <FaFacebook size={20} />
+              </a>
+              <a href="#" className="text-white hover:text-yellow-400 transition-colors  duration-300 ">
+                <FaTwitter size={20} />
+              </a>
+              <a href="#" className="text-white hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">
+                <FaLinkedin size={20} />
+              </a>
+              <a href="#" className="text-white hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">
+                <FaInstagram size={20} />
+              </a>
+              <a href="#" className="text-white hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">
+                <FaYoutube size={20} />
+              </a>
+            </div>
           </div>
 
           {/* Other Colleges */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold">Other Colleges</h3>
-            <ul className="space-y-3 text-md">
-              {[
-                "Saroj Institute of Technology & Management",
-                "Shivdan Singh Institute of Technology & Management",
-                "Saroj College Of Pharmacy",
-              ].map((college, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-start gap-2 hover:text-orange-500 transition-colors"
-                >
-                  <MapPin size={18} className="mt-1 shrink-0" />
-                  <span className="leading-snug">{college}</span>
-                </li>
-              ))}
+          <div>
+            <h3 className="text-xl font-bold mb-4 relative pb-2">
+              Other Colleges
+              <span className="absolute bottom-0 left-0 w-12 h-1 bg-yellow-400"></span>
+            </h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Saroj Institute of Technology & Management</a></li>
+              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Shivdan Singh Institute of Technology & Management</a></li>
+              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Saroj College Of Pharmacy</a></li>
             </ul>
           </div>
 
-          {/* Admissions */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold">Admissions</h3>
-            <ul className="space-y-3 text-md">
-              <li className="hover:text-orange-500 transition-colors">
-                <a href="/admission/admission-process">Admission Process</a>
-              </li>
-              <li className="hover:text-orange-500 transition-colors">
-                <a href="/admission/eligibility">Eligibility Criteria</a>
-              </li>
-              <li className="hover:text-orange-500 transition-colors">
-                <a href="/">Fee Structure</a>
-              </li>
+          {/* Admissions & Quick Links */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 relative pb-2">
+              Admissions
+              <span className="absolute bottom-0 left-0 w-12 h-1 bg-yellow-400"></span>
+            </h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Admission Process</a></li>
+              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Eligibility Criteria</a></li>
+              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Fee Structure</a></li>
             </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold">Quick Links</h3>
-            <ul className="space-y-3 text-md">
-              <li className="hover:text-orange-500 transition-colors">
-                <a href="/privacy-policy">Privacy Policy</a>
-              </li>
-              <li className="hover:text-orange-500 transition-colors">
-                <a href="/terms-and-conditions">Terms and Conditions</a>
-              </li>
+            
+            <h3 className="text-xl font-bold mt-6 mb-4 relative pb-2">
+              Quick Links
+              <span className="absolute bottom-0 left-0 w-12 h-1 bg-yellow-400"></span>
+            </h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Privacy Policy</a></li>
+              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Terms and Conditions</a></li>
             </ul>
           </div>
 
           {/* Quick Contact */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold">Quick Contact</h3>
-            <div className="space-y-3 text-md">
-              <div className="flex items-start gap-2 hover:text-orange-500 transition-colors">
-                <MapPin size={18} className="mt-1 shrink-0" />
-                <span className="leading-snug">
-                  12th Km Stone, Sultanpur Road, Near Purvanchal Expressway,
-                  Gosaiganj, Lucknow, Uttar Pradesh - 226 022
-                </span>
-              </div>
-              <div className="flex items-center gap-2 hover:text-orange-500 transition-colors">
-                <Phone size={18} className="shrink-0" />
-                <span>+91 95137-31275</span>
-              </div>
-              <div className="flex items-center gap-2 hover:text-orange-500 transition-colors">
-                <Phone size={18} className="shrink-0" />
-                <span>+91-522-311-6178</span>
-              </div>
-            </div>
-
-            {/* Social Media Icons */}
-            <div className="flex gap-4 mt-6">
-              <a href="https://www.instagram.com/segindia/">
-                <Instagram size={20} />
-              </a>
-              <a href="https://www.linkedin.com/company/saroj-educational-group/">
-                <Linkedin size={20} />
-              </a>
-              <a href="https://www.facebook.com/SEGofficial">
-                <Facebook size={20} />
-              </a>
-            </div>
+          <div>
+            <h3 className="text-xl font-bold mb-4 relative pb-2">
+              Quick Contact
+              <span className="absolute bottom-0 left-0 w-12 h-1 bg-yellow-400"></span>
+            </h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2">
+                <FaMapMarkerAlt className="mt-1 text-yellow-400" />
+                <span>12th Km Stone, Sultanpur Road, Near Purvanchal Expressway, Gosaiganj, Lucknow, Uttar Pradesh - 226 022</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaPhone className="text-yellow-400" />
+                <a href="tel:+919513731275" className="hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">+91 95137-31275</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaPhone className="text-yellow-400" />
+                <a href="tel:+915223116178" className="hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">+91-522-311-6178</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaEnvelope className="text-yellow-400" />
+                <a href="mailto:info@sarojuniversity.edu.in" className="hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">info@sarojuniversity.edu.in</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
 
-      {/* Copyright */}
-      <div className="bg-gray-900 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm md:text-base font-medium">
-            © {new Date().getFullYear()} Saroj International University - SIU.
-            All Rights Reserved.
-          </p>
+        {/* Copyright & Back to Top */}
+        <div className="border-t border-gray-700 mt-10 py-6 flex justify-between items-center">
+          <p>© {new Date().getFullYear()} Saroj International University. All Rights Reserved.</p>
+          <button 
+            onClick={scrollToTop}
+            className="bg-yellow-400 text-blue-900 p-2 rounded-full hover:bg-white  hover:underline hover:underline-offset-8 transition-colors duration-300"
+            aria-label="Back to top"
+          >
+            <FaArrowUp size={18} />
+          </button>
         </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
