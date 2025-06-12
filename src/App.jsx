@@ -9,6 +9,8 @@ import HistoryPage from "./pages/about/HistoryPage";
 import VisionMissionPage from "./pages/about/VisionMissionPage";
 import Acts from "./pages/about/Acts";
 import ApprovalsDocuments from "./pages/about/ApprovalsDocuments";
+import ChancellorPage from "./pages/Admission/Chancellor";
+import ViceChancellorPage from "./pages/Admission/ViceChancellor";
 
 function App() {
   return (
@@ -32,6 +34,14 @@ function App() {
       <Route path = "about/acts" element ={ <Acts />  } />
 
       <Route path = "about/approvals-documents" element ={ <ApprovalsDocuments/>  } />
+
+
+      <Route path = "/administration/chancellor" element ={ <ChancellorPage />  } />
+
+      
+      <Route path = "/administration/vice-chancellor" element ={ <ViceChancellorPage />  } />
+
+
 
     </Routes>
   );

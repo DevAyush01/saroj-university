@@ -25,9 +25,9 @@ const navItems = [
     title: "Administration",
     path: "/administration",
     subItems: [
-      { title: "Chancellor", path: "/administration/" },
+      { title: "Chancellor", path: "/administration/chancellor" },
       { title: "Pro Chancellor", path: "/administration/" },
-      { title: "Vice Chancellor", path: "/administration/" },
+      { title: "Vice Chancellor", path: "/administration/vice-chancellor" },
       { title: "Registrar", path: "/administration/" },
       { title: "Financial Officer", path: "/administration/" },
       { title: "Controller of Examination (CoE)", path: "/administration/" },
@@ -443,10 +443,10 @@ function Header() {
                           onMouseEnter={() => setOpenSubmenu(index)}
                           onMouseLeave={() => setOpenSubmenu(null)}
                         >
-                          {item.subItems.map((subItem) =>
+                          {item.subItems.map((subItem, index) =>
                             subItem.target ? (
                               <a
-                                key={subItem.path}
+                                key={index}
                                 href={subItem.path}
                                 target={subItem.target}
                                 rel={subItem.rel}
