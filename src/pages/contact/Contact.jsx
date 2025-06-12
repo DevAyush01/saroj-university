@@ -13,7 +13,7 @@ import Layout from '../../components/Layout'
 const Contact = () => {
   return (
     <Layout>
-    <div className="bg-gray-50 min-h-screen py-12 px-4 md:px-10">
+    <div className="bg-gray-50 min-h-screen py-36 md:py-48 px-4 md:px-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left: Contact Details */}
         <div className="bg-white p-8 rounded-xl shadow-md space-y-6">

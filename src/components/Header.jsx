@@ -404,7 +404,7 @@ function Header() {
         className=" fixed left-0 right-0 top-0 pt-10 z-40 shadow-xl bg-[#F8F9FA]"
       >
         <div className="max-w-8xl mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between md:flex">
             <Link to="/" className="flex items-center" onClick={closeAllMenus}>
               <img src={logo} alt="SIU logo" className="h-16 w-auto" />
             </Link>
