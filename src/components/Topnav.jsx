@@ -2,10 +2,10 @@ import {Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const TopNavbar = () => {
   return (
-    <nav className=" hidden fixed left-0 right-0 top-0 z-50 md:flex bg-[#214A9A] text-white py-3 px-4 md:px-8 shadow-md"
+    <nav className=" hidden fixed left-0 right-0 top-0 z-50 md:flex bg-secondary text-white py-1 px-4 md:px-8 shadow-md"
       style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%)' }}>
       
-      <div className="max-w-7xl mx-auto flex justify-end items-center text-sm md:text-lg font-inter">
+      <div className="max-w-7xl mx-auto flex justify-end items-center text-sm md:text-base font-inter">
      
 
         <ul className="flex items-center space-x-4">

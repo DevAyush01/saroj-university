@@ -8,7 +8,7 @@ function Layout({children}){
         <div className="flex flex-col min-h-screen">
           
           
-            <TopNavbar/>
+            {/* <TopNavbar/> */}
             <Header />
             <div className="flex-1 overflow-hidden">
                 {children}
