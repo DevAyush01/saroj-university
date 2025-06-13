@@ -2,47 +2,59 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Contact from "./pages/contact/Contact";
 import AboutSIU from "./pages/about/AboutSIU";
-import AdmissionCriteria from "./pages/admission/AdmissionCriteria";
 import ScholarshipPage from "./pages/admission/ScholarshipPage";
 import AdmissionProcess from "./pages/admission/AdmissionProcess";
+import AdmissionCriteria from "./pages/admission/AdmissionCriteria";
 import HistoryPage from "./pages/about/HistoryPage";
 import VisionMissionPage from "./pages/about/VisionMissionPage";
 import Acts from "./pages/about/Acts";
 import ApprovalsDocuments from "./pages/about/ApprovalsDocuments";
-import ChancellorPage from "./pages/Admission/Chancellor";
-import ViceChancellorPage from "./pages/Admission/ViceChancellor";
+import ChancellorPage from "./pages/administration/Chancellor";
+import ViceChancellorPage from "./pages/administration/ViceChancellor";
+import ProgramsPage from "./pages/programs/ProgramsPage";
+import ErrorPage from "./pages/notFoundPage";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      
+       <Route path="/programs" element={<ProgramsPage />} />
+
       <Route path="/about/about-siu" element={<AboutSIU />} />
 
       <Route path="/contact-us" element={<Contact />} />
 
-      <Route path="admissions/admission-criteria" element={<AdmissionCriteria/>} /> 
+      <Route
+        path="admissions/admission-criteria"
+        element={<AdmissionCriteria />}
+      />
 
-      <Route path="admissions/scholarship" element={<ScholarshipPage />} /> 
+      <Route path="admissions/scholarship" element={<ScholarshipPage />} />
 
-      <Route path="admissions/admission-process" element={<AdmissionProcess />} />
+      <Route
+        path="admissions/admission-process"
+        element={<AdmissionProcess />}
+      />
 
-      <Route path = "about/history" element ={ <HistoryPage/> } />
+      <Route path="about/history" element={<HistoryPage />} />
 
-      <Route path = "about/vision-mission" element ={ <VisionMissionPage/> } />
+      <Route path="about/vision-mission" element={<VisionMissionPage />} />
 
-      <Route path = "about/acts" element ={ <Acts />  } />
+      <Route path="about/acts" element={<Acts />} />
 
-      <Route path = "about/approvals-documents" element ={ <ApprovalsDocuments/>  } />
+      <Route
+        path="about/approvals-documents"
+        element={<ApprovalsDocuments />}
+      />
 
+      <Route path="/administration/chancellor" element={<ChancellorPage />} />
 
-      <Route path = "/administration/chancellor" element ={ <ChancellorPage />  } />
+      <Route
+        path="/administration/vice-chancellor"
+        element={<ViceChancellorPage />}
+      />
 
-      
-      <Route path = "/administration/vice-chancellor" element ={ <ViceChancellorPage />  } />
-
-
-
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 }

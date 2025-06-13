@@ -93,65 +93,65 @@ const navItems = [
         heading: "TCS ACADEMIA", // New heading for TCS courses
         items: [
           {
-            title: "Design Thinking - Practitioner's Perspective",
+            title: "Design Thinking - Practitioner's Perspective [TCS]",
             path: "/programs/tcs/design-thinking",
           },
           {
-            title: "Innovation and Entrepreneurship",
+            title: "Innovation and Entrepreneurship [TCS]",
             path: "/programs/tcs/innovation-entrepreneurship",
           },
           {
-            title: "Artificial Intelligence for Real-World Application",
+            title: "Artificial Intelligence for Real-World Application [TCS]",
             path: "/programs/tcs/ai-real-world",
           },
           {
-            title: "Machine Learning for Real-World Application",
+            title: "Machine Learning for Real-World Application [TCS]",
             path: "/programs/tcs/ml-real-world",
           },
           {
-            title: "Statistics using R and Python",
+            title: "Statistics using R and Python [TCS]",
             path: "/programs/tcs/statistics-r-python",
           },
           {
-            title: "Advanced Cyber Security - An Application Approach",
+            title: "Advanced Cyber Security - An Application Approach [TCS]",
             path: "/programs/tcs/advanced-cyber-security",
           },
-          { title: "Cryptography", path: "/programs/tcs/cryptography" },
+          { title: "Cryptography [TCS]", path: "/programs/tcs/cryptography" },
           {
-            title: "Cloud Development",
+            title: "Cloud Development [TCS]",
             path: "/programs/tcs/cloud-development",
           },
           {
-            title: "Application of Deep Learning and Neural Networks",
+            title: "Application of Deep Learning and Neural Networks [TCS]",
             path: "/programs/tcs/deep-learning-neural-networks",
           },
           {
-            title: "Information Security - Practitioner's Perspective",
+            title: "Information Security - Practitioner's Perspective [TCS]",
             path: "/programs/tcs/information-security",
           },
           {
-            title: "Applied Cloud Computing",
+            title: "Applied Cloud Computing [TCS]",
             path: "/programs/tcs/applied-cloud-computing",
           },
           {
-            title: "Data Modeling and Visualization",
+            title: "Data Modeling and Visualization [TCS]",
             path: "/programs/tcs/data-modeling-visualization",
           },
           {
-            title: "Data Mining and Warehousing",
+            title: "Data Mining and Warehousing [TCS]",
             path: "/programs/tcs/data-mining-warehousing",
           },
           {
-            title: "Data Analysis with Excel",
+            title: "Data Analysis with Excel [TCS]",
             path: "/programs/tcs/data-analysis-excel",
           },
           {
-            title: "Data Analytics and Reporting",
+            title: "Data Analytics and Reporting [TCS]",
             path: "/programs/tcs/data-analytics-reporting",
           },
-          { title: "Big Data on Cloud", path: "/programs/tcs/big-data-cloud" },
+          { title: "Big Data on Cloud [TCS]", path: "/programs/tcs/big-data-cloud" },
           {
-            title: "Practical Approach to Cyber Security",
+            title: "Practical Approach to Cyber Security [TCS]",
             path: "/programs/tcs/practical-cyber-security",
           },
         ],
@@ -347,11 +347,11 @@ function Header() {
   return (
     <div ref={navRef}>
       <nav
-        className={`fixed left-0 right-0 top-0 z-40 shadow-xl transition-all duration-300 ${
-          scrolled || window.location.pathname !== "/"
-            ? "py-2 bg-white text-gray-600"
-            : "bg-transparent py-4 text-white"
-        }`}
+     className={`fixed left-0 right-0 top-0 z-40 shadow-xl transition-all duration-300 ${
+  scrolled || window.location.pathname !== "/"
+    ? "py-2 bg-white text-gray-600" // This applies when scrolled OR not on home page
+    : "bg-transparent py-4 text-gray-600" // Change text-white to text-gray-600 for home page without scroll
+}`}
       >
         <div className="max-w-8xl mx-auto px-4">
           <div className="flex items-center justify-between">
@@ -505,7 +505,7 @@ function Header() {
                                             <li
                                               key={`${subItem.path}-${subItemIndex}`}
                                               className="mb-1"
-                                            >  
+                                            >
                                               <Link
                                                 to={subItem.path}
                                                 className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-start group"
@@ -513,6 +513,9 @@ function Header() {
                                               >
                                                 <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                                                 {subItem.title}
+                                                <Link to="" className="">
+                                                  <ArrowRight size={16}  color="orange"/>
+                                                </Link>
                                               </Link>
                                             </li>
                                           ))}
