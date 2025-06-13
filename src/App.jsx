@@ -11,6 +11,7 @@ import Acts from "./pages/about/Acts";
 import ApprovalsDocuments from "./pages/about/ApprovalsDocuments";
 import ChancellorPage from "./pages/Admission/Chancellor";
 import ViceChancellorPage from "./pages/Admission/ViceChancellor";
+import ErrorPage from "./pages/notFoundPage";
 
 function App() {
   return (
@@ -40,6 +41,8 @@ function App() {
 
       
       <Route path = "/administration/vice-chancellor" element ={ <ViceChancellorPage />  } />
+
+      <Route path = "*" element ={ <ErrorPage /> } />
 
 
 
