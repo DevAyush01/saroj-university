@@ -11,6 +11,7 @@ import ApprovalsDocuments from "./pages/about/ApprovalsDocuments";
 import ChancellorPage from "./pages/administration/Chancellor";
 import ViceChancellorPage from "./pages/administration/ViceChancellor";
 import ErrorPage from "./pages/notFoundPage";
+import AdmissionCriteria from "./pages/Admission/AdmissionCriteria";
 
 function App() {
   return (

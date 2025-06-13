@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { BellDotIcon, BellElectric, BellIcon } from "lucide-react";
+import { BellIcon } from "lucide-react";
 
 const FloatingAdmissionAlert = () => {
   const deadline = new Date("June 30, 2025 23:59:59").getTime();
@@ -13,7 +13,7 @@ const FloatingAdmissionAlert = () => {
   });
 
   const [showCountdown, setShowCountdown] = useState(true);
-  const [showNotification, setShowNotification] = useState(true);
+  const [showMessage, setShowMessage] = useState(true); // control message only
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -38,7 +38,7 @@ const FloatingAdmissionAlert = () => {
 
   return (
     <>
-      {/* Countdown Floating Alert */}
+      {/* LEFT: Floating Countdown Box */}
       {showCountdown && (
         <motion.div
           initial={{ y: 100, opacity: 0 }}
@@ -46,8 +46,8 @@ const FloatingAdmissionAlert = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="fixed bottom-6 left-6 z-50"
         >
-          <div className="bg-white rounded-xl shadow-2xl overflow-hidden border-2 border-primary w-72 relative">
-            <div className="bg-primary px-4 py-3">
+          <div className="bg-white rounded-xl shadow-2xl overflow-hidden border-2 border-red-600 w-72 relative">
+            <div className="bg-red-600 px-4 py-3">
               <h3 className="text-white font-bold text-center">Admissions Closing Soon!</h3>
             </div>
 
@@ -55,7 +55,7 @@ const FloatingAdmissionAlert = () => {
               <div className="grid grid-cols-4 gap-2 mb-4">
                 {["days", "hours", "minutes", "seconds"].map((unit) => (
                   <div key={unit} className="bg-gray-100 rounded-lg p-2 text-center">
-                    <div className="text-xl font-bold text-primary">{timeLeft[unit]}</div>
+                    <div className="text-xl font-bold text-red-600">{timeLeft[unit]}</div>
                     <div className="text-xs text-gray-600">{unit.toUpperCase()}</div>
                   </div>
                 ))}
@@ -63,11 +63,12 @@ const FloatingAdmissionAlert = () => {
 
               <motion.a
                 href="#apply"
-                className="block w-full bg-secondary hover:bg-yellow-600 text-gray-900 font-bold py-3 px-4 rounded-lg text-center shadow-md"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="block w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg text-center shadow-md relative overflow-hidden"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
               >
-                APPLY NOW !
+                <span className="relative z-10">APPLY NOW !</span>
+                <span className="absolute inset-0 bg-white/10 animate-pulse"></span>
               </motion.a>
             </div>
 
@@ -87,49 +88,58 @@ const FloatingAdmissionAlert = () => {
         </motion.div>
       )}
 
-      {/* Notification Floating Bell */}
-      {showNotification && (
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="fixed bottom-6 right-6 z-50"
+      {/* RIGHT: Floating Notification Bell with Message */}
+      <motion.div
+  initial={{ scale: 0.8, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  className="fixed bottom-6 right-6 z-50"
+>
+  <div className="relative group">
+    {/* Floating Message Box */}
+    {showMessage && (
+      <motion.div
+        className="absolute bottom-14 right-0 bg-white w-72 shadow-xl rounded-xl border border-gray-200 p-4 text-sm"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        <div className="font-bold text-sm text-gray-800 mb-1 flex items-center gap-2">
+          <BellIcon className="w-4 h-4 text-blue-600" />
+          Last Chance!
+        </div>
+        <div className="text-gray-700 mb-3">
+          Don’t miss out! Apply by <span className="text-red-600 font-medium">June 30</span> and grab a{" "}
+          <span className="font-semibold text-green-700">100% scholarship</span> chance!
+        </div>
+
+        <a
+          href="#register"
+          className="block text-center bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition"
         >
-          <div className="relative group">
-            <motion.div
-              className="absolute bottom-12 right-0 bg-white w-72 shadow-xl rounded-xl border border-gray-200 p-4 text-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              <div className="font-bold text-sm text-gray-800 mb-1 flex"><BellIcon/> Last Chance!</div>
-              <div className="text-gray-700 mb-3">
-  Don’t miss out! Apply by <span className="text-red-600 font-medium">June 30</span> and grab a 
-  <span className="font-semibold text-green-700">100% scholarship</span> chance!
-</div>
+          Register now
+        </a>
 
-              <a
-                href="#register"
-                className="block text-center bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition"
-              >
-                Register now
-              </a>
-              <button
-                onClick={() => setShowNotification(false)}
-                className="absolute top-2 right-2 text-gray-500 hover:text-red-400"
-              >
-                ×
-              </button>
-            </motion.div>
+        <button
+          onClick={() => setShowMessage(false)}
+          className="absolute top-2 right-2 text-gray-500 hover:text-red-400"
+        >
+          ×
+        </button>
+      </motion.div>
+    )}
 
-            <div className="bg-red-600 p-3 rounded-full text-white shadow-lg cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a2 2 0 002-2H8a2 2 0 002 2z" />
-              </svg>
-            </div>
-          </div>
-        </motion.div>
-      )}
+    {/* Bell Icon Button (toggles message) */}
+    <div
+      className="bg-blue-600 p-3 rounded-full text-white shadow-lg cursor-pointer animate-pulse"
+      onClick={() => setShowMessage((prev) => !prev)}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a2 2 0 002-2H8a2 2 0 002 2z" />
+      </svg>
+    </div>
+  </div>
+</motion.div>
     </>
   );
 };

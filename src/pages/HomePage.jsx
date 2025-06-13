@@ -35,17 +35,17 @@ function Home() {
       <Layout>
         <FloatingAdmissionAlert/>
         <HeroSection/>
-        <HiringPartnersSection />
-        <StatsSection/>
-        <ApprovalsSection />
         <CompaniesTieUps/>
+        <StatsSection/>
+        <HiringPartnersSection />
         <ProgramsSection />
+        <ApprovalsSection />
         <NewsSection/>
-        <Happenings />
+        {/* <Happenings /> */}
         <TestimonialSlider />
-        <WhyChooseUs />
+        {/* <WhyChooseUs />
         <ResearchPage />
-        <EventsPage />
+        <EventsPage /> */}
         
       </Layout>
     </>

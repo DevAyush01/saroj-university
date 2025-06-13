@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Briefcase, Award, Users, TrendingUp } from 'lucide-react';
+import bgImg from '../assets/blurBg.png';
 
 const HiringPartnersSection = () => {
   const logos = [
@@ -13,12 +13,7 @@ const HiringPartnersSection = () => {
     { id: 8, src: '/companyLogos/8.png', alt: 'Cognizant' },
   ];
 
-  const stats = [
-    { value: "100+", label: "Hiring Partners", icon: Briefcase },
-    { value: "90%", label: "Placement Rate", icon: Award },
-    { value: "10,000+", label: "Students Placed", icon: Users },
-    { value: "3.5x", label: "Average Salary Growth", icon: TrendingUp },
-  ];
+
 
   const containerRef = useRef(null);
   const angleRef = useRef(0);
@@ -59,9 +54,9 @@ const HiringPartnersSection = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10 bg-blue-50 ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 font-funneldisplay">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Our Esteemed Hiring Partners
           </h2>

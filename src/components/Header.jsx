@@ -220,11 +220,11 @@ function Header() {
 
   return (
     <div ref={navRef}>
-      <nav
+    <nav
         className={`fixed left-0 right-0 top-0 z-40 shadow-xl transition-all duration-300 ${
           scrolled || window.location.pathname !== "/"
             ? "py-2 bg-white text-gray-600"
-            : "bg-transparent py-4 text-white"
+            : "bg-white py-4 text-black"
         }`}
       >
         <div className="max-w-8xl mx-auto px-4">
@@ -515,7 +515,6 @@ function Header() {
         </div>
       </nav>
       {/* Add padding to prevent content from being hidden behind the fixed navbar */}
-      <div className={`h-${scrolled ? '20' : '24'}`}></div>
     </div>
   );
 }

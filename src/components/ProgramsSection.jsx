@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   BookOpen,
@@ -76,21 +76,6 @@ const ProgramsSection = () => {
 
   const [activeTab, setActiveTab] = useState(programs[0].id);
   const [hoveredProgram, setHoveredProgram] = useState(null);
-  const [isAutoRotating, setIsAutoRotating] = useState(false);
-
-  // Auto-rotation effect
-  useEffect(() => {
-    if (isAutoRotating) {
-      const interval = setInterval(() => {
-        setActiveTab((prev) => {
-          const currentIndex = programs.findIndex((p) => p.id === prev);
-          const nextIndex = (currentIndex + 1) % programs.length;
-          return programs[nextIndex].id;
-        });
-      }, 3000);
-      return () => clearInterval(interval);
-    }
-  }, [isAutoRotating]);
 
   const currentProgram = programs.find((program) => program.id === activeTab);
 
@@ -102,12 +87,12 @@ const ProgramsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-12 max-w-7xl mx-auto"
         >
-          <h2 className="text-5xl text-left font-bold text-gray-900 mb-4">
+          <h2 className="text-5xl text-left font-funneldisplay font-bold text-gray-900 mb-4">
             Our Academic Programs
           </h2>
-          <p className="text-xl text-left text-gray-600 ">
+          <p className="text-lg font-funneldisplay text-left text-gray-600 ">
             Explore our diverse range of undergraduate, postgraduate, and
             doctoral programs designed to shape future leaders.
           </p>
@@ -116,24 +101,10 @@ const ProgramsSection = () => {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Program Categories - Left Side */}
           <div className="lg:w-1/3">
-            <div
-              className="mb-4 p-3 bg-white rounded-lg shadow-sm flex justify-between items-center"
-              onMouseEnter={() => setIsAutoRotating(false)}
-              onMouseLeave={() => setIsAutoRotating(true)}
-            >
+            <div className="mb-4 p-3 bg-white rounded-lg shadow-sm">
               <span className="font-medium text-gray-700">
                 Program Categories
               </span>
-              <button
-                onClick={() => setIsAutoRotating(!isAutoRotating)}
-                className={`px-3 py-1 rounded-full text-sm ${
-                  isAutoRotating
-                    ? "bg-blue-100 text-blue-800"
-                    : "bg-gray-100 text-gray-800"
-                }`}
-              >
-                {isAutoRotating ? "Auto" : "Manual"}
-              </button>
             </div>
 
             <div className="space-y-2">
@@ -144,10 +115,7 @@ const ProgramsSection = () => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <button
-                    onClick={() => {
-                      setActiveTab(program.id);
-                      setIsAutoRotating(false);
-                    }}
+                    onClick={() => setActiveTab(program.id)}
                     onMouseEnter={() => setHoveredProgram(program.id)}
                     onMouseLeave={() => setHoveredProgram(null)}
                     className={`w-full text-left p-4 rounded-lg transition-all duration-300 flex items-center gap-3
@@ -185,7 +153,7 @@ const ProgramsSection = () => {
             <motion.div whileHover={{ x: 5 }} className="mt-6">
               <a
                 href="#all-programs"
-                className="flex items-center justify-center gap-2 w-full py-3 px-4  delay-100 bg-[#214A9A] hover:bg-[#f08f07] text-white rounded-lg transition-colors"
+                className="flex items-center justify-center gap-2 w-full py-3 px-4 delay-100 bg-[#214A9A] hover:bg-[#f08f07] text-white rounded-lg transition-colors"
               >
                 Explore All Programs
                 <ArrowRight className="w-5 h-5" />
@@ -259,7 +227,7 @@ const ProgramsSection = () => {
                         </span>
                       </li>
                     </ul>
-                    <button className="mt-4 px-6 py-2  delay-100 bg-[#214A9A] hover:bg-[#f08f07] text-white rounded-md transition-colors flex items-center justify-center gap-2 mx-auto">
+                    <button className="mt-4 px-6 py-2 delay-100 bg-[#214A9A] hover:bg-[#f08f07] text-white rounded-md transition-colors flex items-center justify-center gap-2 mx-auto">
                       Start Application Process
                       <ArrowRight className="w-4 h-4" />
                     </button>

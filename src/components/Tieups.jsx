@@ -128,23 +128,35 @@ export default function CompaniesTieUps() {
 
   return (
     <div className=" bg-blue-100 relative">
-        {/* Heading of industry tieups  */}
-        <div className="bg-gradient-to-b from-gray-100 to-gray-200 py-16 px-6 sm:px-12 lg:px-24">
-      <div className="max-w-7xl font-funneldisplay font-light  mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
-        {/* Text Section */}
-        <div className="text-center lg:text-left max-w-3xl">
-          <h3 className="text-lg sm:text-xl text-gray-600 mb-2">
-            Strategic Partnerships for Real-World Exposure 
-          </h3>
-          <h1 className="text-3xl sm:text-5xl font-funneldisplay  font-bold text-gray-900 leading-tight">
-            Powered by Leading Tech Firms, <br className="hidden sm:block" />
-            Designed for Industry Success
-          </h1>
+      {/* Heading of industry tieups  */}
+      <div className="bg-blue-50 py-16 px-6 sm:px-12 lg:px-24">
+        <div className="max-w-7xl font-funneldisplay mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+          {/* Text Section */}
+          <div className="text-center lg:text-left max-w-3xl">
+            <h3 className="text-lg sm:text-xl text-gray-600 mb-2">
+              Strategic Partnerships for Real-World Exposure
+            </h3>
+            <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 leading-tight">
+              Powered by Leading Tech Firms, <br className="hidden sm:block" />
+              Designed for Industry Success
+            </h1>
+          </div>
+
+          {/* Apply Now Button */}
+          <motion.a
+            href="#apply"
+            whileHover={{ scale: 1.05, x: 5 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center justify-center bg-blue-700 text-white font-semibold px-10 py-3 rounded-sm shadow-lg hover:bg-blue-800 transition duration-300 text-base sm:text-lg"
+          >
+            APPLY NOW
+            <ArrowRight className="ml-3 w-5 h-5" />
+          </motion.a>
         </div>
       </div>
 
       {/* slider of tie ups  */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden font-funneldisplay">
         <div
           ref={sliderRef}
           className="flex transition-transform duration-700 ease-in-out"
@@ -158,7 +170,7 @@ export default function CompaniesTieUps() {
               className="flex-shrink-0"
               style={{ width: `${slideWidth}%` }}
             >
-              <div className="flex flex-col font-funneldisplay  lg:flex-row shadow-xl overflow-hidden bg-white min-h-[500px] lg:h-[450px] hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+              <div className="flex flex-col lg:flex-row shadow-xl overflow-hidden bg-white min-h-[500px] lg:h-[450px] hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
                 <div className="lg:w-1/2 w-full p-4 sm:p-6 lg:p-8 relative bg-white flex flex-col h-full">
                   <div className="flex justify-center mb-4 lg:mb-6">
                     <img
@@ -233,7 +245,6 @@ export default function CompaniesTieUps() {
           <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
       </div>
-    </div>
     </div>
   );
 }

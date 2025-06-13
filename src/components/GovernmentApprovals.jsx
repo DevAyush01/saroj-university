@@ -88,9 +88,9 @@ const ApprovalsSection = () => {
   };
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-gray-50 font-funneldisplay">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-indigo-800">Approvals & Certificates</h2>
+        <h2 className="text-5xl font-bold max-w-7xl mx-auto mb-8">Approvals & Certificates</h2>
         
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Left Panel - Certificate List - Now 50% width */}
