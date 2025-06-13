@@ -1,23 +1,22 @@
-import { useState, useEffect, useRef } from "react"
-import { ArrowRight, ArrowRightIcon } from "lucide-react"
+import { useState, useEffect, useRef } from "react";
+import { ArrowRight, ArrowRightIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
+import logoIbm from "../assets/ibm.jpg";
+import logoTcs from "../assets/TCS.jpg";
+import logoCisco from "../assets/cisco.webp";
+import logoHdfc from "../assets/hdfc.png";
 
-import logoIbm from "../assets/ibm.jpg"
-import logoTcs from "../assets/TCS.jpg"
-import logoCisco from "../assets/cisco.webp"
-import logoHdfc from "../assets/hdfc.png"
-
-// logos 
-import tcsLogo from '../assets/logos/tcsLogo.png'
-import ibmLogo from '../assets/logos/ibmLogo.png'
-import ciscoLogo from '../assets/logos/ciscoLogo.png'
-import hdfcLogo from '../assets/logos/hdfcLogo.png'
+// logos
+import tcsLogo from "../assets/logos/tcsLogo.png";
+import ibmLogo from "../assets/logos/ibmLogo.png";
+import ciscoLogo from "../assets/logos/ciscoLogo.png";
+import hdfcLogo from "../assets/logos/hdfcLogo.png";
 
 export default function CompaniesTieUps() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [slidesToShow, setSlidesToShow] = useState(3)
-  const sliderRef = useRef(null)
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(3);
+  const sliderRef = useRef(null);
 
   const companies = [
     {
@@ -56,7 +55,7 @@ export default function CompaniesTieUps() {
         "Collaborative University Projects",
       ],
     },
-    
+
     {
       name: "HDFC Bank",
       logo: hdfcLogo,
@@ -69,56 +68,63 @@ export default function CompaniesTieUps() {
         "Campus Connect Initiatives",
       ],
     },
-  ]
-  
-  const infiniteCompanies = [...companies, ...companies, ...companies, ...companies, ...companies, ...companies]
+  ];
+
+  const infiniteCompanies = [
+    ...companies,
+    ...companies,
+    ...companies,
+    ...companies,
+    ...companies,
+    ...companies,
+  ];
 
   useEffect(() => {
     const handleResize = () => {
-      const width = window.innerWidth
+      const width = window.innerWidth;
       if (width < 640) {
-        setSlidesToShow(1)
+        setSlidesToShow(1);
       } else if (width < 768) {
-        setSlidesToShow(1.3)
+        setSlidesToShow(1.3);
       } else if (width < 1024) {
-        setSlidesToShow(2)
+        setSlidesToShow(2);
       } else {
-        setSlidesToShow(2)
+        setSlidesToShow(2);
       }
-    }
+    };
 
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
-        const maxIndex = infiniteCompanies.length - Math.ceil(slidesToShow)
-        return prevIndex >= maxIndex ? 0 : prevIndex + 1
-      })
-    }, 5000)
+        const maxIndex = infiniteCompanies.length - Math.ceil(slidesToShow);
+        return prevIndex >= maxIndex ? 0 : prevIndex + 1;
+      });
+    }, 5000);
 
-    return () => clearInterval(interval)
-  }, [slidesToShow, infiniteCompanies.length])
+    return () => clearInterval(interval);
+  }, [slidesToShow, infiniteCompanies.length]);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => {
-      const maxIndex = infiniteCompanies.length - Math.ceil(slidesToShow)
-      return prevIndex >= maxIndex ? 0 : prevIndex + 1
-    })
-  }
+      const maxIndex = infiniteCompanies.length - Math.ceil(slidesToShow);
+      return prevIndex >= maxIndex ? 0 : prevIndex + 1;
+    });
+  };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => {
       return prevIndex <= 0
         ? infiniteCompanies.length - Math.ceil(slidesToShow)
-        : prevIndex - 1
-    })
-  }
+        : prevIndex - 1;
+    });
+  };
 
-  const slideWidth = 100 / slidesToShow
+  const slideWidth = 100 / slidesToShow;
 
   return (
     <div className=" bg-blue-100 relative">
@@ -135,21 +141,9 @@ export default function CompaniesTieUps() {
             Designed for Industry Success
           </h1>
         </div>
-
-        {/* Apply Now Button */}
-        <motion.a
-          href="#apply"
-          whileHover={{ scale: 1.05, x: 5 }}
-          whileTap={{ scale: 0.95 }}
-          className="inline-flex items-center justify-center bg-blue-700 text-white font-semibold px-10 py-3 rounded-sm shadow-lg hover:bg-blue-800 transition duration-300 text-base sm:text-lg"
-        >
-          APPLY NOW
-          <ArrowRight className="ml-3 w-5 h-5" />
-        </motion.a>
       </div>
-    </div>
 
-    {/* slider of tie ups  */}
+      {/* slider of tie ups  */}
       <div className="relative overflow-hidden">
         <div
           ref={sliderRef}
@@ -172,7 +166,8 @@ export default function CompaniesTieUps() {
                       alt={`${company.name} logo`}
                       className="w-24 sm:w-32 h-auto object-contain max-h-12 sm:max-h-16"
                       onError={(e) => {
-                        e.currentTarget.src = "/placeholder.svg?height=64&width=128"
+                        e.currentTarget.src =
+                          "/placeholder.svg?height=64&width=128";
                       }}
                     />
                   </div>
@@ -183,7 +178,9 @@ export default function CompaniesTieUps() {
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs sm:text-sm font-semibold text-blue-600 mb-2 lg:mb-3">Programs Offered:</p>
+                      <p className="text-xs sm:text-sm font-semibold text-blue-600 mb-2 lg:mb-3">
+                        Programs Offered:
+                      </p>
                       <ul className="space-y-1 lg:space-y-2">
                         {company.programs.map((program, idx) => (
                           <li key={idx} className="flex items-start">
@@ -203,12 +200,15 @@ export default function CompaniesTieUps() {
                     alt={`${company.name} background`}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
                     onError={(e) => {
-                      e.currentTarget.src = "/placeholder.svg?height=450&width=400"
+                      e.currentTarget.src =
+                        "/placeholder.svg?height=450&width=400";
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="text-lg lg:text-xl font-bold">{company.name}</h3>
+                    <h3 className="text-lg lg:text-xl font-bold">
+                      {company.name}
+                    </h3>
                     <p className="text-sm text-blue-200">Industry Partner</p>
                   </div>
                 </div>
@@ -234,5 +234,6 @@ export default function CompaniesTieUps() {
         </button>
       </div>
     </div>
-  )
+    </div>
+  );
 }

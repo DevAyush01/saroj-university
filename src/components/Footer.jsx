@@ -1,3 +1,12 @@
+import React from "react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Instagram,
+  Linkedin,
+  Facebook,
+} from "lucide-react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaPhone, FaMapMarkerAlt, FaEnvelope, FaArrowUp } from 'react-icons/fa';
 
 const Footer = () => {

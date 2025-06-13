@@ -51,14 +51,28 @@ const navItems = [
           { title: "M.Tech - CSE with AI & ML [CSES]", path: "/programs/mtech-cse-ai-ml" },
           { title: "BBA(H) - Business Analytics [KPMG]", path: "/programs/bba-business-analytics" },
           { title: "MBA - Global Business Management [KPMG]", path: "/programs/mba-global-business" },
-          { title: "BBA Fintech + ACCA [Grant Thornton]", path: "/programs/bba-fintech-acca" },
-          { title: "MBA- Applied Finance", path: "/programs/mba-applied-finance" },
-          { title: "MBA Fintech", path: "/programs/mba-fintech" },
-          { title: "MBA - Data Science & AI [CSES]", path: "/programs/mba-data-science-ai" },
-          { title: "MBA Business Analytics [JEM]", path: "/programs/mba-business-analytics" },
-          { title: "B.Com(H) + ACCA [Grant Thornton]", path: "/programs/bcom-acca" },
-          { title: "BCAI(H) - Data Science [CSES]", path: "/programs/bcai-data-science" },
-          { title: "MCA - AI & ML [CSES]", path: "/programs/mca-ai-ml" },
+        ],
+      },
+      {
+        heading: "TCS ACADEMIA", // New heading for TCS courses
+        items: [
+          { title: "Design Thinking - Practitioner's Perspective", path: "/programs/tcs/design-thinking" },
+          { title: "Innovation and Entrepreneurship", path: "/programs/tcs/innovation-entrepreneurship" },
+          { title: "Artificial Intelligence for Real-World Application", path: "/programs/tcs/ai-real-world" },
+          { title: "Machine Learning for Real-World Application", path: "/programs/tcs/ml-real-world" },
+          { title: "Statistics using R and Python", path: "/programs/tcs/statistics-r-python" },
+          { title: "Advanced Cyber Security - An Application Approach", path: "/programs/tcs/advanced-cyber-security" },
+          { title: "Cryptography", path: "/programs/tcs/cryptography" },
+          { title: "Cloud Development", path: "/programs/tcs/cloud-development" },
+          { title: "Application of Deep Learning and Neural Networks", path: "/programs/tcs/deep-learning-neural-networks" },
+          { title: "Information Security - Practitioner's Perspective", path: "/programs/tcs/information-security" },
+          { title: "Applied Cloud Computing", path: "/programs/tcs/applied-cloud-computing" },
+          { title: "Data Modeling and Visualization", path: "/programs/tcs/data-modeling-visualization" },
+          { title: "Data Mining and Warehousing", path: "/programs/tcs/data-mining-warehousing" },
+          { title: "Data Analysis with Excel", path: "/programs/tcs/data-analysis-excel" },
+          { title: "Data Analytics and Reporting", path: "/programs/tcs/data-analytics-reporting" },
+          { title: "Big Data on Cloud", path: "/programs/tcs/big-data-cloud" },
+          { title: "Practical Approach to Cyber Security", path: "/programs/tcs/practical-cyber-security" },
         ],
       },
       {
@@ -94,12 +108,6 @@ const navItems = [
           { title: "B.Sc. (Hons) - Chemistry", path: "/programs/bsc-chemistry" },
           { title: "B.Sc. (Hons) - Mathematics", path: "/programs/bsc-maths" },
           { title: "M.Sc. Physics", path: "/programs/msc-physics" },
-          { title: "M.Sc. Chemistry", path: "/programs/msc-chemistry" },
-          { title: "M.Sc. Mathematics", path: "/programs/msc-maths" },
-          { title: "B.Sc. (Hons) - Data Science", path: "/programs/bsc-data-science" },
-          { title: "B.Sc. (Hons) - Biotechnology", path: "/programs/bsc-biotech" },
-          { title: "B.Sc. (Hons) - Forensic Science", path: "/programs/bsc-forensic" },
-          { title: "M.Sc. Data Science", path: "/programs/msc-data-science" },
         ],
       },
       {
@@ -129,7 +137,6 @@ const navItems = [
       { title: "Statutes", path: "/academics/statutes" },
       { title: "Library", path: "/academics/library" },
       { title: "Faculty", path: "/academics/faculty" },
-      { title: "Syllabus", path: "/academics/syllabus" },
       { title: "Exam Schedule", path: "/academics/exam-schedule" },
       { title: "Internal Quality Assurance Cell (IQAC)", path: "/academics/iqac" },
       { title: "Industry Collaboration", path: "/academics/industry-collaboration" },
@@ -213,9 +220,11 @@ function Header() {
 
   return (
     <div ref={navRef}>
-      <nav 
-        className={`fixed left-0 right-0 top-0 z-40 shadow-xl  transition-all duration-300 ${
-          scrolled ? " py-2 bg-white text-gray-600" : "bg-transparent py-4 text-white"
+      <nav
+        className={`fixed left-0 right-0 top-0 z-40 shadow-xl transition-all duration-300 ${
+          scrolled || window.location.pathname !== "/"
+            ? "py-2 bg-white text-gray-600"
+            : "bg-transparent py-4 text-white"
         }`}
       >
         <div className="max-w-8xl mx-auto px-4">
@@ -228,9 +237,10 @@ function Header() {
               className="hidden font-outfit md:flex space-x-2 text-lg items-center"
               ref={menuRef}
             >
+              {/* Navbar items */}
               {navItems.map((item, index) => (
-                <li 
-                  key={`${item.path}-${index}`} 
+                <li
+                  key={`${item.path}-${index}`}
                   className="relative"
                   onMouseEnter={() => toggleSubmenu(index)}
                   onMouseLeave={() => setOpenSubmenu(null)}
@@ -238,10 +248,10 @@ function Header() {
                   {item.subItems || item.megaMenu ? (
                     <div className="relative">
                       <button
-                        className={`flex items-center px-2 py-1  relative
-                                 before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                 before:bg-orange-500 before:transition-all before:duration-300
-                                 hover:before:w-full ${openSubmenu === index ? 'text-orange-500' : ''}`}
+                        className={`flex items-center px-2 py-1 relative
+                                  before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
+                                  before:bg-orange-500 before:transition-all before:duration-300
+                                  hover:before:w-full ${openSubmenu === index ? 'text-orange-500' : ''}`}
                       >
                         {item.title}
                         <ChevronDown
@@ -259,7 +269,7 @@ function Header() {
                               : "opacity-0 invisible -translate-y-2"
                           } transition-all duration-300`}
                         >
-                          {item.subItems.map((subItem, subIndex) => 
+                          {item.subItems.map((subItem, subIndex) =>
                             subItem.target ? (
                               <a
                                 key={`${subItem.path}-${subIndex}`}
@@ -267,9 +277,9 @@ function Header() {
                                 target={subItem.target}
                                 rel={subItem.rel}
                                 className="block px-4 py-2 hover:bg-gray-100 relative
-                                         before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                         before:bg-orange-500 before:transition-all before:duration-300
-                                         hover:before:w-full"
+                                        before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
+                                        before:bg-orange-500 before:transition-all before:duration-300
+                                        hover:before:w-full"
                                 onClick={closeAllMenus}
                               >
                                 {subItem.title}
@@ -279,9 +289,9 @@ function Header() {
                                 key={`${subItem.path}-${subIndex}`}
                                 to={subItem.path}
                                 className="block px-4 py-2 hover:bg-gray-100 relative
-                                         before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                         before:bg-orange-500 before:transition-all before:duration-300
-                                         hover:before:w-full"
+                                        before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
+                                        before:bg-orange-500 before:transition-all before:duration-300
+                                        hover:before:w-full"
                                 onClick={closeAllMenus}
                               >
                                 {subItem.title}
@@ -300,42 +310,74 @@ function Header() {
                           } transition-all duration-300`}
                         >
                           <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white"></div>
-                          <div className="grid grid-cols-6 gap-x-8 gap-y-4">
-                            {item.columns.map((column, colIndex) => (
-                              <div key={`${column.heading}-${colIndex}`} className="relative">
-                                <h3 className="font-bold text-lg text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative">
-                                  {column.heading}
-                                  <span className="absolute bottom-0 left-0 w-1/3 h-0.5 bg-gradient-to-r from-orange-500 to-transparent"></span>
-                                </h3>
-                                <ul className="space-y-2">
-                                  {column.items.map((subItem, subItemIndex) => (
-                                    <li key={`${subItem.path}-${subItemIndex}`} className="mb-1">
-                                      <Link
-                                        to={subItem.path}
-                                        className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-start group"
-                                        onClick={closeAllMenus}
-                                      >
-                                        <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-                                        {subItem.title}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                                {colIndex < item.columns.length - 1 && (
-                                  <div className="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent"></div>
-                                )}
-                              </div>
-                            ))}
-                          </div>
-                          <div className="mt-4 pt-4 border-t border-gray-100">
-                            <Link 
-                              to="/programs" 
-                              className="text-orange-500 font-medium hover:underline flex items-center"
-                              onClick={closeAllMenus}
-                            >
-                              View all programs
-                              <ChevronDown className="w-4 h-4 ml-1 transform rotate-90" />
-                            </Link>
+
+                          {/* Main grid for two columns */}
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                            {/* Left column for Collaboration */}
+                            <div>
+                              {item.columns.map((column, colIndex) =>
+                                column.heading === "COLLABORATION" && (
+                                  <div key={`${column.heading}-${colIndex}`} className="relative">
+                                    <h3 className="font-bold text-lg text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative">
+                                      {column.heading}
+                                      <span className="absolute bottom-0 left-0 w-1/8 h-0.5 bg-gradient-to-r from-orange-500 to-transparent"></span>
+                                    </h3>
+                                    <ul className="space-y-2">
+                                      {column.items.map((subItem, subItemIndex) => (
+                                        <li key={`${subItem.path}-${subItemIndex}`} className="mb-1">
+                                          <Link
+                                            to={subItem.path}
+                                            className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-start group"
+                                            onClick={closeAllMenus}
+                                          >
+                                            <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                                            {subItem.title}
+                                          </Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                )
+                              )}
+                            </div>
+
+                            {/* Right column for other programs */}
+                            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                              {item.columns.map((column, colIndex) =>
+                                column.heading !== "COLLABORATION" && (
+                                  <div key={`${column.heading}-${colIndex}`} className="relative">
+                                    <h3 className="font-bold text-lg text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative">
+                                      {column.heading}
+                                      <span className="absolute bottom-0 left-0 w-1/3 h-0.5 bg-gradient-to-r from-orange-500 to-transparent"></span>
+                                    </h3>
+                                    <ul className="space-y-2">
+                                      {/* Apply slice(0, 2) here */}
+                                      {column.items.slice(0, 2).map((subItem, subItemIndex) => (
+                                        <li key={`${subItem.path}-${subItemIndex}`} className="mb-1">
+                                          <Link
+                                            to={subItem.path}
+                                            className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-start group"
+                                            onClick={closeAllMenus}
+                                          >
+                                            <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                                            {subItem.title}
+                                          </Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                    {/* View all course button remains for each category */}
+                                    <Link
+                                      to="/programs"
+                                      className="text-orange-500 md:font-sm hover:underline flex items-center"
+                                      onClick={closeAllMenus}
+                                    >
+                                      View all programs
+                                      <ChevronDown className="w-4 h-4 ml-1 transform rotate-90" />
+                                    </Link>
+                                  </div>
+                                )
+                              )}
+                            </div>
                           </div>
                         </div>
                       )}
@@ -344,9 +386,9 @@ function Header() {
                     <Link
                       to={item.path}
                       className="px-2 py-1 relative
-                                 before:absolute  before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                 before:bg-orange-500 before:transition-all before:duration-300
-                                 hover:before:w-full"
+                                  before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
+                                  before:bg-orange-500 before:transition-all before:duration-300
+                                  hover:before:w-full"
                       onClick={closeAllMenus}
                     >
                       {item.title}
@@ -405,9 +447,9 @@ function Header() {
                                     target={subItem.target}
                                     rel={subItem.rel}
                                     className="block px-3 py-3 hover:bg-gray-50 relative
-                                                before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                                before:bg-orange-500 before:transition-all before:duration-300
-                                                hover:before:w-full"
+                                            before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
+                                            before:bg-orange-500 before:transition-all before:duration-300
+                                            hover:before:w-full"
                                     onClick={closeAllMenus}
                                   >
                                     {subItem.title}
@@ -416,9 +458,9 @@ function Header() {
                                   <Link
                                     to={subItem.path}
                                     className="block px-3 py-3 hover:bg-gray-50 relative
-                                                before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                                before:bg-orange-500 before:transition-all before:duration-300
-                                                hover:before:w-full"
+                                            before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
+                                            before:bg-orange-500 before:transition-all before:duration-300
+                                            hover:before:w-full"
                                     onClick={closeAllMenus}
                                   >
                                     {subItem.title}
@@ -458,9 +500,9 @@ function Header() {
                     <Link
                       to={item.path}
                       className="block px-3 py-3 hover:bg-gray-50 relative
-                                 before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                 before:bg-orange-500 before:transition-all before:duration-300
-                                 hover:before:w-full"
+                                  before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
+                                  before:bg-orange-500 before:transition-all before:duration-300
+                                  hover:before:w-full"
                       onClick={closeAllMenus}
                     >
                       {item.title}

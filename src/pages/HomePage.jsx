@@ -15,6 +15,9 @@ import LogoSlider from "../components/CompanyTieUps.jsx";
 import CircularLogoCarousel from "../components/CompanyTieUps.jsx";
 import HiringPartnersSection from "../components/CompanyTieUps.jsx";
 import StatsSection from "../components/StatsSection.jsx";
+import GovernmentApprovals from "../components/GovernmentApprovals.jsx";
+import ApprovalsSection from "../components/GovernmentApprovals.jsx";
+import ProgramsSection from "../components/ProgramsSection.jsx";
 
 function Home() {
   const logos = [
@@ -34,7 +37,9 @@ function Home() {
         <HeroSection/>
         <HiringPartnersSection />
         <StatsSection/>
+        <ApprovalsSection />
         <CompaniesTieUps/>
+        <ProgramsSection />
         <NewsSection/>
         <Happenings />
         <TestimonialSlider />
