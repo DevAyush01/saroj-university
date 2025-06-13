@@ -2,15 +2,15 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Contact from "./pages/contact/Contact";
 import AboutSIU from "./pages/about/AboutSIU";
-import AdmissionCriteria from "./pages/admission/AdmissionCriteria";
 import ScholarshipPage from "./pages/admission/ScholarshipPage";
 import AdmissionProcess from "./pages/admission/AdmissionProcess";
 import HistoryPage from "./pages/about/HistoryPage";
 import VisionMissionPage from "./pages/about/VisionMissionPage";
 import Acts from "./pages/about/Acts";
 import ApprovalsDocuments from "./pages/about/ApprovalsDocuments";
-import ChancellorPage from "./pages/Admission/Chancellor";
-import ViceChancellorPage from "./pages/Admission/ViceChancellor";
+import ChancellorPage from "./pages/administration/Chancellor";
+import ViceChancellorPage from "./pages/administration/ViceChancellor";
+import AdmissionCriteria from "./pages/Admission/AdmissionCriteria";
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function App() {
       <Route path = "about/approvals-documents" element ={ <ApprovalsDocuments/>  } />
 
 
-      <Route path = "/administration/chancellor" element ={ <ChancellorPage />  } />
+      <Route path = "/administration/chancellor" element ={ <ChancellorPage/>  } />
 
       
       <Route path = "/administration/vice-chancellor" element ={ <ViceChancellorPage />  } />

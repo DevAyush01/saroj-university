@@ -124,13 +124,13 @@ export default function CompaniesTieUps() {
     <div className=" bg-blue-100 relative">
         {/* Heading of industry tieups  */}
         <div className="bg-gradient-to-b from-gray-100 to-gray-200 py-16 px-6 sm:px-12 lg:px-24">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+      <div className="max-w-7xl font-funneldisplay font-light  mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* Text Section */}
         <div className="text-center lg:text-left max-w-3xl">
           <h3 className="text-lg sm:text-xl text-gray-600 mb-2">
-            Strategic Partnerships for Real-World Exposure
+            Strategic Partnerships for Real-World Exposure 
           </h3>
-          <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-funneldisplay  font-bold text-gray-900 leading-tight">
             Powered by Leading Tech Firms, <br className="hidden sm:block" />
             Designed for Industry Success
           </h1>
@@ -164,7 +164,7 @@ export default function CompaniesTieUps() {
               className="flex-shrink-0"
               style={{ width: `${slideWidth}%` }}
             >
-              <div className="flex flex-col lg:flex-row shadow-xl overflow-hidden bg-white min-h-[500px] lg:h-[450px] hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+              <div className="flex flex-col font-funneldisplay  lg:flex-row shadow-xl overflow-hidden bg-white min-h-[500px] lg:h-[450px] hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
                 <div className="lg:w-1/2 w-full p-4 sm:p-6 lg:p-8 relative bg-white flex flex-col h-full">
                   <div className="flex justify-center mb-4 lg:mb-6">
                     <img

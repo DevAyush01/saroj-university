@@ -5,12 +5,12 @@ import TopNavbar from './Topnav';
 
 function Layout({children}){
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen ">
           
           
             {/* <TopNavbar/> */}
             <Header />
-            <div className="flex-1 overflow-hidden">
+            <div className="flex-1 overflow-hidden ">
                 {children}
             </div>
            
