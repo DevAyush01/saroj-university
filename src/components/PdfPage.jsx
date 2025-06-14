@@ -96,17 +96,17 @@ export default function PdfPage({ JSONFile }) {
                   <div className="px-5 py-3 bg-gray-50 border-t flex justify-end space-x-2">
                     <button
                       onClick={() => setPreviewFile(file.fileUrl)}
-                      className="flex items-center px-3 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 text-sm font-medium text-gray-700"
+                      className="flex items-center px-3 py-2 bg-blue-600 border border-gray-300 rounded-lg hover:bg-blue-800 hover:cursor-pointer text-sm font-medium text-white"
                     >
                       <FiEye className="mr-2" /> Preview
                     </button>
-                    <button
+                    {/* <button
                       onClick={() => handleDownload(file.fileUrl, file.fileName)}
                       disabled={isLoading}
                       className="flex items-center px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm font-medium disabled:opacity-70"
                     >
                       {isLoading ? 'Downloading...' : (<><FiDownload className="mr-2" /> Download</>)}
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}

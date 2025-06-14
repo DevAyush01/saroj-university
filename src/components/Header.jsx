@@ -14,6 +14,8 @@ const navItems = [
         title: "Institutional Development Plan",
         path: "/about/development-plan",
       },
+      { title: "Act and Statutes or MoA", path: "/about/approvals-documents" },
+      { title: "Institutional Development Plan", path: "/about/development-plan" },
       { title: "Constituent Units", path: "/about/constituent-units" },
       { title: "Accreditation", path: "/about/accreditation" },
       { title: "Recognition", path: "/about/recognition" },

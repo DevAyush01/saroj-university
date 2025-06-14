@@ -18,6 +18,11 @@ import StatsSection from "../components/StatsSection.jsx";
 import GovernmentApprovals from "../components/GovernmentApprovals.jsx";
 import ApprovalsSection from "../components/GovernmentApprovals.jsx";
 import ProgramsSection from "../components/ProgramsSection.jsx";
+import AIBanner from "../components/Aibanner.jsx";
+import AIBannerV2 from "../components/Aibanner.jsx";
+import NeoAIBanner from "../components/Aibanner.jsx";
+import LightAIBanner from "../components/Aibanner.jsx";
+import CompactAIBanner from "../components/Aibanner.jsx";
 
 function Home() {
   const logos = [
@@ -35,6 +40,7 @@ function Home() {
       <Layout>
         <FloatingAdmissionAlert/>
         <HeroSection/>
+        <LightAIBanner/>
         <HiringPartnersSection />
         <StatsSection/>
         <ApprovalsSection />
