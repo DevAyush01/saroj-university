@@ -2,6 +2,7 @@ import logo from "../assets/logo.png";
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
+import programsData from '../assets/json/programs.json';
 
 const navItems = [
   {
@@ -9,13 +10,11 @@ const navItems = [
     path: "/about",
     subItems: [
       { title: "About SIU", path: "/about/about-siu" },
-      { title: "Act and Statutes or MoA", path: "/about/act-statutes" },
+      
       {
         title: "Institutional Development Plan",
         path: "/about/development-plan",
       },
-      { title: "Act and Statutes or MoA", path: "/about/approvals-documents" },
-      { title: "Institutional Development Plan", path: "/about/development-plan" },
       { title: "Constituent Units", path: "/about/constituent-units" },
       { title: "Accreditation", path: "/about/accreditation" },
       { title: "Recognition", path: "/about/recognition" },
@@ -23,6 +22,15 @@ const navItems = [
       { title: "Annual Account", path: "/about/annual-account" },
       { title: "Committees", path: "/about/committees" },
       { title: "Mandatory Disclosure", path: "/about/mandatory-disclosure" },
+      { title: "Act and Statutes or MoA", path: "/about/approvals-documents" },
+      // { title: "Institutional Development Plan", path: "/about/development-plan" },
+      // { title: "Constituent Units", path: "/about/constituent-units" },
+      // { title: "Accreditation", path: "/about/accreditation" },
+      // { title: "Recognition", path: "/about/recognition" },
+      // { title: "Annual Reports", path: "/about/annual-reports" },
+      // { title: "Annual Account", path: "/about/annual-account" },
+      // { title: "Committees", path: "/about/committees" },
+      // { title: "Mandatory Disclosure", path: "/about/mandatory-disclosure" },
     ],
   },
   {
@@ -53,197 +61,11 @@ const navItems = [
       },
     ],
   },
-  {
+{
     title: "Programs",
     path: "/programs",
     megaMenu: true,
-    columns: [
-      {
-        heading: "COLLABORATION",
-        items: [
-          {
-            title: "B.Tech - CSE with AI & ML [Microsoft]",
-            path: "/programs/btech-cse-ai-ml-microsoft",
-          },
-          {
-            title: "B.Tech - CSE with Data Science [Google]",
-            path: "/programs/btech-cse-data-science-google",
-          },
-          {
-            title: "B.Tech - CSE Cyber Security [CNS/CFS]",
-            path: "/programs/btech-cse-cyber-security",
-          },
-          {
-            title: "B.Tech - CSE with Cloud Computing [Google]",
-            path: "/programs/btech-cse-cloud-computing",
-          },
-          {
-            title: "M.Tech - CSE with AI & ML [CSES]",
-            path: "/programs/mtech-cse-ai-ml",
-          },
-          {
-            title: "BBA(H) - Business Analytics [KPMG]",
-            path: "/programs/bba-business-analytics",
-          },
-          {
-            title: "MBA - Global Business Management [KPMG]",
-            path: "/programs/mba-global-business",
-          },
-        ],
-      },
-      {
-        heading: "TCS ACADEMIA", // New heading for TCS courses
-        items: [
-          {
-            title: "Design Thinking - Practitioner's Perspective [TCS]",
-            path: "/programs/tcs/design-thinking",
-          },
-          {
-            title: "Innovation and Entrepreneurship [TCS]",
-            path: "/programs/tcs/innovation-entrepreneurship",
-          },
-          {
-            title: "Artificial Intelligence for Real-World Application [TCS]",
-            path: "/programs/tcs/ai-real-world",
-          },
-          {
-            title: "Machine Learning for Real-World Application [TCS]",
-            path: "/programs/tcs/ml-real-world",
-          },
-          {
-            title: "Statistics using R and Python [TCS]",
-            path: "/programs/tcs/statistics-r-python",
-          },
-          {
-            title: "Advanced Cyber Security - An Application Approach [TCS]",
-            path: "/programs/tcs/advanced-cyber-security",
-          },
-          { title: "Cryptography [TCS]", path: "/programs/tcs/cryptography" },
-          {
-            title: "Cloud Development [TCS]",
-            path: "/programs/tcs/cloud-development",
-          },
-          {
-            title: "Application of Deep Learning and Neural Networks [TCS]",
-            path: "/programs/tcs/deep-learning-neural-networks",
-          },
-          {
-            title: "Information Security - Practitioner's Perspective [TCS]",
-            path: "/programs/tcs/information-security",
-          },
-          {
-            title: "Applied Cloud Computing [TCS]",
-            path: "/programs/tcs/applied-cloud-computing",
-          },
-          {
-            title: "Data Modeling and Visualization [TCS]",
-            path: "/programs/tcs/data-modeling-visualization",
-          },
-          {
-            title: "Data Mining and Warehousing [TCS]",
-            path: "/programs/tcs/data-mining-warehousing",
-          },
-          {
-            title: "Data Analysis with Excel [TCS]",
-            path: "/programs/tcs/data-analysis-excel",
-          },
-          {
-            title: "Data Analytics and Reporting [TCS]",
-            path: "/programs/tcs/data-analytics-reporting",
-          },
-          { title: "Big Data on Cloud [TCS]", path: "/programs/tcs/big-data-cloud" },
-          {
-            title: "Practical Approach to Cyber Security [TCS]",
-            path: "/programs/tcs/practical-cyber-security",
-          },
-        ],
-      },
-      {
-        heading: "ENGINEERING",
-        items: [
-          {
-            title: "B.Tech - Civil Engineering",
-            path: "/programs/btech-civil",
-          },
-          {
-            title: "B.Tech - Mechanical Engineering",
-            path: "/programs/btech-mechanical",
-          },
-          {
-            title: "B.Tech - Electronics and Communication Engineering",
-            path: "/programs/btech-ece",
-          },
-          {
-            title: "B.Tech - Electrical Engineering",
-            path: "/programs/btech-electrical",
-          },
-          { title: "B.Tech - Biotechnology", path: "/programs/btech-biotech" },
-          {
-            title: "M.Tech - CE Construction Technology & Management",
-            path: "/programs/mtech-construction",
-          },
-          {
-            title: "M.Tech - CE Structural Engineering",
-            path: "/programs/mtech-structural",
-          },
-        ],
-      },
-      {
-        heading: "BUSINESS",
-        items: [
-          { title: "BBA (Hons)", path: "/programs/bba" },
-          { title: "BBA-DM (Hons)", path: "/programs/bba-dm" },
-          {
-            title: "BBA - Branding & Advertising (Hons)",
-            path: "/programs/bba-branding",
-          },
-          { title: "MBA", path: "/programs/mba" },
-          { title: "MBA (Strategic HR)", path: "/programs/mba-hr" },
-          {
-            title: "MBA (Digital Marketing)",
-            path: "/programs/mba-digital-marketing",
-          },
-        ],
-      },
-      {
-        heading: "COMPUTING & SCIENCES",
-        items: [
-          { title: "BCA (Hons)", path: "/programs/bca" },
-          { title: "MCA", path: "/programs/mca" },
-          {
-            title: "B.Sc. (Hons) - Animation, VFX & Gaming",
-            path: "/programs/bsc-animation",
-          },
-          { title: "B.Sc. (Hons) - Physics", path: "/programs/bsc-physics" },
-          {
-            title: "B.Sc. (Hons) - Chemistry",
-            path: "/programs/bsc-chemistry",
-          },
-          { title: "B.Sc. (Hons) - Mathematics", path: "/programs/bsc-maths" },
-          { title: "M.Sc. Physics", path: "/programs/msc-physics" },
-        ],
-      },
-      {
-        heading: "LEGAL & COMMERCE",
-        items: [
-          { title: "Bachelor of Law (LLB)", path: "/programs/llb" },
-          { title: "B.A.LL.B. (Hons) Integrated", path: "/programs/ba-llb" },
-          { title: "BBA.LL.B. (Hons) Integrated", path: "/programs/bba-llb" },
-          { title: "B.Com (Hons)", path: "/programs/bcom" },
-          {
-            title: "BA. (Hons) - Liberal Arts",
-            path: "/programs/ba-liberal-arts",
-          },
-          { title: "B.A. Psychology (Hons.)", path: "/programs/ba-psychology" },
-        ],
-      },
-      {
-        heading: "PHARMACY",
-        items: [
-          { title: "B.Pharm (Bachelor of Pharmacy)", path: "/programs/bpharm" },
-        ],
-      },
-    ],
+    columns: programsData.columns // Use the imported programs data
   },
   {
     title: "Academics",
@@ -350,11 +172,11 @@ function Header() {
 
   return (
     <div ref={navRef}>
-    <nav
-        className={`fixed left-0 right-0 top-0 z-40 shadow-xl transition-all duration-300 ${
+      <nav
+        className={`fixed left-0 right-0 top-0 z-40 shadow-xl transition-all duration-300 mb-4 pb-4 ${
           scrolled || window.location.pathname !== "/"
-            ? "py-2 bg-white text-gray-600"
-            : "bg-white py-4 text-black"
+            ? "py-2 bg-white text-gray-600" // This applies when scrolled OR not on home page
+            : "bg-transparent py-4 text-gray-600" // Change text-white to text-gray-600 for home page without scroll
         }`}
       >
         <div className="max-w-8xl mx-auto px-4">
@@ -386,9 +208,10 @@ function Header() {
                                       ? "text-orange-500"
                                       : ""
                                   }`}
+                        aria-haspopup="true"
+                        aria-expanded={openSubmenu === index}
                       >
                         {item.title}
-                        
                         <ChevronDown
                           className={`w-4 h-4 ml-1 transition-transform duration-300 ${
                             openSubmenu === index ? "rotate-180" : ""
@@ -448,11 +271,12 @@ function Header() {
 
                           {/* Main grid for two columns */}
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                            {/* Left column for Collaboration */}
+                            {/* Left column for Collaboration and TCS Academia */}
                             <div>
                               {item.columns.map(
                                 (column, colIndex) =>
-                                  column.heading === "COLLABORATION" && (
+                                  (column.heading === "COLLABORATION" ||
+                                    column.heading === "TCS ACADEMIA") && ( // Changed here
                                     <div
                                       key={`${column.heading}-${colIndex}`}
                                       className="relative"
@@ -470,14 +294,18 @@ function Header() {
                                             >
                                               <Link
                                                 to={subItem.path}
-                                                className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-start group"
+                                                className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group"
                                                 onClick={closeAllMenus}
                                               >
-                                                <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-                                                {subItem.title}
-                                                <Link to="" className="">
-                                                  <ArrowRight size={16}  color="orange"/>
-                                                </Link>
+                                                <div className="flex items-start">
+                                                  <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                                                  {subItem.title}
+                                                </div>
+                                                <ArrowRight
+                                                  size={16}
+                                                  color="orange"
+                                                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                                />
                                               </Link>
                                             </li>
                                           )
@@ -492,7 +320,8 @@ function Header() {
                             <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                               {item.columns.map(
                                 (column, colIndex) =>
-                                  column.heading !== "COLLABORATION" && (
+                                  column.heading !== "COLLABORATION" &&
+                                  column.heading !== "TCS ACADEMIA" && ( // Changed here
                                     <div
                                       key={`${column.heading}-${colIndex}`}
                                       className="relative"
@@ -512,26 +341,33 @@ function Header() {
                                             >
                                               <Link
                                                 to={subItem.path}
-                                                className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-start group"
+                                                className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group"
                                                 onClick={closeAllMenus}
                                               >
-                                                <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-                                                {subItem.title}
-                                                <Link to="" className="">
-                                                  <ArrowRight size={16}  color="orange"/>
-                                                </Link>
+                                                <div className="flex items-start">
+                                                  <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                                                  {subItem.title}
+                                                </div>
+                                                <ArrowRight
+                                                  size={16}
+                                                  color="orange"
+                                                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                                />
                                               </Link>
                                             </li>
                                           ))}
                                       </ul>
                                       {/* View all course button remains for each category */}
                                       <Link
-                                        to="/programs"
-                                        className="text-orange-500 md:font-sm hover:underline flex items-center"
+                                        to="/programs" // Consider making this more dynamic if each column has a specific "view all" link
+                                        className="text-orange-500 md:font-sm hover:underline flex items-center mt-2"
                                         onClick={closeAllMenus}
                                       >
                                         View all programs
-                                        <ChevronDown className="w-4 h-4 ml-1 transform rotate-90" />
+                                        <ArrowRight
+                                          size={16}
+                                          className="ml-1"
+                                        />
                                       </Link>
                                     </div>
                                   )
@@ -560,6 +396,7 @@ function Header() {
             <button
               className="xl:hidden p-2 rounded-md hover:bg-gray-100"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {mobileMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -582,6 +419,8 @@ function Header() {
                       <button
                         onClick={() => toggleMobileSubmenu(index)}
                         className="flex items-center justify-between w-full px-3 py-3 hover:bg-gray-50"
+                        aria-haspopup="true"
+                        aria-expanded={openMobileSubmenu === index}
                       >
                         <span>{item.title}</span>
                         <ChevronDown
@@ -593,7 +432,7 @@ function Header() {
                       <div
                         className={`${
                           openMobileSubmenu === index
-                            ? "max-h-[2000px]"
+                            ? "max-h-[2000px]" // Increased max-h for potential longer menus
                             : "max-h-0"
                         } overflow-hidden transition-all duration-300 ease-in-out`}
                       >
@@ -643,14 +482,14 @@ function Header() {
                                     >
                                       <Link
                                         to={subItem.path}
-                                        className="block px-3 py-2 hover:bg-gray-50 flex items-center group relative"
+                                        className="block px-3 py-2 hover:bg-gray-50 flex items-center justify-between group relative" // Added justify-between
                                         onClick={closeAllMenus}
                                       >
                                         {subItem.title}
-
-                                        <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                          &rarr;
-                                        </span>
+                                        <ArrowRight
+                                          size={16}
+                                          className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                        />
                                       </Link>
                                     </li>
                                   ))}

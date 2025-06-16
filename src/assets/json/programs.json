@@ -1,0 +1,479 @@
+{
+  "title": "Programs",
+  "path": "/programs",
+  "megaMenu": true,
+  "columns": [
+    {
+      "heading": "TCS ACADEMIA",
+      "items": [
+        {
+          "title": "Design Thinking - Practitioner's Perspective [TCS]",
+          "path": "/programs/tcs/design-thinking"
+        },
+        {
+          "title": "Innovation and Entrepreneurship [TCS]",
+          "path": "/programs/tcs/innovation-entrepreneurship"
+        },
+        {
+          "title": "Artificial Intelligence for Real-World Application [TCS]",
+          "path": "/programs/tcs/ai-real-world"
+        },
+        {
+          "title": "Machine Learning for Real-World Application [TCS]",
+          "path": "/programs/tcs/ml-real-world"
+        },
+        {
+          "title": "Statistics using R and Python [TCS]",
+          "path": "/programs/tcs/statistics-r-python"
+        },
+        {
+          "title": "Advanced Cyber Security - An Application Approach [TCS]",
+          "path": "/programs/tcs/advanced-cyber-security"
+        },
+        {
+          "title": "Cryptography [TCS]",
+          "path": "/programs/tcs/cryptography"
+        },
+        {
+          "title": "Cloud Development [TCS]",
+          "path": "/programs/tcs/cloud-development"
+        },
+        {
+          "title": "Application of Deep Learning and Neural Networks [TCS]",
+          "path": "/programs/tcs/deep-learning-neural-networks"
+        },
+        {
+          "title": "Information Security - Practitioner's Perspective [TCS]",
+          "path": "/programs/tcs/information-security"
+        },
+        {
+          "title": "Applied Cloud Computing [TCS]",
+          "path": "/programs/tcs/applied-cloud-computing"
+        },
+        {
+          "title": "Data Modeling and Visualization [TCS]",
+          "path": "/programs/tcs/data-modeling-visualization"
+        },
+        {
+          "title": "Data Mining and Warehousing [TCS]",
+          "path": "/programs/tcs/data-mining-warehousing"
+        },
+        {
+          "title": "Data Analysis with Excel [TCS]",
+          "path": "/programs/tcs/data-analysis-excel"
+        },
+        {
+          "title": "Data Analytics and Reporting [TCS]",
+          "path": "/programs/tcs/data-analytics-reporting"
+        },
+        {
+          "title": "Big Data on Cloud [TCS]",
+          "path": "/programs/tcs/big-data-cloud"
+        },
+        {
+          "title": "Practical Approach to Cyber Security [TCS]",
+          "path": "/programs/tcs/practical-cyber-security"
+        }
+      ]
+    },
+    {
+      "heading": "COLLABORATION",
+      "items": [
+        {
+          "title": "B.Tech - CSE with AI & ML [Microsoft]",
+          "path": "/programs/btech-cse-ai-ml-microsoft"
+        },
+        {
+          "title": "B.Tech - CSE with Data Science [Google]",
+          "path": "/programs/btech-cse-data-science-google"
+        },
+        {
+          "title": "B.Tech - CSE Cyber Security [CNS/CFS]",
+          "path": "/programs/btech-cse-cyber-security"
+        },
+        {
+          "title": "B.Tech - CSE with Cloud Computing [Google]",
+          "path": "/programs/btech-cse-cloud-computing"
+        },
+        {
+          "title": "M.Tech - CSE with AI & ML [CSES]",
+          "path": "/programs/mtech-cse-ai-ml"
+        },
+        {
+          "title": "BBA(H) - Business Analytics [KPMG]",
+          "path": "/programs/bba-business-analytics"
+        },
+        {
+          "title": "MBA - Global Business Management [KPMG]",
+          "path": "/programs/mba-global-business"
+        }
+      ]
+    },
+    {
+      "heading": "ARTIFICIAL INTELLIGENCE & TECHNOLOGY",
+      "items": [
+        {
+          "title": "B.Tech - AI & Machine Learning",
+          "path": "/programs/btech-ai-ml"
+        },
+        {
+          "title": "B.Tech - Data Science",
+          "path": "/programs/btech-data-science"
+        },
+        {
+          "title": "B.Tech - Robotics",
+          "path": "/programs/btech-robotics"
+        },
+        {
+          "title": "B.Tech - Computer Science & Engineering",
+          "path": "/programs/btech-cse"
+        },
+        {
+          "title": "M.Tech - AI & Machine Learning",
+          "path": "/programs/mtech-ai-ml"
+        },
+        {
+          "title": "M.Tech - Data Science",
+          "path": "/programs/mtech-data-science"
+        },
+        {
+          "title": "M.Tech - Robotics",
+          "path": "/programs/mtech-robotics"
+        },
+        {
+          "title": "M.Tech - Computer Science & Engineering",
+          "path": "/programs/mtech-cse"
+        }
+      ]
+    },
+
+    {
+      "heading": "MANAGEMENT & BUSINESS",
+      "items": [
+        {
+          "title": "BBA - General",
+          "path": "/programs/bba-general"
+        },
+        {
+          "title": "BBA - Banking & Finance",
+          "path": "/programs/bba-banking-finance"
+        },
+        {
+          "title": "BBA - International Business",
+          "path": "/programs/bba-international-business"
+        },
+        {
+          "title": "BBA - Marketing",
+          "path": "/programs/bba-marketing"
+        },
+        {
+          "title": "BBA - Digital Marketing",
+          "path": "/programs/bba-digital-marketing"
+        },
+        {
+          "title": "BBA - Logistics & SCM",
+          "path": "/programs/bba-logistics-scm"
+        },
+        {
+          "title": "BBA - HR",
+          "path": "/programs/bba-hr"
+        },
+        {
+          "title": "BBA - IT",
+          "path": "/programs/bba-it"
+        },
+        {
+          "title": "BBA - Entrepreneurship",
+          "path": "/programs/bba-entrepreneurship"
+        },
+        {
+          "title": "BBA - Insurance",
+          "path": "/programs/bba-insurance"
+        },
+        {
+          "title": "BBA - Retail & Start-Ups",
+          "path": "/programs/bba-retail-startups"
+        },
+        {
+          "title": "MBA",
+          "path": "/programs/mba"
+        }
+      ]
+    },
+    
+    {
+      "heading": "HUMANITIES & EDUCATION",
+      "items": [
+        {
+          "title": "BA",
+          "path": "/programs/ba"
+        },
+        {
+          "title": "BS - International Relations",
+          "path": "/programs/bs-international-relations"
+        },
+        {
+          "title": "B.Com",
+          "path": "/programs/bcom"
+        },
+        {
+          "title": "B.Ed",
+          "path": "/programs/bed"
+        },
+        {
+          "title": "MA",
+          "path": "/programs/ma"
+        },
+        {
+          "title": "MS - International Relations",
+          "path": "/programs/ms-international-relations"
+        },
+        {
+          "title": "M.Com",
+          "path": "/programs/mcom"
+        },
+        {
+          "title": "M.Ed",
+          "path": "/programs/med"
+        }
+      ]
+    },
+    {
+      "heading": "ENGINEERING & TECHNOLOGY",
+      "items": [
+        {
+          "title": "B.Tech - CSE",
+          "path": "/programs/btech-cse"
+        },
+        {
+          "title": "B.Tech - IT",
+          "path": "/programs/btech-it"
+        },
+        {
+          "title": "B.Tech - Cyber Security",
+          "path": "/programs/btech-cyber-security"
+        },
+        {
+          "title": "B.Tech - IOT",
+          "path": "/programs/btech-iot"
+        },
+        {
+          "title": "B.Tech - Electronics & Communication",
+          "path": "/programs/btech-ece"
+        },
+        {
+          "title": "B.Tech - Mechanical Engineering",
+          "path": "/programs/btech-mechanical"
+        },
+        {
+          "title": "B.Tech - Civil Engineering",
+          "path": "/programs/btech-civil"
+        },
+        {
+          "title": "B.Tech - Mechtronics",
+          "path": "/programs/btech-mechtronics"
+        },
+        {
+          "title": "B.Tech - Bio-Tech",
+          "path": "/programs/btech-biotech"
+        },
+        {
+          "title": "B.Tech - Electrical Engineering",
+          "path": "/programs/btech-electrical"
+        },
+        {
+          "title": "M.Tech - CSE",
+          "path": "/programs/mtech-cse"
+        },
+        {
+          "title": "M.Tech - IT",
+          "path": "/programs/mtech-it"
+        },
+        {
+          "title": "M.Tech - Cyber Security",
+          "path": "/programs/mtech-cyber-security"
+        },
+        {
+          "title": "M.Tech - IOT",
+          "path": "/programs/mtech-iot"
+        },
+        {
+          "title": "M.Tech - Electronics & Communication",
+          "path": "/programs/mtech-ece"
+        },
+        {
+          "title": "M.Tech - Mechanical Engineering",
+          "path": "/programs/mtech-mechanical"
+        },
+        {
+          "title": "M.Tech - Civil Engineering",
+          "path": "/programs/mtech-civil"
+        },
+        {
+          "title": "M.Tech - Mechtronics",
+          "path": "/programs/mtech-mechtronics"
+        },
+        {
+          "title": "M.Tech - Bio-Tech",
+          "path": "/programs/mtech-biotech"
+        },
+        {
+          "title": "M.Tech - Electrical Engineering",
+          "path": "/programs/mtech-electrical"
+        },
+        {
+          "title": "Diploma - Civil Engineering",
+          "path": "/programs/diploma-civil"
+        },
+        {
+          "title": "Diploma - Electrical Engineering",
+          "path": "/programs/diploma-electrical"
+        },
+        {
+          "title": "Diploma - Mechanical Engineering",
+          "path": "/programs/diploma-mechanical"
+        },
+        {
+          "title": "Diploma - Computer Science",
+          "path": "/programs/diploma-cs"
+        }
+      ]
+    },
+    {
+      "heading": "PHARMACY",
+      "items": [
+        {
+          "title": "B.Pharm",
+          "path": "/programs/bpharm"
+        },
+        {
+          "title": "D.Pharm",
+          "path": "/programs/dpharm"
+        },
+        {
+          "title": "M.Pharm",
+          "path": "/programs/mpharm"
+        },
+        {
+          "title": "Ph.D - Pharmacy",
+          "path": "/programs/phd-pharmacy"
+        }
+      ]
+    },
+    {
+      "heading": "SPORTS SCIENCE",
+      "items": [
+        {
+          "title": "BS - Sports Science",
+          "path": "/programs/bs-sports-science"
+        },
+        {
+          "title": "MS - Sports Science",
+          "path": "/programs/ms-sports-science"
+        }
+      ]
+    },
+    {
+      "heading": "FILM & FASHION",
+      "items": [
+        {
+          "title": "B.Sc - Film Making",
+          "path": "/programs/bsc-film-making"
+        },
+        {
+          "title": "B.Sc - Script Writing",
+          "path": "/programs/bsc-script-writing"
+        },
+        {
+          "title": "B.Sc - Cinematography",
+          "path": "/programs/bsc-cinematography"
+        },
+        {
+          "title": "BA - Acting & Drama",
+          "path": "/programs/ba-acting-drama"
+        },
+        {
+          "title": "BA - Advertising",
+          "path": "/programs/ba-advertising"
+        },
+        {
+          "title": "BA - Journalism",
+          "path": "/programs/ba-journalism"
+        },
+        {
+          "title": "BA - PR Events",
+          "path": "/programs/ba-pr-events"
+        },
+        {
+          "title": "B.Des",
+          "path": "/programs/bdes"
+        },
+        {
+          "title": "M.Sc - Film Making",
+          "path": "/programs/msc-film-making"
+        },
+        {
+          "title": "M.Sc - Script Writing",
+          "path": "/programs/msc-script-writing"
+        },
+        {
+          "title": "M.Sc - Cinematography",
+          "path": "/programs/msc-cinematography"
+        },
+        {
+          "title": "MA - Acting & Drama",
+          "path": "/programs/ma-acting-drama"
+        },
+        {
+          "title": "MA - Advertising",
+          "path": "/programs/ma-advertising"
+        },
+        {
+          "title": "MA - Journalism",
+          "path": "/programs/ma-journalism"
+        },
+        {
+          "title": "MA - PR Events",
+          "path": "/programs/ma-pr-events"
+        },
+        {
+          "title": "M.Des",
+          "path": "/programs/mdes"
+        },
+        {
+          "title": "Diploma - Film Making",
+          "path": "/programs/diploma-film-making"
+        },
+        {
+          "title": "Diploma - Script Writing",
+          "path": "/programs/diploma-script-writing"
+        },
+        {
+          "title": "Diploma - Acting & Drama",
+          "path": "/programs/diploma-acting-drama"
+        },
+        {
+          "title": "Diploma - Advertisement",
+          "path": "/programs/diploma-advertisement"
+        },
+        {
+          "title": "Diploma - Journalism",
+          "path": "/programs/diploma-journalism"
+        },
+        {
+          "title": "Diploma - PR Events",
+          "path": "/programs/diploma-pr-events"
+        }
+      ]
+    },
+    {
+      "heading": "HEALTH SCIENCES",
+      "items": [
+        {
+          "title": "Diploma - Public Health",
+          "path": "/programs/diploma-public-health"
+        }
+      ]
+    }
+  ]
+}
