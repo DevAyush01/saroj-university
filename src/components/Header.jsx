@@ -270,6 +270,8 @@ const navItems = [
     subItems: [
       { title: "Admission Process", path: "/admissions/admission-process" },
       { title: "Eligibility Criteria", path: "/admissions/admission-criteria" },
+      { title: "Fee Structure", path: "/admissions/fee-structure" },
+
       { title: "Scholarship", path: "/admissions/scholarship" },
       { title: "Admission Helpdesk", path: "/admissions/helpdesk" },
     ],
@@ -362,7 +364,7 @@ function Header() {
             </Link>
 
             <ul
-              className="hidden font-outfit md:flex space-x-2 text-lg items-center"
+              className="xl:flex  hidden font-outfit  space-x-2 text-lg items-center"
               ref={menuRef}
             >
               {/* Navbar items */}
@@ -556,7 +558,7 @@ function Header() {
             </ul>
 
             <button
-              className="md:hidden p-2 rounded-md hover:bg-gray-100"
+              className="xl:hidden p-2 rounded-md hover:bg-gray-100"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? (
@@ -568,7 +570,7 @@ function Header() {
           </div>
 
           <div
-            className={`md:hidden ${
+            className={`xl:hidden ${
               mobileMenuOpen ? "max-h-screen" : "max-h-0 overflow-hidden"
             } transition-all duration-300 ease-in-out`}
           >

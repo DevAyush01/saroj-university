@@ -23,6 +23,9 @@ import AIBannerV2 from "../components/Aibanner.jsx";
 import NeoAIBanner from "../components/Aibanner.jsx";
 import LightAIBanner from "../components/Aibanner.jsx";
 import CompactAIBanner from "../components/Aibanner.jsx";
+import ThinkInspirationSection from "../components/ThinkInspiration.jsx";
+import PopupForm from "../components/PopupForm.jsx";
+import TopScrollButton from "../components/ScrollTopButton.jsx";
 
 function Home() {
   const logos = [
@@ -38,23 +41,20 @@ function Home() {
   return (
     <>
       <Layout>
+        <TopScrollButton/>
+        <PopupForm/>
         <FloatingAdmissionAlert/>
         <HeroSection/>
         <LightAIBanner/>
-        <HiringPartnersSection />
-        <StatsSection/>
-        <ApprovalsSection />
         <CompaniesTieUps/>
         <StatsSection/>
         <HiringPartnersSection />
-        <ProgramsSection />
         <ApprovalsSection />
+       <ThinkInspirationSection/>
+        <ProgramsSection />
         <NewsSection/>
-        {/* <Happenings /> */}
         <TestimonialSlider />
-        {/* <WhyChooseUs />
-        <ResearchPage />
-        <EventsPage /> */}
+        
         
       </Layout>
     </>

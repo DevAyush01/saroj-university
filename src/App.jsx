@@ -14,6 +14,7 @@ import ProgramsPage from "./pages/programs/ProgramsPage";
 import ErrorPage from "./pages/notFoundPage";
 import Courses from "./pages/about/Courses";
 import AdmissionCriteria from "./pages/Admission/AdmissionCriteria";
+import SIUFeeStructure from "./pages/Admission/FeeStructure";
 
 function App() {
   return (
@@ -66,6 +67,8 @@ function App() {
       <Route path="admissions/admission-criteria" element={ <AdmissionCriteria /> } /> 
       <Route path="admissions/scholarship" element={<ScholarshipPage />} /> 
       <Route path="admissions/admission-process" element={<AdmissionProcess />} />
+      <Route path="admissions/fee-structure" element={<SIUFeeStructure />} />
+
 
       
 
