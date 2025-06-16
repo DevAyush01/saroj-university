@@ -10,7 +10,7 @@ const navItems = [
     path: "/about",
     subItems: [
       { title: "About SIU", path: "/about/about-siu" },
-      { title: "Act and Statutes or MoA", path: "/about/act-statutes" },
+      
       {
         title: "Institutional Development Plan",
         path: "/about/development-plan",
@@ -22,6 +22,15 @@ const navItems = [
       { title: "Annual Account", path: "/about/annual-account" },
       { title: "Committees", path: "/about/committees" },
       { title: "Mandatory Disclosure", path: "/about/mandatory-disclosure" },
+      { title: "Act and Statutes or MoA", path: "/about/approvals-documents" },
+      // { title: "Institutional Development Plan", path: "/about/development-plan" },
+      // { title: "Constituent Units", path: "/about/constituent-units" },
+      // { title: "Accreditation", path: "/about/accreditation" },
+      // { title: "Recognition", path: "/about/recognition" },
+      // { title: "Annual Reports", path: "/about/annual-reports" },
+      // { title: "Annual Account", path: "/about/annual-account" },
+      // { title: "Committees", path: "/about/committees" },
+      // { title: "Mandatory Disclosure", path: "/about/mandatory-disclosure" },
     ],
   },
   {

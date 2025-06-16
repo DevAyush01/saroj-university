@@ -3,8 +3,8 @@ import HomePage from "./pages/HomePage";
 import Contact from "./pages/contact/Contact";
 import AboutSIU from "./pages/about/AboutSIU";
 import ScholarshipPage from "./pages/admission/ScholarshipPage";
+import AdmissionCriteria from "./pages/Admission/AdmissionCriteria"
 import AdmissionProcess from "./pages/admission/AdmissionProcess";
-import AdmissionCriteria from "./pages/admission/AdmissionCriteria";
 import HistoryPage from "./pages/about/HistoryPage";
 import VisionMissionPage from "./pages/about/VisionMissionPage";
 import Acts from "./pages/about/Acts";
@@ -28,13 +28,15 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
        <Route path="/programs" element={<ProgramsPage />} />
+      
+      {/* About  */}
 
       <Route path="/about/about-siu" element={<AboutSIU />} />
       <Route path = "about/history" element ={ <HistoryPage/> } />
       <Route path = "about/vision-mission" element ={ <VisionMissionPage/> } />
       <Route path = "about/acts" element ={ <Acts />  } />
       <Route path = "about/approvals-documents" element ={ <ApprovalsDocuments/>  } />
-      <Route path = "about/courses" element ={ <Courses/> } />
+      <Route path = "about/all-courses" element ={ <Courses/> } />
       
 {/* Programs */}
 <Route path= "/programs/btech-ai-ml" element ={ <AiAndTechPage/>} />
@@ -47,6 +49,35 @@ function App() {
 <Route path= "/programs/sports-science" element ={ <SportsScience/>} />
 
 
+      <Route
+        path="admissions/admission-criteria"
+        element={<AdmissionCriteria />}
+      />
+
+      <Route path="admissions/scholarship" element={<ScholarshipPage />} />
+
+      <Route
+        path="admissions/admission-process"
+        element={<AdmissionProcess />}
+      />
+
+      <Route path="about/history" element={<HistoryPage />} />
+
+      <Route path="about/vision-mission" element={<VisionMissionPage />} />
+
+      <Route path="about/acts" element={<Acts />} />
+
+      <Route
+        path="about/approvals-documents"
+        element={<ApprovalsDocuments />}
+      />
+
+      <Route path="/administration/chancellor" element={<ChancellorPage />} />
+
+      <Route
+        path="/administration/vice-chancellor"
+        element={<ViceChancellorPage />}
+      />
     {/* Admissions  */}
 
       <Route path="admissions/admission-criteria" element={ <AdmissionCriteria /> } /> 
