@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -575,7 +576,7 @@ const ProgramsSection = () => {
               transition={{ delay: 0.2 }}
             >
               <a
-                href="#all-programs"
+                href="/programs"
                 className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white rounded-lg transition-all shadow-md hover:shadow-lg font-medium"
               >
                 Explore All Programs

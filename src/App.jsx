@@ -3,7 +3,6 @@ import HomePage from "./pages/HomePage";
 import Contact from "./pages/contact/Contact";
 import AboutSIU from "./pages/about/AboutSIU";
 import ScholarshipPage from "./pages/admission/ScholarshipPage";
-import AdmissionCriteria from "./pages/admission/AdmissionCriteria";
 import AdmissionProcess from "./pages/admission/AdmissionProcess";
 import AdmissionCriteria from "./pages/admission/AdmissionCriteria";
 import HistoryPage from "./pages/about/HistoryPage";
@@ -12,20 +11,23 @@ import Acts from "./pages/about/Acts";
 import ApprovalsDocuments from "./pages/about/ApprovalsDocuments";
 import ChancellorPage from "./pages/administration/Chancellor";
 import ViceChancellorPage from "./pages/administration/ViceChancellor";
-import ProgramsPage from "./pages/programs/ProgramsPage";
+import ProgramsPage from "./pages/programs/AllPrograms";
 import ErrorPage from "./pages/notFoundPage";
 import Courses from "./pages/about/Courses";
+import AiAndTechPage from "./pages/programs/AiAndTechPage";
+import HealthSciencesPage from "./pages/programs/BasicHealthSciencePage";
+import HumanitiesPage from "./pages/programs/HumanitiesPage";
+import EntrepreneurshipAndBusiness from "./pages/programs/EntrepreneurshipAndBusiness";
+import FilmsAndFashion from "./pages/programs/FilmsAndFashion";
+import ManagementAndTechPage from "./pages/programs/ManagementAndTechPage";
+import PharmacyPage from "./pages/programs/PharmacyPage";
+import SportsScience from "./pages/programs/SportsScience";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-<<<<<<< HEAD
        <Route path="/programs" element={<ProgramsPage />} />
-=======
-      
-      {/* About  */}
->>>>>>> 88dedfa (Progarms section updated, courses page created)
 
       <Route path="/about/about-siu" element={<AboutSIU />} />
       <Route path = "about/history" element ={ <HistoryPage/> } />
@@ -34,39 +36,17 @@ function App() {
       <Route path = "about/approvals-documents" element ={ <ApprovalsDocuments/>  } />
       <Route path = "about/courses" element ={ <Courses/> } />
       
+{/* Programs */}
+<Route path= "/programs/btech-ai-ml" element ={ <AiAndTechPage/>} />
+<Route path= "/programs/diploma-public-health" element ={ <HealthSciencesPage/>} />
+<Route path= "/programs/humanities" element ={ <HumanitiesPage />} />
+<Route path= "/programs/entrepreneurship-and-business" element ={ <EntrepreneurshipAndBusiness/>} />
+<Route path= "/programs/films-and-fashion" element ={ <FilmsAndFashion/>} />
+<Route path= "/programs/management-and-tech" element ={ <ManagementAndTechPage/>} />
+<Route path= "/programs/pharmacy" element ={ <PharmacyPage/>} />
+<Route path= "/programs/sports-science" element ={ <SportsScience/>} />
 
 
-<<<<<<< HEAD
-      <Route
-        path="admissions/admission-criteria"
-        element={<AdmissionCriteria />}
-      />
-
-      <Route path="admissions/scholarship" element={<ScholarshipPage />} />
-
-      <Route
-        path="admissions/admission-process"
-        element={<AdmissionProcess />}
-      />
-
-      <Route path="about/history" element={<HistoryPage />} />
-
-      <Route path="about/vision-mission" element={<VisionMissionPage />} />
-
-      <Route path="about/acts" element={<Acts />} />
-
-      <Route
-        path="about/approvals-documents"
-        element={<ApprovalsDocuments />}
-      />
-
-      <Route path="/administration/chancellor" element={<ChancellorPage />} />
-
-      <Route
-        path="/administration/vice-chancellor"
-        element={<ViceChancellorPage />}
-      />
-=======
     {/* Admissions  */}
 
       <Route path="admissions/admission-criteria" element={ <AdmissionCriteria /> } /> 
@@ -82,7 +62,6 @@ function App() {
 
   {/* Contact Us  */}
       <Route path="/contact-us" element={<Contact />} />
->>>>>>> 88dedfa (Progarms section updated, courses page created)
 
       <Route path="*" element={<ErrorPage />} />
     </Routes>
