@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -465,18 +464,16 @@ const ProgramsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-12 max-w-7xl mx-auto"
         >
-          <div className="inline-flex items-center mb-3 px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium">
-            <RotateCw className="w-4 h-4 mr-2" />
-            Explore Our Programs
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Discover Your <span className="text-blue-600">Academic Pathway</span>
+          <h2 className="text-5xl text-left font-funneldisplay font-bold text-gray-900 mb-4">
+            Our Academic Programs
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose from our diverse range of undergraduate, postgraduate, and doctoral programs designed to shape future leaders.
-          </p>
+          <p className="text-lg font-funneldisplay text-left text-gray-600 ">
+            Explore our diverse range of undergraduate, postgraduate, and
+            doctoral programs designed to shape future leaders.
+            </p>
+       
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-8">

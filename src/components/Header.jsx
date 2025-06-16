@@ -10,7 +10,7 @@ const navItems = [
     path: "/about",
     subItems: [
       { title: "About SIU", path: "/about/about-siu" },
-      { title: "Act and Statutes or MoA", path: "/about/act-statutes" },
+      
       {
         title: "Institutional Development Plan",
         path: "/about/development-plan",
@@ -22,6 +22,15 @@ const navItems = [
       { title: "Annual Account", path: "/about/annual-account" },
       { title: "Committees", path: "/about/committees" },
       { title: "Mandatory Disclosure", path: "/about/mandatory-disclosure" },
+      { title: "Act and Statutes or MoA", path: "/about/approvals-documents" },
+      // { title: "Institutional Development Plan", path: "/about/development-plan" },
+      // { title: "Constituent Units", path: "/about/constituent-units" },
+      // { title: "Accreditation", path: "/about/accreditation" },
+      // { title: "Recognition", path: "/about/recognition" },
+      // { title: "Annual Reports", path: "/about/annual-reports" },
+      // { title: "Annual Account", path: "/about/annual-account" },
+      // { title: "Committees", path: "/about/committees" },
+      // { title: "Mandatory Disclosure", path: "/about/mandatory-disclosure" },
     ],
   },
   {
@@ -83,6 +92,8 @@ const navItems = [
     subItems: [
       { title: "Admission Process", path: "/admissions/admission-process" },
       { title: "Eligibility Criteria", path: "/admissions/admission-criteria" },
+      { title: "Fee Structure", path: "/admissions/fee-structure" },
+
       { title: "Scholarship", path: "/admissions/scholarship" },
       { title: "Admission Helpdesk", path: "/admissions/helpdesk" },
     ],
@@ -175,7 +186,7 @@ function Header() {
             </Link>
 
             <ul
-              className="hidden font-outfit md:flex space-x-2 text-lg items-center"
+              className="xl:flex  hidden font-outfit  space-x-2 text-lg items-center"
               ref={menuRef}
             >
               {/* Navbar items */}
@@ -386,7 +397,7 @@ function Header() {
             </ul>
 
             <button
-              className="md:hidden p-2 rounded-md hover:bg-gray-100"
+              className="xl:hidden p-2 rounded-md hover:bg-gray-100"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
@@ -399,7 +410,7 @@ function Header() {
           </div>
 
           <div
-            className={`md:hidden ${
+            className={`xl:hidden ${
               mobileMenuOpen ? "max-h-screen" : "max-h-0 overflow-hidden"
             } transition-all duration-300 ease-in-out`}
           >

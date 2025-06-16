@@ -3,7 +3,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Import your logo images (replace these with your actual image paths)
 import ugcLogo from '/approvalLogos/ugc.png'
-import naacLogo from '/approvalLogos/naac.webp'
 import internationalLogo from '/approvalLogos/aicte.png'
 import industryLogo from '/approvalLogos/pci.png'
 
@@ -18,17 +17,9 @@ const ApprovalsSection = () => {
   authority: "University Grants Commission",
   link: "#"
 },
+
 {
   id: 2,
-  name: "NAAC Accreditation",
-  logo: naacLogo,
-  description: "Saroj International University has been accredited by the National Assessment and Accreditation Council (NAAC) with a 'B+' grade, reflecting its commitment to quality in higher education.",
-  date: "March 22, 2020",
-  authority: "National Assessment and Accreditation Council",
-  link: "#"
-},
-{
-  id: 3,
   name: "AICTE Approval",
   logo: internationalLogo,
   description: "The university is approved by the All India Council for Technical Education (AICTE) to offer technical and professional programs in compliance with national standards.",
@@ -38,7 +29,7 @@ const ApprovalsSection = () => {
 },
 
 {
-  id: 4,
+  id: 3,
   name: "PCI Approval",
   logo: industryLogo,
   description: "The university is approved by the Pharmacy Council of India (PCI) to offer pharmacy programs, ensuring compliance with national standards for pharmaceutical education.",
@@ -88,9 +79,9 @@ const ApprovalsSection = () => {
   };
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-gray-50 font-funneldisplay">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-indigo-800">Approvals & Certificates</h2>
+        <h2 className="text-5xl font-bold max-w-7xl mx-auto mb-8">Approvals & Certificates</h2>
         
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Left Panel - Certificate List - Now 50% width */}

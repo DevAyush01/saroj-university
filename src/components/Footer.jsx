@@ -54,9 +54,7 @@ const Footer = () => {
               <span className="absolute bottom-0 left-0 w-12 h-1 bg-yellow-400"></span>
             </h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Saroj Institute of Technology & Management</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Shivdan Singh Institute of Technology & Management</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Saroj College Of Pharmacy</a></li>
+              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Lucknow Institute Of Pharmacy</a></li>
             </ul>
           </div>
 
