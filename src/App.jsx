@@ -11,12 +11,11 @@ import Acts from "./pages/about/Acts";
 import ApprovalsDocuments from "./pages/about/ApprovalsDocuments";
 import ChancellorPage from "./pages/administration/Chancellor";
 import ViceChancellorPage from "./pages/administration/ViceChancellor";
-import ProgramsPage from "./pages/programs/AllPrograms";
 import ErrorPage from "./pages/notFoundPage";
-import Courses from "./pages/about/Courses";
+import Courses from "./pages/programs/Courses";
 import SIUFeeStructure from "./pages/Admission/FeeStructure";
 import AiAndTechPage from "./pages/programs/AiAndTechPage";
-import HealthSciencesPage from "./pages/programs/BasicHealthSciencePage";
+import HealthSciencesPage from "./pages/programs/HealthSciencePage";
 import HumanitiesPage from "./pages/programs/HumanitiesPage";
 import EntrepreneurshipAndBusiness from "./pages/programs/EntrepreneurshipAndBusiness";
 import FilmsAndFashion from "./pages/programs/FilmsAndFashion";
@@ -33,8 +32,9 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/programs" element={<ProgramsPage />} />
 
+      
+      
       {/* About  */}
-
       <Route path="/about/about-siu" element={<AboutSIU />} />
       <Route path="about/history" element={<HistoryPage />} />
       <Route path="about/vision-mission" element={<VisionMissionPage />} />
@@ -68,13 +68,26 @@ function App() {
         path="admissions/admission-criteria"
         element={<AdmissionCriteria />}
       />
+      <Route path = "about/history" element ={ <HistoryPage/> } />
+      <Route path = "about/vision-mission" element ={ <VisionMissionPage/> } />
+      <Route path = "about/acts" element ={ <Acts />  } />
+      <Route path = "about/approvals-documents" element ={ <ApprovalsDocuments/>  } />
+      
+      
+      {/* Programs */}
+      <Route path = "programs" element ={ <Courses/> } /> 
+      <Route path= "/programs/artificial-intelligence-technology" element ={ <AiAndTechPage/>} />
+      <Route path= "/programs/humanities-education" element ={ <HumanitiesPage />} />
+      <Route path= "/programs/entrepreneurship-and-business" element ={ <EntrepreneurshipAndBusiness/>} />
+      <Route path= "/programs/film-fashion" element ={ <FilmsAndFashion/>} />
+      <Route path= "/programs/management-and-tech" element ={ <ManagementAndTechPage/>} />
+      <Route path= "/programs/pharmacy" element ={ <PharmacyPage/>} />
+      <Route path= "/programs/sports-science" element ={ <SportsScience/>} />
+      <Route path= "/programs/health-sciences" element ={ <HealthSciencesPage/>} />
 
+      <Route path="admissions/admission-criteria"  element={<AdmissionCriteria />}   />
       <Route path="admissions/scholarship" element={<ScholarshipPage />} />
-
-      <Route
-        path="admissions/admission-process"
-        element={<AdmissionProcess />}
-      />
+      <Route  path="admissions/admission-process"  element={<AdmissionProcess />}  />
 
       <Route path="about/history" element={<HistoryPage />} />
 
@@ -82,16 +95,11 @@ function App() {
 
       <Route path="about/acts" element={<Acts />} />
 
-      <Route
-        path="about/approvals-documents"
-        element={<ApprovalsDocuments />}
+      <Route  path="about/approvals-documents"  element={<ApprovalsDocuments />}
       />
 
       <Route path="/administration/chancellor" element={<ChancellorPage />} />
-
-      <Route
-        path="/administration/vice-chancellor"
-        element={<ViceChancellorPage />}
+      <Route path="/administration/vice-chancellor"  element={<ViceChancellorPage />}
       />
       {/* Admissions  */}
 
@@ -104,6 +112,11 @@ function App() {
         path="admissions/admission-process"
         element={<AdmissionProcess />}
       />
+
+    {/* Admissions  */}
+      <Route path="admissions/admission-criteria" element={ <AdmissionCriteria /> } /> 
+      <Route path="admissions/scholarship" element={<ScholarshipPage />} /> 
+      <Route path="admissions/admission-process" element={<AdmissionProcess />} />
       <Route path="admissions/fee-structure" element={<SIUFeeStructure />} />
 
       {/* Administration  */}

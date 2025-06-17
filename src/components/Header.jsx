@@ -10,7 +10,7 @@ const navItems = [
     path: "/about",
     subItems: [
       { title: "About SIU", path: "/about/about-siu" },
-      
+
       {
         title: "Institutional Development Plan",
         path: "/about/development-plan",
@@ -61,7 +61,7 @@ const navItems = [
       },
     ],
   },
-{
+  {
     title: "Programs",
     path: "/programs",
     megaMenu: true,
@@ -230,6 +230,7 @@ function Header() {
                           )}
                         </div>
                       )}
+                      
 
                       {item.megaMenu && (
                         <div
@@ -278,6 +279,20 @@ function Header() {
                                             </li>
                                           )
                                         )}
+                                        {/* Added the "View all programs" link here for each column */}
+                                        <li key={`${column.heading}-view-all-desktop`} className="mt-2">
+                                            <Link
+                                                to={`/programs/${column.heading.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`}
+                                                className="text-orange-500 md:font-sm hover:underline flex items-center"
+                                                onClick={closeAllMenus}
+                                            >
+                                                View all programs
+                                                <ArrowRight
+                                                    size={16}
+                                                    className="ml-1"
+                                                />
+                                            </Link>
+                                        </li>
                                       </ul>
                                     </div>
                                   )
@@ -322,6 +337,20 @@ function Header() {
                                               </Link>
                                             </li>
                                           ))}
+                                        {/* View all programs section for each individual category */}
+                                        <li key={`${column.heading}-view-all-desktop-right`} className="mt-2">
+                                            <Link
+                                                to={`/programs/${column.heading.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`} // Dynamic link based on heading
+                                                className="text-orange-500 md:font-sm hover:underline flex items-center"
+                                                onClick={closeAllMenus}
+                                            >
+                                                View all programs
+                                                <ArrowRight
+                                                    size={16}
+                                                    className="ml-1"
+                                                />
+                                            </Link>
+                                        </li>
                                       </ul>
                                       <Link
                                         to="/programs"
@@ -338,6 +367,16 @@ function Header() {
                                   )
                               )}
                             </div>
+
+                          {/* View all programs ultimate button */} 
+                          <div className="flex flex-row justify-end items-end">
+                          <Link to="/programs">
+
+                                <button
+                                className="inline-flex items-center justify-center bg-blue-700 text-white font-semibold px-10 
+                                py-3 rounded-sm shadow-lg hover:bg-blue-800 transition duration-300 text-base sm:text-lg"  >View all Programs </button>
+                              </Link>
+                              </div>
                           </div>
                         </div>
                       )}
@@ -412,9 +451,9 @@ function Header() {
                                     target={subItem.target}
                                     rel={subItem.rel}
                                     className="block px-3 py-3 hover:bg-gray-50 relative
-                                            before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                            before:bg-orange-500 before:transition-all before:duration-300
-                                            hover:before:w-full"
+                                              before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
+                                              before:bg-orange-500 before:transition-all before:duration-300
+                                              hover:before:w-full"
                                     onClick={closeAllMenus}
                                   >
                                     {subItem.title}
@@ -423,9 +462,9 @@ function Header() {
                                   <Link
                                     to={subItem.path}
                                     className="block px-3 py-3 hover:bg-gray-50 relative
-                                            before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                            before:bg-orange-500 before:transition-all before:duration-300
-                                            hover:before:w-full"
+                                              before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
+                                              before:bg-orange-500 before:transition-all before:duration-300
+                                              hover:before:w-full"
                                     onClick={closeAllMenus}
                                   >
                                     {subItem.title}
@@ -436,7 +475,7 @@ function Header() {
 
                           {item.megaMenu &&
                             item.columns.map((column, colIndex) => (
-                              <li key={`${column.heading}-${colIndex}-mobile`}>
+                              <li key={`${column.heading}-${colIndex}-mobile-column`}> {/* Added unique key for column li */}
                                 <h4 className="font-bold text-lg text-blue-800 mt-2 mb-1 px-3 border-b-2 border-orange-500 pb-1">
                                   {column.heading}
                                 </h4>
@@ -458,6 +497,20 @@ function Header() {
                                       </Link>
                                     </li>
                                   ))}
+                                  {/* Added the "View all programs" link here for each column */}
+                                  <li key={`${column.heading}-view-all-mobile-column`} className="mt-2">
+                                      <Link
+                                          to={`/programs/${column.heading.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`}
+                                          className="text-orange-500 md:font-sm hover:underline flex items-center px-3"
+                                          onClick={closeAllMenus}
+                                      >
+                                          View all programs
+                                          <ArrowRight
+                                              size={16}
+                                              className="ml-1"
+                                          />
+                                      </Link>
+                                  </li>
                                 </ul>
                               </li>
                             ))}
