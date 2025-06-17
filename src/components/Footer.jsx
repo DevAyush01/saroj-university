@@ -8,6 +8,7 @@ import {
   Facebook,
 } from "lucide-react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaPhone, FaMapMarkerAlt, FaEnvelope, FaArrowUp } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   // Back to top functionality
@@ -65,9 +66,9 @@ const Footer = () => {
               <span className="absolute bottom-0 left-0 w-12 h-1 bg-yellow-400"></span>
             </h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Admission Process</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Eligibility Criteria</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Fee Structure</a></li>
+              <li><Link  to="/admissions/admission-process" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Admission Process</Link></li>
+              <li><Link to="/admissions/admission-criteria" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Eligibility Criteria</Link></li>
+              <li><Link to="/admissions/fee-structure" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Fee Structure</Link></li>
             </ul>
             
             <h3 className="text-xl font-bold mt-6 mb-4 relative pb-2">
@@ -75,8 +76,8 @@ const Footer = () => {
               <span className="absolute bottom-0 left-0 w-12 h-1 bg-yellow-400"></span>
             </h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Terms and Conditions</a></li>
+              <li><Link to="/privacy-policy" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Privacy Policy</Link></li>
+              <li><Link to="/terms-and-conditions" className="text-gray-200 hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">Terms and Conditions</Link></li>
             </ul>
           </div>
 

@@ -128,7 +128,6 @@ function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState(null);
-  const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef(null);
   const navRef = useRef(null);
 
@@ -146,50 +145,25 @@ function Header() {
     setOpenMobileSubmenu(null);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setOpenSubmenu(null);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  
 
   return (
     <div ref={navRef}>
-      <nav
-        className={`fixed left-0 right-0 top-0 z-40 shadow-xl transition-all duration-300 mb-4 pb-4 ${
-          scrolled || window.location.pathname !== "/"
-            ? "py-2 bg-white text-gray-600" // This applies when scrolled OR not on home page
-            : "bg-transparent py-4 text-gray-600" // Change text-white to text-gray-600 for home page without scroll
-        }`}
-      >
-        <div className="max-w-8xl mx-auto px-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center" onClick={closeAllMenus}>
-              <img src={logo} alt="SIU logo" className="h-16 w-auto" />
-            </Link>
+    <nav className="fixed left-0 right-0 top-0 z-40 bg-white text-gray-600 shadow-md">
+      <div className="max-w-8xl mx-auto px-4 py-2">
+        <div className="flex items-center justify-between">
+          <Link to="/" className="flex items-center" onClick={closeAllMenus}>
+            <img 
+              src={logo} 
+              alt="SIU logo" 
+              className="h-auto w-48" 
+            />
+          </Link>
 
             <ul
-              className="xl:flex  hidden font-outfit  space-x-2 text-lg items-center"
+              className="xl:flex hidden font-outfit space-x-2 text-lg items-center"
               ref={menuRef}
             >
-              {/* Navbar items */}
               {navItems.map((item, index) => (
                 <li
                   key={`${item.path}-${index}`}
@@ -222,10 +196,8 @@ function Header() {
                       {item.subItems && !item.megaMenu && (
                         <div
                           className={`absolute left-0 mt-1 w-56 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-100 ${
-                            openSubmenu === index
-                              ? "opacity-100 visible translate-y-0"
-                              : "opacity-0 invisible -translate-y-2"
-                          } transition-all duration-300`}
+                            openSubmenu === index ? "block" : "hidden"
+                          }`}
                         >
                           {item.subItems.map((subItem, subIndex) =>
                             subItem.target ? (
@@ -262,21 +234,17 @@ function Header() {
                       {item.megaMenu && (
                         <div
                           className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${
-                            openSubmenu === index
-                              ? "opacity-100 visible translate-y-0"
-                              : "opacity-0 invisible -translate-y-2"
-                          } transition-all duration-300`}
+                            openSubmenu === index ? "block" : "hidden"
+                          }`}
                         >
                           <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white"></div>
 
-                          {/* Main grid for two columns */}
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                            {/* Left column for Collaboration and TCS Academia */}
                             <div>
                               {item.columns.map(
                                 (column, colIndex) =>
                                   (column.heading === "COLLABORATION" ||
-                                    column.heading === "TCS ACADEMIA") && ( // Changed here
+                                    column.heading === "TCS ACADEMIA") && (
                                     <div
                                       key={`${column.heading}-${colIndex}`}
                                       className="relative"
@@ -316,12 +284,11 @@ function Header() {
                               )}
                             </div>
 
-                            {/* Right column for other programs */}
                             <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                               {item.columns.map(
                                 (column, colIndex) =>
                                   column.heading !== "COLLABORATION" &&
-                                  column.heading !== "TCS ACADEMIA" && ( // Changed here
+                                  column.heading !== "TCS ACADEMIA" && (
                                     <div
                                       key={`${column.heading}-${colIndex}`}
                                       className="relative"
@@ -331,7 +298,6 @@ function Header() {
                                         <span className="absolute bottom-0 left-0 w-1/3 h-0.5 bg-gradient-to-r from-orange-500 to-transparent"></span>
                                       </h3>
                                       <ul className="space-y-2">
-                                        {/* Apply slice(0, 2) here */}
                                         {column.items
                                           .slice(0, 2)
                                           .map((subItem, subItemIndex) => (
@@ -357,9 +323,8 @@ function Header() {
                                             </li>
                                           ))}
                                       </ul>
-                                      {/* View all course button remains for each category */}
                                       <Link
-                                        to="/programs" // Consider making this more dynamic if each column has a specific "view all" link
+                                        to="/programs"
                                         className="text-orange-500 md:font-sm hover:underline flex items-center mt-2"
                                         onClick={closeAllMenus}
                                       >
@@ -432,7 +397,7 @@ function Header() {
                       <div
                         className={`${
                           openMobileSubmenu === index
-                            ? "max-h-[2000px]" // Increased max-h for potential longer menus
+                            ? "max-h-[2000px]"
                             : "max-h-0"
                         } overflow-hidden transition-all duration-300 ease-in-out`}
                       >
@@ -482,7 +447,7 @@ function Header() {
                                     >
                                       <Link
                                         to={subItem.path}
-                                        className="block px-3 py-2 hover:bg-gray-50 flex items-center justify-between group relative" // Added justify-between
+                                        className="block px-3 py-2 hover:bg-gray-50 flex items-center justify-between group relative"
                                         onClick={closeAllMenus}
                                       >
                                         {subItem.title}
@@ -517,8 +482,7 @@ function Header() {
           </div>
         </div>
       </nav>
-      {/* Add padding to prevent content from being hidden behind the fixed navbar */}
-      <div className={`h-${scrolled ? "20" : "24"}`}></div>
+      <div className="h-20"></div>
     </div>
   );
 }

@@ -457,7 +457,7 @@ const ProgramsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-16 bg-blue-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -466,14 +466,13 @@ const ProgramsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12 max-w-7xl mx-auto"
         >
-          <h2 className="text-5xl text-left font-funneldisplay font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl text-left font-funneldisplay font-bold text-gray-900 mb-3">
             Our Academic Programs
           </h2>
-          <p className="text-lg font-funneldisplay text-left text-gray-600 ">
+          <p className="text-base md:text-lg font-funneldisplay text-left text-gray-600 max-w-4xl">
             Explore our diverse range of undergraduate, postgraduate, and
             doctoral programs designed to shape future leaders.
-            </p>
-       
+          </p>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-8">
@@ -484,7 +483,7 @@ const ProgramsSection = () => {
               onMouseEnter={() => setIsAutoRotating(false)}
               onMouseLeave={() => setIsAutoRotating(true)}
             >
-              <span className="font-medium text-gray-700 flex items-center gap-2">
+              <span className="font-medium text-gray-700 flex items-center gap-2 text-sm">
                 <Hand className="w-4 h-4" />
                 Program Categories
               </span>
@@ -525,7 +524,7 @@ const ProgramsSection = () => {
                     }}
                     onMouseEnter={() => setHoveredProgram(program.id)}
                     onMouseLeave={() => setHoveredProgram(null)}
-                    className={`w-full text-left p-4 rounded-lg transition-all duration-300 flex items-center gap-3 border
+                    className={`w-full text-left p-3 rounded-lg transition-all duration-300 flex items-center gap-3 border
                       ${
                         activeTab === program.id
                           ? `${program.color} shadow-md border-transparent`
@@ -548,7 +547,7 @@ const ProgramsSection = () => {
                       {program.icon}
                     </div>
                     <div className="text-left flex-1 min-w-0">
-                      <span className="font-semibold block truncate">{program.title}</span>
+                      <span className="font-medium text-sm block truncate">{program.title}</span>
                       <span className="text-xs text-gray-500 line-clamp-1">
                         {program.description}
                       </span>
@@ -574,10 +573,10 @@ const ProgramsSection = () => {
             >
               <a
                 href="/programs"
-                className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white rounded-lg transition-all shadow-md hover:shadow-lg font-medium"
+                className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white rounded-lg transition-all shadow-md hover:shadow-lg font-medium text-sm"
               >
                 Explore All Programs
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </a>
             </motion.div>
           </div>
@@ -594,24 +593,24 @@ const ProgramsSection = () => {
                 className="bg-white rounded-xl shadow-lg overflow-hidden h-full border border-gray-200"
               >
                 <div
-                  className={`p-6 ${currentProgram.color} flex items-start gap-4`}
+                  className={`p-5 ${currentProgram.color} flex items-start gap-4`}
                 >
-                  <div className="p-3 rounded-lg bg-white text-blue-700 shadow-sm">
+                  <div className="p-2 rounded-lg bg-white text-blue-700 shadow-sm">
                     {currentProgram.icon}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{currentProgram.title}</h3>
-                    <p className="text-sm opacity-90 mt-1">{currentProgram.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900">{currentProgram.title}</h3>
+                    <p className="text-xs opacity-90 mt-1">{currentProgram.description}</p>
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                <div className="p-5">
+                  <div className="grid md:grid-cols-2 gap-4">
                     {currentProgram.degrees.map((degree, index) => (
                       <motion.div
                         key={index}
                         whileHover={{ y: -3 }}
-                        className={`border rounded-lg p-5 transition-all shadow-sm ${
+                        className={`border rounded-lg p-4 transition-all shadow-sm ${
                           expandedDegree === index 
                             ? `bg-gradient-to-b ${currentProgram.bgColor} border-transparent shadow-md` 
                             : 'bg-white border-gray-200 hover:shadow-md'
@@ -622,7 +621,7 @@ const ProgramsSection = () => {
                           onClick={() => toggleDegreeExpand(index)}
                         >
                           <div className="flex justify-between items-start gap-2">
-                            <h4 className="font-bold text-lg mb-2 text-gray-800">
+                            <h4 className="font-semibold text-base mb-1 text-gray-800">
                               {degree.name}
                             </h4>
                             <span className={`text-xs px-2 py-1 rounded-full ${
@@ -633,13 +632,13 @@ const ProgramsSection = () => {
                               {degree.mode}
                             </span>
                           </div>
-                          <div className="flex justify-between text-sm text-gray-600 mb-2">
+                          <div className="flex justify-between text-xs text-gray-600 mb-2">
                             <span className="flex items-center gap-1">
-                              <BookOpen className="w-4 h-4 opacity-70" />
+                              <BookOpen className="w-3 h-3 opacity-70" />
                               {degree.duration}
                             </span>
                             <span className="flex items-center gap-1">
-                              <GraduationCap className="w-4 h-4 opacity-70" />
+                              <GraduationCap className="w-3 h-3 opacity-70" />
                               {degree.fee}
                             </span>
                           </div>
@@ -654,12 +653,12 @@ const ProgramsSection = () => {
                               transition={{ duration: 0.2 }}
                               className="overflow-hidden"
                             >
-                              <div className="mt-3 pt-3 border-t border-gray-200">
-                                <h5 className="font-semibold text-sm flex items-center gap-2 mb-2 text-gray-700">
-                                  <ClipboardList className="w-4 h-4" />
+                              <div className="mt-2 pt-2 border-t border-gray-200">
+                                <h5 className="font-semibold text-xs flex items-center gap-2 mb-1 text-gray-700">
+                                  <ClipboardList className="w-3 h-3" />
                                   Eligibility Criteria
                                 </h5>
-                                <ul className="space-y-2 text-sm text-gray-700">
+                                <ul className="space-y-1 text-xs text-gray-700">
                                   {degree.criteria.map((item, i) => (
                                     <li key={i} className="flex items-start gap-2">
                                       <span className="text-green-500 mt-0.5">✓</span>
@@ -668,9 +667,9 @@ const ProgramsSection = () => {
                                   ))}
                                 </ul>
                               </div>
-                              <button className={`mt-4 w-full py-2 bg-gradient-to-r ${currentProgram.buttonColor} text-white rounded-md transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg font-medium`}>
+                              <button className={`mt-3 w-full py-1.5 bg-gradient-to-r ${currentProgram.buttonColor} text-white rounded-md transition-all flex items-center justify-center gap-1 shadow-md hover:shadow-lg font-medium text-sm`}>
                                 Apply Now
-                                <ChevronRight className="w-4 h-4" />
+                                <ChevronRight className="w-3 h-3" />
                               </button>
                             </motion.div>
                           )}
@@ -678,45 +677,45 @@ const ProgramsSection = () => {
 
                         {expandedDegree !== index && (
                           <button 
-                            className="mt-3 w-full py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-md transition-colors flex items-center justify-center gap-2 text-sm font-medium"
+                            className="mt-2 w-full py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-md transition-colors flex items-center justify-center gap-1 text-xs font-medium"
                             onClick={() => toggleDegreeExpand(index)}
                           >
                             View Details
-                            <ChevronRight className="w-4 h-4" />
+                            <ChevronRight className="w-3 h-3" />
                           </button>
                         )}
                       </motion.div>
                     ))}
                   </div>
 
-                  <div className="mt-8 bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-lg border border-gray-200">
-                    <h4 className="font-bold text-xl mb-4 text-gray-800 flex items-center gap-3">
-                      <div className="p-2 rounded-lg bg-blue-100 text-blue-700">
-                        <UserCheck className="w-5 h-5" />
+                  <div className="mt-6 bg-gradient-to-br from-gray-50 to-gray-100 p-4 rounded-lg border border-gray-200">
+                    <h4 className="font-bold text-lg mb-3 text-gray-800 flex items-center gap-2">
+                      <div className="p-1.5 rounded-lg bg-blue-100 text-blue-700">
+                        <UserCheck className="w-4 h-4" />
                       </div>
                       Admission Process Overview
                     </h4>
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <h5 className="font-semibold mb-3 text-gray-700 flex items-center gap-2">
-                          <span className="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">1</span>
+                        <h5 className="font-semibold mb-2 text-gray-700 flex items-center gap-2 text-sm">
+                          <span className="w-4 h-4 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">1</span>
                           Regular Mode
                         </h5>
-                        <ul className="space-y-3 text-gray-700">
-                          <li className="flex items-start gap-3">
-                            <div className="bg-blue-100 text-blue-800 rounded-full p-1 flex-shrink-0 mt-0.5">
+                        <ul className="space-y-2 text-xs text-gray-700">
+                          <li className="flex items-start gap-2">
+                            <div className="bg-blue-100 text-blue-800 rounded-full p-0.5 flex-shrink-0 mt-0.5">
                               <span className="text-xs font-bold">1</span>
                             </div>
                             <span>Submit online application with required documents</span>
                           </li>
-                          <li className="flex items-start gap-3">
-                            <div className="bg-blue-100 text-blue-800 rounded-full p-1 flex-shrink-0 mt-0.5">
+                          <li className="flex items-start gap-2">
+                            <div className="bg-blue-100 text-blue-800 rounded-full p-0.5 flex-shrink-0 mt-0.5">
                               <span className="text-xs font-bold">2</span>
                             </div>
                             <span>Appear for entrance exam (if applicable)</span>
                           </li>
-                          <li className="flex items-start gap-3">
-                            <div className="bg-blue-100 text-blue-800 rounded-full p-1 flex-shrink-0 mt-0.5">
+                          <li className="flex items-start gap-2">
+                            <div className="bg-blue-100 text-blue-800 rounded-full p-0.5 flex-shrink-0 mt-0.5">
                               <span className="text-xs font-bold">3</span>
                             </div>
                             <span>Attend personal interview/counseling session</span>
@@ -724,25 +723,25 @@ const ProgramsSection = () => {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold mb-3 text-gray-700 flex items-center gap-2">
-                          <span className="w-5 h-5 rounded-full bg-green-600 text-white flex items-center justify-center text-xs">2</span>
+                        <h5 className="font-semibold mb-2 text-gray-700 flex items-center gap-2 text-sm">
+                          <span className="w-4 h-4 rounded-full bg-green-600 text-white flex items-center justify-center text-xs">2</span>
                           Global Mode
                         </h5>
-                        <ul className="space-y-3 text-gray-700">
-                          <li className="flex items-start gap-3">
-                            <div className="bg-green-100 text-green-800 rounded-full p-1 flex-shrink-0 mt-0.5">
+                        <ul className="space-y-2 text-xs text-gray-700">
+                          <li className="flex items-start gap-2">
+                            <div className="bg-green-100 text-green-800 rounded-full p-0.5 flex-shrink-0 mt-0.5">
                               <span className="text-xs font-bold">1</span>
                             </div>
                             <span>Complete regular admission process</span>
                           </li>
-                          <li className="flex items-start gap-3">
-                            <div className="bg-green-100 text-green-800 rounded-full p-1 flex-shrink-0 mt-0.5">
+                          <li className="flex items-start gap-2">
+                            <div className="bg-green-100 text-green-800 rounded-full p-0.5 flex-shrink-0 mt-0.5">
                               <span className="text-xs font-bold">2</span>
                             </div>
                             <span>Submit additional documents for international study</span>
                           </li>
-                          <li className="flex items-start gap-3">
-                            <div className="bg-green-100 text-green-800 rounded-full p-1 flex-shrink-0 mt-0.5">
+                          <li className="flex items-start gap-2">
+                            <div className="bg-green-100 text-green-800 rounded-full p-0.5 flex-shrink-0 mt-0.5">
                               <span className="text-xs font-bold">3</span>
                             </div>
                             <span>Complete visa and travel formalities</span>
@@ -750,13 +749,13 @@ const ProgramsSection = () => {
                         </ul>
                       </div>
                     </div>
-                    <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                      <button className={`flex-1 px-6 py-3 bg-gradient-to-r ${currentProgram.buttonColor} text-white rounded-md transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg font-medium`}>
+                    <div className="mt-4 flex flex-col sm:flex-row gap-2">
+                      <button className={`flex-1 px-4 py-2 bg-gradient-to-r ${currentProgram.buttonColor} text-white rounded-md transition-all flex items-center justify-center gap-1 shadow-md hover:shadow-lg font-medium text-sm`}>
                         Start Application
-                        <ArrowRight className="w-5 h-5" />
+                        <ArrowRight className="w-4 h-4" />
                       </button>
-                      <button className="flex-1 px-6 py-3 bg-white border border-gray-300 hover:bg-gray-50 text-gray-800 rounded-md transition-all flex items-center justify-center gap-2 font-medium">
-                        <Globe className="w-5 h-5" />
+                      <button className="flex-1 px-4 py-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-800 rounded-md transition-all flex items-center justify-center gap-1 font-medium text-sm">
+                        <Globe className="w-4 h-4" />
                         Global Mode Info
                       </button>
                     </div>

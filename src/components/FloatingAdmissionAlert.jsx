@@ -38,13 +38,13 @@ const FloatingAdmissionAlert = () => {
 
   return (
     <>
-      {/* LEFT: Floating Countdown Box */}
+      {/* LEFT: Countdown - visible on md and up */}
       {showCountdown && (
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="fixed bottom-6 left-6 z-50"
+          className="hidden md:block fixed bottom-6 left-6 z-50"
         >
           <div className="bg-white rounded-xl shadow-2xl overflow-hidden border-2 border-red-600 w-72 relative">
             <div className="bg-red-600 px-4 py-3">
@@ -88,58 +88,56 @@ const FloatingAdmissionAlert = () => {
         </motion.div>
       )}
 
-      {/* RIGHT: Floating Notification Bell with Message */}
+      {/* RIGHT: Notification Bell - visible on md and up */}
       <motion.div
-  initial={{ scale: 0.8, opacity: 0 }}
-  animate={{ scale: 1, opacity: 1 }}
-  transition={{ duration: 0.6, ease: "easeOut" }}
-  className="fixed bottom-6 right-6 z-50"
->
-  <div className="relative group">
-    {/* Floating Message Box */}
-    {showMessage && (
-      <motion.div
-        className="absolute bottom-14 right-0 bg-white w-72 shadow-xl rounded-xl border border-gray-200 p-4 text-sm"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="hidden md:block fixed bottom-24 right-8 z-50"
       >
-        <div className="font-bold text-sm text-gray-800 mb-1 flex items-center gap-2">
-          <BellIcon className="w-4 h-4 text-blue-600" />
-          Last Chance!
-        </div>
-        <div className="text-gray-700 mb-3">
-          Don’t miss out! Apply by <span className="text-red-600 font-medium">June 30</span> and grab a{" "}
-          <span className="font-semibold text-green-700">100% scholarship</span> chance!
-        </div>
+        <div className="relative group">
+          {showMessage && (
+            <motion.div
+              className="absolute bottom-14 right-0 bg-white w-72 shadow-xl rounded-xl border border-gray-200 p-4 text-sm"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="font-bold text-sm text-gray-800 mb-1 flex items-center gap-2">
+                <BellIcon className="w-4 h-4 text-blue-600" />
+                Last Chance!
+              </div>
+              <div className="text-gray-700 mb-3">
+                Don’t miss out! Apply by <span className="text-red-600 font-medium">June 30</span> and grab a{" "}
+                <span className="font-semibold text-green-700">100% scholarship</span> chance!
+              </div>
 
-        <a
-          href="#register"
-          className="block text-center bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition"
-        >
-          Register now
-        </a>
+              <a
+                href="#register"
+                className="block text-center bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition"
+              >
+                Register now
+              </a>
 
-        <button
-          onClick={() => setShowMessage(false)}
-          className="absolute top-2 right-2 text-gray-500 hover:text-red-400"
-        >
-          ×
-        </button>
+              <button
+                onClick={() => setShowMessage(false)}
+                className="absolute top-2 right-2 text-gray-500 hover:text-red-400"
+              >
+                ×
+              </button>
+            </motion.div>
+          )}
+
+          <div
+            className="bg-blue-600 p-3 rounded-full text-white shadow-lg cursor-pointer animate-pulse"
+            onClick={() => setShowMessage((prev) => !prev)}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a2 2 0 002-2H8a2 2 0 002 2z" />
+            </svg>
+          </div>
+        </div>
       </motion.div>
-    )}
-
-    {/* Bell Icon Button (toggles message) */}
-    <div
-      className="bg-blue-600 p-3 rounded-full text-white shadow-lg cursor-pointer animate-pulse"
-      onClick={() => setShowMessage((prev) => !prev)}
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a2 2 0 002-2H8a2 2 0 002 2z" />
-      </svg>
-    </div>
-  </div>
-</motion.div>
     </>
   );
 };

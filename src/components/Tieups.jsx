@@ -129,7 +129,7 @@ export default function CompaniesTieUps() {
   return (
     <div className=" bg-blue-100 relative">
       {/* Heading of industry tieups  */}
-      <div className="bg-blue-50 py-16 px-6 sm:px-12 lg:px-24">
+      <div className="bg-blue-50 py-10 px-6 sm:px-12 lg:px-24">
         <div className="max-w-7xl font-funneldisplay mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
           {/* Text Section */}
           <div className="text-center lg:text-left max-w-3xl">
