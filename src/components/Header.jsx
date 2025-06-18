@@ -16,12 +16,15 @@ const navItems = [
         path: "/about/development-plan",
       },
       { title: "Constituent Units", path: "/about/constituent-units" },
+      { title: "Boards", path: "/about/boards" },
+      { title: "Deans", path: "/about/deans" },
+
       { title: "Accreditation", path: "/about/accreditation" },
       { title: "Recognition", path: "/about/recognition" },
       { title: "Annual Reports", path: "/about/annual-reports" },
       { title: "Annual Account", path: "/about/annual-account" },
       { title: "Committees", path: "/about/committees" },
-      { title: "Mandatory Disclosure", path: "/about/mandatory-disclosure" },
+      { title: "Public Self Disclosure", path: "/about/public-self-disclosure" },
       { title: "Act and Statutes or MoA", path: "/about/approvals-documents" },
       // { title: "Institutional Development Plan", path: "/about/development-plan" },
       // { title: "Constituent Units", path: "/about/constituent-units" },
@@ -41,7 +44,7 @@ const navItems = [
       { title: "Pro Chancellor", path: "/administration/pro-chancellor" },
       { title: "Vice Chancellor", path: "/administration/vice-chancellor" },
       { title: "Registrar", path: "/administration/registrar" },
-      { title: "Financial Officer", path: "/administration/financial-officer" },
+      { title: "Finance Commitee", path: "/administration/finance-commitee" },
       {
         title: "Controller of Examination (CoE)",
         path: "/administration/controller-exams",
@@ -52,8 +55,12 @@ const navItems = [
       },
       { title: "Ombudsperson", path: "/administration/ombudsperson" },
       {
-        title: "Academic Leadership",
-        path: "/administration/academic-leadership",
+        title: "Academic Council",
+        path: "/administration/academic-council",
+      },
+      {
+        title: "Executive Council",
+        path: "/administration/executive-council",
       },
       {
         title: "Internal Complaint Committee",
@@ -73,9 +80,9 @@ const navItems = [
     subItems: [
       { title: "Academic Calendar", path: "/academics/academic-calendar" },
       { title: "Statutes", path: "/academics/statutes" },
-      { title: "Library", path: "/academics/library" },
+      // { title: "Library", path: "/academics/library" },
       { title: "Faculty", path: "/academics/faculty" },
-      { title: "Exam Schedule", path: "/academics/exam-schedule" },
+      // { title: "Exam Schedule", path: "/academics/exam-schedule" },
       {
         title: "Internal Quality Assurance Cell (IQAC)",
         path: "/academics/iqac",
