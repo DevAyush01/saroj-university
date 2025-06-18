@@ -142,7 +142,7 @@ const FilmsAndFashion = () => {
           className="bg-white rounded-xl shadow-md overflow-hidden mb-12"
         >
           {/* Header for Filter Bar - Using a dark purple theme */}
-          <div className="bg-purple-700 rounded-t-xl px-8 py-6 text-white flex items-center">
+          <div className="bg-black rounded-t-xl px-8 py-6 text-white flex items-center">
             <FaPalette className="text-3xl text-white mr-4" /> {/* Icon for this section header */}
             <div>
               <h2 className="text-2xl font-bold">Our Creative Arts Programs</h2>

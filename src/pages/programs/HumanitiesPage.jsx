@@ -135,7 +135,7 @@ const HumanitiesPage = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="bg-white rounded-xl shadow-md overflow-hidden mb-12"
         >
-          <div className="bg-indigo-700 rounded-t-xl px-8 py-6 text-white flex items-center">
+          <div className="bg-black rounded-t-xl px-8 py-6 text-white flex items-center">
             <FaGlobe className="text-3xl text-white mr-4" /> 
             <div>
               <h2 className="text-2xl font-bold">Humanities & Liberal Arts</h2>

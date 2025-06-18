@@ -30,128 +30,131 @@ import BPharmaPage from "./pages/programs/Pharma/Bpharma";
 import DPharmaPage from "./pages/programs/Pharma/Dpharma";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsConditions";
+import CoursePage from "./components/ShowPrograms";
+import BscFilmMakingPage from "./pages/programs/film/BscFilmMaking.jsx";
+import BscScriptWritingPage from "./pages/programs/film/BscScriptWriting";
+import BBAGeneralPage from "./pages/programs/Business/BBA.jsx";
+import BBAFinancePage from "./pages/programs/Business/BBAfinance.jsx";
+import BBAPage from "./pages/programs/Business/BBA.jsx";
+import BtechCsePage from "./pages/programs/Btech/Cse.jsx";
+import BtechItPage from "./pages/programs/Btech/It.jsx";
+import BsSportsSciencePage from "./pages/programs/SportsScience/bs.jsx";
+import MsSportsSciencePage from "./pages/programs/SportsScience/Ms.jsx";
+import BscPhysicsPage from "./pages/programs/HealthSciences/BscPhysics.jsx";
+import BscChemistryPage from "./pages/programs/HealthSciences/BscChemistry.jsx";
 
 function App() {
   return (
     <Routes>
-      <Route path="*" element={<ErrorPage />} />
-      <Route path="/" element={<HomePage />} />
-      <Route path="/programs" element={<ProgramsPage />} />
+      <Route path='*' element={<ErrorPage />} />
+      <Route path='/' element={<HomePage />} />
+      <Route path='/programs' element={<CoursePage />} />
 
-      
-      
       {/* About  */}
-      <Route path="/about/about-siu" element={<AboutSIU />} />
-      <Route path="about/history" element={<HistoryPage />} />
-      <Route path="about/vision-mission" element={<VisionMissionPage />} />
-      <Route path="about/acts" element={<Acts />} />
-      <Route
-        path="about/approvals-documents"
-        element={<ApprovalsDocuments />}
-      />
-      <Route path="about/all-courses" element={<Courses />} />
+      <Route path='/about/about-siu' element={<AboutSIU />} />
+      <Route path='about/history' element={<HistoryPage />} />
+      <Route path='about/vision-mission' element={<VisionMissionPage />} />
+      <Route path='about/acts' element={<Acts />} />
+      <Route path='about/approvals-documents' element={<ApprovalsDocuments />} />
+      <Route path='about/all-courses' element={<Courses />} />
 
       {/* Programs */}
-      <Route path="/programs/btech-ai-ml" element={<AiAndTechPage />} />
-      <Route
-        path="/programs/diploma-public-health"
-        element={<HealthSciencesPage />}
-      />
-      <Route path="/programs/humanities" element={<HumanitiesPage />} />
-      <Route
-        path="/programs/entrepreneurship-and-business"
-        element={<EntrepreneurshipAndBusiness />}
-      />
-      <Route path="/programs/films-and-fashion" element={<FilmsAndFashion />} />
-      <Route
-        path="/programs/management-and-tech"
-        element={<ManagementAndTechPage />}
-      />
-      <Route path="/programs/pharmacy" element={<PharmacyPage />} />
-      <Route path="/programs/sports-science" element={<SportsScience />} />
+      <Route path='/programs/btech-ai-ml' element={<BtechAIMLPage />} />
+      <Route path='/programs/diploma-public-health' element={<HealthSciencesPage />} />
+      <Route path='/programs/humanities' element={<HumanitiesPage />} />
+      <Route path='/programs/entrepreneurship-and-business' element={<EntrepreneurshipAndBusiness />} />
+      <Route path='/programs/films-and-fashion' element={<FilmsAndFashion />} />
+      <Route path='/programs/management-and-tech' element={<ManagementAndTechPage />} />
+      <Route path='/programs/pharmacy' element={<PharmacyPage />} />
+      <Route path='/programs/sports-science' element={<SportsScience />} />
 
-      <Route
-        path="admissions/admission-criteria"
-        element={<AdmissionCriteria />}
-      />
-      <Route path = "about/history" element ={ <HistoryPage/> } />
-      <Route path = "about/vision-mission" element ={ <VisionMissionPage/> } />
-      <Route path = "about/acts" element ={ <Acts />  } />
-      <Route path = "about/approvals-documents" element ={ <ApprovalsDocuments/>  } />
-      
-      
+      <Route path='admissions/admission-criteria' element={<AdmissionCriteria />} />
+      <Route path='about/history' element={<HistoryPage />} />
+      <Route path='about/vision-mission' element={<VisionMissionPage />} />
+      <Route path='about/acts' element={<Acts />} />
+      <Route path='about/approvals-documents' element={<ApprovalsDocuments />} />
+
       {/* Programs */}
-      <Route path = "programs" element ={ <Courses/> } /> 
-      <Route path= "/programs/artificial-intelligence-technology" element ={ <AiAndTechPage/>} />
-      <Route path= "/programs/humanities-education" element ={ <HumanitiesPage />} />
-      <Route path= "/programs/entrepreneurship-and-business" element ={ <EntrepreneurshipAndBusiness/>} />
-      <Route path= "/programs/film-fashion" element ={ <FilmsAndFashion/>} />
-      <Route path= "/programs/management-and-tech" element ={ <ManagementAndTechPage/>} />
-      <Route path= "/programs/pharmacy" element ={ <PharmacyPage/>} />
-      <Route path= "/programs/sports-science" element ={ <SportsScience/>} />
-      <Route path= "/programs/health-sciences" element ={ <HealthSciencesPage/>} />
+      <Route path='programs' element={<Courses />} />
+      <Route path='/programs/artificial-intelligence-technology' element={<AiAndTechPage />} />
+      <Route path='/programs/humanities-education' element={<HumanitiesPage />} />
+      <Route path='/programs/entrepreneurship-and-business' element={<EntrepreneurshipAndBusiness />} />
+      <Route path='/programs/film-fashion' element={<FilmsAndFashion />} />
+      <Route path='/programs/management-and-tech' element={<ManagementAndTechPage />} />
+      <Route path='/programs/pharmacy' element={<PharmacyPage />} />
+      <Route path='/programs/sports-science' element={<SportsScience />} />
+      <Route path='/programs/health-sciences' element={<HealthSciencesPage />} />
 
       {/* Programs Submnu Pages */}
-      <Route path = "programs/btech-ai-ml" element ={ <BtechAIMLPage/> } /> 
-      <Route path = "programs/btech-data-science" element ={ <BtechDataSciencePage/> } /> 
+      <Route path='programs/btech-ai-ml' element={<BtechAIMLPage />} />
+      <Route path='programs/btech-data-science' element={<BtechDataSciencePage />} />
 
       {/* Humanities Submenu pages */}
-      <Route path = "programs/ba" element ={ <BAPage/> } /> 
-      <Route path = "programs/bs-international-relations" element ={ <BSPage/> } /> 
+      <Route path='programs/ba' element={<BAPage />} />
+      <Route path='programs/bs-international-relations' element={<BSPage />} />
 
       {/* Pharma Submenu */}
-       <Route path = "programs/bpharm" element ={ <BPharmaPage/> } /> 
-       <Route path = "programs/dpharm" element ={ <DPharmaPage/> } />
+      <Route path='programs/bpharm' element={<BPharmaPage />} />
+      <Route path='programs/dpharm' element={<DPharmaPage />} />
 
-      <Route path="admissions/admission-criteria"  element={<AdmissionCriteria />}   />
-      <Route path="admissions/scholarship" element={<ScholarshipPage />} />
-      <Route  path="admissions/admission-process"  element={<AdmissionProcess />}  />
+      {/* Film Making Submenu */}
+      <Route path='programs/bsc-film-making' element={<BscFilmMakingPage />} />
+      <Route path='programs/bsc-script-writing' element={<BscScriptWritingPage />} />
 
-      <Route path="about/history" element={<HistoryPage />} />
+      {/* Business */}
+      <Route path="/programs/bba-general" element={<BBAGeneralPage />} />
+      <Route path="/programs/bba-banking-finance" element= {<BBAFinancePage/>} />
 
-      <Route path="about/vision-mission" element={<VisionMissionPage />} />
+      {/* Btech */}
+      <Route path="/programs/btech-cse" element= {<BtechCsePage />} />
+      <Route path="/programs/btech-it" element= {<BtechItPage />} />
 
-      <Route path="about/acts" element={<Acts />} />
+      {/* Health Science */}
+      <Route path="/programs/bs-sports-science" element= {<BsSportsSciencePage/>} />
+      <Route path="/programs/ms-sports-science" element= {<MsSportsSciencePage/>} />
 
-      <Route  path="about/approvals-documents"  element={<ApprovalsDocuments />}
-      />
+       {/*Sports Sciences  */}
+       <Route path="/programs/bsc-physics" element ={ <BscPhysicsPage/> } />
+       <Route path="/programs/bsc-chemistry" element = {<BscChemistryPage />} />  
 
-      <Route path="/administration/chancellor" element={<ChancellorPage />} />
-      <Route path="/administration/vice-chancellor"  element={<ViceChancellorPage />}
-      />
       {/* Admissions  */}
+      <Route path='/admissions' element={<AdmissionCriteria />} />
+      <Route path='admissions/admission-criteria' element={<AdmissionCriteria />} />
+      <Route path='admissions/scholarship' element={<ScholarshipPage />} />
+      <Route path='admissions/admission-process' element={<AdmissionProcess />} />
 
-      <Route
-        path="admissions/admission-criteria"
-        element={<AdmissionCriteria />}
-      />
-      <Route path="admissions/scholarship" element={<ScholarshipPage />} />
-      <Route
-        path="admissions/admission-process"
-        element={<AdmissionProcess />}
-      />
+      <Route path='about/history' element={<HistoryPage />} />
 
-    {/* Admissions  */}
-      <Route path="admissions/admission-criteria" element={ <AdmissionCriteria /> } /> 
-      <Route path="admissions/scholarship" element={<ScholarshipPage />} /> 
-      <Route path="admissions/admission-process" element={<AdmissionProcess />} />
-      <Route path="admissions/fee-structure" element={<SIUFeeStructure />} />
+      <Route path='about/vision-mission' element={<VisionMissionPage />} />
+
+      <Route path='about/acts' element={<Acts />} />
+
+      <Route path='about/approvals-documents' element={<ApprovalsDocuments />} />
+
+      <Route path='/administration/chancellor' element={<ChancellorPage />} />
+      <Route path='/administration/vice-chancellor' element={<ViceChancellorPage />} />
+      
+      {/* Admissions  */}
+      <Route path='admissions/admission-criteria' element={<AdmissionCriteria />} />
+      <Route path='admissions/scholarship' element={<ScholarshipPage />} />
+      <Route path='admissions/admission-process' element={<AdmissionProcess />} />
+
+      {/* Admissions  */}
+      <Route path='admissions/admission-criteria' element={<AdmissionCriteria />} />
+      <Route path='admissions/scholarship' element={<ScholarshipPage />} />
+      <Route path='admissions/admission-process' element={<AdmissionProcess />} />
+      <Route path='admissions/fee-structure' element={<SIUFeeStructure />} />
 
       {/* Administration  */}
-      <Route path="/administration/chancellor" element={<ChancellorPage />} />
-      <Route
-        path="/administration/vice-chancellor"
-        element={<ViceChancellorPage />}
-      />
-      <Route path="*" element={<ErrorPage />} />
+      <Route path='/administration/chancellor' element={<ChancellorPage />} />
+      <Route path='/administration/vice-chancellor' element={<ViceChancellorPage />} />
+      <Route path='*' element={<ErrorPage />} />
 
       {/* Contact Us  */}
-      <Route path="/contact-us" element={<Contact />} />
+      <Route path='/contact-us' element={<Contact />} />
 
-
-      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-
+      <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+      <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
     </Routes>
   );
 }

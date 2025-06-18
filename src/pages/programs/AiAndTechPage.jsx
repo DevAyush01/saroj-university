@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Layout from '../../components/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  FaRobot, 
+  FaRobot, // Keep FaRobot imported
   FaLaptopCode, 
   FaBrain, 
   FaDatabase, 
@@ -135,15 +135,24 @@ const AiAndTechPage = () => {
   return (
     <Layout>
       <div className="container mx-auto px-4 py-12 max-w-6xl">
+        {/* TOPMOST ICON */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex justify-center mb-8" // Center the icon and add bottom margin
+        >
+          <FaRobot className="text-6xl text-blue-600" /> {/* Larger and prominent icon */}
+        </motion.div>
+        {/* --- */}
+
         {/* Hero Section */}
-       {/* Hero Section */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-     
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Discover Your Academic Pathway</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Choose from our cutting-edge programs in AI, ML, Data Science, and Robotics designed to shape future technology leaders.
@@ -157,7 +166,7 @@ const AiAndTechPage = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="bg-white rounded-xl shadow-md overflow-hidden mb-12"
         >
-          {/* Section Header */}
+          {/* Section Header (removed FaRobot from here) */}
           <div className="bg-black px-8 py-6 flex items-center">
             <FaLaptopCode className="text-3xl text-white mr-4" />
             <div>
@@ -166,13 +175,14 @@ const AiAndTechPage = () => {
             </div>
           </div>
 
-            {/* Unsplash Image added here */}
-            <div className="flex justify-center width:full relative h-64 overflow-hidden shadown-md ">
+          {/* Unsplash Image added here */}
+          <div className="flex justify-center w-full relative h-64 overflow-hidden shadow-md">
             <img 
               src="https://plus.unsplash.com/premium_photo-1683121716061-3faddf4dc504?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8QVJUSUZJQ0lBTCUyMElOVEVMTElHRU5DRXxlbnwwfDB8MHx8fDA%3D" 
               alt="AI and Technology Banner" 
-              className="w-full h-full object-cover " // Added styling
-            /></div>
+              className="w-full h-full object-cover"
+            />
+          </div>
 
           {/* Filter Buttons */}
           <div className="bg-white p-4 rounded-b-xl shadow-inner-top flex flex-wrap gap-2 justify-start border-b border-gray-100">
@@ -194,9 +204,9 @@ const AiAndTechPage = () => {
           {/* Programs List */}
           <div className="p-8">
             {filteredCourses.length > 0 ? (
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="">
                 {filteredCourses.map((course) => (
-                  <div key={course.id} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                  <div key={course.id} className=" overflow-hidden">
                     <button
                       onClick={() => toggleCourse(course.id)}
                       className="w-full p-6 text-left flex justify-between items-center"

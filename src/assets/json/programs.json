@@ -8,72 +8,56 @@
       "items": [
         {
           "title": "Design Thinking - Practitioner's Perspective [TCS]",
-          "path": "/programs/tcs/design-thinking"
+          "path": "/programs/tcs/design-thinking",
+          "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/design-thinking/"
         },
         {
           "title": "Innovation and Entrepreneurship [TCS]",
-          "path": "/programs/tcs/innovation-entrepreneurship"
+          "path": "/programs/tcs/innovation-entrepreneurship",
+          "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/entrepreneurship-innovation/"
         },
         {
           "title": "Artificial Intelligence for Real-World Application [TCS]",
-          "path": "/programs/tcs/ai-real-world"
+          "path": "/programs/tcs/ai-real-world",
+          "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/artificial-intelligence/"
         },
         {
           "title": "Machine Learning for Real-World Application [TCS]",
-          "path": "/programs/tcs/ml-real-world"
+          "path": "/programs/tcs/ml-real-world",
+          "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/machine-learning/"
         },
         {
           "title": "Statistics using R and Python [TCS]",
-          "path": "/programs/tcs/statistics-r-python"
+          "path": "/programs/tcs/statistics-r-python",
+          "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/statistics-using-r-python/"
         },
         {
           "title": "Advanced Cyber Security - An Application Approach [TCS]",
-          "path": "/programs/tcs/advanced-cyber-security"
+          "path": "/programs/tcs/advanced-cyber-security",
+          "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/cyber-security-advance/"
         },
         {
           "title": "Cryptography [TCS]",
-          "path": "/programs/tcs/cryptography"
+          "path": "/programs/tcs/cryptography",
+          "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/cryptography/"
         },
         {
           "title": "Cloud Development [TCS]",
-          "path": "/programs/tcs/cloud-development"
+          "path": "/programs/tcs/cloud-development",
+          "collaboration_link": "https://www.tcsion.com/courses/ihc/cloud-development-course/"
         },
         {
           "title": "Application of Deep Learning and Neural Networks [TCS]",
-          "path": "/programs/tcs/deep-learning-neural-networks"
+          "path": "/programs/tcs/deep-learning-neural-networks",
+          "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/deep-learning-neural-networks/"
         },
         {
           "title": "Information Security - Practitioner's Perspective [TCS]",
-          "path": "/programs/tcs/information-security"
-        },
-        {
-          "title": "Applied Cloud Computing [TCS]",
-          "path": "/programs/tcs/applied-cloud-computing"
-        },
-        {
-          "title": "Data Modeling and Visualization [TCS]",
-          "path": "/programs/tcs/data-modeling-visualization"
-        },
-        {
-          "title": "Data Mining and Warehousing [TCS]",
-          "path": "/programs/tcs/data-mining-warehousing"
-        },
-        {
-          "title": "Data Analysis with Excel [TCS]",
-          "path": "/programs/tcs/data-analysis-excel"
-        },
-        {
-          "title": "Data Analytics and Reporting [TCS]",
-          "path": "/programs/tcs/data-analytics-reporting"
-        },
-        {
-          "title": "Big Data on Cloud [TCS]",
-          "path": "/programs/tcs/big-data-cloud"
-        },
-        {
-          "title": "Practical Approach to Cyber Security [TCS]",
-          "path": "/programs/tcs/practical-cyber-security"
+          "path": "/programs/tcs/information-security",
+          "collaboration_link": "https://www.careers360.com/courses-certifications/tcs-ion-digital-learning-hub-information-security-practitioners-perspective-course#:~:text=The%20%E2%80%98Information%20Security%20-%20Practitioner's%20Perspective%E2%80%99%20online%20certification,protecting,%20and%20securing%20the%20data%20of%20the%20organization."
         }
+     
+
       ],
       "comment": "Total TCS Academia Programs: 17"
     },
@@ -586,3 +570,6 @@
   ],
   "comment": "Total Programs Across All Categories: 132"
 }
+
+
+       

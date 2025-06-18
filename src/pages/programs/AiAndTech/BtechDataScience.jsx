@@ -13,7 +13,7 @@ import {
   FaBriefcase,      // For careers
   FaChevronDown,    // For accordions
   FaExternalLinkAlt, // For external links
-  FaLightbulb       // For innovation/insights
+  FaLightbulb,FaFileAlt       // For innovation/insights
 } from 'react-icons/fa';
 
 const BtechDataSciencePage = () => {
@@ -270,12 +270,13 @@ const BtechDataSciencePage = () => {
             Join our B.Tech in Data Science program and become a leader in the data-driven future.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-white text-green-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
-              Apply Now
-            </button>
-            <button className="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-green-700 transition-colors">
-              Download Brochure
-            </button>
+            <a 
+                        href="https://siu.in8.nopaperforms.com/"  target="_blank"
+                        className="bg-white text-green-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
+                      >
+                        <FaFileAlt className="mr-2" /> Apply Now
+                      </a>
+          
           </div>
         </div>
       </div>

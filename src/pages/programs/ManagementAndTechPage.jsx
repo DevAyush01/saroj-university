@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../../components/Layout';
-import { AnimatePresence } from 'framer-motion';
+import { motion,AnimatePresence } from 'framer-motion';
 import { FaLaptopCode, FaBusinessTime, FaChartBar, FaNetworkWired, FaChevronDown, FaFileAlt, FaFilter, FaStethoscope } from 'react-icons/fa'; // Added FaStethoscope for the header icon
 
 const ManagementAndTechPage = () => {
@@ -518,7 +518,7 @@ const ManagementAndTechPage = () => {
       
 
         {/* Automatic Filters Section */}
-        <div className="bg-green-700 rounded-t-lg px-8 py-6 text-white mb-0"> {/* Adjusted background color to green based on image */}
+        <div className="bg-black rounded-t-lg px-8 py-6 text-white mb-0"> {/* Adjusted background color to green based on image */}
           <div className="flex items-center">
             {/* You can change this icon if it's for Health Sciences */}
             <FaStethoscope className="text-3xl text-white mr-4" /> 

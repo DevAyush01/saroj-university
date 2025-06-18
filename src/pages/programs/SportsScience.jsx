@@ -109,7 +109,7 @@ const SportsScience = () => {
           className="bg-white rounded-xl shadow-md overflow-hidden mb-12"
         >
           {/* Section Header */}
-          <div className="bg-red-700 px-8 py-6 flex items-center">
+          <div className="bg-black px-8 py-6 flex items-center">
             <FaBasketballBall className="text-3xl text-white mr-4" />
             <div>
               <h2 className="text-2xl font-bold text-white">Our Sports Science Programs</h2>

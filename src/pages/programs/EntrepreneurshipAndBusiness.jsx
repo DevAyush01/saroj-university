@@ -148,7 +148,7 @@ const EntrepreneurshipAndBusiness = () => {
           className="bg-white rounded-xl shadow-md overflow-hidden mb-12"
         >
           {/* Header for Filter Bar - Using a golden/yellow theme */}
-          <div className="bg-yellow-600 rounded-t-xl px-8 py-6 text-white flex items-center">
+          <div className="bg-black rounded-t-xl px-8 py-6 text-white flex items-center">
             <FaUniversity className="text-3xl text-white mr-4" /> {/* Icon for this section header */}
             <div>
               <h2 className="text-2xl font-bold">Our Business & Entrepreneurship Programs</h2>
