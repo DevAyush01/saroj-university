@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage";
 import Contact from "./pages/contact/Contact";
 import AboutSIU from "./pages/about/AboutSIU";
 import ScholarshipPage from "./pages/admission/ScholarshipPage";
-import AdmissionCriteria from "./pages/Admission/AdmissionCriteria"
+import AdmissionCriteria from "./pages/Admission/AdmissionCriteria";
 import AdmissionProcess from "./pages/admission/AdmissionProcess";
 import HistoryPage from "./pages/about/HistoryPage";
 import VisionMissionPage from "./pages/about/VisionMissionPage";
@@ -28,15 +28,52 @@ import BAPage from "./pages/programs/Humanities/BA";
 import BSPage from "./pages/programs/Humanities/BS";
 import BPharmaPage from "./pages/programs/Pharma/Bpharma";
 import DPharmaPage from "./pages/programs/Pharma/Dpharma";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsConditions";
 
 function App() {
   return (
     <Routes>
+      <Route path="*" element={<ErrorPage />} />
       <Route path="/" element={<HomePage />} />
+      <Route path="/programs" element={<ProgramsPage />} />
+
       
       
       {/* About  */}
       <Route path="/about/about-siu" element={<AboutSIU />} />
+      <Route path="about/history" element={<HistoryPage />} />
+      <Route path="about/vision-mission" element={<VisionMissionPage />} />
+      <Route path="about/acts" element={<Acts />} />
+      <Route
+        path="about/approvals-documents"
+        element={<ApprovalsDocuments />}
+      />
+      <Route path="about/all-courses" element={<Courses />} />
+
+      {/* Programs */}
+      <Route path="/programs/btech-ai-ml" element={<AiAndTechPage />} />
+      <Route
+        path="/programs/diploma-public-health"
+        element={<HealthSciencesPage />}
+      />
+      <Route path="/programs/humanities" element={<HumanitiesPage />} />
+      <Route
+        path="/programs/entrepreneurship-and-business"
+        element={<EntrepreneurshipAndBusiness />}
+      />
+      <Route path="/programs/films-and-fashion" element={<FilmsAndFashion />} />
+      <Route
+        path="/programs/management-and-tech"
+        element={<ManagementAndTechPage />}
+      />
+      <Route path="/programs/pharmacy" element={<PharmacyPage />} />
+      <Route path="/programs/sports-science" element={<SportsScience />} />
+
+      <Route
+        path="admissions/admission-criteria"
+        element={<AdmissionCriteria />}
+      />
       <Route path = "about/history" element ={ <HistoryPage/> } />
       <Route path = "about/vision-mission" element ={ <VisionMissionPage/> } />
       <Route path = "about/acts" element ={ <Acts />  } />
@@ -82,6 +119,17 @@ function App() {
       <Route path="/administration/chancellor" element={<ChancellorPage />} />
       <Route path="/administration/vice-chancellor"  element={<ViceChancellorPage />}
       />
+      {/* Admissions  */}
+
+      <Route
+        path="admissions/admission-criteria"
+        element={<AdmissionCriteria />}
+      />
+      <Route path="admissions/scholarship" element={<ScholarshipPage />} />
+      <Route
+        path="admissions/admission-process"
+        element={<AdmissionProcess />}
+      />
 
     {/* Admissions  */}
       <Route path="admissions/admission-criteria" element={ <AdmissionCriteria /> } /> 
@@ -89,18 +137,21 @@ function App() {
       <Route path="admissions/admission-process" element={<AdmissionProcess />} />
       <Route path="admissions/fee-structure" element={<SIUFeeStructure />} />
 
+      {/* Administration  */}
+      <Route path="/administration/chancellor" element={<ChancellorPage />} />
+      <Route
+        path="/administration/vice-chancellor"
+        element={<ViceChancellorPage />}
+      />
+      <Route path="*" element={<ErrorPage />} />
 
-      
-
-    {/* Administration  */}
-      <Route path = "/administration/chancellor" element ={ <ChancellorPage/>  } />
-      <Route path = "/administration/vice-chancellor" element ={ <ViceChancellorPage />  } />
-      <Route path = "*" element ={ <ErrorPage /> } />
-
-  {/* Contact Us  */}
+      {/* Contact Us  */}
       <Route path="/contact-us" element={<Contact />} />
 
-      <Route path="*" element={<ErrorPage />} />
+
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+
     </Routes>
   );
 }

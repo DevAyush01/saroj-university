@@ -37,9 +37,9 @@ const ThinkInspirationSection = () => {
   const [activeFeature, setActiveFeature] = useState(null);
 
   return (
-    <section className="flex flex-col md:flex-row w-full">
+    <section className="flex flex-col lg:flex-row w-full">
       {/* LEFT: Image Slider */}
-      <div className="w-full md:w-1/2 h-[60vh] min-h-[700px] relative group">
+      <div className="w-full lg:w-1/2 h-[50vh] sm:h-[60vh] lg:h-[70vh] xl:min-h-[700px] relative group">
         <Swiper
           modules={[EffectFade, Autoplay]}
           effect="fade"
@@ -52,11 +52,11 @@ const ThinkInspirationSection = () => {
           className="h-full w-full"
         >
           {slides.map((slide, idx) => (
-            <SwiperSlide key={idx} className="h-full w-full">
+            <SwiperSlide key={idx} className="h-full w-full ">
               <img
                 src={slide.src}
                 alt={slide.alt}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover md:object-fill    lg:object-left "
                 loading={idx === 0 ? "eager" : "lazy"}
               />
             </SwiperSlide>
@@ -65,16 +65,16 @@ const ThinkInspirationSection = () => {
       </div>
 
       {/* RIGHT: Text Content */}
-      <div className="w-full md:w-1/2 h-[60vh] min-h-[700px] bg-primary text-white font-funneldisplay p-6 md:p-8 lg:p-12 flex flex-col justify-center">
+      <div className="w-full lg:w-1/2 h-auto lg:h-[70vh] xl:min-h-[700px] bg-primary text-white font-funneldisplay p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-center">
         <div className="max-w-lg mx-auto w-full">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 leading-tight hover:text-yellow-200 transition-colors duration-300">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold mb-2 leading-tight hover:text-yellow-200 transition-colors duration-300">
             THINK EXCELLENCE
           </h2>
-          <p className="uppercase text-sm md:text-base mb-6 tracking-wider opacity-90 hover:opacity-100 transition-opacity duration-300">
+          <p className="uppercase text-xs sm:text-sm md:text-base mb-4 sm:mb-6 tracking-wider opacity-90 hover:opacity-100 transition-opacity duration-300">
             AT SAROJ INTERNATIONAL UNIVERSITY
           </p>
 
-          <ul className="space-y-2 mb-6 md:mb-8">
+          <ul className="space-y-2 mb-6 sm:mb-8">
             {features.map((feature, index) => (
               <li
                 key={index}
@@ -93,13 +93,13 @@ const ThinkInspirationSection = () => {
 
           <a
             href="#discover-more"
-            className="inline-flex items-center text-white font-semibold hover:underline text-base md:text-lg transition-all hover:translate-x-1 group"
+            className="inline-flex items-center text-white font-semibold hover:underline text-sm sm:text-base md:text-lg transition-all hover:translate-x-1 group"
             aria-label="Discover more about Saroj International University"
           >
             <span>Discover the Spirit of Saroj International University</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 ml-1 transition-transform duration-300 group-hover:translate-x-1"
+              className="h-4 w-4 sm:h-5 sm:w-5 ml-1 transition-transform duration-300 group-hover:translate-x-1"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

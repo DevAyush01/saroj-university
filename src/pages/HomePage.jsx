@@ -41,7 +41,7 @@ function Home() {
   return (
     <>
       <Layout>
-        <TopScrollButton/>
+      
         <PopupForm/>
         <FloatingAdmissionAlert/>
         <HeroSection/>

@@ -2,70 +2,73 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const NewsSection = () => {
-  // News data
+  // Updated News data with recent information
   const newsItems = [
     {
       id: 1,
-      title: "Saroj International ranked among top 10 institutes for AI education",
-      date: "June 15, 2023",
-      category: "Achievement",
-      excerpt: "The institute has been recognized for its excellence in artificial intelligence education and research."
+      title: "Saroj International University ranked among top 20 private universities in India",
+      date: "June 10, 2025",
+      category: "Recognition",
+      excerpt: "The university climbs the national rankings with excellence in research, innovation, and placements."
     },
     {
       id: 2,
-      title: "New partnership with Tech Giants Inc. for student internships",
-      date: "June 10, 2023",
-      category: "Collaboration",
-      excerpt: "Students will now have access to exclusive internship opportunities at leading tech companies."
+      title: "Global Innovation Lab inaugurated at Saroj International",
+      date: "May 22, 2025",
+      category: "Infrastructure",
+      excerpt: "The new lab supports AI, robotics, and sustainability projects, in collaboration with international partners."
     },
     {
       id: 3,
-      title: "Campus reopening announced with enhanced safety measures",
-      date: "June 5, 2023",
-      category: "Announcement",
-      excerpt: "The institute will reopen with new health protocols to ensure student safety."
+      title: "Saroj International launches ‘Green Campus Initiative’",
+      date: "May 28, 2025",
+      category: "Sustainability",
+      excerpt: "The initiative promotes eco-friendly practices including solar power, zero-waste policies, and green buildings."
     },
     {
       id: 4,
-      title: "Annual tech fest 'InnovateX 2023' scheduled for July 20-22",
-      date: "May 28, 2023",
+      title: "Annual Tech & Innovation Summit 2025 concludes successfully",
+      date: "April 25, 2025",
       category: "Event",
-      excerpt: "Three days of workshops, competitions, and talks from industry leaders."
-    },
-   
+      excerpt: "The 3-day summit featured keynote speakers from Google, panel discussions, and student startup showcases."
+    }
   ];
+  
+  
 
-  // Notice data
+  // Updated Notice data
   const notices = [
     {
       id: 1,
-      title: "Admission Deadline Extension",
-      content: "Last date for admissions extended to June 30, 2023",
-      date: "June 12, 2023",
+      title: "Admissions Open 2025-26",
+      content: "Applications for UG and PG programs are now being accepted online",
+      date: "June 1, 2025",
       important: true
     },
     {
       id: 2,
-      title: "Summer Break Schedule",
-      content: "Institute will remain closed from July 1-15, 2023",
-      date: "June 10, 2023",
-      important: false
-    },
-    {
-      id: 3,
-      title: "Campus Maintenance",
-      content: "Power shutdown on June 18, 2023 (9 AM - 5 PM)",
-      date: "June 8, 2023",
+      title: "Scholarship Application Deadline Approaching",
+      content: "Apply by June 30, 2025, for academic and sports-based scholarships",
+      date: "June 12, 2025",
       important: true
     },
     {
-      id: 4,
-      title: "Faculty Recruitment",
-      content: "Walk-in interviews for Assistant Professors on June 25, 2023",
-      date: "June 5, 2023",
+      id: 3,
+      title: "AICTE Internship Portal Now Open",
+      content: "Students can register for summer internships under the AICTE portal till July 5, 2025",
+      date: "June 8, 2025",
       important: false
+    },
+    {
+      id: 4,
+      title: "Mega Tech Hiring Week Announced",
+      content: "Top recruiters including Infosys, Deloitte, Wipro, and Accenture will participate from July 15–20, 2025",
+      date: "June 5, 2025",
+      important: true
     }
+    
   ];
+  
 
   // Animation variants
   const containerVariants = {
@@ -100,21 +103,21 @@ const NewsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b font-funneldisplay font-medium from-gray-50 to-white">
+    <section className="py-10 bg-blue-50 font-funneldisplay font-medium ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
             News & Announcements
           </h2>
           <div className="mt-4 h-1.5 w-24 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
           <p className="mt-6 max-w-2xl text-xl text-gray-600 mx-auto">
-            Stay updated with the latest happenings and important notices from Saroj International
+            Stay updated with the latest happenings at Saroj International University
           </p>
         </motion.div>
 
@@ -155,8 +158,8 @@ const NewsSection = () => {
                           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                             item.category === "Achievement" ? "bg-green-100 text-green-800" :
                             item.category === "Collaboration" ? "bg-blue-100 text-blue-800" :
-                            item.category === "Announcement" ? "bg-purple-100 text-purple-800" :
-                            item.category === "Event" ? "bg-red-100 text-red-800" :
+                            item.category === "Academics" ? "bg-indigo-100 text-indigo-800" :
+                            item.category === "Infrastructure" ? "bg-orange-100 text-orange-800" :
                             "bg-yellow-100 text-yellow-800"
                           }`}>
                             {item.category}
@@ -165,18 +168,18 @@ const NewsSection = () => {
                         </div>
                         <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
                         <p className="text-gray-600 mb-4">{item.excerpt}</p>
-                        <a href="#" className="text-sm font-medium text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        {/* <a href="#" className="text-sm font-medium text-blue-600 hover:text-blue-800 inline-flex items-center">
                           Read more
                           <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                           </svg>
-                        </a>
+                        </a> */}
                       </div>
                     </motion.div>
                   ))}
                 </div>
               </div>
-              <div className="bg-gray-50 px-6 py-4 text-center border-t border-gray-200">
+              {/* <div className="bg-gray-50 px-6 py-4 text-center border-t border-gray-200">
                 <motion.a 
                   href="#" 
                   className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -185,7 +188,7 @@ const NewsSection = () => {
                 >
                   View all news articles
                 </motion.a>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 
@@ -248,7 +251,7 @@ const NewsSection = () => {
                   ))}
                 </motion.ul>
               </div>
-              <div className="bg-gray-50 px-6 py-4 text-center border-t border-gray-200">
+              {/* <div className="bg-gray-50 px-6 py-4 text-center border-t border-gray-200">
                 <motion.a 
                   href="#" 
                   className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
@@ -257,7 +260,7 @@ const NewsSection = () => {
                 >
                   View all notices
                 </motion.a>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
