@@ -13,9 +13,8 @@ const ApprovalsSection = () => {
   name: "UGC Recognition",
   logo: ugcLogo,
   description: "Saroj International University is recognized by the University Grants Commission (UGC) under Section 2(f) of the UGC Act, 1956, affirming its status as a legitimate higher education institution in India.",
-  date: "June 15, 2018",
   authority: "University Grants Commission",
-  link: "#"
+  link: "/about/recognition"
 },
 
 {
@@ -23,9 +22,8 @@ const ApprovalsSection = () => {
   name: "AICTE Approval",
   logo: internationalLogo,
   description: "The university is approved by the All India Council for Technical Education (AICTE) to offer technical and professional programs in compliance with national standards.",
-  date: "October 5, 2021",
   authority: "All India Council for Technical Education",
-  link: "#"
+  link: ""
 },
 
 {
@@ -33,7 +31,6 @@ const ApprovalsSection = () => {
   name: "PCI Approval",
   logo: industryLogo,
   description: "The university is approved by the Pharmacy Council of India (PCI) to offer pharmacy programs, ensuring compliance with national standards for pharmaceutical education.",
-  date: "August 8, 2022",
   authority: "Pharmacy Council of India",
   link: "#"
 }
@@ -155,10 +152,7 @@ const ApprovalsSection = () => {
                       <h4 className="text-sm font-medium text-gray-500 mb-1">Issuing Authority</h4>
                       <p className="font-medium text-gray-800">{activeCertificate.authority}</p>
                     </div>
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <h4 className="text-sm font-medium text-gray-500 mb-1">Date of Recognition</h4>
-                      <p className="font-medium text-gray-800">{activeCertificate.date}</p>
-                    </div>
+                    
                   </div>
                 </div>
               </div>

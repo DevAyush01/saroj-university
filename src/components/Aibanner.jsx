@@ -1,5 +1,6 @@
 import React,{ useEffect, useRef, useState } from 'react';
 import { BrainCircuit, Rocket, Cpu, Database, Atom, Sparkles, CircuitBoard, Binary, Network, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const LightAIBanner = () => {
   const [hoverState, setHoverState] = useState(false);
@@ -124,7 +125,7 @@ const LightAIBanner = () => {
             
             <div className="flex flex-wrap gap-3 sm:gap-4">
               <button className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold rounded-lg md:rounded-xl hover:shadow-lg hover:shadow-blue-200 transition-all duration-300 flex items-center gap-2 sm:gap-3 group text-sm sm:text-base">
-                <span>Explore Programs</span>
+                <Link to='/programs'>Explore Programs</Link>
                 <Rocket className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
