@@ -10,27 +10,24 @@ const navItems = [
     path: "/about",
     subItems: [
       { title: "About SIU", path: "/about/about-siu" },
+      // {
+      //   title: "Institutional Development Plan",
+      //   // path: "/about/development-plan",
+      // },
+      // { title: "Constituent Units", path: "/about/constituent-units" },
+      { title: "Boards", path: "/about/boards" },
+      { title: "Deans", path: "/about/deans" },
 
-      {
-        title: "Institutional Development Plan",
-        path: "/about/development-plan",
-      },
-      { title: "Constituent Units", path: "/about/constituent-units" },
-      { title: "Accreditation", path: "/about/accreditation" },
+      // { title: "Accreditation", path: "/about/accreditation" },
       { title: "Recognition", path: "/about/recognition" },
       { title: "Annual Reports", path: "/about/annual-reports" },
-      { title: "Annual Account", path: "/about/annual-account" },
-      { title: "Committees", path: "/about/committees" },
-      { title: "Mandatory Disclosure", path: "/about/mandatory-disclosure" },
-      { title: "Act and Statutes or MoA", path: "/about/approvals-documents" },
-      // { title: "Institutional Development Plan", path: "/about/development-plan" },
-      // { title: "Constituent Units", path: "/about/constituent-units" },
-      // { title: "Accreditation", path: "/about/accreditation" },
-      // { title: "Recognition", path: "/about/recognition" },
-      // { title: "Annual Reports", path: "/about/annual-reports" },
       // { title: "Annual Account", path: "/about/annual-account" },
-      // { title: "Committees", path: "/about/committees" },
-      // { title: "Mandatory Disclosure", path: "/about/mandatory-disclosure" },
+      { title: "Committees", path: "/about/committees" },
+      {
+        title: "Public Self Disclosure",
+        path: "/about/public-self-disclosure",
+      },
+      { title: "Act and Statutes or MoA", path: "/about/approvals-documents" },
     ],
   },
   {
@@ -38,22 +35,23 @@ const navItems = [
     path: "/administration",
     subItems: [
       { title: "Chancellor", path: "/administration/chancellor" },
-      { title: "Pro Chancellor", path: "/administration/pro-chancellor" },
+      // { title: "Pro Chancellor", path: "/administration/pro-chancellor" },
       { title: "Vice Chancellor", path: "/administration/vice-chancellor" },
-      { title: "Registrar", path: "/administration/registrar" },
-      { title: "Financial Officer", path: "/administration/financial-officer" },
+      // { title: "Registrar", path: "/administration/registrar" },
+      { title: "Finance Commitee", path: "/administration/finance-commitee" },
+      // { title: "Controller of Examination (CoE)", path: "/administration/controller-exams",},
+      // {
+      //   title: "Chief Vigilance Officer",
+      //   path: "/administration/chief-vigilance",
+      // },
+      // { title: "Ombudsperson", path: "/administration/ombudsperson" },
       {
-        title: "Controller of Examination (CoE)",
-        path: "/administration/controller-exams",
+        title: "Academic Council",
+        path: "/administration/academic-council",
       },
       {
-        title: "Chief Vigilance Officer",
-        path: "/administration/chief-vigilance",
-      },
-      { title: "Ombudsperson", path: "/administration/ombudsperson" },
-      {
-        title: "Academic Leadership",
-        path: "/administration/academic-leadership",
+        title: "Executive Council",
+        path: "/administration/executive-council",
       },
       {
         title: "Internal Complaint Committee",
@@ -65,7 +63,11 @@ const navItems = [
     title: "Programs",
     path: "/programs",
     megaMenu: true,
+<<<<<<< HEAD
     columns: programsData.columns, // Use the imported programs data
+=======
+    columns: programsData.columns,
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
   },
   {
     title: "Academics",
@@ -73,9 +75,9 @@ const navItems = [
     subItems: [
       { title: "Academic Calendar", path: "/academics/academic-calendar" },
       { title: "Statutes", path: "/academics/statutes" },
-      { title: "Library", path: "/academics/library" },
+      // { title: "Library", path: "/academics/library" },
       { title: "Faculty", path: "/academics/faculty" },
-      { title: "Exam Schedule", path: "/academics/exam-schedule" },
+      // { title: "Exam Schedule", path: "/academics/exam-schedule" },
       {
         title: "Internal Quality Assurance Cell (IQAC)",
         path: "/academics/iqac",
@@ -93,7 +95,6 @@ const navItems = [
       { title: "Admission Process", path: "/admissions/admission-process" },
       { title: "Eligibility Criteria", path: "/admissions/admission-criteria" },
       { title: "Fee Structure", path: "/admissions/fee-structure" },
-
       { title: "Scholarship", path: "/admissions/scholarship" },
       { title: "Admission Helpdesk", path: "/admissions/helpdesk" },
     ],
@@ -147,11 +148,19 @@ function Header() {
 
   return (
     <div ref={navRef}>
+<<<<<<< HEAD
       <nav className='fixed left-0 right-0 top-0 z-40 bg-white text-gray-600 shadow-md'>
         <div className='max-w-8xl mx-auto px-4 py-2'>
           <div className='flex items-center justify-between'>
             <Link to='/' className='flex items-center' onClick={closeAllMenus}>
               <img src={logo} alt='SIU logo' className='h-auto w-48' />
+=======
+      <nav className="fixed left-0 right-0 top-0 z-40 bg-white text-gray-600 shadow-md">
+        <div className="max-w-8xl mx-auto px-4 py-2">
+          <div className="flex items-center justify-between">
+            <Link to="/" className="flex items-center" onClick={closeAllMenus}>
+              <img src={logo} alt="SIU logo" className="h-auto w-48" />
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
             </Link>
 
             {/* Desktop Header UL  */}
@@ -204,17 +213,36 @@ function Header() {
                       )}
 
                       {item.megaMenu && (
+<<<<<<< HEAD
                         <div className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"}`}>
                           <div className='absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white'></div>
+=======
+                        <div
+                          className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[900px] max-h-[80vh] overflow-y-auto bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${
+                            openSubmenu === index ? "block" : "hidden"
+                          }`}
+                        >
+                          <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white"></div>
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
 
                           {/* 1st column: tcs and collab */}
                           <div className='grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4'>
                             <div>
                               {item.columns.map(
                                 (column, colIndex) =>
+<<<<<<< HEAD
                                   (column.heading === "COLLABORATION" || column.heading === "TCS ACADEMIA") && (
                                     <div key={`${column.heading}-${colIndex}`} className='relative'>
                                       <h3 className='font-bold text-sm text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative'>
+=======
+                                  (column.heading === "COLLABORATION" ||
+                                    column.heading === "TCS ACADEMIA") && (
+                                    <div
+                                      key={`${column.heading}-${colIndex}`}
+                                      className="relative mb-6"
+                                    >
+                                      <h3 className="font-bold text-lg text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative">
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                         {column.heading}
                                         <span className='absolute bottom-0 left-0 w-1/8 h-0.5 bg-gradient-to-r from-orange-500 to-transparent'></span>
                                       </h3>
@@ -243,10 +271,16 @@ function Header() {
                                                 </div>
                                                 <ArrowRight size={16} color='orange' className='opacity-0 group-hover:opacity-100 transition-opacity duration-200' />
                                               </Link>
+<<<<<<< HEAD
                                             )}
                                           </li>
                                         ))}
                                       
+=======
+                                            </li>
+                                          )
+                                        )}
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                       </ul>
                                     </div>
                                   )
@@ -259,11 +293,20 @@ function Header() {
                                 (column, colIndex) =>
                                   column.heading !== "COLLABORATION" &&
                                   column.heading !== "TCS ACADEMIA" && (
+<<<<<<< HEAD
                                     <div key={`${column.heading}-${colIndex}`} className='relative'>
                                       <h3 className='font-bold text-sm text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative'>
+=======
+                                    <div
+                                      key={`${column.heading}-${colIndex}`}
+                                      className="relative mb-6"
+                                    >
+                                      <h3 className="font-bold text-lg text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative">
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                         {column.heading}
                                         <span className='absolute bottom-0 left-0 w-1/3 h-0.5 bg-gradient-to-r from-orange-500 to-transparent'></span>
                                       </h3>
+<<<<<<< HEAD
                                       <ul className='space-y-2'>
                                         {column.items.slice(0, 2).map((subItem, subItemIndex) => (
                                           <li key={`${subItem.path}-${subItemIndex}`} className='mb-1'>
@@ -286,12 +329,41 @@ function Header() {
                                             <ArrowRight size={16} className='ml-1' />
                                           </Link>
                                         </li>
+=======
+                                      <ul className="space-y-2">
+                                        {column.items
+                                          .slice(0, 4)
+                                          .map((subItem, subItemIndex) => (
+                                            <li
+                                              key={`${subItem.path}-${subItemIndex}`}
+                                              className="mb-1"
+                                            >
+                                              <Link
+                                                to={subItem.path}
+                                                className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group"
+                                                onClick={closeAllMenus}
+                                              >
+                                                <div className="flex items-start">
+                                                  <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                                                  {subItem.title}
+                                                </div>
+                                                <ArrowRight
+                                                  size={16}
+                                                  color="orange"
+                                                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                                />
+                                              </Link>
+                                            </li>
+                                          ))}
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                       </ul>
                                     </div>
                                   )
                               )}
                             </div>
+                          </div>
 
+<<<<<<< HEAD
                             {/* View all programs ultimate button */}
                             <div className='flex flex-row justify-end items-end'>
                               <Link to='/programs'>
@@ -302,6 +374,17 @@ function Header() {
                                 </button>
                               </Link>
                             </div>
+=======
+                          <div className="flex justify-center mt-4">
+                            <Link to="/programs" onClick={closeAllMenus}>
+                              <button
+                                className="inline-flex items-center justify-center bg-blue-700 text-white font-semibold px-10 
+                                py-3 rounded-sm shadow-lg hover:bg-blue-800 transition duration-300 text-base sm:text-lg"
+                              >
+                                View all Programs
+                              </button>
+                            </Link>
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                           </div>
                         </div>
                       )}
@@ -326,50 +409,106 @@ function Header() {
             </button>
           </div>
 
+<<<<<<< HEAD
           <div className={`xl:hidden ${mobileMenuOpen ? "max-h-screen" : "max-h-0 overflow-hidden"} transition-all duration-300 ease-in-out`}>
             <ul className='pt-2 pb-4 space-y-1'>
+=======
+          {/* Modified mobile menu section */}
+          <div
+            className={`xl:hidden ${
+              mobileMenuOpen ? "max-h-[90vh]z-[888] pb-10" : "max-h-0"
+            } transition-all duration-300 ease-in-out overflow-y-auto `}
+          >
+            <ul className="pt-2 pb-4 space-y-3 min-h-screen ">
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
               {navItems.map((item, index) => (
-                <li key={`${item.path}-${index}-mobile`}>
+                <li
+                  key={`${item.path}-${index}-mobile`}
+                  className="border-b border-gray-100 last:border-b-0"
+                >
                   {item.subItems || item.megaMenu ? (
                     <>
+<<<<<<< HEAD
                       <button onClick={() => toggleMobileSubmenu(index)} className='flex items-center justify-between w-full px-3 py-3 hover:bg-gray-50' aria-haspopup='true' aria-expanded={openMobileSubmenu === index}>
                         <span>{item.title}</span>
                         <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openMobileSubmenu === index ? "rotate-180" : ""}`} />
                       </button>
                       <div className={`${openMobileSubmenu === index ? "max-h-[2000px]" : "max-h-0"} overflow-hidden transition-all duration-300 ease-in-out`}>
                         <ul className='pl-4 mt-1 space-y-1'>
+=======
+                      <button
+                        onClick={() => toggleMobileSubmenu(index)}
+                        className="flex items-center justify-between w-full px-3 py-2 hover:bg-gray-50"
+                        aria-haspopup="true"
+                        aria-expanded={openMobileSubmenu === index}
+                      >
+                        <span className="text-gray-800 font-medium">
+                          {item.title}
+                        </span>
+                        <ChevronDown
+                          className={`w-5 h-5 transition-transform duration-300 ${
+                            openMobileSubmenu === index ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      <div
+                        className={`${
+                          openMobileSubmenu === index
+                            ? "max-h-[2000px]"
+                            : "max-h-0"
+                        } overflow-hidden transition-all duration-300 ease-in-out`}
+                      >
+                        <ul className="pl-2 space-y-0">
+                          {" "}
+                          {/* Changed pl-4 to pl-2 and space-y-1 to space-y-0 */}
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                           {item.subItems &&
                             !item.megaMenu &&
                             item.subItems.map((subItem, subIndex) => (
-                              <li key={`${subItem.path}-${subIndex}-mobile`}>
+                              <li
+                                key={`${subItem.path}-${subIndex}-mobile`}
+                                className="border-t border-gray-100"
+                              >
                                 {subItem.target ? (
                                   <a
                                     href={subItem.path}
                                     target={subItem.target}
                                     rel={subItem.rel}
+<<<<<<< HEAD
                                     className='block px-3 py-3 hover:bg-gray-50 relative
                                             before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                             before:bg-orange-500 before:transition-all before:duration-300
                                             hover:before:w-full'
                                     onClick={closeAllMenus}>
+=======
+                                    className="block px-3 py-2 hover:bg-gray-50 text-gray-700 text-sm"
+                                    onClick={closeAllMenus}
+                                  >
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                     {subItem.title}
                                   </a>
                                 ) : (
                                   <Link
                                     to={subItem.path}
+<<<<<<< HEAD
                                     className='block px-3 py-3 hover:bg-gray-50 relative
                                             before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                             before:bg-orange-500 before:transition-all before:duration-300
                                             hover:before:w-full'
                                     onClick={closeAllMenus}>
+=======
+                                    className="block px-3 py-2 hover:bg-gray-50 text-gray-700 text-sm"
+                                    onClick={closeAllMenus}
+                                  >
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                     {subItem.title}
                                   </Link>
                                 )}
                               </li>
                             ))}
-
                           {item.megaMenu &&
                             item.columns.map((column, colIndex) => (
+<<<<<<< HEAD
                               <li key={`${column.heading}-${colIndex}-mobile-column`}>
                                 {" "}
                                 {/* Added unique key for column li */}
@@ -398,6 +537,38 @@ function Header() {
                                       <ArrowRight size={16} className='ml-1' />
                                     </Link>
                                   </li>
+=======
+                              <li
+                                key={`${column.heading}-${colIndex}-mobile-column`}
+                                className="border-t border-gray-100"
+                              >
+                                <h4 className="font-semibold text-blue-800 mt-1 mb-1 px-3 border-b border-orange-200 pb-1 text-sm">
+                                  {" "}
+                                  {/* Reduced text size and adjusted styling */}
+                                  {column.heading}
+                                </h4>
+                                <ul className="pl-2 space-y-0">
+                                  {" "}
+                                  {/* Changed pl-4 to pl-2 and space-y-1 to space-y-0 */}
+                                  {column.items.map((subItem, subItemIndex) => (
+                                    <li
+                                      key={`${subItem.path}-${subItemIndex}-mobile`}
+                                      className="border-t border-gray-100"
+                                    >
+                                      <Link
+                                        to={subItem.path}
+                                        className="block px-3 py-2 hover:bg-gray-50 flex items-center justify-between group text-gray-700 text-sm"
+                                        onClick={closeAllMenus}
+                                      >
+                                        {subItem.title}
+                                        <ArrowRight
+                                          size={14}
+                                          className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                        />
+                                      </Link>
+                                    </li>
+                                  ))}
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                 </ul>
                               </li>
                             ))}
@@ -407,11 +578,17 @@ function Header() {
                   ) : (
                     <Link
                       to={item.path}
+<<<<<<< HEAD
                       className='block px-3 py-3 hover:bg-gray-50 relative
                                   before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                   before:bg-orange-500 before:transition-all before:duration-300
                                   hover:before:w-full'
                       onClick={closeAllMenus}>
+=======
+                      className="block px-3 py-2 hover:bg-gray-50 text-gray-800 font-medium"
+                      onClick={closeAllMenus}
+                    >
+>>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                       {item.title}
                     </Link>
                   )}

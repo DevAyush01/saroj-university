@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const primaryBlue = "#214A9A";
@@ -91,7 +92,7 @@ const HeroSection = () => {
                   boxShadow: `0 4px 14px ${primaryBlue}80`
                 }}
               >
-                <span>Explore Programs</span>
+                <Link to='/programs'>Explore Programs</Link>
                 <ArrowRight
                   className="group-hover:translate-x-1 transition-transform duration-300"
                   size={16}
