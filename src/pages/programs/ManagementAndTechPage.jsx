@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../../components/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { FaLaptopCode, FaBusinessTime, FaChartBar, FaNetworkWired, FaChevronDown, FaFileAlt, FaFilter, FaStethoscope } from 'react-icons/fa'; // Added FaStethoscope for the header icon
 
 const ManagementAndTechPage = () => {
