@@ -22,6 +22,12 @@ import FilmsAndFashion from "./pages/programs/FilmsAndFashion";
 import ManagementAndTechPage from "./pages/programs/ManagementAndTechPage";
 import PharmacyPage from "./pages/programs/PharmacyPage";
 import SportsScience from "./pages/programs/SportsScience";
+import BtechAIMLPage from "./pages/programs/AiAndTech/BTechAiPage";
+import BtechDataSciencePage from "./pages/programs/AiAndTech/BtechDataScience";
+import BAPage from "./pages/programs/Humanities/BA";
+import BSPage from "./pages/programs/Humanities/BS";
+import BPharmaPage from "./pages/programs/Pharma/Bpharma";
+import DPharmaPage from "./pages/programs/Pharma/Dpharma";
 
 function App() {
   return (
@@ -47,6 +53,18 @@ function App() {
       <Route path= "/programs/pharmacy" element ={ <PharmacyPage/>} />
       <Route path= "/programs/sports-science" element ={ <SportsScience/>} />
       <Route path= "/programs/health-sciences" element ={ <HealthSciencesPage/>} />
+
+      {/* Programs Submnu Pages */}
+      <Route path = "programs/btech-ai-ml" element ={ <BtechAIMLPage/> } /> 
+      <Route path = "programs/btech-data-science" element ={ <BtechDataSciencePage/> } /> 
+
+      {/* Humanities Submenu pages */}
+      <Route path = "programs/ba" element ={ <BAPage/> } /> 
+      <Route path = "programs/bs-international-relations" element ={ <BSPage/> } /> 
+
+      {/* Pharma Submenu */}
+       <Route path = "programs/bpharm" element ={ <BPharmaPage/> } /> 
+       <Route path = "programs/dpharm" element ={ <DPharmaPage/> } />
 
       <Route path="admissions/admission-criteria"  element={<AdmissionCriteria />}   />
       <Route path="admissions/scholarship" element={<ScholarshipPage />} />

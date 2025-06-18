@@ -1,0 +1,327 @@
+import React, { useState } from 'react';
+import Layout from '../../../components/Layout'; // Default import for Layout
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  FaBookReader,       // Main icon for Arts/Humanities
+  FaGlobe,            // For Political Science/Global Studies
+  FaChartBar,         // For Economics
+  FaHistory,          // For History
+  FaLanguage,         // For Language
+  FaGraduationCap,    // General academic
+  FaClock,            // For duration
+  FaUniversity,       // For programs/education
+  FaFileAlt,          // For details/application
+  FaChevronDown,      // For accordions
+  FaHome,             // For Domestic Mode
+  FaCalendarAlt       // For intake
+} from 'react-icons/fa';
+
+const BAPage = () => {
+  const [expandedSections, setExpandedSections] = useState({
+    overview: false,
+    admission: false,
+    fees: false
+  });
+
+  const toggleSection = (section) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [section]: !prev[section]
+    }));
+  };
+
+  const accordionVariants = {
+    open: { 
+      opacity: 1,
+      height: "auto",
+      transition: { 
+        duration: 0.3,
+        ease: "easeInOut" 
+      }
+    },
+    closed: { 
+      opacity: 0,
+      height: 0,
+      transition: { 
+        duration: 0.3,
+        ease: "easeInOut" 
+      }
+    }
+  };
+
+  const baPrograms = [
+    {
+      id: 'history-econ-lang-polsci',
+      title: 'BA (History, Economics, Language, Political Science)',
+      duration: '3 Years (6 Semesters)',
+      mode: 'Regular Mode - Totally domestic and Full-time - Offline',
+      icon: <FaBookReader className="text-purple-500 text-2xl" />,
+      description: 'A comprehensive undergraduate program offering a deep dive into social sciences, preparing students for diverse careers or further academic pursuits.',
+      highlights: [
+        'Interdisciplinary approach to social studies',
+        'Focus on critical thinking and analytical skills',
+        'In-depth study of historical events and economic theories',
+        'Development of linguistic and communication abilities',
+        'Understanding of political systems and global affairs'
+      ]
+    },
+    {
+      id: 'ba-english-literature',
+      title: 'BA in English Literature',
+      duration: '3 Years (6 Semesters)',
+      mode: 'Regular Mode - Full-time - Offline',
+      icon: <FaLanguage className="text-purple-500 text-2xl" />,
+      description: 'Explore literary traditions across cultures and historical periods, developing strong analytical and communication skills.',
+      highlights: [
+        'Critical Theory and Literary Analysis',
+        'Creative Writing Workshops',
+        'Survey of World Literature & Genres',
+        'Research Methodologies & Academic Writing'
+      ]
+    },
+    {
+      id: 'ba-sociology',
+      title: 'BA in Sociology',
+      duration: '3 Years (6 Semesters)',
+      mode: 'Regular Mode - Full-time - Offline',
+      icon: <FaUniversity className="text-purple-500 text-2xl" />,
+      description: 'Study human behavior, social structures, and cultural patterns to understand societal dynamics.',
+      highlights: [
+        'Social Stratification & Inequality',
+        'Research Methods in Sociology',
+        'Urban Sociology & Rural Development',
+        'Social Problems & Social Change'
+      ]
+    }
+  ];
+
+  return (
+    <Layout>
+      <div className="max-w-6xl mx-auto px-4 py-12">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="flex justify-center mb-6">
+            <div className="bg-purple-100 p-4 rounded-full">
+              <FaBookReader className="w-12 h-12 text-purple-600" />
+            </div>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Bachelor of Arts (BA) Programs</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore diverse fields in humanities and social sciences, fostering critical thinking and analytical skills for a holistic education.
+          </p>
+        </div>
+
+        {/* Program Highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <div className="flex items-center mb-4">
+              <FaGraduationCap className="w-6 h-6 text-purple-600 mr-3" />
+              <h3 className="font-semibold text-lg">Degree Awarded</h3>
+            </div>
+            <p className="text-gray-700">Bachelor of Arts (BA)</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <div className="flex items-center mb-4">
+              <FaClock className="w-6 h-6 text-purple-600 mr-3" />
+              <h3 className="font-semibold text-lg">Duration</h3>
+            </div>
+            <p className="text-gray-700">3 Years (6 Semesters)</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <div className="flex items-center mb-4">
+              <FaCalendarAlt className="w-6 h-6 text-purple-600 mr-3" />
+              <h3 className="font-semibold text-lg">Intake</h3>
+            </div>
+            <p className="text-gray-700">Varies by specialization (Annual)</p>
+          </div>
+        </div>
+
+        {/* Available BA Programs */}
+        <div className="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+          <div className="bg-purple-700 px-8 py-6 flex items-center">
+            <FaUniversity className="text-3xl text-white mr-4" />
+            <div>
+              <h2 className="text-2xl font-bold text-white">Our BA Program Specializations</h2>
+              <p className="text-purple-100 mt-1">Diverse pathways in Humanities and Social Sciences</p>
+            </div>
+          </div>
+          <div className="p-8">
+            {baPrograms.map((program) => (
+              <div key={program.id} className="mb-6 last:mb-0 border-b border-gray-100 last:border-0 pb-6 last:pb-0">
+                <button
+                  onClick={() => toggleSection(program.id)}
+                  className="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50"
+                >
+                  <div className="flex items-center">
+                    {program.icon}
+                    <div className="ml-4">
+                      <h3 className="text-xl font-semibold text-gray-800">{program.title}</h3>
+                      <p className="text-gray-600 text-sm">{program.duration} • {program.mode}</p>
+                    </div>
+                  </div>
+                  <FaChevronDown className={`w-5 h-5 text-gray-500 transition-transform ${expandedSections[program.id] ? 'rotate-180' : ''}`} />
+                </button>
+
+                <AnimatePresence>
+                  {expandedSections[program.id] && (
+                    <motion.div
+                      initial="closed"
+                      animate="open"
+                      exit="closed"
+                      variants={accordionVariants}
+                      className="px-6 pb-6 pl-14 bg-gray-50 rounded-lg mt-2"
+                    >
+                      <p className="text-gray-700 mb-3">{program.description}</p>
+                      <h4 className="font-semibold text-gray-800 mb-2">Program Highlights:</h4>
+                      <ul className="space-y-2 text-gray-700 list-disc list-inside">
+                        {program.highlights.map((highlight, i) => (
+                          <li key={i}>{highlight}</li>
+                        ))}
+                      </ul>
+                      <div className="mt-4">
+                        <a 
+                          href={`/programs/${program.id}`} 
+                          className="text-purple-600 hover:text-purple-800 font-medium flex items-center"
+                        >
+                          <FaFileAlt className="mr-2" /> Learn More
+                        </a>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Admission Requirements */}
+        <div className="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+          <button
+            onClick={() => toggleSection('admission')}
+            className="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50"
+          >
+            <h2 className="text-2xl font-bold text-gray-800 flex items-center">
+              <FaGraduationCap className="w-6 h-6 text-purple-600 mr-3" />
+              Admission Process
+            </h2>
+            <FaChevronDown className={`w-5 h-5 text-gray-500 transition-transform ${expandedSections.admission ? 'rotate-180' : ''}`} />
+          </button>
+
+          {expandedSections.admission && (
+            <div className="px-6 pb-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="font-semibold text-lg mb-3 text-gray-800">Eligibility:</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span>10+2 from a recognized board or equivalent</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span>Minimum 50% aggregate marks</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span>May require an aptitude test or interview for certain specializations</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-3 text-gray-800">Application Process:</h3>
+                  <ol className="space-y-3 text-gray-700 list-decimal list-inside">
+                    <li>Fill online application form</li>
+                    <li>Upload required academic and identification documents</li>
+                    <li>Pay application fee</li>
+                    <li>Attend counseling or interview (if applicable)</li>
+                    <li>Complete final admission formalities upon selection</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Program Fees Structure Table */}
+        <div className="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+          <button
+            onClick={() => toggleSection('fees')}
+            className="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50"
+          >
+            <h2 className="text-2xl font-bold text-gray-800 flex items-center">
+              <FaChartBar className="w-6 h-6 text-purple-600 mr-3" />
+              Program Fees Structure
+            </h2>
+            <FaChevronDown className={`w-5 h-5 text-gray-500 transition-transform ${expandedSections.fees ? 'rotate-180' : ''}`} />
+          </button>
+
+          {expandedSections.fees && (
+            <div className="px-6 pb-6">
+              <p className="text-gray-700 mb-4">
+                The fee structure for our BA programs varies slightly based on the chosen specialization. Below is an approximate annual fee.
+              </p>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Program Specialization
+                      </th>
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Annual Fee (Approx.)
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">History, Economics, Language, Political Science</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">₹75,000</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">English Literature</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">₹70,000</td>
+                    </tr>
+                     <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Sociology</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">₹72,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-gray-500 mt-4">
+                * Fees are approximate and subject to change. This covers tuition and basic lab/library access. Additional charges for specific workshops or field trips may apply.
+              </p>
+            </div>
+          )}
+        </div>
+
+
+        {/* CTA Section */}
+        <div className="text-center bg-purple-700 text-white p-12 rounded-lg">
+          <h2 className="text-3xl font-bold mb-4">Ready to Explore the Arts & Humanities?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Enroll in our BA programs to cultivate critical thinking, creativity, and a deep understanding of human society.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a 
+              href="/apply" 
+              className="bg-white text-purple-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
+            >
+              <FaFileAlt className="mr-2" /> Apply Now
+            </a>
+            <a 
+              href="/brochure-ba.pdf" // Placeholder link for brochure
+              className="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-purple-700 transition-colors flex items-center justify-center"
+            >
+              <FaFileAlt className="mr-2" /> Download Brochure
+            </a>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default BAPage;
