@@ -63,6 +63,8 @@ import PublicSelfDisclosure from "./pages/about/PublicSelfDisclosure";
 import Recognition from "./pages/about/Recognition";
 import Faculty from "./pages/Academics/Faculty";
 import PharmacyCouncil from "./pages/about/PharmacyCouncilofIndia";
+import Committees from "./pages/about/Committees";
+import AICTEApproval from "./pages/about/AICTEApproval";
 
 function App() {
   return (
@@ -74,8 +76,8 @@ function App() {
       <Route path="/" element={<HomePage />} />
 
       {/* Programs Overview */}
-      <Route path="/programs" element={<CoursePage />} />
-      <Route path="/about/all-courses" element={<Courses />} />
+      <Route path="/programs" element={<Courses />} />
+      
 
       {/* About */}
       <Route path="/about/about-siu" element={<AboutSIU />} />
@@ -88,7 +90,9 @@ function App() {
       <Route path="/about/deans" element={<Deans /> } />
       <Route path="/about/public-self-disclosure" element={<PublicSelfDisclosure/> } />
       <Route path="/about/recognition" element={<Recognition /> } />
-      <Route path="/about/lip_pharmacy_council" element={<PharmacyCouncil /> } />
+      <Route path="/about/lip-pharmacy-council" element={<PharmacyCouncil /> } />
+      <Route path="/about/aicte-approval" element={<AICTEApproval /> } />
+      <Route path="/about/committees" element={<Committees /> } />
 
       {/* Academics */}
       <Route path="/academics/academic-calendar" element={<AcademicCalendar />} />

@@ -2,7 +2,7 @@ import logo from "../assets/logo.png";
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
-import programsData from '../assets/json/programs.json';
+import programsData from "../assets/json/programs.json";
 
 const navItems = [
   {
@@ -10,20 +10,23 @@ const navItems = [
     path: "/about",
     subItems: [
       { title: "About SIU", path: "/about/about-siu" },
-      {
-        title: "Institutional Development Plan",
-        path: "/about/development-plan",
-      },
-      { title: "Constituent Units", path: "/about/constituent-units" },
+      // {
+      //   title: "Institutional Development Plan",
+      //   // path: "/about/development-plan",
+      // },
+      // { title: "Constituent Units", path: "/about/constituent-units" },
       { title: "Boards", path: "/about/boards" },
       { title: "Deans", path: "/about/deans" },
 
-      { title: "Accreditation", path: "/about/accreditation" },
+      // { title: "Accreditation", path: "/about/accreditation" },
       { title: "Recognition", path: "/about/recognition" },
       { title: "Annual Reports", path: "/about/annual-reports" },
-      { title: "Annual Account", path: "/about/annual-account" },
+      // { title: "Annual Account", path: "/about/annual-account" },
       { title: "Committees", path: "/about/committees" },
-      { title: "Public Self Disclosure", path: "/about/public-self-disclosure" },
+      {
+        title: "Public Self Disclosure",
+        path: "/about/public-self-disclosure",
+      },
       { title: "Act and Statutes or MoA", path: "/about/approvals-documents" },
     ],
   },
@@ -32,19 +35,16 @@ const navItems = [
     path: "/administration",
     subItems: [
       { title: "Chancellor", path: "/administration/chancellor" },
-      { title: "Pro Chancellor", path: "/administration/pro-chancellor" },
+      // { title: "Pro Chancellor", path: "/administration/pro-chancellor" },
       { title: "Vice Chancellor", path: "/administration/vice-chancellor" },
-      { title: "Registrar", path: "/administration/registrar" },
+      // { title: "Registrar", path: "/administration/registrar" },
       { title: "Finance Commitee", path: "/administration/finance-commitee" },
-      {
-        title: "Controller of Examination (CoE)",
-        path: "/administration/controller-exams",
-      },
-      {
-        title: "Chief Vigilance Officer",
-        path: "/administration/chief-vigilance",
-      },
-      { title: "Ombudsperson", path: "/administration/ombudsperson" },
+      // { title: "Controller of Examination (CoE)", path: "/administration/controller-exams",},
+      // {
+      //   title: "Chief Vigilance Officer",
+      //   path: "/administration/chief-vigilance",
+      // },
+      // { title: "Ombudsperson", path: "/administration/ombudsperson" },
       {
         title: "Academic Council",
         path: "/administration/academic-council",
@@ -63,7 +63,7 @@ const navItems = [
     title: "Programs",
     path: "/programs",
     megaMenu: true,
-    columns: programsData.columns
+    columns: programsData.columns,
   },
   {
     title: "Academics",
@@ -148,11 +148,7 @@ function Header() {
         <div className="max-w-8xl mx-auto px-4 py-2">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center" onClick={closeAllMenus}>
-              <img 
-                src={logo} 
-                alt="SIU logo" 
-                className="h-auto w-48" 
-              />
+              <img src={logo} alt="SIU logo" className="h-auto w-48" />
             </Link>
 
             <ul
@@ -372,18 +368,23 @@ function Header() {
               mobileMenuOpen ? "max-h-[90vh]z-[888] pb-10" : "max-h-0"
             } transition-all duration-300 ease-in-out overflow-y-auto `}
           >
-            <ul className="pt-2 pb-4 space-y-3 min-h-screen "> 
+            <ul className="pt-2 pb-4 space-y-3 min-h-screen ">
               {navItems.map((item, index) => (
-                <li key={`${item.path}-${index}-mobile`} className="border-b border-gray-100 last:border-b-0">
+                <li
+                  key={`${item.path}-${index}-mobile`}
+                  className="border-b border-gray-100 last:border-b-0"
+                >
                   {item.subItems || item.megaMenu ? (
                     <>
                       <button
                         onClick={() => toggleMobileSubmenu(index)}
-                        className="flex items-center justify-between w-full px-3 py-2 hover:bg-gray-50" 
+                        className="flex items-center justify-between w-full px-3 py-2 hover:bg-gray-50"
                         aria-haspopup="true"
                         aria-expanded={openMobileSubmenu === index}
                       >
-                        <span className="text-gray-800 font-medium">{item.title}</span>
+                        <span className="text-gray-800 font-medium">
+                          {item.title}
+                        </span>
                         <ChevronDown
                           className={`w-5 h-5 transition-transform duration-300 ${
                             openMobileSubmenu === index ? "rotate-180" : ""
@@ -397,11 +398,16 @@ function Header() {
                             : "max-h-0"
                         } overflow-hidden transition-all duration-300 ease-in-out`}
                       >
-                        <ul className="pl-2 space-y-0"> {/* Changed pl-4 to pl-2 and space-y-1 to space-y-0 */}
+                        <ul className="pl-2 space-y-0">
+                          {" "}
+                          {/* Changed pl-4 to pl-2 and space-y-1 to space-y-0 */}
                           {item.subItems &&
                             !item.megaMenu &&
                             item.subItems.map((subItem, subIndex) => (
-                              <li key={`${subItem.path}-${subIndex}-mobile`} className="border-t border-gray-100">
+                              <li
+                                key={`${subItem.path}-${subIndex}-mobile`}
+                                className="border-t border-gray-100"
+                              >
                                 {subItem.target ? (
                                   <a
                                     href={subItem.path}
@@ -415,7 +421,7 @@ function Header() {
                                 ) : (
                                   <Link
                                     to={subItem.path}
-                                    className="block px-3 py-2 hover:bg-gray-50 text-gray-700 text-sm" 
+                                    className="block px-3 py-2 hover:bg-gray-50 text-gray-700 text-sm"
                                     onClick={closeAllMenus}
                                   >
                                     {subItem.title}
@@ -423,14 +429,20 @@ function Header() {
                                 )}
                               </li>
                             ))}
-
                           {item.megaMenu &&
                             item.columns.map((column, colIndex) => (
-                              <li key={`${column.heading}-${colIndex}-mobile-column`} className="border-t border-gray-100">
-                                <h4 className="font-semibold text-blue-800 mt-1 mb-1 px-3 border-b border-orange-200 pb-1 text-sm"> {/* Reduced text size and adjusted styling */}
+                              <li
+                                key={`${column.heading}-${colIndex}-mobile-column`}
+                                className="border-t border-gray-100"
+                              >
+                                <h4 className="font-semibold text-blue-800 mt-1 mb-1 px-3 border-b border-orange-200 pb-1 text-sm">
+                                  {" "}
+                                  {/* Reduced text size and adjusted styling */}
                                   {column.heading}
                                 </h4>
-                                <ul className="pl-2 space-y-0"> {/* Changed pl-4 to pl-2 and space-y-1 to space-y-0 */}
+                                <ul className="pl-2 space-y-0">
+                                  {" "}
+                                  {/* Changed pl-4 to pl-2 and space-y-1 to space-y-0 */}
                                   {column.items.map((subItem, subItemIndex) => (
                                     <li
                                       key={`${subItem.path}-${subItemIndex}-mobile`}
@@ -438,12 +450,12 @@ function Header() {
                                     >
                                       <Link
                                         to={subItem.path}
-                                        className="block px-3 py-2 hover:bg-gray-50 flex items-center justify-between group text-gray-700 text-sm" 
+                                        className="block px-3 py-2 hover:bg-gray-50 flex items-center justify-between group text-gray-700 text-sm"
                                         onClick={closeAllMenus}
                                       >
                                         {subItem.title}
                                         <ArrowRight
-                                          size={14} 
+                                          size={14}
                                           className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                                         />
                                       </Link>
@@ -458,7 +470,7 @@ function Header() {
                   ) : (
                     <Link
                       to={item.path}
-                      className="block px-3 py-2 hover:bg-gray-50 text-gray-800 font-medium" 
+                      className="block px-3 py-2 hover:bg-gray-50 text-gray-800 font-medium"
                       onClick={closeAllMenus}
                     >
                       {item.title}

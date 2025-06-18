@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Search, ChevronDown, ChevronUp, BookOpen, Clock, IndianRupee, GraduationCap, Filter, X, Info, UserCheck, Bookmark, Calendar, Award, Layers } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CoursePage = ({ universityData = { university: '', institutes: [] } }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -419,10 +420,12 @@ const CoursePage = ({ universityData = { university: '', institutes: [] } }) => 
                             )}
                           </button>
                           
-                          <button className="flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700">
+                          <Link 
+                          to="https://siu.in8.nopaperforms.com/"
+                          className="flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700">
                             <Info className="mr-1 h-4 w-4" />
                             Apply Now
-                          </button>
+                          </Link>
                         </div>
                       </div>
 

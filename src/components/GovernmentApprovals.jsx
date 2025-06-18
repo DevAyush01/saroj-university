@@ -23,7 +23,7 @@ const ApprovalsSection = () => {
   logo: internationalLogo,
   description: "The university is approved by the All India Council for Technical Education (AICTE) to offer technical and professional programs in compliance with national standards.",
   authority: "All India Council for Technical Education",
-  link: ""
+  link: "/about/aicte-approval"
 },
 
 {
@@ -32,7 +32,7 @@ const ApprovalsSection = () => {
   logo: industryLogo,
   description: "The university is approved by the Pharmacy Council of India (PCI) to offer pharmacy programs, ensuring compliance with national standards for pharmaceutical education.",
   authority: "Pharmacy Council of India",
-  link: "#"
+  link: "/about/lip-pharmacy-council"
 }
 
   ];
@@ -160,6 +160,7 @@ const ApprovalsSection = () => {
               <div className="p-4 bg-gray-50 border-t border-gray-200">
                 <a 
                   href={activeCertificate.link} 
+                  target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium"
                 >
                   View official document

@@ -73,19 +73,16 @@ const FloatingAdmissionAlert = () => {
               </div>
 
               <motion.a
-                href="#apply"
+                 href="https://siu.in8.nopaperforms.com/"
+                 target="_blank"
                 className="block w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg text-center shadow-md relative overflow-hidden"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <a
-                  href="https://siu.in8.nopaperforms.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative z-10"
-                >
+            
+                
                   APPLY NOW !
-                </a>
+                
                 <span className="absolute inset-0 bg-white/10 animate-pulse"></span>
               </motion.a>
             </div>
