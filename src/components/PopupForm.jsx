@@ -57,7 +57,7 @@ const PopupForm = () => {
         boxShadow:
           "0 10px 15px -3px rgba(220, 38, 38, 0.5), 0 4px 6px -2px rgba(220, 38, 38, 0.25)", 
         transition: "background-color 0.3s ease", 
-        zIndex: 50,
+        zIndex: 30,
       }}
     >
       Enquire Now!

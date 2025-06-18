@@ -18,416 +18,397 @@ import {
   RotateCw,
   Hand,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProgramsSection = () => {
   const programs = [
     {
       id: 1,
       title: "Artificial Intelligence & Technology",
-      description: "Cutting-edge programs in AI, ML, Data Science, and Robotics",
+      description:
+        "Cutting-edge programs in AI, ML, Data Science, and Robotics",
       degrees: [
-        { 
-          name: "B.Tech (AI, ML, Data Science, Robotics)", 
-          duration: "4 Years", 
+        {
+          name: "B.Tech (AI, ML, Data Science, Robotics)",
+          duration: "4 Years",
           fee: "₹1,10,000/yr",
           mode: "Regular/Global",
           criteria: [
             "10+2 with Physics, Chemistry, Mathematics",
             "Minimum 50% marks",
-            "Entrance exam scores may be required"
-          ]
+            "Entrance exam scores may be required",
+          ],
         },
-        { 
-          name: "B.Tech Computer Science & Engineering", 
-          duration: "4 Years", 
+        {
+          name: "B.Tech Computer Science & Engineering",
+          duration: "4 Years",
           fee: "₹1,10,000/yr",
           mode: "Regular/Global",
           criteria: [
             "10+2 with Physics, Chemistry, Mathematics",
             "Minimum 50% marks",
-            "Entrance exam scores may be required"
-          ]
+            "Entrance exam scores may be required",
+          ],
         },
-        { 
-          name: "M.Tech (AI, ML, Data Science, Robotics)", 
-          duration: "2 Years", 
+        {
+          name: "M.Tech (AI, ML, Data Science, Robotics)",
+          duration: "2 Years",
           fee: "₹1,25,000/yr",
           mode: "Regular/Global",
           criteria: [
             "B.Tech/B.E. in relevant field",
             "Minimum 50% marks",
-            "Professional certifications may be considered"
-          ]
+            "Professional certifications may be considered",
+          ],
         },
-        { 
-          name: "M.Tech Computer Science & Engineering", 
-          duration: "2 Years", 
+        {
+          name: "M.Tech Computer Science & Engineering",
+          duration: "2 Years",
           fee: "₹1,25,000/yr",
           mode: "Regular/Global",
           criteria: [
             "B.Tech/B.E. in relevant field",
             "Minimum 50% marks",
-            "Professional certifications may be considered"
-          ]
+            "Professional certifications may be considered",
+          ],
         },
       ],
       icon: <Cpu className="w-5 h-5" />,
       color: "bg-blue-100 text-blue-800",
       borderColor: "border-blue-200",
       bgColor: "from-blue-50 to-blue-100",
-      buttonColor: "from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900"
+      buttonColor:
+        "from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900",
     },
     {
       id: 2,
       title: "Management & Technology",
       description: "Programs blending technology with business management",
       degrees: [
-        { 
-          name: "B.Tech (CSE, IT, Cyber Security, IoT)", 
-          duration: "4 Years", 
+        {
+          name: "B.Tech (CSE, IT, Cyber Security, IoT)",
+          duration: "4 Years",
           fee: "₹1,10,000/yr",
           mode: "Regular/Global",
           criteria: [
             "10+2 with Physics, Chemistry, Mathematics",
             "Minimum 50% marks",
-            "Entrance exam scores may be required"
-          ]
+            "Entrance exam scores may be required",
+          ],
         },
-        { 
-          name: "BCA (AI, ML, Cyber Security)", 
-          duration: "3 Years", 
+        {
+          name: "BCA (AI, ML, Cyber Security)",
+          duration: "3 Years",
           fee: "₹1,00,000/yr",
           mode: "Regular/Global",
           criteria: [
             "10+2 from recognized board",
             "Minimum 50% marks",
-            "Basic computer knowledge preferred"
-          ]
+            "Basic computer knowledge preferred",
+          ],
         },
-        { 
-          name: "MCA (AI, ML, Cyber Security)", 
-          duration: "2 Years", 
+        {
+          name: "MCA (AI, ML, Cyber Security)",
+          duration: "2 Years",
           fee: "₹1,25,000/yr",
           mode: "Regular/Global",
           criteria: [
             "Bachelor's degree in any discipline",
             "Minimum 50% marks",
-            "Mathematics in 10+2 preferred"
-          ]
+            "Mathematics in 10+2 preferred",
+          ],
         },
-        { 
-          name: "M.Tech (CSE, IT, Cyber Security, IoT)", 
-          duration: "2 Years", 
+        {
+          name: "M.Tech (CSE, IT, Cyber Security, IoT)",
+          duration: "2 Years",
           fee: "₹1,25,000/yr",
           mode: "Regular/Global",
           criteria: [
             "B.Tech/B.E. in relevant field",
             "Minimum 50% marks",
-            "Entrance exam scores may be required"
-          ]
+            "Entrance exam scores may be required",
+          ],
         },
       ],
       icon: <Briefcase className="w-5 h-5" />,
       color: "bg-purple-100 text-purple-800",
       borderColor: "border-purple-200",
       bgColor: "from-purple-50 to-purple-100",
-      buttonColor: "from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900"
+      buttonColor:
+        "from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900",
     },
     {
       id: 3,
       title: "Entrepreneurship & Business",
-      description: "Programs designed for future business leaders and entrepreneurs",
+      description:
+        "Programs designed for future business leaders and entrepreneurs",
       degrees: [
-        { 
-          name: "BBA (General, Banking, Marketing)", 
-          duration: "3 Years", 
+        {
+          name: "BBA (General, Banking, Marketing)",
+          duration: "3 Years",
           fee: "₹1,10,000/yr",
           mode: "Regular/Global",
           criteria: [
             "10+2 from recognized board",
             "Minimum 50% marks",
-            "Entrance exam scores may be required"
-          ]
+            "Entrance exam scores may be required",
+          ],
         },
-        { 
-          name: "BBA (Logistics, HR, IT, Entrepreneurship)", 
-          duration: "3 Years", 
+        {
+          name: "BBA (Logistics, HR, IT, Entrepreneurship)",
+          duration: "3 Years",
           fee: "₹1,10,000/yr",
           mode: "Regular/Global",
           criteria: [
             "10+2 from recognized board",
             "Minimum 50% marks",
-            "Entrance exam scores may be required"
-          ]
+            "Entrance exam scores may be required",
+          ],
         },
-        { 
-          name: "BBA (Insurance, Retail, Start-Ups)", 
-          duration: "3 Years", 
+        {
+          name: "BBA (Insurance, Retail, Start-Ups)",
+          duration: "3 Years",
           fee: "₹1,10,000/yr",
           mode: "Regular/Global",
           criteria: [
             "10+2 from recognized board",
             "Minimum 50% marks",
-            "Entrance exam scores may be required"
-          ]
+            "Entrance exam scores may be required",
+          ],
         },
-        { 
-          name: "MBA", 
-          duration: "2 Years", 
+        {
+          name: "MBA",
+          duration: "2 Years",
           fee: "₹1,25,000/yr",
           mode: "Regular/Global",
           criteria: [
             "Bachelor's degree in any discipline",
             "Minimum 50% marks",
-            "Entrance exam scores may be required"
-          ]
+            "Entrance exam scores may be required",
+          ],
         },
       ],
       icon: <Briefcase className="w-5 h-5" />,
       color: "bg-green-100 text-green-800",
       borderColor: "border-green-200",
       bgColor: "from-green-50 to-green-100",
-      buttonColor: "from-green-600 to-green-800 hover:from-green-700 hover:to-green-900"
+      buttonColor:
+        "from-green-600 to-green-800 hover:from-green-700 hover:to-green-900",
     },
     {
       id: 4,
       title: "Humanities & Education",
       description: "Programs in arts, commerce, and education",
       degrees: [
-        { 
-          name: "BA", 
-          duration: "3 Years", 
+        {
+          name: "BA",
+          duration: "3 Years",
           fee: "₹80,000/yr",
           mode: "Regular/Global",
-          criteria: [
-            "10+2 from recognized board",
-            "Minimum 50% marks"
-          ]
+          criteria: ["10+2 from recognized board", "Minimum 50% marks"],
         },
-        { 
-          name: "B.Com", 
-          duration: "3 Years", 
+        {
+          name: "B.Com",
+          duration: "3 Years",
           fee: "₹80,000/yr",
           mode: "Regular/Global",
-          criteria: [
-            "10+2 from recognized board",
-            "Minimum 50% marks"
-          ]
+          criteria: ["10+2 from recognized board", "Minimum 50% marks"],
         },
-        { 
-          name: "B.Ed", 
-          duration: "2 Years", 
+        {
+          name: "B.Ed",
+          duration: "2 Years",
           fee: "₹80,000/yr",
           mode: "Regular",
           criteria: [
             "Bachelor's degree in any discipline",
-            "Minimum 50% marks"
-          ]
+            "Minimum 50% marks",
+          ],
         },
-        { 
-          name: "MA", 
-          duration: "2 Years", 
+        {
+          name: "MA",
+          duration: "2 Years",
           fee: "₹80,000/yr",
           mode: "Regular/Global",
           criteria: [
             "Bachelor's degree in any discipline",
-            "Minimum 50% marks"
-          ]
+            "Minimum 50% marks",
+          ],
         },
       ],
       icon: <School className="w-5 h-5" />,
       color: "bg-yellow-100 text-yellow-800",
       borderColor: "border-yellow-200",
       bgColor: "from-yellow-50 to-yellow-100",
-      buttonColor: "from-yellow-600 to-yellow-800 hover:from-yellow-700 hover:to-yellow-900"
+      buttonColor:
+        "from-yellow-600 to-yellow-800 hover:from-yellow-700 hover:to-yellow-900",
     },
     {
       id: 5,
       title: "Basic & Health Sciences",
       description: "Programs in pure sciences and health-related fields",
       degrees: [
-        { 
-          name: "B.Sc (Physics, Chemistry, Biology, Math)", 
-          duration: "3 Years", 
+        {
+          name: "B.Sc (Physics, Chemistry, Biology, Math)",
+          duration: "3 Years",
           fee: "₹80,000/yr",
           mode: "Regular/Global",
           criteria: [
             "10+2 with relevant science subjects",
-            "Minimum 50% marks"
-          ]
+            "Minimum 50% marks",
+          ],
         },
-        { 
-          name: "BS (Data Science, Physiotherapy)", 
-          duration: "3 Years", 
+        {
+          name: "BS (Data Science, Physiotherapy)",
+          duration: "3 Years",
           fee: "₹80,000/yr",
           mode: "Regular/Global",
-          criteria: [
-            "10+2 with relevant subjects",
-            "Minimum 50% marks"
-          ]
+          criteria: ["10+2 with relevant subjects", "Minimum 50% marks"],
         },
-        { 
-          name: "M.Sc (Physics, Chemistry, Biology, Math)", 
-          duration: "2 Years", 
+        {
+          name: "M.Sc (Physics, Chemistry, Biology, Math)",
+          duration: "2 Years",
           fee: "₹80,000/yr",
           mode: "Regular/Global",
-          criteria: [
-            "B.Sc in relevant subject",
-            "Minimum 50% marks"
-          ]
+          criteria: ["B.Sc in relevant subject", "Minimum 50% marks"],
         },
-        { 
-          name: "MS (Data Science, Physiotherapy)", 
-          duration: "2 Years", 
+        {
+          name: "MS (Data Science, Physiotherapy)",
+          duration: "2 Years",
           fee: "₹80,000/yr",
           mode: "Regular/Global",
           criteria: [
             "Bachelor's degree in relevant field",
-            "Minimum 50% marks"
-          ]
+            "Minimum 50% marks",
+          ],
         },
       ],
       icon: <FlaskConical className="w-5 h-5" />,
       color: "bg-red-100 text-red-800",
       borderColor: "border-red-200",
       bgColor: "from-red-50 to-red-100",
-      buttonColor: "from-red-600 to-red-800 hover:from-red-700 hover:to-red-900"
+      buttonColor:
+        "from-red-600 to-red-800 hover:from-red-700 hover:to-red-900",
     },
     {
       id: 6,
       title: "Pharmacy",
       description: "Programs in pharmaceutical sciences",
       degrees: [
-        { 
-          name: "B.Pharm", 
-          duration: "4 Years", 
+        {
+          name: "B.Pharm",
+          duration: "4 Years",
           fee: "₹1,10,000/yr",
           mode: "Regular",
           criteria: [
             "10+2 with Physics, Chemistry, Biology/Mathematics",
-            "Minimum 50% marks"
-          ]
+            "Minimum 50% marks",
+          ],
         },
-        { 
-          name: "D.Pharm", 
-          duration: "2 Years", 
+        {
+          name: "D.Pharm",
+          duration: "2 Years",
           fee: "₹80,000/yr",
           mode: "Regular",
           criteria: [
             "10+2 with Physics, Chemistry, Biology/Mathematics",
-            "Minimum 50% marks"
-          ]
+            "Minimum 50% marks",
+          ],
         },
-        { 
-          name: "M.Pharm", 
-          duration: "2 Years", 
+        {
+          name: "M.Pharm",
+          duration: "2 Years",
           fee: "₹1,25,000/yr",
           mode: "Regular",
-          criteria: [
-            "B.Pharm degree",
-            "Minimum 50% marks"
-          ]
+          criteria: ["B.Pharm degree", "Minimum 50% marks"],
         },
-        { 
-          name: "Ph.D (Pharmacy)", 
-          duration: "3-5 Years", 
+        {
+          name: "Ph.D (Pharmacy)",
+          duration: "3-5 Years",
           fee: "₹1,00,000/yr",
           mode: "Regular",
-          criteria: [
-            "M.Pharm or equivalent",
-            "Minimum 55% marks"
-          ]
+          criteria: ["M.Pharm or equivalent", "Minimum 55% marks"],
         },
       ],
       icon: <Pill className="w-5 h-5" />,
       color: "bg-indigo-100 text-indigo-800",
       borderColor: "border-indigo-200",
       bgColor: "from-indigo-50 to-indigo-100",
-      buttonColor: "from-indigo-600 to-indigo-800 hover:from-indigo-700 hover:to-indigo-900"
+      buttonColor:
+        "from-indigo-600 to-indigo-800 hover:from-indigo-700 hover:to-indigo-900",
     },
     {
       id: 7,
       title: "Sports Science",
       description: "Programs in sports science and research",
       degrees: [
-        { 
-          name: "BS (Sports Science)", 
-          duration: "3 Years", 
+        {
+          name: "BS (Sports Science)",
+          duration: "3 Years",
           fee: "₹80,000/yr",
           mode: "Regular",
-          criteria: [
-            "10+2 from recognized board",
-            "Minimum 50% marks"
-          ]
+          criteria: ["10+2 from recognized board", "Minimum 50% marks"],
         },
-        { 
-          name: "MS (Sports Science)", 
-          duration: "2 Years", 
+        {
+          name: "MS (Sports Science)",
+          duration: "2 Years",
           fee: "₹80,000/yr",
           mode: "Regular",
           criteria: [
             "Bachelor's degree in any discipline",
-            "Minimum 50% marks"
-          ]
+            "Minimum 50% marks",
+          ],
         },
       ],
       icon: <Dumbbell className="w-5 h-5" />,
       color: "bg-orange-100 text-orange-800",
       borderColor: "border-orange-200",
       bgColor: "from-orange-50 to-orange-100",
-      buttonColor: "from-orange-600 to-orange-800 hover:from-orange-700 hover:to-orange-900"
+      buttonColor:
+        "from-orange-600 to-orange-800 hover:from-orange-700 hover:to-orange-900",
     },
     {
       id: 8,
       title: "Film & Fashion",
       description: "Creative programs in film, fashion, and media",
       degrees: [
-        { 
-          name: "B.Sc (Film Making, Cinematography)", 
-          duration: "3 Years", 
+        {
+          name: "B.Sc (Film Making, Cinematography)",
+          duration: "3 Years",
           fee: "₹80,000/yr",
           mode: "Regular",
-          criteria: [
-            "10+2 from recognized board",
-            "Minimum 50% marks"
-          ]
+          criteria: ["10+2 from recognized board", "Minimum 50% marks"],
         },
-        { 
-          name: "BA (Acting, Journalism, PR)", 
-          duration: "3 Years", 
+        {
+          name: "BA (Acting, Journalism, PR)",
+          duration: "3 Years",
           fee: "₹80,000/yr",
           mode: "Regular",
-          criteria: [
-            "10+2 from recognized board",
-            "Minimum 50% marks"
-          ]
+          criteria: ["10+2 from recognized board", "Minimum 50% marks"],
         },
-        { 
-          name: "Diploma (Film Making, Acting)", 
-          duration: "1 Year", 
+        {
+          name: "Diploma (Film Making, Acting)",
+          duration: "1 Year",
           fee: "₹1,00,000",
           mode: "Regular",
-          criteria: [
-            "10+2 from recognized board",
-            "Minimum 50% marks"
-          ]
+          criteria: ["10+2 from recognized board", "Minimum 50% marks"],
         },
-        { 
-          name: "M.Sc (Film Making, Cinematography)", 
-          duration: "2 Years", 
+        {
+          name: "M.Sc (Film Making, Cinematography)",
+          duration: "2 Years",
           fee: "₹80,000/yr",
           mode: "Regular",
           criteria: [
             "Bachelor's degree in any discipline",
-            "Minimum 50% marks"
-          ]
+            "Minimum 50% marks",
+          ],
         },
       ],
       icon: <Film className="w-5 h-5" />,
       color: "bg-pink-100 text-pink-800",
       borderColor: "border-pink-200",
       bgColor: "from-pink-50 to-pink-100",
-      buttonColor: "from-pink-600 to-pink-800 hover:from-pink-700 hover:to-pink-900"
+      buttonColor:
+        "from-pink-600 to-pink-800 hover:from-pink-700 hover:to-pink-900",
     },
   ];
 
@@ -547,14 +528,20 @@ const ProgramsSection = () => {
                       {program.icon}
                     </div>
                     <div className="text-left flex-1 min-w-0">
-                      <span className="font-medium text-sm block truncate">{program.title}</span>
+                      <span className="font-medium text-sm block truncate">
+                        {program.title}
+                      </span>
                       <span className="text-xs text-gray-500 line-clamp-1">
                         {program.description}
                       </span>
                     </div>
-                    <span className={`ml-auto text-xs font-medium px-2 py-1 rounded-full ${
-                      activeTab === program.id ? 'bg-white text-blue-700' : 'bg-gray-100 text-gray-700'
-                    }`}>
+                    <span
+                      className={`ml-auto text-xs font-medium px-2 py-1 rounded-full ${
+                        activeTab === program.id
+                          ? "bg-white text-blue-700"
+                          : "bg-gray-100 text-gray-700"
+                      }`}
+                    >
                       {program.degrees.length} programs
                     </span>
                   </button>
@@ -563,7 +550,7 @@ const ProgramsSection = () => {
             </div>
 
             {/* Explore All Programs Button */}
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="mt-6"
@@ -571,13 +558,13 @@ const ProgramsSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              <a
-                href="/programs"
+              <Link
+                to="/programs"
                 className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white rounded-lg transition-all shadow-md hover:shadow-lg font-medium text-sm"
               >
                 Explore All Programs
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </motion.div>
           </div>
 
@@ -599,8 +586,12 @@ const ProgramsSection = () => {
                     {currentProgram.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">{currentProgram.title}</h3>
-                    <p className="text-xs opacity-90 mt-1">{currentProgram.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {currentProgram.title}
+                    </h3>
+                    <p className="text-xs opacity-90 mt-1">
+                      {currentProgram.description}
+                    </p>
                   </div>
                 </div>
 
@@ -611,12 +602,12 @@ const ProgramsSection = () => {
                         key={index}
                         whileHover={{ y: -3 }}
                         className={`border rounded-lg p-4 transition-all shadow-sm ${
-                          expandedDegree === index 
-                            ? `bg-gradient-to-b ${currentProgram.bgColor} border-transparent shadow-md` 
-                            : 'bg-white border-gray-200 hover:shadow-md'
+                          expandedDegree === index
+                            ? `bg-gradient-to-b ${currentProgram.bgColor} border-transparent shadow-md`
+                            : "bg-white border-gray-200 hover:shadow-md"
                         }`}
                       >
-                        <div 
+                        <div
                           className="cursor-pointer"
                           onClick={() => toggleDegreeExpand(index)}
                         >
@@ -624,11 +615,13 @@ const ProgramsSection = () => {
                             <h4 className="font-semibold text-base mb-1 text-gray-800">
                               {degree.name}
                             </h4>
-                            <span className={`text-xs px-2 py-1 rounded-full ${
-                              degree.mode.includes('Global') 
-                                ? 'bg-green-100 text-green-800' 
-                                : 'bg-gray-100 text-gray-800'
-                            }`}>
+                            <span
+                              className={`text-xs px-2 py-1 rounded-full ${
+                                degree.mode.includes("Global")
+                                  ? "bg-green-100 text-green-800"
+                                  : "bg-gray-100 text-gray-800"
+                              }`}
+                            >
                               {degree.mode}
                             </span>
                           </div>
@@ -648,7 +641,7 @@ const ProgramsSection = () => {
                           {expandedDegree === index && (
                             <motion.div
                               initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
+                              animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
                               className="overflow-hidden"
@@ -660,23 +653,36 @@ const ProgramsSection = () => {
                                 </h5>
                                 <ul className="space-y-1 text-xs text-gray-700">
                                   {degree.criteria.map((item, i) => (
-                                    <li key={i} className="flex items-start gap-2">
-                                      <span className="text-green-500 mt-0.5">✓</span>
+                                    <li
+                                      key={i}
+                                      className="flex items-start gap-2"
+                                    >
+                                      <span className="text-green-500 mt-0.5">
+                                        ✓
+                                      </span>
                                       <span>{item}</span>
                                     </li>
                                   ))}
                                 </ul>
                               </div>
-                              <button className={`mt-3 w-full py-1.5 bg-gradient-to-r ${currentProgram.buttonColor} text-white rounded-md transition-all flex items-center justify-center gap-1 shadow-md hover:shadow-lg font-medium text-sm`}>
-                                Apply Now
-                                <ChevronRight className="w-3 h-3" />
-                              </button>
+                              <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://siu.in8.nopaperforms.com/"
+                              >
+                                <button
+                                  className={`mt-3 w-full py-1.5 bg-gradient-to-r ${currentProgram.buttonColor} text-white rounded-md transition-all flex items-center justify-center gap-1 shadow-md hover:shadow-lg font-medium text-sm`}
+                                >
+                                  Apply Now
+                                  <ChevronRight className="w-3 h-3" />
+                                </button>
+                              </a>
                             </motion.div>
                           )}
                         </AnimatePresence>
 
                         {expandedDegree !== index && (
-                          <button 
+                          <button
                             className="mt-2 w-full py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-md transition-colors flex items-center justify-center gap-1 text-xs font-medium"
                             onClick={() => toggleDegreeExpand(index)}
                           >
@@ -698,7 +704,9 @@ const ProgramsSection = () => {
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <h5 className="font-semibold mb-2 text-gray-700 flex items-center gap-2 text-sm">
-                          <span className="w-4 h-4 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">1</span>
+                          <span className="w-4 h-4 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">
+                            1
+                          </span>
                           Regular Mode
                         </h5>
                         <ul className="space-y-2 text-xs text-gray-700">
@@ -706,25 +714,33 @@ const ProgramsSection = () => {
                             <div className="bg-blue-100 text-blue-800 rounded-full p-0.5 flex-shrink-0 mt-0.5">
                               <span className="text-xs font-bold">1</span>
                             </div>
-                            <span>Submit online application with required documents</span>
+                            <span>
+                              Submit online application with required documents
+                            </span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="bg-blue-100 text-blue-800 rounded-full p-0.5 flex-shrink-0 mt-0.5">
                               <span className="text-xs font-bold">2</span>
                             </div>
-                            <span>Appear for entrance exam (if applicable)</span>
+                            <span>
+                              Appear for entrance exam (if applicable)
+                            </span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="bg-blue-100 text-blue-800 rounded-full p-0.5 flex-shrink-0 mt-0.5">
                               <span className="text-xs font-bold">3</span>
                             </div>
-                            <span>Attend personal interview/counseling session</span>
+                            <span>
+                              Attend personal interview/counseling session
+                            </span>
                           </li>
                         </ul>
                       </div>
                       <div>
                         <h5 className="font-semibold mb-2 text-gray-700 flex items-center gap-2 text-sm">
-                          <span className="w-4 h-4 rounded-full bg-green-600 text-white flex items-center justify-center text-xs">2</span>
+                          <span className="w-4 h-4 rounded-full bg-green-600 text-white flex items-center justify-center text-xs">
+                            2
+                          </span>
                           Global Mode
                         </h5>
                         <ul className="space-y-2 text-xs text-gray-700">
@@ -738,7 +754,10 @@ const ProgramsSection = () => {
                             <div className="bg-green-100 text-green-800 rounded-full p-0.5 flex-shrink-0 mt-0.5">
                               <span className="text-xs font-bold">2</span>
                             </div>
-                            <span>Submit additional documents for international study</span>
+                            <span>
+                              Submit additional documents for international
+                              study
+                            </span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="bg-green-100 text-green-800 rounded-full p-0.5 flex-shrink-0 mt-0.5">
@@ -750,14 +769,19 @@ const ProgramsSection = () => {
                       </div>
                     </div>
                     <div className="mt-4 flex flex-col sm:flex-row gap-2">
-                      <button className={`flex-1 px-4 py-2 bg-gradient-to-r ${currentProgram.buttonColor} text-white rounded-md transition-all flex items-center justify-center gap-1 shadow-md hover:shadow-lg font-medium text-sm`}>
+                      <a
+                        href="https://siu.in8.nopaperforms.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex-1 px-4 py-2 bg-gradient-to-r ${currentProgram.buttonColor} text-white rounded-md transition-all flex items-center justify-center gap-1 shadow-md hover:shadow-lg font-medium text-sm`}
+                      >
                         Start Application
                         <ArrowRight className="w-4 h-4" />
-                      </button>
-                      <button className="flex-1 px-4 py-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-800 rounded-md transition-all flex items-center justify-center gap-1 font-medium text-sm">
+                      </a>
+                      {/* <button className="flex-1 px-4 py-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-800 rounded-md transition-all flex items-center justify-center gap-1 font-medium text-sm">
                         <Globe className="w-4 h-4" />
                         Global Mode Info
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
