@@ -334,7 +334,7 @@ const SportsScience = () => {
           <div className="flex items-center px-8 py-6 bg-red-50">
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Ready to Elevate Your Career in Sports?</h3>
             <motion.a 
-              href="/apply" 
+            href="https://siu.in8.nopaperforms.com/"  target="_blank"
               className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg shadow-md flex items-center justify-center mx-auto w-fit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

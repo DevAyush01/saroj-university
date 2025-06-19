@@ -299,14 +299,7 @@ const ManagementAndTechPage = () => {
                             </li>
                           ))}
                         </ul>
-                        <div className="mt-4">
-                          <a
-                            href={`/programs/${program.id}`}
-                            className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
-                          >
-                            <FaFileAlt className="mr-2" /> View Program Details
-                          </a>
-                        </div>
+                        
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -321,7 +314,7 @@ const ManagementAndTechPage = () => {
 
           <div className="px-8 py-6 bg-blue-50 border-t border-gray-200 text-center">
             <motion.a
-              href="/apply"
+             href="https://siu.in8.nopaperforms.com/"  target="_blank"
               className=" bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-md flex items-center justify-center mx-auto w-fit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
