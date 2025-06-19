@@ -296,26 +296,7 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-2xl p-8 transform transition-all hover:shadow-2xl hover:-translate-y-1">
-                  <h2 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
-                    <span className="w-4 h-4 bg-blue-500 rounded-full mr-3"></span>
-                    Office Hours
-                  </h2>
-                  <div className="space-y-2 text-gray-600">
-                    <p className="flex justify-between hover:text-blue-600 transition-colors duration-300">
-                      <span>Monday - Friday</span>
-                      <span>9:00 AM - 5:00 PM</span>
-                    </p>
-                    <p className="flex justify-between hover:text-blue-600 transition-colors duration-300">
-                      <span>Saturday</span>
-                      <span>10:00 AM - 2:00 PM</span>
-                    </p>
-                    <p className="flex justify-between hover:text-blue-600 transition-colors duration-300">
-                      <span>Sunday</span>
-                      <span>Closed</span>
-                    </p>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>

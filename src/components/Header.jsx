@@ -519,7 +519,11 @@ function Header() {
           {/* Mobile Menu (unchanged for these specific requests) */}
           <div
             className={`xl:hidden ${
+<<<<<<< HEAD
              mobileMenuOpen ? "max-h-[90vh] z-[888] pb-10" : "max-h-0"
+=======
+              mobileMenuOpen ? "max-h-[90vh] z-[888] pb-10" : "max-h-0"
+>>>>>>> e61f595 (updates in contact us and pdf uploads)
             } transition-all duration-300 ease-in-out overflow-y-auto `}
           >
             <ul className="pt-2 pb-4 space-y-1">

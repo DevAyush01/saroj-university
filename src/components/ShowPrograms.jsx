@@ -9,7 +9,7 @@ const CoursePage = ({ universityData = { university: '', institutes: [] } }) => 
     institute: [],
     mode: []
   });
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState(true);
   const [activeDegreeTab, setActiveDegreeTab] = useState('all');
   const [activeCategoryTab, setActiveCategoryTab] = useState('all');
 
