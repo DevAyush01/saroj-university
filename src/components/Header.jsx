@@ -519,8 +519,8 @@ function Header() {
           {/* Mobile Menu (unchanged for these specific requests) */}
           <div
             className={`xl:hidden ${
-              mobileMenuOpen ? "max-h-screen" : "max-h-0 overflow-auto"
-            } transition-all duration-300 ease-in-out`}
+             mobileMenuOpen ? "max-h-[90vh] z-[888] pb-10" : "max-h-0"
+            } transition-all duration-300 ease-in-out overflow-y-auto `}
           >
             <ul className="pt-2 pb-4 space-y-1">
               {navItems.map((item, index) => (
