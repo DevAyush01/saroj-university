@@ -113,7 +113,7 @@ const FloatingAdmissionAlert = () => {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="hidden md:block fixed bottom-24 right-8 z-50"
+        className="hidden md:block fixed bottom-28 right-8 z-50"
       >
         <div className="relative group">
           {showMessage && (

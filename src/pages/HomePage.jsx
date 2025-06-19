@@ -26,6 +26,7 @@ import CompactAIBanner from "../components/Aibanner.jsx";
 import ThinkInspirationSection from "../components/ThinkInspiration.jsx";
 import PopupForm from "../components/PopupForm.jsx";
 import TopScrollButton from "../components/ScrollTopButton.jsx";
+import LatestNews from "../components/LatestNews.jsx";
 
 function Home() {
   const logos = [
@@ -43,6 +44,7 @@ function Home() {
       <Layout>
       
         <PopupForm/>
+        <LatestNews/>
         <FloatingAdmissionAlert/>
         <HeroSection/>
         <LightAIBanner/>

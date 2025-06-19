@@ -63,11 +63,7 @@ const navItems = [
     title: "Programs",
     path: "/programs",
     megaMenu: true,
-<<<<<<< HEAD
-    columns: programsData.columns, // Use the imported programs data
-=======
     columns: programsData.columns,
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
   },
   {
     title: "Academics",
@@ -148,40 +144,52 @@ function Header() {
 
   return (
     <div ref={navRef}>
-<<<<<<< HEAD
-      <nav className='fixed left-0 right-0 top-0 z-40 bg-white text-gray-600 shadow-md'>
-        <div className='max-w-8xl mx-auto px-4 py-2'>
-          <div className='flex items-center justify-between'>
-            <Link to='/' className='flex items-center' onClick={closeAllMenus}>
-              <img src={logo} alt='SIU logo' className='h-auto w-48' />
-=======
       <nav className="fixed left-0 right-0 top-0 z-40 bg-white text-gray-600 shadow-md">
         <div className="max-w-8xl mx-auto px-4 py-2">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center" onClick={closeAllMenus}>
               <img src={logo} alt="SIU logo" className="h-auto w-48" />
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
             </Link>
 
-            {/* Desktop Header UL  */}
-            <ul className='xl:flex hidden font-outfit space-x-2 text-xl items-center' ref={menuRef}>
+            <ul
+              className="xl:flex hidden font-outfit space-x-2 text-lg items-center"
+              ref={menuRef}
+            >
               {navItems.map((item, index) => (
-                <li key={`${item.path}-${index}`} className='relative' onMouseEnter={() => toggleSubmenu(index)} onMouseLeave={() => setOpenSubmenu(null)}>
+                <li
+                  key={`${item.path}-${index}`}
+                  className="relative"
+                  onMouseEnter={() => toggleSubmenu(index)}
+                  onMouseLeave={() => setOpenSubmenu(null)}
+                >
                   {item.subItems || item.megaMenu ? (
-                    <div className='relative'>
+                    <div className="relative">
                       <button
                         className={`flex items-center px-2 py-1 relative
                                   before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                   before:bg-orange-500 before:transition-all before:duration-300
-                                  hover:before:w-full ${openSubmenu === index ? "text-orange-500" : ""}`}
-                        aria-haspopup='true'
-                        aria-expanded={openSubmenu === index}>
+                                  hover:before:w-full ${
+                                    openSubmenu === index
+                                      ? "text-orange-500"
+                                      : ""
+                                  }`}
+                        aria-haspopup="true"
+                        aria-expanded={openSubmenu === index}
+                      >
                         {item.title}
-                        <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-300 ${openSubmenu === index ? "rotate-180" : ""}`} />
+                        <ChevronDown
+                          className={`w-4 h-4 ml-1 transition-transform duration-300 ${
+                            openSubmenu === index ? "rotate-180" : ""
+                          }`}
+                        />
                       </button>
 
                       {item.subItems && !item.megaMenu && (
-                        <div className={`absolute left-0 mt-1 w-56 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-100 ${openSubmenu === index ? "block" : "hidden"}`}>
+                        <div
+                          className={`absolute left-0 mt-1 w-56 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-100 ${
+                            openSubmenu === index ? "block" : "hidden"
+                          }`}
+                        >
                           {item.subItems.map((subItem, subIndex) =>
                             subItem.target ? (
                               <a
@@ -189,22 +197,24 @@ function Header() {
                                 href={subItem.path}
                                 target={subItem.target}
                                 rel={subItem.rel}
-                                className='block px-4 py-2 hover:bg-gray-100 relative
-                                      before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                      before:bg-orange-500 before:transition-all before:duration-300
-                                      hover:before:w-full'
-                                onClick={closeAllMenus}>
+                                className="block px-4 py-2 hover:bg-gray-100 relative
+                                        before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
+                                        before:bg-orange-500 before:transition-all before:duration-300
+                                        hover:before:w-full"
+                                onClick={closeAllMenus}
+                              >
                                 {subItem.title}
                               </a>
                             ) : (
                               <Link
                                 key={`${subItem.path}-${subIndex}`}
                                 to={subItem.path}
-                                className='block px-4 py-2 hover:bg-gray-100 relative
-                                      before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                      before:bg-orange-500 before:transition-all before:duration-300
-                                      hover:before:w-full'
-                                onClick={closeAllMenus}>
+                                className="block px-4 py-2 hover:bg-gray-100 relative
+                                        before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
+                                        before:bg-orange-500 before:transition-all before:duration-300
+                                        hover:before:w-full"
+                                onClick={closeAllMenus}
+                              >
                                 {subItem.title}
                               </Link>
                             )
@@ -213,28 +223,17 @@ function Header() {
                       )}
 
                       {item.megaMenu && (
-<<<<<<< HEAD
-                        <div className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"}`}>
-                          <div className='absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white'></div>
-=======
                         <div
                           className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[900px] max-h-[80vh] overflow-y-auto bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${
                             openSubmenu === index ? "block" : "hidden"
                           }`}
                         >
                           <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white"></div>
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
 
-                          {/* 1st column: tcs and collab */}
-                          <div className='grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4'>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                             <div>
                               {item.columns.map(
                                 (column, colIndex) =>
-<<<<<<< HEAD
-                                  (column.heading === "COLLABORATION" || column.heading === "TCS ACADEMIA") && (
-                                    <div key={`${column.heading}-${colIndex}`} className='relative'>
-                                      <h3 className='font-bold text-sm text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative'>
-=======
                                   (column.heading === "COLLABORATION" ||
                                     column.heading === "TCS ACADEMIA") && (
                                     <div
@@ -242,94 +241,53 @@ function Header() {
                                       className="relative mb-6"
                                     >
                                       <h3 className="font-bold text-lg text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative">
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                         {column.heading}
-                                        <span className='absolute bottom-0 left-0 w-1/8 h-0.5 bg-gradient-to-r from-orange-500 to-transparent'></span>
+                                        <span className="absolute bottom-0 left-0 w-1/8 h-0.5 bg-gradient-to-r from-orange-500 to-transparent"></span>
                                       </h3>
-                                      <ul className='space-y-2'>
-                                        {column.items.map((subItem, subItemIndex) => (
-                                          <li key={`${subItem.path}-${subItemIndex}`} className='mb-1'>
-                                            {/* Conditional rendering for TCS ACADEMIA links */}
-                                            {column.heading === "TCS ACADEMIA" && subItem.collaboration_link ? (
-                                              <a
-                                                href={subItem.collaboration_link}
-                                                target='_blank' // Opens in a new tab
-                                                rel='noopener noreferrer' // Security best practice
-                                                className='text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group'
-                                                onClick={closeAllMenus}>
-                                                <div className='flex items-start'>
-                                                  <span className='w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200'></span>
+                                      <ul className="space-y-2">
+                                        {column.items.map(
+                                          (subItem, subItemIndex) => (
+                                            <li
+                                              key={`${subItem.path}-${subItemIndex}`}
+                                              className="mb-1"
+                                            >
+                                              <Link
+                                                to={subItem.path}
+                                                className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group"
+                                                onClick={closeAllMenus}
+                                              >
+                                                <div className="flex items-start">
+                                                  <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                                                   {subItem.title}
                                                 </div>
-                                                <ArrowRight size={16} color='orange' className='opacity-0 group-hover:opacity-100 transition-opacity duration-200' />
-                                              </a>
-                                            ) : (
-                                              <Link to={subItem.path} className='text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group' onClick={closeAllMenus}>
-                                                <div className='flex items-start'>
-                                                  <span className='w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200'></span>
-                                                  {subItem.title}
-                                                </div>
-                                                <ArrowRight size={16} color='orange' className='opacity-0 group-hover:opacity-100 transition-opacity duration-200' />
+                                                <ArrowRight
+                                                  size={16}
+                                                  color="orange"
+                                                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                                />
                                               </Link>
-<<<<<<< HEAD
-                                            )}
-                                          </li>
-                                        ))}
-                                      
-=======
                                             </li>
                                           )
                                         )}
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                       </ul>
                                     </div>
                                   )
                               )}
                             </div>
 
-                            {/* 2nd column: college courses */}
-                            <div className='grid grid-cols-2 gap-x-8 gap-y-4'>
+                            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                               {item.columns.map(
                                 (column, colIndex) =>
                                   column.heading !== "COLLABORATION" &&
                                   column.heading !== "TCS ACADEMIA" && (
-<<<<<<< HEAD
-                                    <div key={`${column.heading}-${colIndex}`} className='relative'>
-                                      <h3 className='font-bold text-sm text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative'>
-=======
                                     <div
                                       key={`${column.heading}-${colIndex}`}
                                       className="relative mb-6"
                                     >
                                       <h3 className="font-bold text-lg text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative">
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                         {column.heading}
-                                        <span className='absolute bottom-0 left-0 w-1/3 h-0.5 bg-gradient-to-r from-orange-500 to-transparent'></span>
+                                        <span className="absolute bottom-0 left-0 w-1/3 h-0.5 bg-gradient-to-r from-orange-500 to-transparent"></span>
                                       </h3>
-<<<<<<< HEAD
-                                      <ul className='space-y-2'>
-                                        {column.items.slice(0, 2).map((subItem, subItemIndex) => (
-                                          <li key={`${subItem.path}-${subItemIndex}`} className='mb-1'>
-                                            <Link to={subItem.path} className='text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group' onClick={closeAllMenus}>
-                                              <div className='flex items-start'>
-                                                <span className='w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200'></span>
-                                                {subItem.title}
-                                              </div>
-                                              <ArrowRight size={16} color='orange' className='opacity-0 group-hover:opacity-100 transition-opacity duration-200' />
-                                            </Link>
-                                          </li>
-                                        ))}
-                                        {/* View all programs section for each individual category */}
-                                        <li key={`${column.heading}-view-all-desktop-right`} className='mt-2 text-sm '>
-                                          <Link
-                                            to={`/programs/${column.heading.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`} // Dynamic link based on heading
-                                            className='text-orange-500  hover:underline flex items-center'
-                                            onClick={closeAllMenus}>
-                                            View all programs
-                                            <ArrowRight size={16} className='ml-1' />
-                                          </Link>
-                                        </li>
-=======
                                       <ul className="space-y-2">
                                         {column.items
                                           .slice(0, 4)
@@ -355,7 +313,6 @@ function Header() {
                                               </Link>
                                             </li>
                                           ))}
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                       </ul>
                                     </div>
                                   )
@@ -363,18 +320,6 @@ function Header() {
                             </div>
                           </div>
 
-<<<<<<< HEAD
-                            {/* View all programs ultimate button */}
-                            <div className='flex flex-row justify-end items-end'>
-                              <Link to='/programs'>
-                                <button
-                                  className='inline-flex items-center justify-center bg-blue-700 text-white font-semibold px-10
-                                py-3 rounded-sm shadow-lg hover:bg-blue-800 transition duration-300 text-base sm:text-sm'>
-                                  View all Programs{" "}
-                                </button>
-                              </Link>
-                            </div>
-=======
                           <div className="flex justify-center mt-4">
                             <Link to="/programs" onClick={closeAllMenus}>
                               <button
@@ -384,7 +329,6 @@ function Header() {
                                 View all Programs
                               </button>
                             </Link>
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                           </div>
                         </div>
                       )}
@@ -392,11 +336,12 @@ function Header() {
                   ) : (
                     <Link
                       to={item.path}
-                      className='px-2 py-1 relative
+                      className="px-2 py-1 relative
                                   before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
                                   before:bg-orange-500 before:transition-all before:duration-300
-                                  hover:before:w-full'
-                      onClick={closeAllMenus}>
+                                  hover:before:w-full"
+                      onClick={closeAllMenus}
+                    >
                       {item.title}
                     </Link>
                   )}
@@ -404,23 +349,26 @@ function Header() {
               ))}
             </ul>
 
-            <button className='xl:hidden p-2 rounded-md hover:bg-gray-100' onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}>
-              {mobileMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+            <button
+              className="xl:hidden p-2 rounded-md hover:bg-gray-100"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
 
-<<<<<<< HEAD
-          <div className={`xl:hidden ${mobileMenuOpen ? "max-h-screen" : "max-h-0 overflow-hidden"} transition-all duration-300 ease-in-out`}>
-            <ul className='pt-2 pb-4 space-y-1'>
-=======
           {/* Modified mobile menu section */}
           <div
             className={`xl:hidden ${
-              mobileMenuOpen ? "max-h-[90vh]z-[888] pb-10" : "max-h-0"
+              mobileMenuOpen ? "max-h-[90vh] z-[888] pb-10" : "max-h-0"
             } transition-all duration-300 ease-in-out overflow-y-auto `}
           >
             <ul className="pt-2 pb-4 space-y-3 min-h-screen ">
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
               {navItems.map((item, index) => (
                 <li
                   key={`${item.path}-${index}-mobile`}
@@ -428,14 +376,6 @@ function Header() {
                 >
                   {item.subItems || item.megaMenu ? (
                     <>
-<<<<<<< HEAD
-                      <button onClick={() => toggleMobileSubmenu(index)} className='flex items-center justify-between w-full px-3 py-3 hover:bg-gray-50' aria-haspopup='true' aria-expanded={openMobileSubmenu === index}>
-                        <span>{item.title}</span>
-                        <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openMobileSubmenu === index ? "rotate-180" : ""}`} />
-                      </button>
-                      <div className={`${openMobileSubmenu === index ? "max-h-[2000px]" : "max-h-0"} overflow-hidden transition-all duration-300 ease-in-out`}>
-                        <ul className='pl-4 mt-1 space-y-1'>
-=======
                       <button
                         onClick={() => toggleMobileSubmenu(index)}
                         className="flex items-center justify-between w-full px-3 py-2 hover:bg-gray-50"
@@ -461,7 +401,6 @@ function Header() {
                         <ul className="pl-2 space-y-0">
                           {" "}
                           {/* Changed pl-4 to pl-2 and space-y-1 to space-y-0 */}
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                           {item.subItems &&
                             !item.megaMenu &&
                             item.subItems.map((subItem, subIndex) => (
@@ -474,33 +413,17 @@ function Header() {
                                     href={subItem.path}
                                     target={subItem.target}
                                     rel={subItem.rel}
-<<<<<<< HEAD
-                                    className='block px-3 py-3 hover:bg-gray-50 relative
-                                            before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                            before:bg-orange-500 before:transition-all before:duration-300
-                                            hover:before:w-full'
-                                    onClick={closeAllMenus}>
-=======
                                     className="block px-3 py-2 hover:bg-gray-50 text-gray-700 text-sm"
                                     onClick={closeAllMenus}
                                   >
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                     {subItem.title}
                                   </a>
                                 ) : (
                                   <Link
                                     to={subItem.path}
-<<<<<<< HEAD
-                                    className='block px-3 py-3 hover:bg-gray-50 relative
-                                            before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                            before:bg-orange-500 before:transition-all before:duration-300
-                                            hover:before:w-full'
-                                    onClick={closeAllMenus}>
-=======
                                     className="block px-3 py-2 hover:bg-gray-50 text-gray-700 text-sm"
                                     onClick={closeAllMenus}
                                   >
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                     {subItem.title}
                                   </Link>
                                 )}
@@ -508,36 +431,6 @@ function Header() {
                             ))}
                           {item.megaMenu &&
                             item.columns.map((column, colIndex) => (
-<<<<<<< HEAD
-                              <li key={`${column.heading}-${colIndex}-mobile-column`}>
-                                {" "}
-                                {/* Added unique key for column li */}
-                                <h4 className='font-bold text-sm text-blue-800 mt-2 mb-1 px-3 border-b-2 border-orange-500 pb-1'>{column.heading}</h4>
-                                <ul className='pl-4 space-y-1'>
-                                  {column.items.map((subItem, subItemIndex) => (
-                                    <li key={`${subItem.path}-${subItemIndex}-mobile`}>
-                                      {/* Conditional rendering for TCS ACADEMIA links in mobile */}
-                                      {column.heading === "TCS ACADEMIA" && subItem.collaboration_link ? (
-                                        <a href={subItem.collaboration_link} target='_blank' rel='noopener noreferrer' className='block px-3 py-2 hover:bg-gray-50 flex items-center justify-between group relative' onClick={closeAllMenus}>
-                                          {subItem.title}
-                                          <ArrowRight size={16} className='ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200' />
-                                        </a>
-                                      ) : (
-                                        <Link to={subItem.path} className='block px-3 py-2 hover:bg-gray-50 flex items-center justify-between group relative' onClick={closeAllMenus}>
-                                          {subItem.title}
-                                          <ArrowRight size={16} className='ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200' />
-                                        </Link>
-                                      )}
-                                    </li>
-                                  ))}
-                                  {/* Added the "View all programs" link here for each column */}
-                                  <li key={`${column.heading}-view-all-mobile-column`} className='mt-2'>
-                                    <Link to={`/programs/${column.heading.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`} className='text-orange-500 md:font-sm hover:underline flex items-center px-3' onClick={closeAllMenus}>
-                                      View all programs
-                                      <ArrowRight size={16} className='ml-1' />
-                                    </Link>
-                                  </li>
-=======
                               <li
                                 key={`${column.heading}-${colIndex}-mobile-column`}
                                 className="border-t border-gray-100"
@@ -568,7 +461,6 @@ function Header() {
                                       </Link>
                                     </li>
                                   ))}
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                                 </ul>
                               </li>
                             ))}
@@ -578,17 +470,9 @@ function Header() {
                   ) : (
                     <Link
                       to={item.path}
-<<<<<<< HEAD
-                      className='block px-3 py-3 hover:bg-gray-50 relative
-                                  before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5
-                                  before:bg-orange-500 before:transition-all before:duration-300
-                                  hover:before:w-full'
-                      onClick={closeAllMenus}>
-=======
                       className="block px-3 py-2 hover:bg-gray-50 text-gray-800 font-medium"
                       onClick={closeAllMenus}
                     >
->>>>>>> 689a84722a4f8686a5f3aade704091b4e935c2b1
                       {item.title}
                     </Link>
                   )}
@@ -598,7 +482,7 @@ function Header() {
           </div>
         </div>
       </nav>
-      <div className='h-20'></div>
+      <div className="h-20"></div>
     </div>
   );
 }
