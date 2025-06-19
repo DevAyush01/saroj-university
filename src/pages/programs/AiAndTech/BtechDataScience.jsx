@@ -88,7 +88,7 @@ const BtechDataSciencePage = () => {
               <FaDatabase className="w-12 h-12 text-green-600" />
             </div>
           </div>
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">B.Tech in Data Science</h1>
+          <h1 className="text-5xl font-bold text-gray-800 mb-4">B.Tech in Data Science</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             A specialized program focused on extracting insights from data, developing predictive models, and mastering data-driven decision-making.
           </p>

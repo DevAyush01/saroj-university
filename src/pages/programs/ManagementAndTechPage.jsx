@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../../components/Layout';
-import { motion,AnimatePresence } from 'framer-motion';
-import { FaLaptopCode, FaBusinessTime, FaChartBar, FaNetworkWired, FaChevronDown, FaFileAlt, FaFilter, FaStethoscope } from 'react-icons/fa'; // Added FaStethoscope for the header icon
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaLaptopCode, FaBusinessTime, FaChartBar, FaNetworkWired, FaChevronDown, FaFileAlt, FaFilter, FaLightbulb, FaTools } from 'react-icons/fa'; // Added FaTools for the main icon
 
 const ManagementAndTechPage = () => {
   const [expandedPrograms, setExpandedPrograms] = useState({});
@@ -10,473 +10,148 @@ const ManagementAndTechPage = () => {
     category: 'all',
     duration: 'all'
   });
-  // Removed showFilters state as buttons will directly control the filter
 
   const allPrograms = [
-    // B.Tech Programs
+    // BBA Programs (Updated to reflect "Business & Entrepreneurship")
     {
-      id: 'btech-cse',
-      title: 'B.Tech - Computer Science & Engineering',
+      id: 'bba-entrepreneurship',
+      title: 'BBA in Entrepreneurship',
       level: 'undergraduate',
-      category: 'engineering',
+      category: 'business',
       duration: '4 Years',
-      icon: <FaLaptopCode className="text-blue-500 text-2xl" />,
-      description: 'Comprehensive computer science education with hands-on training in software development and system design.',
+      icon: <FaLightbulb className="text-orange-400 text-xl" />, // Smaller, orange icon for consistency
+      description: 'A comprehensive program designed to cultivate entrepreneurial mindset and skills.',
       highlights: [
-        'Software engineering principles',
-        'Data structures and algorithms',
-        'Database management systems',
-        'Computer networks',
-        'Cloud computing'
+        'Startup ecosystem understanding',
+        'Business model canvas',
+        'Venture capital & funding',
+        'Innovation and design thinking',
+        'Marketing and sales strategies'
       ]
     },
     {
-      id: 'btech-it',
-      title: 'B.Tech - Information Technology',
+      id: 'bba-finance',
+      title: 'BBA in Finance',
       level: 'undergraduate',
-      category: 'engineering',
-      duration: '4 Years',
-      icon: <FaLaptopCode className="text-blue-500 text-2xl" />,
-      description: 'Focus on IT systems, applications, and their integration in business environments.',
+      category: 'business',
+      duration: '3 Years',
+      icon: <FaLightbulb className="text-orange-400 text-xl" />,
+      description: 'Focus on financial markets, investment, and corporate finance.',
       highlights: [
-        'Web technologies',
-        'Information systems',
-        'Network security',
-        'Enterprise computing',
-        'IT project management'
+        'Financial accounting',
+        'Investment analysis',
+        'Risk management',
+        'Corporate finance',
+        'Financial modeling'
       ]
     },
     {
-      id: 'btech-cyber-security',
-      title: 'B.Tech - Cyber Security',
+      id: 'bba-marketing',
+      title: 'BBA in Marketing',
       level: 'undergraduate',
-      category: 'engineering',
-      duration: '4 Years',
-      icon: <FaLaptopCode className="text-blue-500 text-2xl" />,
-      description: 'Specialized program in securing digital systems and networks against cyber threats.',
+      category: 'business',
+      duration: '3 Years',
+      icon: <FaLightbulb className="text-orange-400 text-xl" />,
+      description: 'Develop skills in market research, branding, and sales strategies.',
       highlights: [
-        'Cryptography',
-        'Ethical hacking',
-        'Digital forensics',
-        'Network security',
-        'Cyber laws'
+        'Consumer behavior',
+        'Digital marketing',
+        'Brand management',
+        'Marketing research',
+        'Sales management'
       ]
     },
+    // MBA Programs
     {
-      id: 'btech-iot',
-      title: 'B.Tech - Internet of Things',
-      level: 'undergraduate',
-      category: 'engineering',
-      duration: '4 Years',
-      icon: <FaLaptopCode className="text-blue-500 text-2xl" />,
-      description: 'Design and development of interconnected smart devices and systems.',
-      highlights: [
-        'Embedded systems',
-        'Sensor networks',
-        'Cloud computing for IoT',
-        'Data analytics for IoT',
-        'IoT security'
-      ]
-    },
-    {
-      id: 'btech-network-eng',
-      title: 'B.Tech - Network Engineering',
-      level: 'undergraduate',
-      category: 'engineering',
-      duration: '4 Years',
-      icon: <FaNetworkWired className="text-blue-500 text-2xl" />, // Using FaNetworkWired here
-      description: 'Dedicated program for designing, implementing, and managing robust computer networks.',
-      highlights: [
-        'Network architecture and protocols',
-        'Wireless and mobile networks',
-        'Network security and administration',
-        'Cloud networking solutions',
-        'Router and switch configurations'
-      ]
-    },
-    {
-      id: 'btech-ece',
-      title: 'B.Tech - Electronics & Communication',
-      level: 'undergraduate',
-      category: 'engineering',
-      duration: '4 Years',
-      icon: <FaLaptopCode className="text-blue-500 text-2xl" />,
-      description: 'Fundamentals of electronic systems and communication technologies.',
-      highlights: [
-        'Digital electronics',
-        'Signal processing',
-        'VLSI design',
-        'Wireless communication',
-        'Embedded systems'
-      ]
-    },
-    {
-      id: 'btech-mechanical',
-      title: 'B.Tech - Mechanical Engineering',
-      level: 'undergraduate',
-      category: 'engineering',
-      duration: '4 Years',
-      icon: <FaLaptopCode className="text-blue-500 text-2xl" />,
-      description: 'Classical and modern mechanical engineering principles with industry applications.',
-      highlights: [
-        'Thermodynamics',
-        'Machine design',
-        'Manufacturing processes',
-        'Automation and robotics',
-        'CAD/CAM'
-      ]
-    },
-    {
-      id: 'btech-civil',
-      title: 'B.Tech - Civil Engineering',
-      level: 'undergraduate',
-      category: 'engineering',
-      duration: '4 Years',
-      icon: <FaLaptopCode className="text-blue-500 text-2xl" />,
-      description: 'Design, construction, and maintenance of infrastructure projects.',
-      highlights: [
-        'Structural engineering',
-        'Geotechnical engineering',
-        'Transportation engineering',
-        'Environmental engineering',
-        'Construction management'
-      ]
-    },
-    {
-      id: 'btech-mechtronics',
-      title: 'B.Tech - Mechtronics',
-      level: 'undergraduate',
-      category: 'engineering',
-      duration: '4 Years',
-      icon: <FaLaptopCode className="text-blue-500 text-2xl" />,
-      description: 'Integration of mechanical, electronic and computer engineering for smart systems.',
-      highlights: [
-        'Control systems',
-        'Robotics',
-        'Industrial automation',
-        'Sensors and actuators',
-        'System integration'
-      ]
-    },
-    {
-      id: 'btech-biotech',
-      title: 'B.Tech - Bio-Tech',
-      level: 'undergraduate',
-      category: 'engineering',
-      duration: '4 Years',
-      icon: <FaLaptopCode className="text-blue-500 text-2xl" />,
-      description: 'Application of engineering principles to biological systems and medical technologies.',
-      highlights: [
-        'Genetic engineering',
-        'Bioprocess engineering',
-        'Bioinformatics',
-        'Medical instrumentation',
-        'Pharmaceutical technology'
-      ]
-    },
-    {
-      id: 'btech-electrical',
-      title: 'B.Tech - Electrical Engineering',
-      level: 'undergraduate',
-      category: 'engineering',
-      duration: '4 Years',
-      icon: <FaLaptopCode className="text-blue-500 text-2xl" />,
-      description: 'Design and analysis of electrical systems and power distribution networks.',
-      highlights: [
-        'Power systems',
-        'Control systems',
-        'Electrical machines',
-        'Power electronics',
-        'Renewable energy systems'
-      ]
-    },
-
-    // M.Tech Programs
-    {
-      id: 'mtech-cse',
-      title: 'M.Tech - Computer Science & Engineering',
+      id: 'mba-general',
+      title: 'MBA - General Management',
       level: 'postgraduate',
-      category: 'engineering',
+      category: 'business',
       duration: '2 Years',
-      icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
-      description: 'Advanced study in computer science with specialization options.',
+      icon: <FaLightbulb className="text-yellow-600 text-xl" />, // Different shade for PG
+      description: 'Broad-based management education for leadership roles.',
       highlights: [
-        'Advanced algorithms',
-        'Distributed systems',
-        'Machine learning',
-        'Cloud computing',
-        'Research project'
+        'Strategic management',
+        'Organizational behavior',
+        'Operations management',
+        'Business analytics',
+        'Leadership development'
       ]
     },
     {
-      id: 'mtech-it',
-      title: 'M.Tech - Information Technology',
+      id: 'mba-hr',
+      title: 'MBA - Human Resources',
       level: 'postgraduate',
-      category: 'engineering',
+      category: 'business',
       duration: '2 Years',
-      icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
-      description: 'Advanced IT concepts with focus on emerging technologies.',
+      icon: <FaLightbulb className="text-yellow-600 text-xl" />,
+      description: 'Specialization in human resource management and organizational development.',
       highlights: [
-        'Big data analytics',
-        'Enterprise architecture',
-        'Information security',
-        'IT governance',
-        'Capstone project'
+        'Talent acquisition',
+        'Performance management',
+        'Compensation & benefits',
+        'Labor laws',
+        'HR analytics'
       ]
     },
+    // Diploma Programs (if applicable for business)
     {
-      id: 'mtech-cyber-security',
-      title: 'M.Tech - Cyber Security',
-      level: 'postgraduate',
-      category: 'engineering',
-      duration: '2 Years',
-      icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
-      description: 'Advanced study of cyber security threats and defense mechanisms.',
-      highlights: [
-        'Advanced cryptography',
-        'Penetration testing',
-        'Incident response',
-        'Security architecture',
-        'Research thesis'
-      ]
-    },
-    {
-      id: 'mtech-iot',
-      title: 'M.Tech - Internet of Things',
-      level: 'postgraduate',
-      category: 'engineering',
-      duration: '2 Years',
-      icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
-      description: 'Advanced IoT systems design and implementation.',
-      highlights: [
-        'Edge computing',
-        'IoT data analytics',
-        'Industrial IoT',
-        'Smart city applications',
-        'Research project'
-      ]
-    },
-    {
-      id: 'mtech-ece',
-      title: 'M.Tech - Electronics & Communication',
-      level: 'postgraduate',
-      category: 'engineering',
-      duration: '2 Years',
-      icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
-      description: 'Advanced topics in electronics and communication systems.',
-      highlights: [
-        'Advanced DSP',
-        'VLSI design',
-        'Wireless networks',
-        'Optical communication',
-        'Thesis work'
-      ]
-    },
-    {
-      id: 'mtech-mechanical',
-      title: 'M.Tech - Mechanical Engineering',
-      level: 'postgraduate',
-      category: 'engineering',
-      duration: '2 Years',
-      icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
-      description: 'Specialized mechanical engineering with research focus.',
-      highlights: [
-        'Advanced thermodynamics',
-        'Computational mechanics',
-        'Advanced materials',
-        'Robotics and automation',
-        'Research thesis'
-      ]
-    },
-    {
-      id: 'mtech-civil',
-      title: 'M.Tech - Civil Engineering',
-      level: 'postgraduate',
-      category: 'engineering',
-      duration: '2 Years',
-      icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
-      description: 'Advanced civil engineering with specialization options.',
-      highlights: [
-        'Structural dynamics',
-        'Geotechnical engineering',
-        'Environmental engineering',
-        'Construction technology',
-        'Research project'
-      ]
-    },
-    {
-      id: 'mtech-mechtronics',
-      title: 'M.Tech - Mechtronics',
-      level: 'postgraduate',
-      category: 'engineering',
-      duration: '2 Years',
-      icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
-      description: 'Advanced integration of mechanical and electronic systems.',
-      highlights: [
-        'Advanced robotics',
-        'Industrial automation',
-        'Smart manufacturing',
-        'System simulation',
-        'Research work'
-      ]
-    },
-    {
-      id: 'mtech-biotech',
-      title: 'M.Tech - Bio-Tech',
-      level: 'postgraduate',
-      category: 'engineering',
-      duration: '2 Years',
-      icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
-      description: 'Advanced biotechnological applications and research.',
-      highlights: [
-        'Advanced genetic engineering',
-        'Bioprocess optimization',
-        'Tissue engineering',
-        'Pharmaceutical biotechnology',
-        'Research thesis'
-      ]
-    },
-    {
-      id: 'mtech-electrical',
-      title: 'M.Tech - Electrical Engineering',
-      level: 'postgraduate',
-      category: 'engineering',
-      duration: '2 Years',
-      icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
-      description: 'Advanced electrical systems and smart grid technologies.',
-      highlights: [
-        'Power system analysis',
-        'Renewable energy systems',
-        'Advanced control systems',
-        'High voltage engineering',
-        'Research project'
-      ]
-    },
-
-    // Diploma Programs
-    {
-      id: 'diploma-civil',
-      title: 'Diploma - Civil Engineering',
+      id: 'diploma-business',
+      title: 'Diploma in Business Administration',
       level: 'diploma',
-      category: 'engineering',
-      duration: '3 Years',
-      icon: <FaLaptopCode className="text-blue-400 text-2xl" />,
-      description: 'Practical training in civil engineering fundamentals.',
+      category: 'business',
+      duration: '1 Year', // Example duration
+      icon: <FaLightbulb className="text-yellow-400 text-xl" />, // Different shade for Diploma
+      description: 'Foundational understanding of business principles.',
       highlights: [
-        'Construction materials',
-        'Surveying',
-        'Building drawing',
-        'Estimating and costing',
-        'Site training'
+        'Business communication',
+        'Basic accounting',
+        'Marketing fundamentals',
+        'Business law basics',
+        'Office administration'
       ]
     },
+    // Added Tech Programs for "Management & Tech" context
     {
-      id: 'diploma-electrical',
-      title: 'Diploma - Electrical Engineering',
-      level: 'diploma',
-      category: 'engineering',
-      duration: '3 Years',
-      icon: <FaLaptopCode className="text-blue-400 text-2xl" />,
-      description: 'Hands-on electrical engineering skills for industry.',
-      highlights: [
-        'Electrical circuits',
-        'Power systems',
-        'Electrical machines',
-        'Installation practices',
-        'Workshop training'
-      ]
-    },
-    {
-      id: 'diploma-mechanical',
-      title: 'Diploma - Mechanical Engineering',
-      level: 'diploma',
-      category: 'engineering',
-      duration: '3 Years',
-      icon: <FaLaptopCode className="text-blue-400 text-2xl" />,
-      description: 'Practical mechanical engineering skills development.',
-      highlights: [
-        'Workshop technology',
-        'Thermal engineering',
-        'Manufacturing processes',
-        'Machine drawing',
-        'Industrial training'
-      ]
-    },
-    {
-      id: 'diploma-cs',
-      title: 'Diploma - Computer Science',
-      level: 'diploma',
-      category: 'computing',
-      duration: '3 Years',
-      icon: <FaLaptopCode className="text-blue-400 text-2xl" />,
-      description: 'Fundamental computer science and programming skills.',
-      highlights: [
-        'Programming fundamentals',
-        'Web development',
-        'Database management',
-        'Networking basics',
-        'Project work'
-      ]
-    },
-
-    // BCA/MCA Programs
-    {
-      id: 'bca-ai-ml-cyber',
-      title: 'BCA - AI, ML, Cyber Security',
+      id: 'bsc-cs',
+      title: 'BSc in Computer Science',
       level: 'undergraduate',
-      category: 'computing',
+      category: 'tech',
       duration: '3 Years',
-      icon: <FaLaptopCode className="text-blue-500 text-2xl" />,
-      description: 'Computer applications with focus on emerging technologies.',
+      icon: <FaLaptopCode className="text-blue-600 text-xl" />,
+      description: 'Foundational study of computing and programming.',
       highlights: [
         'Programming languages',
-        'Artificial intelligence',
-        'Machine learning',
-        'Cyber security basics',
-        'Application development'
+        'Data structures',
+        'Algorithms',
+        'Operating systems',
+        'Database management'
       ]
     },
     {
-      id: 'mca-ai-ml-cyber',
-      title: 'MCA - AI, ML, Cyber Security',
+      id: 'msc-it',
+      title: 'MSc in Information Technology',
       level: 'postgraduate',
-      category: 'computing',
+      category: 'tech',
       duration: '2 Years',
-      icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
-      description: 'Advanced computer applications with specialization options.',
+      icon: <FaNetworkWired className="text-teal-600 text-xl" />,
+      description: 'Advanced studies in IT infrastructure and management.',
       highlights: [
-        'Advanced algorithms',
-        'AI and ML applications',
-        'Advanced cyber security',
+        'Network security',
         'Cloud computing',
-        'Capstone project'
+        'IT project management',
+        'Data analytics',
+        'Software engineering'
       ]
-    }
-    // You might also consider adding a 'doctoral' level if applicable to your data
-    // {
-    //   id: 'phd-cse',
-    //   title: 'Ph.D. - Computer Science',
-    //   level: 'doctoral',
-    //   category: 'engineering',
-    //   duration: '3-5 Years',
-    //   icon: <FaLaptopCode className="text-blue-700 text-2xl" />,
-    //   description: 'Doctoral research in cutting-edge computer science topics.',
-    //   highlights: [
-    //     'Advanced research methodologies',
-    //     'Specialized domain expertise',
-    //     'Dissertation writing',
-    //     'Conference publications',
-    //     'Innovation and discovery'
-    //   ]
-    // },
+    },
   ];
 
   const filteredPrograms = allPrograms.filter(program => {
     return (
       (filters.level === 'all' || program.level === filters.level) &&
       (filters.category === 'all' || program.category === filters.category) &&
-      (filters.duration === 'all' || 
-        (filters.duration === 'short' && program.duration.includes('2')) ||
+      (filters.duration === 'all' ||
+        (filters.duration === 'short' && (program.duration.includes('1') || program.duration.includes('2'))) || // Assuming 1 & 2 years are 'short'
         (filters.duration === 'medium' && program.duration.includes('3')) ||
         (filters.duration === 'long' && program.duration.includes('4'))
       )
@@ -495,111 +170,76 @@ const ManagementAndTechPage = () => {
     { label: 'Undergraduate', value: 'undergraduate' },
     { label: 'Postgraduate', value: 'postgraduate' },
     { label: 'Diploma', value: 'diploma' },
-    // Uncomment if you add 'doctoral' level programs
-    // { label: 'Doctoral', value: 'doctoral' },
   ];
 
   return (
     <Layout>
-      <div className="container mx-auto px-4 py-12 max-w-6xl">
-        <motion.div 
+      <div className="container mx-auto max-w-6xl py-12">
+        {/* NEW TOP HEADER SECTION */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
-          <div className="flex justify-center mb-4">
-            <FaNetworkWired className="text-5xl text-blue-600" /> {/* Or FaStethoscope if this was meant for Health Sciences page */}
+          <div className="flex justify-center mb-4 text-5xl text-gray-700">
+            {/* Icon relevant to Management & Technology - using FaTools as a generic representation */}
+            <FaTools />
           </div>
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Management & Technology Programs</h1>
-          <p className="text-xl text-gray-600">Comprehensive engineering and technology programs for future leaders</p>
+          <h1 className="text-4xl font-bold text-gray-800 mb-2">Management & Technology Programs</h1>
+          <p className="text-xl text-gray-600 mb-2">Innovating the future through strategic leadership and cutting-edge technology.</p>
+          <p className="text-md text-gray-500">Total Programs Available: {allPrograms.length} (including all levels)</p>
         </motion.div>
+        {/* END NEW TOP HEADER SECTION */}
 
-      
 
-        {/* Automatic Filters Section */}
-        <div className="bg-black rounded-t-lg px-8 py-6 text-white mb-0"> {/* Adjusted background color to green based on image */}
-          <div className="flex items-center">
-            {/* You can change this icon if it's for Health Sciences */}
-            <FaStethoscope className="text-3xl text-white mr-4" /> 
-            <div>
-              <h2 className="text-2xl font-bold">Our Engineering & Tech Programs</h2>
-              <p className="text-green-100 mt-1">From foundational diplomas to advanced postgraduate degrees</p>
+        {/* Black Banner/Card with text, image, and filters */}
+        <div className="bg-black rounded-t-xl shadow-lg overflow-hidden mb-0"> {/* Adjusted rounded-xl for full card */}
+          <div className="px-8 py-6 text-white">
+            <div className="flex items-center">
+              <FaBusinessTime className="text-3xl text-white mr-4" /> {/* Icon changed */}
+              <div>
+                <h2 className="text-2xl font-bold">Our Business & Entrepreneurship Programs</h2> {/* Text updated */}
+                <p className="text-gray-300 mt-1">Building the next generation of business innovators and strategists</p> {/* Text updated */}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-white p-4 rounded-b-lg shadow-md mb-8 flex flex-wrap gap-2 justify-start">
-          {levelFilters.map((filter) => (
-            <button
-              key={filter.value}
-              onClick={() => handleFilterChange('level', filter.value)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 
-                ${filters.level === filter.value 
-                  ? 'bg-blue-600 text-white' // Active state for Management & Tech
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-            >
-              {filter.label}
-            </button>
-          ))}
-          {/* You can add dropdowns for other filters (category, duration) here
-              if you still want them, but they won't be "automatic buttons" like levels */}
+          {/* Image Section - Directly below the header */}
+          <div className="w-full relative h-64 overflow-hidden ">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW5mb3JtYXRpb24lMjB0ZWNobm9sb2d5fGVufDB8MHwwfHx8MA%3D%3D"
+              alt="AI and Technology Banner"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Filter Buttons Section - Directly below the image */}
+          <div className="bg-white p-4 shadow-md flex flex-wrap gap-2 justify-start"> {/* Kept shadow-md for this section */}
+            {levelFilters.map((filter) => (
+              <button
+                key={filter.value}
+                onClick={() => handleFilterChange('level', filter.value)}
+                className={`px-4 py-2 rounded-b-lg text-sm font-medium transition-colors duration-200
+                  ${filters.level === filter.value
+                    ? 'bg-orange-500 text-white' // Orange active state from image
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+              >
+                {filter.label}
+              </button>
+            ))}
           
-          {/* Example of adding category dropdown back if desired */}
-          <div className="relative ml-auto"> {/* Aligns to the right if space allows */}
-            <select
-              className="px-4 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 appearance-none pr-8"
-              value={filters.category}
-              onChange={(e) => handleFilterChange('category', e.target.value)}
-            >
-              <option value="all">All Categories</option>
-              <option value="engineering">Engineering</option>
-              <option value="computing">Computing</option>
-            </select>
-            <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
-          </div>
-           {/* Example of adding duration dropdown back if desired */}
-           <div className="relative">
-            <select 
-              className="px-4 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 appearance-none pr-8"
-              value={filters.duration}
-              onChange={(e) => handleFilterChange('duration', e.target.value)}
-            >
-              <option value="all">All Durations</option>
-              <option value="short">2 Years</option>
-              <option value="medium">3 Years</option>
-              <option value="long">4 Years</option>
-            </select>
-            <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
           </div>
         </div>
-        {/* End Automatic Filters Section */}
 
-          {/* Unsplash Image added here */}
-            <div className="flex justify-center width:full relative h-64 overflow-hidden shadown-md ">
-            <img 
-              src="https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW5mb3JtYXRpb24lMjB0ZWNobm9sb2d5fGVufDB8MHwwfHx8MA%3D%3D" 
-              alt="AI and Technology Banner" 
-              className="w-full h-full object-cover " // Added styling
-            /></div>
-
-        <motion.div 
+        {/* Programs List Section */}
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="bg-white rounded-xl shadow-md overflow-hidden mb-12"
+          className="bg-white rounded-b--xl shadow-md overflow-hidden mb-12" // Original styling for program list container
         >
-          {/* This header is now redundant with the new filter bar, you might want to remove it
-              or repurpose it. For now, keeping it but consider its placement. */}
-          {/* <div className="bg-blue-700 px-8 py-6 flex items-center">
-            <FaLaptopCode className="text-3xl text-white mr-4" />
-            <div>
-              <h2 className="text-2xl font-bold text-white">Engineering & Technology Programs</h2>
-              <p className="text-blue-100 mt-1">Comprehensive programs to build technical expertise</p>
-            </div>
-          </div> */}
-
           <div className="p-8">
             {filteredPrograms.length > 0 ? (
               filteredPrograms.map((program) => (
@@ -609,13 +249,25 @@ const ManagementAndTechPage = () => {
                       ...prev,
                       [program.id]: !prev[program.id]
                     }))}
-                    className="w-full text-left flex justify-between items-start"
+                    className="w-full text-left flex justify-between items-center" // Changed items-start to items-center
                   >
                     <div className="flex items-center">
-                      {program.icon}
+                      {program.icon} {/* Program-specific icon */}
                       <div className="ml-4">
                         <h3 className="text-xl font-semibold text-gray-800">{program.title}</h3>
-                        <p className="text-gray-600">{program.duration} • {program.level.charAt(0).toUpperCase() + program.level.slice(1)}</p>
+                        <div className="flex items-center mt-1"> {/* Container for duration and badge */}
+                            <p className="text-gray-600 text-sm">{program.duration}</p>
+                            {/* Level Badge Styling */}
+                            <span className={`ml-2 px-2 py-0.5 rounded-full text-xs font-semibold text-white
+                                ${program.level === 'undergraduate' ? 'bg-orange-500' :
+                                  program.level === 'postgraduate' ? 'bg-purple-600' :
+                                  program.level === 'diploma' ? 'bg-yellow-600' : 'bg-gray-500'
+                                }`}>
+                                {program.level === 'undergraduate' ? 'UG' :
+                                 program.level === 'postgraduate' ? 'PG' :
+                                 program.level === 'diploma' ? 'Diploma' : ''}
+                            </span>
+                        </div>
                       </div>
                     </div>
                     <motion.div
@@ -648,8 +300,8 @@ const ManagementAndTechPage = () => {
                           ))}
                         </ul>
                         <div className="mt-4">
-                          <a 
-                            href={`/programs/${program.id}`} 
+                          <a
+                            href={`/programs/${program.id}`}
                             className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
                           >
                             <FaFileAlt className="mr-2" /> View Program Details
@@ -668,8 +320,8 @@ const ManagementAndTechPage = () => {
           </div>
 
           <div className="px-8 py-6 bg-blue-50 border-t border-gray-200 text-center">
-            <motion.a 
-              href="/apply" 
+            <motion.a
+              href="/apply"
               className=" bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-md flex items-center justify-center mx-auto w-fit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
