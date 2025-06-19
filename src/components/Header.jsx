@@ -52,17 +52,46 @@ const navItems = [
   {
     title: "Academics",
     path: "/academics",
-    subItems: [
-      { title: "Academic Calendar", path: "/academics/academic-calendar" },
-      { title: "Statutes", path: "/academics/statutes" },
-      { title: "Faculty", path: "/academics/faculty" },
+    megaMenu: true, // Mark Academics for mega menu
+    columns: [
+      // ACADEMIA LAYOUT
       {
-        title: "Internal Quality Assurance Cell (IQAC)",
-        path: "/academics/iqac",
+        heading: "INSTITUTES",
+        type: "institutes", // Custom type to identify this column
+        items: [
+          { title: "Saroj Institute of Artificial Intelligence (SIAI)", },
+          { title: "Saroj Institute of Management & Technology (SIMTI)", approval: "AICTE Approved",   },
+          { title: "Saroj Institute of Basic & Health Sciences (SIBHS)", },
+          { title: "Saroj Institute of Humanities & Education (SHIE)", },
+          { title: "Saroj Institute of Sports Sciences & Research (SISSRI)", },
+          { title: "Saroj Institute of Entrepreneurship & Business (SIEB)", },
+          { title: "Saroj Institute of Film and Fashion (SIFF)", approval: "AICTE Approved", },
+          { title: "Lucknow Institute of Pharmacy (LIP)", approval: "PCI Approved", },
+        ],
       },
       {
-        title: "Industry Collaboration",
-        path: "/academics/industry-collaboration",
+        heading: "PROGRAMS & FEES",
+        type: "fees", // Custom type for fee structure
+        items: [
+          { title: "Saroj Institute of Artificial Intelligence- Programs & Fee" },
+          { title: "Saroj Institute of Management & Technology- Programs & Fee " },
+          { title: "Saroj Institute of Basic & Health Sciences- Programs & Fee " },
+          { title: "Saroj Institute of Humanities & Education- Programs & Fee " },
+          { title: "Saroj Institute of Sports Sciences & Research- Programs & Fee " },
+          { title: "Saroj Institute of Entrepreneurship & Business- Programs & Fee" },
+          { title: "Saroj Institute of Film and Fashion- Programs & Fee" },
+          { title: "Lucknow Institute of Pharmacy- Programs & Fee" },
+        ],
+      },
+      {
+        heading: "ACADEMICS MENU",
+        type: "academics-menu", // Custom type for remaining academics items
+        items: [
+          { title: "Academic Calendar", path: "/academics/academic-calendar" },
+          { title: "Statutes", path: "/academics/statutes" },
+          { title: "Faculty", path: "/academics/faculty" },
+          
+        ],
       },
     ],
   },
@@ -82,22 +111,10 @@ const navItems = [
     title: "Student Life",
     path: "/studentlife",
     subItems: [
-      { title: "Hostel Details", path: "/studentlife/hostel" },
+      // { title: "Hostel Details", path: "/studentlife/hostel" },
       { title: "Sports", path: "/studentlife/sports" },
       { title: "Scholarships", path: "/studentlife/scholarships" },
-      { title: "Health Facilities", path: "/studentlife/health" },
-      {
-        title: "Internal Complaint Committee",
-        path: "/studentlife/internal-complaint",
-      },
-      { title: "Anti-Ragging Cell", path: "/studentlife/anti-ragging" },
-      { title: "Mentoring Schema", path: "/studentlife/mentoring" },
-      {
-        title: "Facilities for differently-abled",
-        path: "/studentlife/differently-abled",
-      },
-      { title: "Research and Development Cell", path: "/studentlife/RnD-cell" },
-      { title: "Innovation Centre", path: "/studentlife/innovation-center" },
+      // { title: "Health Facilities", path: "/studentlife/health" },
     ],
   },
   { title: "Contact Us", path: "/contact-us" },
@@ -205,7 +222,7 @@ function Header() {
                         </div>
                       )}
 
-                      {item.megaMenu && (
+                      {item.megaMenu && item.title === "Programs" && (
                         <div
                           // Apply scroll to the entire mega menu container
                           className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${
@@ -351,7 +368,9 @@ function Header() {
                             </div>
 
                             {/* View all programs ultimate button */}
-                            <div className="flex flex-row justify-end items-end col-span-full mt-4"> {/* col-span-full to make it take full width */}
+                            <div className="flex flex-row justify-end items-end col-span-full mt-4">
+                              {" "}
+                              {/* col-span-full to make it take full width */}
                               <Link to="/programs" onClick={closeAllMenus}>
                                 <button
                                   className="inline-flex items-center justify-center bg-blue-700 text-white font-semibold px-10
@@ -362,6 +381,113 @@ function Header() {
                               </Link>
                             </div>
                           </div>
+                        </div>
+                      )}
+
+                      {item.megaMenu && item.title === "Academics" && (
+                        // ACADEMIA LAYOUT
+                        <div
+                          className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${
+                            openSubmenu === index ? "block" : "hidden"
+                          } max-h-[600px] overflow-y-auto`}
+                        >
+                          <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white"></div>
+                          <div className="grid grid-cols-3 gap-x-8 gap-y-4">
+                            {item.columns.map((column, colIndex) => (
+                              <div
+                                key={`${column.heading}-${colIndex}`}
+                                className="relative"
+                              >
+                                <h3 className="font-bold text-sm text-blue-800 mb-3 pb-2 border-b-2 border-orange-500 relative">
+                                  {column.heading}
+                                  <span className="absolute bottom-0 left-0 w-1/3 h-0.5 bg-gradient-to-r from-orange-500 to-transparent"></span>
+                                </h3>
+                                <ul className="space-y-2">
+                                  {column.type === "institutes" &&
+                                    column.items.map(
+                                      (subItem, subItemIndex) => (
+                                        <li
+                                          key={`${subItem.path}-${subItemIndex}`}
+                                          className="mb-1"
+                                        >
+                                          <Link
+                                            to={subItem.path}
+                                            className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group"
+                                            onClick={closeAllMenus}
+                                          >
+                                            <div className="flex items-start">
+                                              <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                                              {subItem.title}
+                                              {subItem.approval && (
+                                                <span className="ml-2 text-xs text-green-600 font-medium">
+                                                  ({subItem.approval})
+                                                </span>
+                                              )}
+                                            </div>
+                                            <ArrowRight
+                                              size={16}
+                                              color="orange"
+                                              className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                            />
+                                          </Link>
+                                        </li>
+                                      )
+                                    )}
+                                  {column.type === "fees" &&
+                                    column.items.map(
+                                      (subItem, subItemIndex) => (
+                                        <li
+                                          key={`${subItem.path}-${subItemIndex}`}
+                                          className="mb-1"
+                                        >
+                                          <Link
+                                            to={subItem.path}
+                                            className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group"
+                                            onClick={closeAllMenus}
+                                          >
+                                            <div className="flex items-start">
+                                              <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                                              {subItem.title}
+                                            </div>
+                                            <ArrowRight
+                                              size={16}
+                                              color="orange"
+                                              className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                            />
+                                          </Link>
+                                        </li>
+                                      )
+                                    )}
+                                  {column.type === "academics-menu" &&
+                                    column.items.map(
+                                      (subItem, subItemIndex) => (
+                                        <li
+                                          key={`${subItem.path}-${subItemIndex}`}
+                                          className="mb-1"
+                                        >
+                                          <Link
+                                            to={subItem.path}
+                                            className="text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group"
+                                            onClick={closeAllMenus}
+                                          >
+                                            <div className="flex items-start">
+                                              <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                                              {subItem.title}
+                                            </div>
+                                            <ArrowRight
+                                              size={16}
+                                              color="orange"
+                                              className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                            />
+                                          </Link>
+                                        </li>
+                                      )
+                                    )}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                          
                         </div>
                       )}
                     </div>
@@ -393,7 +519,7 @@ function Header() {
           {/* Mobile Menu (unchanged for these specific requests) */}
           <div
             className={`xl:hidden ${
-              mobileMenuOpen ? "max-h-screen" : "max-h-0 overflow-hidden"
+              mobileMenuOpen ? "max-h-screen" : "max-h-0 overflow-auto"
             } transition-all duration-300 ease-in-out`}
           >
             <ul className="pt-2 pb-4 space-y-1">
@@ -452,7 +578,7 @@ function Header() {
                               </li>
                             ))}
 
-                          {item.megaMenu &&
+                          {item.megaMenu && item.title === "Programs" &&
                             item.columns.map((column, colIndex) => (
                               <li key={`${column.heading}-${colIndex}-mobile-column`}>
                                 {" "}
@@ -513,6 +639,39 @@ function Header() {
                                 </ul>
                               </li>
                             ))}
+                            {item.megaMenu && item.title === "Academics" &&
+                              item.columns.map((column, colIndex) => (
+                                <li key={`${column.heading}-${colIndex}-mobile-column`}>
+                                  <h4 className="font-bold text-sm text-blue-800 mt-2 mb-1 px-3 border-b-2 border-orange-500 pb-1">
+                                    {column.heading}
+                                  </h4>
+                                  <ul className="pl-4 space-y-1">
+                                    {column.items.map((subItem, subItemIndex) => (
+                                      <li
+                                        key={`${subItem.path}-${subItemIndex}-mobile`}
+                                      >
+                                        <Link
+                                          to={subItem.path}
+                                          className="block px-3 py-2 hover:bg-gray-50 flex items-center justify-between group relative"
+                                          onClick={closeAllMenus}
+                                        >
+                                          {subItem.title}
+                                          {subItem.approval && (
+                                            <span className="ml-2 text-xs text-green-600 font-medium">
+                                              ({subItem.approval})
+                                            </span>
+                                          )}
+                                          <ArrowRight
+                                            size={16}
+                                            className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                          />
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  
+                                  </ul>
+                                </li>
+                              ))}
                         </ul>
                       </div>
                     </>
