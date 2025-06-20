@@ -188,10 +188,7 @@ const BtechAIMLPage = () => {
                       <h3 className='font-semibold text-lg ml-3'>{career.title}</h3>
                     </div>
                     <p className='text-gray-700'>{career.description}</p>
-                    <div className='mt-4 text-sm text-red-600 flex items-center'>
-                      <span>Learn More</span>
-                      <FaFileAlt className='w-4 h-4 ml-2' />
-                    </div>
+                    
                   </div>
                 ))}
               </div>

@@ -367,6 +367,12 @@
         {
           "title": "MS - Sports Science",
           "path": "/programs/ms-sports-science"
+        }, {
+          "title": "BS - Sports Science Management",
+          "path": "/programs/bs-sports-science-management"
+        }, {
+          "title": "  BS - Sports Science Management",
+          "path": "/programs/ms-sports-science-management"
         }
       ],
       "comment": "Total Sports Science Programs: 2 (1 BS, 1 MS)"

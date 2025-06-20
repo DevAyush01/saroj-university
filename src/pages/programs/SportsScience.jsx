@@ -27,6 +27,36 @@ const SportsScience = () => {
       highlights: ["Metabolic demands of exercise", "Supplementation science", "Weight management for athletes", "Clinical sports nutrition", "Research methodologies in nutrition"],
       category: "Postgraduate",
     },
+    {
+      id: 'bs-sports-management',
+      title: 'MS in Sports Nutrition',
+      duration: '2 Years',
+      icon: <FaHeartbeat className="text-red-600 text-2xl" />,
+      description: 'Advanced study of nutritional strategies for athletes and active individuals, focusing on metabolic demands, supplementation, and performance enhancement.',
+      highlights: [
+        'Metabolic demands of exercise',
+        'Supplementation science',
+        'Weight management for athletes',
+        'Clinical sports nutrition',
+        'Research methodologies in nutrition'
+      ],
+      category: 'Undergaduate'
+    },
+      {
+      id: 'ms-sports-management',
+      title: 'MS in Sports Nutrition',
+      duration: '2 Years',
+      icon: <FaHeartbeat className="text-red-600 text-2xl" />,
+      description: 'Advanced study of nutritional strategies for athletes and active individuals, focusing on metabolic demands, supplementation, and performance enhancement.',
+      highlights: [
+        'Metabolic demands of exercise',
+        'Supplementation science',
+        'Weight management for athletes',
+        'Clinical sports nutrition',
+        'Research methodologies in nutrition'
+      ],
+      category: 'Postgraduate'
+    },
   ];
 
   const toggleProgram = (programId) => {

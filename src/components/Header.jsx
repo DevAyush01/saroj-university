@@ -92,10 +92,10 @@ const navItems = [
     title: "Student Life",
     path: "/studentlife",
     subItems: [
-      // { title: "Hostel Details", path: "/studentlife/hostel" },
+      
       { title: "Sports", path: "/studentlife/sports" },
       { title: "Scholarships", path: "/studentlife/scholarships" },
-      // { title: "Health Facilities", path: "/studentlife/health" },
+     
     ],
   },
   { title: "Contact Us", path: "/contact-us" },
@@ -283,6 +283,7 @@ function Header() {
                         </div>
                       )}
 
+                      {/* // ACADEMIA LAYOUT */}
                       {item.megaMenu && item.title === "Academics" && (
                         // ACADEMIA LAYOUT
                         <div className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"} max-h-[600px] overflow-y-auto`}>

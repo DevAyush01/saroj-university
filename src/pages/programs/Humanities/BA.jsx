@@ -2,14 +2,20 @@ import React, { useState } from 'react';
 import Layout from '../../../components/Layout'; // Default import for Layout
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  FaBookReader,         // Main icon for Arts/Humanities
-  FaGraduationCap,      // General academic
-  FaClock,              // For duration
-  FaUniversity,         // For programs/education
-  FaFileAlt,            // For details/application
-  FaChevronDown,        // For accordions
-  FaCalendarAlt,        // For intake
-  FaLanguage,           // For Language (used for English Lit)
+  FaBookReader, // Main icon for Arts/Humanities
+  FaGraduationCap, // General academic
+  FaClock, // For duration
+  FaUniversity, // For programs/education
+  FaFileAlt, // For details/application
+  FaChevronDown, // For accordions
+  FaCalendarAlt, // For intake
+  FaLanguage, // For Language (used for English Lit)
+  FaBriefcase, // For career opportunities
+  FaPencilAlt, // Icon for content/writing
+  FaLightbulb, // Icon for policy/research
+  FaUsers, // Icon for social/community
+  FaTheaterMasks, // Icon for performing arts (if acting is part of BA)
+  FaChartLine // Icon for economics/analytics
 } from 'react-icons/fa';
 import { Helmet } from 'react-helmet';
 
@@ -17,6 +23,7 @@ const BAPage = () => {
   const [expandedSections, setExpandedSections] = useState({
     overview: false,
     admission: false,
+    career: false, // Added for career opportunities
   });
 
   const toggleSection = (section) => {
@@ -66,6 +73,16 @@ const BAPage = () => {
         'Skills development in journalism and content creation',
         'Event management and coordination experience',
         'Industry-relevant curriculum and hands-on projects'
+      ],
+      careerOpportunities: [
+        'Actor/Performer',
+        'Advertising Executive',
+        'Journalist/Reporter',
+        'Public Relations Specialist',
+        'Event Manager',
+        'Content Creator',
+        'Media Planner',
+        'Brand Manager'
       ]
     },
     {
@@ -87,6 +104,16 @@ const BAPage = () => {
         'In-depth study of historical events and economic theories',
         'Development of linguistic and communication abilities',
         'Understanding of political systems and global affairs'
+      ],
+      careerOpportunities: [
+        'Civil Services',
+        'Economist',
+        'Historian/Archivist',
+        'Policy Analyst',
+        'Journalist/Editor',
+        'Researcher',
+        'International Relations Specialist',
+        'Educator'
       ]
     },
     {
@@ -104,6 +131,16 @@ const BAPage = () => {
         'Creative Writing Workshops',
         'Survey of World Literature & Genres',
         'Research Methodologies & Academic Writing'
+      ],
+      careerOpportunities: [
+        'Content Writer/Editor',
+        'Journalist',
+        'Publisher',
+        'Academic/Researcher',
+        'Teacher',
+        'Lexicographer',
+        'Scriptwriter',
+        'Public Relations'
       ]
     },
     {
@@ -121,8 +158,58 @@ const BAPage = () => {
         'Research Methods in Sociology',
         'Urban Sociology & Rural Development',
         'Social Problems & Social Change'
+      ],
+      careerOpportunities: [
+        'Social Worker',
+        'Market Researcher',
+        'Human Resources Specialist',
+        'Policy Analyst',
+        'Community Development Officer',
+        'Counselor',
+        'Urban Planner',
+        'Demographer'
       ]
     }
+  ];
+
+  // Specific BA Career Roles for the general career opportunities section, reflecting image layout
+  const generalBACareerRoles = [
+    {
+      title: 'Content Creator/Writer',
+      icon: <FaPencilAlt className="text-red-500 text-xl" />,
+      description: 'Develop engaging content for various platforms, including articles, blogs, marketing materials, and digital media.'
+    },
+    {
+      title: 'Policy Analyst',
+      icon: <FaLightbulb className="text-green-500 text-xl" />,
+      description: 'Research, analyze, and evaluate policies for government agencies, think tanks, or advocacy groups.'
+    },
+    {
+      title: 'Social Worker/Community Developer',
+      icon: <FaUsers className="text-blue-500 text-xl" />,
+      description: 'Work to improve the well-being of individuals, families, and communities through support and resource provision.'
+    },
+    {
+      title: 'Journalist/Editor',
+      icon: <FaBookReader className="text-yellow-500 text-xl" />, // Reusing FaBookReader for relevance
+      description: 'Investigate, write, and present news and stories for print, broadcast, or digital media.'
+    },
+    {
+      title: 'Public Relations Specialist',
+      icon: <FaBriefcase className="text-purple-500 text-xl" />,
+      description: 'Manage the public image and communication strategies for individuals, organizations, or brands.'
+    },
+    {
+      title: 'Marketing Executive',
+      icon: <FaChartLine className="text-teal-500 text-xl" />,
+      description: 'Develop and implement marketing campaigns, analyze market trends, and manage brand promotion.'
+    }
+  ];
+
+  const topBARecruiters = [
+    'Publishing Houses', 'Media Organizations', 'NGOs', 'Government Agencies',
+    'Marketing Firms', 'Educational Institutions', 'Human Resources Departments',
+    'Event Management Companies'
   ];
 
   return (
@@ -215,26 +302,69 @@ const BAPage = () => {
                           <li key={i}>{spec}</li>
                         ))}
                       </ul>
-                      <h4 className="font-semibold text-gray-800 mb-2 mt-4">Program Highlights:</h4>
+                      <h4 className="font-semibold text-gray-800 mb-2 mt-4">Key Features:</h4>
                       <ul className="space-y-2 text-gray-700 list-disc list-inside">
                         {program.highlights.map((highlight, i) => (
                           <li key={i}>{highlight}</li>
                         ))}
                       </ul>
-                      <div className="mt-4">
-                        <a
-                          href={`/programs/${program.id}`}
-                          className="text-purple-600 hover:text-purple-800 font-medium flex items-center"
-                        >
-                          <FaFileAlt className="mr-2" /> Learn More
-                        </a>
-                      </div>
+                     
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
             ))}
           </div>
+        </div>
+
+        {/* New Career Opportunities Section - General overview, mimicking image layout */}
+        <div className="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+          <button
+            onClick={() => toggleSection('career')}
+            className="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50"
+          >
+            <h2 className="text-2xl font-bold text-gray-800 flex items-center">
+              <FaGraduationCap className="w-6 h-6 text-purple-600 mr-3" /> {/* Using FaGraduationCap as in the image's "Admission Process" */}
+              Career Opportunities
+            </h2>
+            <FaChevronDown className={`w-5 h-5 text-gray-500 transition-transform ${expandedSections.career ? 'rotate-180' : ''}`} />
+          </button>
+
+          <AnimatePresence>
+            {expandedSections.career && (
+              <motion.div
+                initial="closed"
+                animate="open"
+                exit="closed"
+                variants={accordionVariants}
+                className="px-6 pb-6"
+              >
+                <p className="text-gray-700 mb-6">
+                  A Bachelor of Arts degree equips graduates with highly transferable skills, opening doors to diverse career paths across various sectors. The emphasis on critical thinking, communication, research, and analytical abilities makes BA graduates valuable assets in today's dynamic job market.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> {/* Grid layout as in image */}
+                  {generalBACareerRoles.map((role, index) => (
+                    <div key={index} className="bg-gray-50 p-6 rounded-lg border border-gray-100 flex flex-col items-start text-left">
+                      <div className="p-3 bg-white rounded-full shadow-sm mb-4">
+                        {role.icon}
+                      </div>
+                      <h3 className="font-semibold text-lg text-gray-800 mb-2">{role.title}</h3>
+                      <p className="text-gray-600 text-sm">{role.description}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <h3 className="font-semibold text-lg text-gray-800 mb-3">Top Recruiters:</h3>
+                <div className="flex flex-wrap gap-3">
+                  {topBARecruiters.map((recruiter, index) => (
+                    <span key={index} className="bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full">
+                      {recruiter}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* Admission Requirements */}
@@ -293,12 +423,12 @@ const BAPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="https://siu.in8.nopaperforms.com/"  target="_blank"
+              href="https://siu.in8.nopaperforms.com/" target="_blank"
               className="bg-white text-purple-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
             >
               <FaFileAlt className="mr-2" /> Apply Now
             </a>
-            
+
           </div>
         </div>
       </div>
