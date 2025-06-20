@@ -1,5 +1,5 @@
 import logo from "../assets/logo.png";
-import React, { useState, useEffect, useRef } from "react";
+import { useState,  useRef } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import programsData from "../assets/json/programs.json";
@@ -88,16 +88,7 @@ const navItems = [
     ],
   },
   { title: "Research and development", path: "/rnd" },
-  {
-    title: "Student Life",
-    path: "/studentlife",
-    subItems: [
-      
-      { title: "Sports", path: "/studentlife/sports" },
-      { title: "Scholarships", path: "/studentlife/scholarships" },
-     
-    ],
-  },
+ 
   { title: "Contact Us", path: "/contact-us" },
 ];
 

@@ -119,7 +119,7 @@ const ManagementAndTechPage = () => {
       level: 'undergraduate',
       category: 'tech',
       duration: '3 Years',
-      icon: <FaLaptopCode className="text-blue-600 text-xl" />,
+      icon: <FaLaptopCode className="text-orange-600 text-xl" />,
       description: 'Foundational study of computing and programming.',
       highlights: [
         'Programming languages',
@@ -264,10 +264,10 @@ const ManagementAndTechPage = () => {
                         <div className="flex items-center mt-1"> {/* Container for duration and badge */}
                             <p className="text-gray-600 text-sm">{program.duration}</p>
                             {/* Level Badge Styling */}
-                            <span className={`ml-2 px-2 py-0.5 rounded-full text-xs font-semibold text-white
-                                ${program.level === 'undergraduate' ? 'bg-orange-500' :
-                                  program.level === 'postgraduate' ? 'bg-purple-600' :
-                                  program.level === 'diploma' ? 'bg-yellow-600' : 'bg-gray-500'
+                            <span className={`ml-2 px-2 py-0.5 rounded-full text-xs font-semibold  
+                                ${program.level === 'undergraduate' ? 'bg-orange-100 text-orange-600' :
+                                  program.level === 'postgraduate' ? 'bg-purple-100 text-purple-600' :
+                                  program.level === 'diploma' ? 'bg-yellow-100 text-yellow-600' : 'bg-gray-100 text-gray-600'
                                 }`}>
                                 {program.level === 'undergraduate' ? 'UG' :
                                  program.level === 'postgraduate' ? 'PG' :
@@ -306,6 +306,12 @@ const ManagementAndTechPage = () => {
                           ))}
                         </ul>
                         
+                         <div className="mt-4 flex gap-4">
+                              <a  href="https://siu.in8.nopaperforms.com/" target="_blank"
+                               className="text-white bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded-md text-sm font-medium"   >
+                            Apply Now
+                          </a>
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -318,10 +324,10 @@ const ManagementAndTechPage = () => {
             )}
           </div>
 
-          <div className="px-8 py-6 bg-blue-50 border-t border-gray-200 text-center">
+          <div className="px-8 py-6 bg-orange-50 border-t border-gray-200 text-center">
             <motion.a
              href="https://siu.in8.nopaperforms.com/"  target="_blank"
-              className=" bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-md flex items-center justify-center mx-auto w-fit"
+              className=" bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg shadow-md flex items-center justify-center mx-auto w-fit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
