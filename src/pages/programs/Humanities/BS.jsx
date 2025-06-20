@@ -15,7 +15,8 @@ import {
   FaGavel, // For international law
   FaUsers, // For diplomacy/people
   FaSearch, // For research
-  FaCalendarAlt, // For intake dates
+  FaCalendarAlt,
+   FaExternalLinkAlt, // For intake dates
 } from "react-icons/fa";
 
 const BSPage = () => {
@@ -208,10 +209,7 @@ const BSPage = () => {
                       <h3 className='font-semibold text-lg ml-3'>{career.title}</h3>
                     </div>
                     <p className='text-gray-700'>{career.description}</p>
-                    <div className='mt-4 text-sm text-yellow-600 flex items-center'>
-                      <span>Explore More</span>
-                      <FaExternalLinkAlt className='w-4 h-4 ml-2' />
-                    </div>
+                   
                   </div>
                 ))}
               </div>
