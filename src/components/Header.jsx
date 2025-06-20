@@ -183,7 +183,7 @@ function Header() {
                       {item.megaMenu && item.title === "Programs" && (
                         <div
                           // Apply scroll to the entire mega menu container
-                          className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"} max-h-[600px] overflow-y-auto`}>
+                          className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"} max-h-[700px] overflow-y-auto`}>
                           <div className='absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white'></div>
 
                           <div className='grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4'>
