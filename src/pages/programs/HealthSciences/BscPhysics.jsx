@@ -15,6 +15,7 @@ import {
   FaMicroscope, // For research aspects
   FaSatelliteDish, // For applied physics/space
 } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const BscPhysicsPage = () => {
   const [staticSections, setStaticSections] = useState({
@@ -75,6 +76,11 @@ const BscPhysicsPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>B.Sc. in Physics | Saroj International University</title>
+  <meta name="description" content="Gain a strong understanding of classical and modern physics, quantum mechanics, and research methodologies in our B.Sc. in Physics program." />
+</Helmet>
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

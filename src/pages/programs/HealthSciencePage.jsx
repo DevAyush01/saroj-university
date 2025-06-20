@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Layout from '../../components/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 // Import the icon you want to use
-import { FaMedkit } from 'react-icons/fa'; // or FaStethoscope, FaMicroscope, FaDna
+import { FaMedkit,FaFileAlt  } from 'react-icons/fa'; // or FaStethoscope, FaMicroscope, FaDna
+import { Helmet } from 'react-helmet';
 
 const HealthSciencesPage = () => {
   const [expandedPrograms, setExpandedPrograms] = useState({});
@@ -404,6 +405,11 @@ const HealthSciencesPage = () => {
 
   return (
     <Layout>
+  <Helmet>
+  <title>Health Science Programs | Saroj International University</title>
+  <meta name="description" content="Advance your career in healthcare with programs in Pharmacy, Allied Health, and Biomedical Sciences at Saroj International University." />
+</Helmet>
+
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -474,7 +480,7 @@ const HealthSciencesPage = () => {
                         <span className="text-gray-600 mr-3">{program.duration}</span>
                         {/* Dynamic level tag based on 'level' property */}
                         {program.level === 'Undergraduate' && (
-                          <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">UG</span>
+                          <span className="text-xs bg-green-100 text-blue-800 px-2 py-1 rounded">UG</span>
                         )}
                         {program.level === 'Postgraduate' && (
                           <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">PG</span>
@@ -584,20 +590,18 @@ const HealthSciencesPage = () => {
           </div>
 
           {/* CTA */}
-          <div className="px-8 py-6 bg-green-50 text-center">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Ready to Start Your Journey in Health Sciences?</h3>
-            <a
-              href="/apply"
-              className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition-colors shadow-md"
-            >
-          <span>
-                Apply Now
-                </span>
-            </a>
-            <p className="mt-4 text-gray-600">
-              Have questions? <a href="/contact" className="text-green-600 hover:underline">Contact our admissions team</a>
-            </p>
-          </div>
+          <div className="px-8 py-6 bg-green-50 border-t border-gray-200 text-center">
+            <a
+             href="https://siu.in8.nopaperforms.com/"  target="_blank"
+              className=" bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg shadow-md flex items-center justify-center mx-auto w-fit"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <FaFileAlt className="mr-2" /><span>
+                Start Application
+                </span>
+            </a>
+          </div>
         </div>
 
         {/* Additional Info */}

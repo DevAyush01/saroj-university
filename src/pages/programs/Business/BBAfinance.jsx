@@ -16,6 +16,7 @@ import {
   FaChartLine,    // For Finance specific highlights/topics
   FaHandshake,    // For Finance opportunities
 } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const BBAFinancePage = () => {
   const [staticSections, setStaticSections] = useState({
@@ -76,6 +77,11 @@ const BBAFinancePage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>BBA in Finance | Saroj International University</title>
+  <meta name="description" content="Specialize in finance with our BBA program and learn investment analysis, financial planning, and corporate finance principles." />
+</Helmet>
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

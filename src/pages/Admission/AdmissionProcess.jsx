@@ -11,6 +11,7 @@ import {
   FaUniversity
 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
 
 const steps = [
   { 
@@ -76,6 +77,11 @@ const AdmissionProcess = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Admission Process | Saroj International University</title>
+  <meta name="description" content="Learn about the step-by-step admission process at Saroj International University for undergraduate, postgraduate, and doctoral programs." />
+</Helmet>
+
       <div className="bg-gradient-to-b from-blue-50 to-white py-30 px-4 lg:px-20">
         <div className="bg-white rounded-2xl max-w-5xl mx-auto shadow-2xl overflow-hidden">
           {/* Header with university branding */}

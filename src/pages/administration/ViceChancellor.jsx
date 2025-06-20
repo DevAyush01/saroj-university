@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiLinkedin, FiBook, FiAward, FiBriefcase, FiGlobe } from 'react-icons/fi';
 import Layout from '../../components/Layout';
+import { Helmet } from 'react-helmet';
 
 const ViceChancellorPage = () => {
   const [activeTab, setActiveTab] = useState('message');
@@ -21,7 +22,12 @@ const ViceChancellorPage = () => {
 
   return (
     <Layout>
-    <div className="min-h-screen pt-54 bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
+      <Helmet>
+  <title>Vice Chancellor | Saroj International University</title>
+  <meta name="description" content="Meet the Vice Chancellor of Saroj International University and read their message on leadership, innovation, and academic excellence." />
+</Helmet>
+
+    <div className="min-h-screen pt-22 bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <motion.div 

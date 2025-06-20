@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import Layout from '../../components/Layout';
 
 const SIUFeeStructure = () => {
@@ -164,6 +165,11 @@ const SIUFeeStructure = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Fee Structure | Saroj International University</title>
+  <meta name="description" content="Explore the detailed fee structure for all programs at Saroj International University, including tuition, hostel, and other applicable charges." />
+</Helmet>
+
       <div className="min-h-screen flex items-center py-24 justify-center bg-gradient-to-br from-gray-50 to-gray-200 px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl max-w-6xl w-full">
           <div className="p-8">

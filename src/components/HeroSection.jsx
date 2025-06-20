@@ -18,21 +18,18 @@ const HeroSection = () => {
       title: "World-Class Campus",
       description: "Experience our state-of-the-art facilities designed for innovation and collaboration",
       image: "https://bridge-u.com/wp-content/uploads/2023/06/campus-or-city-university-blog-post-featured-image.jpg",
-      cta: "Take a campus tour",
       icon: <GraduationCap size={24} />
     },
     {
       title: "Global Opportunities",
       description: "Join our international network of students and faculty across 50+ countries",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsuXRnQ3CpVnxNhQMdK1BBwcNzf39PdPC_Og&s",
-      cta: "Explore exchange programs",
       icon: <Globe size={24} />
     },
     {
       title: "Cutting-Edge Research",
       description: "Work alongside leading researchers in fields that shape tomorrow's world",
       image: "https://img2.storyblok.com//f/64062/992x657/de15b07cbe/yale-university.jpg",
-      cta: "View research areas",
       icon: <BookOpen size={24} />
     },
   ];
@@ -49,7 +46,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-blue-50 to-white overflow-hidden py-2">
+    <div className="relative bg-gradient-to-br font-funneldisplay from-blue-50 to-white overflow-hidden py-2">
       {/* Stable background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div 
@@ -103,8 +100,8 @@ const HeroSection = () => {
             {/* Stats Section */}
             <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-4 bg-white rounded-xl shadow-sm border border-blue-50">
               <StatsDisplay value={15000} label="Students" />
-              <StatsDisplay value={350} label="Faculty" />
-              <StatsDisplay value={120} label="Programs" />
+              <StatsDisplay value={250} label="Faculty" />
+              <StatsDisplay value={45} label="Programs" />
             </div>
           </div>
 
@@ -112,8 +109,8 @@ const HeroSection = () => {
           <div className="w-full lg:w-[70%] mt-0 sm:mt-6">
             {/* Motivational text above slider */}
             <div className="mb-4 sm:mb-6">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-2">
-                Learn Today. Lead Tomorrow
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-funneldisplay font-semibold text-black mb-2">
+              India’s Gateway to Next-Gen Education
               </h3>
               <span className="w-full block bg-yellow-300 h-1"></span>
             </div>
@@ -174,15 +171,7 @@ const HeroSection = () => {
                             {slide.description}
                           </h2>
 
-                          <button className="flex items-center gap-1 sm:gap-2 text-white group mt-4 sm:mt-6">
-                            <span className="font-medium px-3 py-1 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 border border-white/20 text-xs sm:text-sm">
-                              {slide.cta}
-                            </span>
-                            <ArrowRight
-                              size={14}
-                              className="group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform duration-300"
-                            />
-                          </button>
+                        
                         </div>
                       </div>
                     </div>

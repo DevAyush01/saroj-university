@@ -17,6 +17,7 @@ import {
   FaSearch, // For research
   FaCalendarAlt, // For intake dates
 } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const BSPage = () => {
   const [expandedSections, setExpandedSections] = useState({
@@ -110,6 +111,11 @@ const BSPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Bachelor of Science (BS) in Humanities | Saroj International University</title>
+  <meta name="description" content="Earn your BS degree from Saroj International University with a focus on scientific research, critical thinking, and technical expertise." />
+</Helmet>
+
       <div className='max-w-6xl mx-auto px-4 py-12'>
         {/* Hero Section */}
         <div className='text-center mb-16'>

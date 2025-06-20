@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout'; // Assuming you have a Layout component
+import { Helmet } from 'react-helmet';
 
 // TimelineItem component for individual entries
 const TimelineItem = ({ title, content, isLeft, index }) => {
@@ -73,7 +74,12 @@ const HistoryPage = () => {
 
   return (
     <Layout>
-      {/* Overall page background - light blue theme */}
+      <Helmet>
+  <title>Our History | Saroj International University</title>
+  <meta name="description" content="Discover the journey and milestones of Saroj International University, from its founding to its growth as a center of higher education." />
+</Helmet>
+
+            {/* Overall page background - light blue theme */}
       <div className="bg-blue-50 py-16 px-4 sm:px-6 lg:px-8 min-h-screen">
         {/* Main content container for title */}
         <div className="max-w-4xl mx-auto text-center mb-12">

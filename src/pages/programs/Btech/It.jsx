@@ -15,6 +15,7 @@ import {
   FaDatabase, // For Data Management
   FaMobileAlt, // For Mobile Development
 } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const BtechItPage = () => {
   const [staticSections, setStaticSections] = useState({
@@ -75,6 +76,11 @@ const BtechItPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>B.Tech in Information Technology | Saroj International University</title>
+  <meta name="description" content="Enroll in the B.Tech in IT program to build skills in networking, cybersecurity, database systems, and cloud computing at Saroj International University." />
+</Helmet>
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

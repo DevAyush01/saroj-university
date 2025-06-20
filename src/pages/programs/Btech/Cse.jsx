@@ -15,6 +15,7 @@ import {
   FaRobot, // For AI/ML opportunities
   FaNetworkWired, // For networking/cybersecurity
 } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const BtechCsePage = () => {
   const [staticSections, setStaticSections] = useState({
@@ -75,6 +76,11 @@ const BtechCsePage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>B.Tech in Computer Science Engineering | Saroj International University</title>
+  <meta name="description" content="Explore core computing concepts, software development, and system design through our B.Tech in Computer Science Engineering program." />
+</Helmet>
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

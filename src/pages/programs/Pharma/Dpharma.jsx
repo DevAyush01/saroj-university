@@ -17,6 +17,7 @@ import {
   FaCalendarAlt, // For intake dates (kept for highlights, but no "important dates" section)
   FaChartLine, // For fees structure
 } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const DPharmaPage = () => {
   const [expandedSections, setExpandedSections] = useState({
@@ -78,6 +79,11 @@ const DPharmaPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Diploma in Pharmacy (D.Pharm) | Saroj International University</title>
+  <meta name="description" content="Start your career in pharmacy with a D.Pharm diploma from Saroj International University, focusing on pharmaceutical fundamentals and practical skills." />
+</Helmet>
+
       <div className='max-w-6xl mx-auto px-4 py-12'>
         <div className='text-center mb-16'>
           <div className='flex justify-center mb-6'>

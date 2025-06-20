@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { GraduationCap, Globe, User2, Info, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Layout from "../../components/Layout";
+import { Helmet } from "react-helmet";
 
 const criteria = [
   {
@@ -64,6 +65,11 @@ const AdmissionCriteria = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Eligibility Criteria | Saroj International University</title>
+  <meta name="description" content="Check the eligibility requirements for various courses offered at Saroj International University across different academic disciplines." />
+</Helmet>
+
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-30 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header with animated underline */}

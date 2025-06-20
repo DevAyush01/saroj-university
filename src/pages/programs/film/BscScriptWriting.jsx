@@ -15,6 +15,7 @@ import {
   FaBuilding,
   FaEdit, // For fees structure
 } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const BscScriptWritingPage = () => {
   const [expandedSections, setExpandedSections] = useState({
@@ -80,6 +81,11 @@ const BscScriptWritingPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>B.Sc. in Script Writing | Saroj International University</title>
+  <meta name="description" content="Learn the art of screenwriting, story development, and dialogue creation in the B.Sc. in Script Writing program." />
+</Helmet>
+
       <div className='max-w-6xl mx-auto px-4 py-12'>
         <div className='text-center mb-16'>
           <div className='flex justify-center mb-6'>

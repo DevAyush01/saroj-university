@@ -17,6 +17,7 @@ import {
   FaDollarSign, // Added for finance specific BBA icon
   FaBuilding, // Added for general BBA specializations
 } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const BBAPage = () => {
   const [expandedSections, setExpandedSections] = useState({});
@@ -151,6 +152,11 @@ const BBAPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Bachelor of Business Administration (BBA) | Saroj International University</title>
+  <meta name="description" content="Earn your BBA from Saroj International University and gain a strong foundation in management, leadership, marketing, and entrepreneurship." />
+</Helmet>
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

@@ -15,6 +15,7 @@ import {
   FaPrescriptionBottleAlt, // For pharmaceuticals/biochemistry
   FaIndustry, // For industrial chemistry
 } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const BscChemistryPage = () => { // Correct component name
   const [staticSections, setStaticSections] = useState({
@@ -76,6 +77,11 @@ const BscChemistryPage = () => { // Correct component name
 
   return (
     <Layout>
+      <Helmet>
+  <title>B.Sc. in Chemistry | Saroj International University</title>
+  <meta name="description" content="Study molecular science, organic/inorganic chemistry, and lab techniques in the B.Sc. in Chemistry program at Saroj International University." />
+</Helmet>
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

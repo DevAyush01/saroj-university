@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiLinkedin, FiTwitter, FiBookOpen } from 'react-icons/fi';
 import Layout from '../../components/Layout';
+import { Helmet } from 'react-helmet';
 
 const ChancellorPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,7 +41,12 @@ const ChancellorPage = () => {
 
   return (
     <Layout >
-    <div className="min-h-screen pt-42 bg-gradient-to-br from-indigo-50 to-white py-12 px-4 sm:px-6 lg:px-8">
+      <Helmet>
+  <title>Chancellor | Saroj International University</title>
+  <meta name="description" content="Know more about the Chancellor of Saroj International University and their vision for institutional growth and excellence." />
+</Helmet>
+
+    <div className="min-h-screen pt-20 bg-gradient-to-br from-indigo-50 to-white py-12 px-4 sm:px-6 lg:px-8">
       <motion.div 
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}

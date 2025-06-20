@@ -15,6 +15,7 @@ import {
   FaExternalLinkAlt, // For external links
   FaLightbulb,FaFileAlt       // For innovation/insights
 } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const BtechDataSciencePage = () => {
   const [expandedSections, setExpandedSections] = useState({
@@ -80,6 +81,11 @@ const BtechDataSciencePage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>B.Tech in Data Science | Saroj International University</title>
+  <meta name="description" content="Join the B.Tech in Data Science program at Saroj International University and learn data analytics, big data tools, and predictive modeling." />
+</Helmet>
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -88,7 +94,7 @@ const BtechDataSciencePage = () => {
               <FaDatabase className="w-12 h-12 text-green-600" />
             </div>
           </div>
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">B.Tech in Data Science</h1>
+          <h1 className="text-5xl font-bold text-gray-800 mb-4">B.Tech in Data Science</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             A specialized program focused on extracting insights from data, developing predictive models, and mastering data-driven decision-making.
           </p>

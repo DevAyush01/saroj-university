@@ -15,6 +15,7 @@ import {
   FaDumbbell, // For strength/conditioning
   FaBrain, // For sports psychology
 } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const BsSportsSciencePage = () => {
   const [staticSections, setStaticSections] = useState({
@@ -75,6 +76,11 @@ const BsSportsSciencePage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Bachelor of Science (BS) in Sports | Saroj International University</title>
+  <meta name="description" content="Join the BS in Sports program at Saroj International University to build a career in sports science, coaching, fitness training, and athletic performance management." />
+</Helmet>
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

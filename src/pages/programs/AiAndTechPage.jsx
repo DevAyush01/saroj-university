@@ -12,6 +12,7 @@ import {
   FaGraduationCap,
   FaChevronDown
 } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const AiAndTechPage = () => {
   const [expandedCourses, setExpandedCourses] = useState({});
@@ -134,6 +135,11 @@ const AiAndTechPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Artificial Intelligence & Technology Programs | Saroj International University</title>
+  <meta name="description" content="Explore cutting-edge programs in Artificial Intelligence, Data Science, Computer Engineering, and IT at Saroj International University." />
+</Helmet>
+
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         {/* TOPMOST ICON */}
         <motion.div
@@ -153,7 +159,7 @@ const AiAndTechPage = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Discover Your Academic Pathway</h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Artificial Intelligence & Technology Programs</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Choose from our cutting-edge programs in AI, ML, Data Science, and Robotics designed to shape future technology leaders.
           </p>
@@ -245,9 +251,7 @@ const AiAndTechPage = () => {
                               </li>
                             ))}
                           </ul>
-                          <a href={course.detailsLink} className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-                            <FaFileAlt className="mr-2" /> View Full Details
-                          </a>
+                        
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -365,7 +369,7 @@ const AiAndTechPage = () => {
           {/* CTA Button */}
           <div className="px-8 py-6 bg-gray-50 border-t border-gray-200 text-center">
             <motion.a 
-              href="/apply" 
+              href="https://siu.in8.nopaperforms.com/"  target="_blank"
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-md flex items-center justify-center mx-auto w-fit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

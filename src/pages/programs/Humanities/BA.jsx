@@ -11,6 +11,7 @@ import {
   FaCalendarAlt,        // For intake
   FaLanguage,           // For Language (used for English Lit)
 } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const BAPage = () => {
   const [expandedSections, setExpandedSections] = useState({
@@ -126,6 +127,11 @@ const BAPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Bachelor of Arts (BA) in Humanities | Saroj International University</title>
+  <meta name="description" content="Explore diverse disciplines in humanities and social sciences through the BA program at Saroj International University." />
+</Helmet>
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

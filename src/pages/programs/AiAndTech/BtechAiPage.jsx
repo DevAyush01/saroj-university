@@ -17,6 +17,7 @@ import {
   FaCalendarAlt,
   FaBriefcase, // For intake dates (kept for highlights, but no "important dates" section)
 } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const BtechAIMLPage = () => {
   const [expandedSections, setExpandedSections] = useState({
@@ -82,6 +83,11 @@ const BtechAIMLPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>B.Tech in Artificial Intelligence | Saroj International University</title>
+  <meta name="description" content="Pursue a B.Tech in Artificial Intelligence at Saroj International University and gain hands-on experience in machine learning, deep learning, and AI systems." />
+</Helmet>
+
       <div className='max-w-6xl mx-auto px-4 py-12'>
         <div className='text-center mb-16'>
           <div className='flex justify-center mb-6'>

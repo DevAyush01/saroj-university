@@ -17,6 +17,7 @@ import {
   FaSearch, // For research/analysis
   FaCalendarAlt, // For intake dates (kept for highlights, but no "important dates" section)
 } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const BPharmaPage = () => {
   const [expandedSections, setExpandedSections] = useState({
@@ -88,6 +89,11 @@ const BPharmaPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Bachelor of Pharmacy (B.Pharm) | Saroj International University</title>
+  <meta name="description" content="Enroll in the B.Pharm program at Saroj International University and gain expertise in pharmaceutical sciences, drug formulation, and clinical research." />
+</Helmet>
+
       <div className='max-w-6xl mx-auto px-4 py-12'>
         <div className='text-center mb-16'>
           <div className='flex justify-center mb-6'>

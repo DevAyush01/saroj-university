@@ -15,6 +15,7 @@ import {
   FaChartLine,
   FaBuilding, // For fees structure
 } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const BscFilmMakingPage = () => {
   const [expandedSections, setExpandedSections] = useState({
@@ -80,6 +81,11 @@ const BscFilmMakingPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>B.Sc. in Film Making | Saroj International University</title>
+  <meta name="description" content="Dive into cinematic storytelling, production, and direction with a B.Sc. in Film Making from Saroj International University." />
+</Helmet>
+
       <div className='max-w-6xl mx-auto px-4 py-12'>
         <div className='text-center mb-16'>
           <div className='flex justify-center mb-6'>

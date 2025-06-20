@@ -36,6 +36,16 @@ import BAPage from "./pages/programs/Humanities/BA";
 import BSPage from "./pages/programs/Humanities/BS";
 import BPharmaPage from "./pages/programs/Pharma/Bpharma";
 import DPharmaPage from "./pages/programs/Pharma/Dpharma";
+import BscFilmMakingPage from "./pages/programs/film/BscFilmMaking";
+import BscScriptWritingPage from "./pages/programs/film/BscScriptWriting";
+import BBAPage from "./pages/programs/Business/BBA";
+import BBAfinancePage from "./pages/programs/Business/BBAfinance";    
+import BtechCsePage from "./pages/programs/Btech/Cse";
+import BtechItPage from "./pages/programs/Btech/It";
+import MsSportsSciencePage from "./pages/programs/SportsScience/Ms";
+import BsSportsSciencePage from "./pages/programs/SportsScience/Bs";
+import BscPhysicsPage from "./pages/programs/HealthSciences/BscPhysics";
+import BscChemistryPage from "./pages/programs/HealthSciences/BscChemistry"; 
 
 // Administration Pages
 import ChancellorPage from "./pages/administration/Chancellor";
@@ -65,6 +75,8 @@ import Faculty from "./pages/Academics/Faculty";
 import PharmacyCouncil from "./pages/about/PharmacyCouncilofIndia";
 import Committees from "./pages/about/Committees";
 import AICTEApproval from "./pages/about/AICTEApproval";
+import BBAFinancePage from "./pages/programs/Business/BBAfinance";
+
 
 function App() {
   return (
@@ -114,14 +126,26 @@ function App() {
       <Route path="/programs/management-and-tech" element={<ManagementAndTechPage />} />
       <Route path="/programs/pharmacy" element={<PharmacyPage />} />
       <Route path="/programs/sports-science" element={<SportsScience />} />
+      
 
-      {/* Program Subpages */}
+      {/* Program Sub-Pages */}
       <Route path="/programs/btech-ai-ml" element={<BtechAIMLPage />} />
       <Route path="/programs/btech-data-science" element={<BtechDataSciencePage />} />
       <Route path="/programs/ba" element={<BAPage />} />
       <Route path="/programs/bs-international-relations" element={<BSPage />} />
       <Route path="/programs/bpharm" element={<BPharmaPage />} />
       <Route path="/programs/dpharm" element={<DPharmaPage />} />
+      <Route path="/programs/bsc-film-making" element={<BscFilmMakingPage />} />
+       <Route path="/programs/bsc-script-writing" element={<BscScriptWritingPage/>} />
+      <Route path="/programs/bba-general" element={<BBAPage />} />
+      <Route path="/programs/bba-banking-finance" element={<BBAFinancePage />} />
+      <Route path="/programs/btech-cse" element={<BtechCsePage />} />
+      <Route path="/programs/btech-it" element={<BtechItPage />} />
+      <Route path="/programs/ms-sports-science" element={<MsSportsSciencePage/>} />
+      <Route path="/programs/bs-sports-science" element={<BsSportsSciencePage/>} />
+      <Route path="/programs/bsc-physics" element={<BscPhysicsPage />} />
+      <Route path="/programs/bsc-Chemistry" element={<BscChemistryPage />} />
+      
 
       {/* Administration */}
       <Route path="/administration/chancellor" element={<ChancellorPage />} />

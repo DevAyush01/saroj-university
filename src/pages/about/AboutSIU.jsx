@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import Layout from '../../components/Layout';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const AboutSIU = () => {
   const [activeTab, setActiveTab] = useState('mission');
@@ -66,6 +67,14 @@ const AboutSIU = () => {
 
   return (
     <Layout>
+     <Helmet>
+  <title>About Us | Saroj International University</title>
+  <meta 
+    name="description" 
+    content="Discover the story of Saroj International University — our mission, vision, leadership, and commitment to academic excellence in global higher education." 
+  />
+</Helmet>
+
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-blue-800 to-blue-500 text-white overflow-hidden">

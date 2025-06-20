@@ -27,6 +27,7 @@ import ThinkInspirationSection from "../components/ThinkInspiration.jsx";
 import PopupForm from "../components/PopupForm.jsx";
 import TopScrollButton from "../components/ScrollTopButton.jsx";
 import LatestNews from "../components/LatestNews.jsx";
+import { Helmet } from "react-helmet";
 
 function Home() {
   const logos = [
@@ -41,6 +42,10 @@ function Home() {
   ];
   return (
     <>
+    <Helmet>
+  <title>Saroj International University | </title>
+  <meta name="description" content="Welcome to Saroj International University. Explore top programs in AI, business, health, and more." />
+</Helmet>
       <Layout>
       
         <PopupForm/>

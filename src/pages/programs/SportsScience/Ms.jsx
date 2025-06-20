@@ -15,6 +15,7 @@ import {
   FaChartLine, // For performance analysis
   FaUserMd, // For clinical or advanced roles
 } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const MsSportsSciencePage = () => {
   const [staticSections, setStaticSections] = useState({
@@ -75,6 +76,11 @@ const MsSportsSciencePage = () => {
 
   return (
     <Layout>
+      <Helmet>
+  <title>Master of Science (MS) in Sports | Saroj International University</title>
+  <meta name="description" content="Advance your expertise in sports science, performance analysis, and athletic training with the MS in Sports program at Saroj International University." />
+</Helmet>
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

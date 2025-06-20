@@ -1,9 +1,15 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import { Helmet } from 'react-helmet';
 
 const ScholarshipPage = () => {
   return (
     <Layout>
+      <Helmet>
+  <title>Scholarships | Saroj International University</title>
+  <meta name="description" content="Find out about the scholarships and financial aid opportunities available to meritorious and deserving students at Saroj International University." />
+</Helmet>
+
       <div className="bg-[#F3F8FF] py-20 px-4 xl:px-20">
         <div className="max-w-7xl mx-auto">
           {/* Page Heading */}

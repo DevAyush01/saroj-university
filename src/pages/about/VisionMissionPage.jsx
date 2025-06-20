@@ -1,9 +1,15 @@
 import React from 'react';
 import Layout from '../../components/Layout'; // Assuming you have a Layout component
+import { Helmet } from 'react-helmet';
 
 const VisionMissionPage = () => {
   return (
     <Layout>
+      <Helmet>
+  <title>Vision & Mission | Saroj International University</title>
+  <meta name="description" content="Understand the core vision and mission that drive Saroj International University's pursuit of excellence in education, research, and innovation." />
+</Helmet>
+
       {/* Overall page background - light blue theme */}
       <div className="bg-blue-50 py-16 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col items-center">
 
