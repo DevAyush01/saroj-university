@@ -43,7 +43,7 @@ function Home() {
   return (
     <>
     <Helmet>
-  <title>Saroj International University | </title>
+  <title>Saroj International University | India's Gateway to Next-Gen Education</title>
   <meta name="description" content="Welcome to Saroj International University. Explore top programs in AI, business, health, and more." />
 </Helmet>
       <Layout>

@@ -123,8 +123,8 @@ function Header() {
   };
 
   return (
-    <div ref={navRef}>
-      <nav className='fixed left-0 right-0 top-0 z-40 bg-white text-gray-600 shadow-md'>
+    <div ref={navRef} className="sticky top-0 z-[9999]">
+      <nav className='  bg-white text-gray-600 shadow-md'>
         <div className='max-w-8xl mx-auto px-4 py-2'>
           <div className='flex items-center justify-between'>
             <Link to='/' className='flex items-center' onClick={closeAllMenus}>
@@ -494,7 +494,6 @@ function Header() {
 </div>
         </div>
       </nav>
-      <div className='h-20'></div>
     </div>
   );
 }
