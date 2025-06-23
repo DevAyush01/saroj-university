@@ -277,7 +277,7 @@ function Header() {
                       {/* // ACADEMIA LAYOUT */}
                       {item.megaMenu && item.title === "Academics" && (
                         // ACADEMIA LAYOUT
-                        <div className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"} max-h-[600px] overflow-y-auto`}>
+                        <div className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1100px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"} max-h-[600px] overflow-y-auto`}>
                           <div className='absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white'></div>
                           <div className='grid grid-cols-3 gap-x-8 gap-y-4'>
                             {item.columns.map((column, colIndex) => (

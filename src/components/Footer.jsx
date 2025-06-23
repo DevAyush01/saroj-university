@@ -1,20 +1,8 @@
 import React from "react";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Instagram,
-  Linkedin,
-  Facebook,
-} from "lucide-react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaPhone, FaMapMarkerAlt, FaEnvelope, FaArrowUp } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  // Back to top functionality
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <footer className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-700 text-white py-8">
