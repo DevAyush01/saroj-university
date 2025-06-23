@@ -17,9 +17,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-700 text-white pt-12">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-700 text-white py-8">
+      <div className="container mx-auto px-6 lg:px-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 py-4 lg:grid-cols-5 gap-8 ">
           {/* University Info */}
           <div className="lg:col-span-2">
             <h3 className="text-xl font-bold mb-4 relative pb-2">
@@ -109,15 +109,9 @@ const Footer = () => {
         </div>
 
         {/* Copyright & Back to Top */}
-        <div className="border-t border-gray-700 mt-10 py-6 flex justify-between items-center">
+        <div className="border-t border-gray-700  pt-3  flex justify-center items-center">
           <p>© {new Date().getFullYear()} Saroj International University. All Rights Reserved.</p>
-          <button 
-            onClick={scrollToTop}
-            className="bg-yellow-400 text-blue-900 p-2 rounded-full hover:bg-white  hover:underline hover:underline-offset-8 transition-colors duration-300"
-            aria-label="Back to top"
-          >
-            <FaArrowUp size={18} />
-          </button>
+         
         </div>
       </div>
     </footer>
