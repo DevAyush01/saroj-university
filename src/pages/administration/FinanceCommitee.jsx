@@ -13,8 +13,8 @@ const FinanceCommitee = () => {
     <PdfViewer
       pdfFiles={[
         {
-          name: "Finance Commitee",
-          path: "/pdfs/finance-commitee.pdf",
+          name: "Finance Officer",
+          path: "/pdfs/finance_commitee.pdf",
         },
       ]}
     />

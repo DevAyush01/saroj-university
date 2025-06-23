@@ -13,7 +13,7 @@ const navItems = [
       { title: "Boards", path: "/about/boards" },
       { title: "Deans", path: "/about/deans" },
       { title: "Recognition", path: "/about/recognition" },
-      { title: "Annual Reports", path: "/about/annual-reports" },
+      { title: "Annual Reports", path: "/annual-account" },
       { title: "Committees", path: "/about/committees" },
       {
         title: "Public Self Disclosure",
@@ -26,8 +26,8 @@ const navItems = [
     title: "Administration",
     path: "/administration",
     subItems: [
-      { title: "Chancellor", path: "/administration/chancellor" },
-      { title: "Vice Chancellor", path: "/administration/vice-chancellor" },
+      { title: "Chancellor", path: "/chancellor" },
+      { title: "Vice Chancellor", path: "/vice-chancellor" },
       { title: "Finance Commitee", path: "/administration/finance-commitee" },
       {
         title: "Academic Council",
