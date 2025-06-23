@@ -1,13 +1,30 @@
-import PdfPage from "../../components/PdfPage"
-import JSONFile from '../../assets/json/actPdf.json'; // json file
+import { Helmet } from "react-helmet";
+import Layout from "../../components/Layout";
+import PdfViewer from "../../components/PdfPageView";
 
-const Acts = () =>{
+const Acts = () => {
+  return (
+    <Layout>
+      <Helmet>
+        <title>Academic Calendar | Saroj International University</title>
+        <meta name='description' content='Stay informed about the academic schedule, important dates, and events for the current session at Saroj International University.' />
+      </Helmet>
 
+      <PdfViewer
+        pdfFiles={[
+          {
+            name: "University Acts",
+            path: "/pdfs/university_act.pdf",
+          },
+          {
+            name: "Ordinances Of SIU",
+            path: "/pdfs/ordinancesofSIU.pdf",
+          },
+          
+        ]}
+      />
+    </Layout>
+  );
+};
 
-  return(
-    <PdfPage JSONFile={JSONFile} />
-  )
-
-}
-
-export default Acts
+export default Acts;

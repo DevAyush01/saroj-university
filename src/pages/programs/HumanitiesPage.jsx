@@ -22,7 +22,7 @@ const HumanitiesPage = () => {
       title: 'BA in English Literature',
       duration: '3 Years',
       level: 'undergraduate', 
-      icon: <FaBook className="text-indigo-500 text-2xl" />,
+      icon: <FaBook className="text-yellow-500 text-2xl" />,
       description: 'Explore literary traditions across cultures and historical periods, developing strong analytical and communication skills.',
       highlights: [
         'Critical Theory and Literary Analysis',
@@ -37,7 +37,7 @@ const HumanitiesPage = () => {
       title: 'MA in History',
       duration: '2 Years',
       level: 'postgraduate', 
-      icon: <FaHistory className="text-indigo-600 text-2xl" />,
+      icon: <FaHistory className="text-yellow-600 text-2xl" />,
       description: 'Advanced study of historical events, interpretations, and methodologies, preparing for academic or research careers.',
       highlights: [
         'Historiography & Historical Theory',
@@ -52,7 +52,7 @@ const HumanitiesPage = () => {
       title: 'BA in Linguistics',
       duration: '3 Years',
       level: 'undergraduate',
-      icon: <FaLanguage className="text-indigo-500 text-2xl" />,
+      icon: <FaLanguage className="text-yellow-500 text-2xl" />,
       description: 'Understand the structure, evolution, and use of human language, from phonetics to semantics.',
       highlights: [
         'Phonetics & Phonology',
@@ -67,7 +67,7 @@ const HumanitiesPage = () => {
       title: 'MA in Philosophy',
       duration: '2 Years',
       level: 'postgraduate',
-      icon: <FaPencilAlt className="text-indigo-700 text-2xl" />, 
+      icon: <FaPencilAlt className="text-yellow-700 text-2xl" />, 
       description: 'Engage with fundamental questions about existence, knowledge, values, reason, mind, and language.',
       highlights: [
         'Ethics & Political Philosophy',
@@ -82,7 +82,7 @@ const HumanitiesPage = () => {
       title: 'Diploma in Creative Writing',
       duration: '1 Year',
       level: 'diploma',
-      icon: <FaBook className="text-indigo-400 text-2xl" />,
+      icon: <FaBook className="text-yellow-400 text-2xl" />,
       description: 'Practical, intensive program designed to hone your skills in various forms of creative writing.',
       highlights: [
         'Fiction & Short Story Writing',
@@ -125,7 +125,7 @@ const HumanitiesPage = () => {
           className="text-center mb-16"
         >
           <div className="flex justify-center mb-4">
-            <FaLanguage className="text-5xl text-indigo-600" /> 
+            <FaLanguage className="text-5xl text-yellow-600" /> 
           </div>
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Humanities Programs</h1>
           <p className="text-xl text-gray-600">Exploring human culture, thought, and creativity through diverse disciplines.</p>
@@ -145,7 +145,7 @@ const HumanitiesPage = () => {
             <FaGlobe className="text-3xl text-white mr-4" /> 
             <div>
               <h2 className="text-2xl font-bold">Humanities & Liberal Arts</h2>
-              <p className="text-indigo-100 mt-1">Understanding the human experience through critical inquiry and diverse perspectives.</p>
+              <p className="text-yellow-100 mt-1">Understanding the human experience through critical inquiry and diverse perspectives.</p>
             </div>
           </div>
 
@@ -164,7 +164,7 @@ const HumanitiesPage = () => {
                 onClick={() => handleFilterChange(filter.value)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 
                   ${filters.level === filter.value 
-                    ? 'bg-indigo-600 text-white shadow-md' 
+                    ? 'bg-yellow-600 text-white shadow-md' 
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
               >
@@ -226,9 +226,12 @@ const HumanitiesPage = () => {
                             </li>
                           ))}
                         </ul>
-                        <div className="mt-4">
-                        
-                        </div>
+                      <div className="mt-4 flex gap-4">
+                              <a  href="https://siu.in8.nopaperforms.com/" target="_blank"
+                               className="text-white bg-yellow-600 hover:bg-yellow-700 px-4 py-2 rounded-md text-sm font-medium"   >
+                            Apply Now
+                          </a>
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -241,10 +244,10 @@ const HumanitiesPage = () => {
             )}
           </div>
 
-          <div className="flex items-center px-8 py-6 bg-indigo-50 border-t border-gray-200">
+          <div className="flex items-center px-8 py-6 bg-yellow-50 border-t border-gray-200">
             <motion.a 
               href="https://siu.in8.nopaperforms.com/"  target="_blank"
-              className="  bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-md flex items-center justify-center mx-auto w-fit"
+              className="  bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-lg shadow-md flex items-center justify-center mx-auto w-fit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

@@ -180,10 +180,7 @@ const DPharmaPage = () => {
                       <h3 className='font-semibold text-lg ml-3'>{career.title}</h3>
                     </div>
                     <p className='text-gray-700'>{career.description}</p>
-                    <div className='mt-4 text-sm text-green-600 flex items-center'>
-                      <span>Learn More</span>
-                      <FaFileAlt className='w-4 h-4 ml-2' />
-                    </div>
+                    
                   </div>
                 ))}
               </div>
@@ -241,42 +238,7 @@ const DPharmaPage = () => {
           )}
         </div>
 
-        <div className='bg-white rounded-lg shadow-md overflow-hidden mb-12'>
-          <button onClick={() => toggleSection("fees")} className='w-full text-left p-6 flex justify-between items-center hover:bg-gray-50'>
-            <h2 className='text-2xl font-bold text-gray-800 flex items-center'>
-              <FaChartLine className='w-6 h-6 text-green-600 mr-3' />
-              Program Fees Structure
-            </h2>
-            <FaChevronDown className={`w-5 h-5 text-gray-500 transition-transform ${expandedSections.fees ? "rotate-180" : ""}`} />
-          </button>
-
-          {expandedSections.fees && (
-            <div className='px-6 pb-6'>
-              <p className='text-gray-700 mb-4'>The approximate annual fee for the Diploma in Pharmacy (D.Pharm) program is:</p>
-              <div className='overflow-x-auto'>
-                <table className='min-w-full divide-y divide-gray-200'>
-                  <thead className='bg-gray-50'>
-                    <tr>
-                      <th scope='col' className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
-                        Program
-                      </th>
-                      <th scope='col' className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
-                        Annual Fee (Approx.)
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className='bg-white divide-y divide-gray-200'>
-                    <tr>
-                      <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>D.Pharm</td>
-                      <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-700'>₹70,000</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p className='text-xs text-gray-500 mt-4'>* Fees are approximate and subject to change. This covers tuition and basic lab/library access.</p>
-            </div>
-          )}
-        </div>
+        
 
         <div className='text-center bg-green-700 text-white p-12 rounded-lg'>
           <h2 className='text-3xl font-bold mb-4'>Ready to Begin Your Pharmacy Career?</h2>

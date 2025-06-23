@@ -1,6 +1,7 @@
 import CoursePage from '../../components/ShowPrograms';
 import universityData from '../../assets/json/universityData.json'; 
 import Layout from '../../components/Layout';
+import { Helmet } from 'react-helmet';
 
 const Courses = () => {
  

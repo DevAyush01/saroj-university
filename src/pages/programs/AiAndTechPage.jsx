@@ -251,7 +251,12 @@ const AiAndTechPage = () => {
                               </li>
                             ))}
                           </ul>
-                        
+                         <div className="mt-4 flex gap-4">
+                              <a  href="https://siu.in8.nopaperforms.com/" target="_blank"
+                               className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium"   >
+                            Apply Now
+                          </a>
+                        </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -265,106 +270,7 @@ const AiAndTechPage = () => {
             )}
           </div>
 
-          {/* Admission Process */}
-          <div className="grid md:grid-cols-2 gap-8 px-8 pb-8">
-            {/* Regular Admission */}
-            <div className="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
-              <button
-                onClick={() => toggleAdmission('regular')}
-                className="w-full p-6 text-left flex justify-between items-center"
-              >
-                <div className="flex items-center">
-                  <FaFileAlt className="text-gray-700 mr-3 text-xl" />
-                  <h3 className="text-xl font-semibold text-gray-800">Admission Process Overview</h3>
-                </div>
-                <motion.div
-                  variants={arrowVariants}
-                  animate={expandedAdmission.regular ? "open" : "closed"}
-                >
-                  <FaChevronDown className="w-5 h-5 text-gray-500" />
-                </motion.div>
-              </button>
-
-              <AnimatePresence>
-                {expandedAdmission.regular && (
-                  <motion.div
-                    initial="closed"
-                    animate="open"
-                    exit="closed"
-                    variants={accordionVariants}
-                  >
-                    <div className="px-6 pb-6 pl-14">
-                      <ul className="space-y-3 text-gray-700">
-                        <li className="flex items-start">
-                          <span className="mr-2">•</span>
-                          <span>Regular Mode</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="mr-2">•</span>
-                          <span>Submit online application with required documents</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="mr-2">•</span>
-                          <span>Appear for entrance exam (if applicable)</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="mr-2">•</span>
-                          <span>Attend personal interview/counseling session</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Global Admission */}
-            <div className="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
-              <button
-                onClick={() => toggleAdmission('global')}
-                className="w-full p-6 text-left flex justify-between items-center"
-              >
-                <div className="flex items-center">
-                  <FaGlobeAmericas className="text-gray-700 mr-3 text-xl" />
-                  <h3 className="text-xl font-semibold text-gray-800">Global Mode</h3>
-                </div>
-                <motion.div
-                  variants={arrowVariants}
-                  animate={expandedAdmission.global ? "open" : "closed"}
-                >
-                  <FaChevronDown className="w-5 h-5 text-gray-500" />
-                </motion.div>
-              </button>
-
-              <AnimatePresence>
-                {expandedAdmission.global && (
-                  <motion.div
-                    initial="closed"
-                    animate="open"
-                    exit="closed"
-                    variants={accordionVariants}
-                  >
-                    <div className="px-6 pb-6 pl-14">
-                      <ul className="space-y-3 text-gray-700">
-                        <li className="flex items-start">
-                          <span className="mr-2">•</span>
-                          <span>Complete regular admission process</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="mr-2">•</span>
-                          <span>Submit additional documents for international study</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="mr-2">•</span>
-                          <span>Complete visa and travel formalities</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          </div>
+      
 
           {/* CTA Button */}
           <div className="px-8 py-6 bg-gray-50 border-t border-gray-200 text-center">

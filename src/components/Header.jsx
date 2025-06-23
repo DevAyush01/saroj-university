@@ -1,5 +1,5 @@
 import logo from "../assets/logo.png";
-import React, { useState, useEffect, useRef } from "react";
+import { useState,  useRef } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import programsData from "../assets/json/programs.json";
@@ -13,7 +13,7 @@ const navItems = [
       { title: "Boards", path: "/about/boards" },
       { title: "Deans", path: "/about/deans" },
       { title: "Recognition", path: "/about/recognition" },
-      { title: "Annual Reports", path: "/about/annual-reports" },
+      { title: "Annual Reports", path: "/annual-account" },
       { title: "Committees", path: "/about/committees" },
       {
         title: "Public Self Disclosure",
@@ -26,8 +26,8 @@ const navItems = [
     title: "Administration",
     path: "/administration",
     subItems: [
-      { title: "Chancellor", path: "/administration/chancellor" },
-      { title: "Vice Chancellor", path: "/administration/vice-chancellor" },
+      { title: "Chancellor", path: "/chancellor" },
+      { title: "Vice Chancellor", path: "/vice-chancellor" },
       { title: "Finance Commitee", path: "/administration/finance-commitee" },
       {
         title: "Academic Council",
@@ -88,16 +88,7 @@ const navItems = [
     ],
   },
   { title: "Research and development", path: "/rnd" },
-  {
-    title: "Student Life",
-    path: "/studentlife",
-    subItems: [
-      // { title: "Hostel Details", path: "/studentlife/hostel" },
-      { title: "Sports", path: "/studentlife/sports" },
-      { title: "Scholarships", path: "/studentlife/scholarships" },
-      // { title: "Health Facilities", path: "/studentlife/health" },
-    ],
-  },
+ 
   { title: "Contact Us", path: "/contact-us" },
 ];
 
@@ -183,7 +174,7 @@ function Header() {
                       {item.megaMenu && item.title === "Programs" && (
                         <div
                           // Apply scroll to the entire mega menu container
-                          className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"} max-h-[600px] overflow-y-auto`}>
+                          className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"} max-h-[700px] overflow-y-auto`}>
                           <div className='absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white'></div>
 
                           <div className='grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4'>
@@ -283,6 +274,7 @@ function Header() {
                         </div>
                       )}
 
+                      {/* // ACADEMIA LAYOUT */}
                       {item.megaMenu && item.title === "Academics" && (
                         // ACADEMIA LAYOUT
                         <div className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"} max-h-[600px] overflow-y-auto`}>

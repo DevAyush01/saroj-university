@@ -27,6 +27,36 @@ const SportsScience = () => {
       highlights: ["Metabolic demands of exercise", "Supplementation science", "Weight management for athletes", "Clinical sports nutrition", "Research methodologies in nutrition"],
       category: "Postgraduate",
     },
+    {
+      id: 'bs-sports-management',
+      title: 'MS in Sports Nutrition',
+      duration: '2 Years',
+      icon: <FaHeartbeat className="text-red-600 text-2xl" />,
+      description: 'Advanced study of nutritional strategies for athletes and active individuals, focusing on metabolic demands, supplementation, and performance enhancement.',
+      highlights: [
+        'Metabolic demands of exercise',
+        'Supplementation science',
+        'Weight management for athletes',
+        'Clinical sports nutrition',
+        'Research methodologies in nutrition'
+      ],
+      category: 'Undergaduate'
+    },
+      {
+      id: 'ms-sports-management',
+      title: 'MS in Sports Nutrition',
+      duration: '2 Years',
+      icon: <FaHeartbeat className="text-red-600 text-2xl" />,
+      description: 'Advanced study of nutritional strategies for athletes and active individuals, focusing on metabolic demands, supplementation, and performance enhancement.',
+      highlights: [
+        'Metabolic demands of exercise',
+        'Supplementation science',
+        'Weight management for athletes',
+        'Clinical sports nutrition',
+        'Research methodologies in nutrition'
+      ],
+      category: 'Postgraduate'
+    },
   ];
 
   const toggleProgram = (programId) => {
@@ -148,11 +178,13 @@ const SportsScience = () => {
                             </li>
                           ))}
                         </ul>
-                        <div className='mt-4'>
-                          <a href={`/programs/${program.id}`} className='text-red-600 hover:text-red-800 font-medium flex items-center'>
-                            <FaFileAlt className='mr-2' /> View Program Details
-                          </a>
-                        </div>
+                      
+                      <div className="mt-4 flex gap-4">
+                              <a  href="https://siu.in8.nopaperforms.com/" target="_blank"
+                               className="text-white bg-red-600 hover:bg-red-700 px-4 py-2 rounded-md text-sm font-medium"   >
+                            Apply Now
+                          </a>
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -204,77 +236,16 @@ const SportsScience = () => {
             </div>
           </div>
 
-          {/* Additional Info */}
-          <div className='grid md:grid-cols-3 gap-8 px-8 py-6 bg-gray-50 border-t border-gray-200'>
-            <div className='bg-blue-50 p-6 rounded-lg'>
-              <div className='flex items-center mb-3'>
-                <FaFlask className='text-xl text-blue-600 mr-3' />
-                <h3 className='text-xl font-semibold text-gray-800'>State-of-the-Art Facilities</h3>
-              </div>
-              <p className='text-gray-700'>Access to modern sports labs, physiology equipment, and dedicated training zones for practical learning.</p>
-            </div>
-            <div className='bg-purple-50 p-6 rounded-lg'>
-              <div className='flex items-center mb-3'>
-                <FaBriefcase className='text-xl text-purple-600 mr-3' />
-                <h3 className='text-xl font-semibold text-gray-800'>Industry Internships</h3>
-              </div>
-              <p className='text-gray-700'>Opportunities for internships with sports academies, fitness centers, and professional teams.</p>
-            </div>
-            <div className='bg-orange-50 p-6 rounded-lg'>
-              <div className='flex items-center mb-3'>
-                <FaChalkboardTeacher className='text-xl text-orange-600 mr-3' />
-                <h3 className='text-xl font-semibold text-gray-800'>Expert Faculty</h3>
-              </div>
-              <p className='text-gray-700'>Learn from leading experts and researchers in sports science, exercise physiology, and nutrition.</p>
-            </div>
-          </div>
+     
 
-          {/* Fee Information */}
-          <div className='bg-white rounded-xl shadow-md overflow-hidden p-8 border-t border-gray-200'>
-            <h2 className='text-2xl font-bold text-gray-800 mb-6'>Program Fees Structure</h2>
-            <div className='overflow-x-auto'>
-              <table className='min-w-full divide-y divide-gray-200'>
-                <thead className='bg-gray-50'>
-                  <tr>
-                    <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>Program Level</th>
-                    <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>Regular Mode (Annual)</th>
-                    <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>Global Mode (Annual)</th>
-                  </tr>
-                </thead>
-                <tbody className='bg-white divide-y divide-gray-200'>
-                  <tr>
-                    <td className='px-6 py-4 whitespace-nowrap font-medium'>BS</td>
-                    <td className='px-6 py-4 whitespace-nowrap'>₹90,000</td>
-                    <td className='px-6 py-4 whitespace-nowrap'>₹1,30,000</td>
-                  </tr>
-                  <tr>
-                    <td className='px-6 py-4 whitespace-nowrap font-medium'>MS</td>
-                    <td className='px-6 py-4 whitespace-nowrap'>₹95,000</td>
-                    <td className='px-6 py-4 whitespace-nowrap'>₹1,40,000</td>
-                  </tr>
-                  <tr>
-                    <td className='px-6 py-4 whitespace-nowrap font-medium'>Diploma</td>
-                    <td className='px-6 py-4 whitespace-nowrap'>₹65,000</td>
-                    <td className='px-6 py-4 whitespace-nowrap'>-</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className='text-sm text-gray-500 mt-4'>* Fees are approximate and subject to change. Additional charges may apply for lab work, field trips, and international components.</p>
-          </div>
+    
 
           {/* CTA */}
           <div className='flex items-center px-8 py-6 bg-red-50'>
-            <h3 className='text-xl font-semibold text-gray-800 mb-4'>Ready to Elevate Your Career in Sports?</h3>
             <motion.a href='https://siu.in8.nopaperforms.com/' target='_blank' className='bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg shadow-md flex items-center justify-center mx-auto w-fit' whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <FaFileAlt className='mr-2' /> <span>Start Application</span>
             </motion.a>
-            <p className='mt-4 text-gray-600'>
-              Questions about our programs?{" "}
-              <a href='/contact' className='text-red-600 hover:underline'>
-                Contact our admissions team
-              </a>
-            </p>
+          
           </div>
         </motion.div>
       </div>

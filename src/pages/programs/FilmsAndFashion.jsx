@@ -196,6 +196,12 @@ const FilmsAndFashion = () => {
                           ))}
                         </ul>
                         
+                         <div className="mt-4 flex gap-4">
+                              <a  href="https://siu.in8.nopaperforms.com/" target="_blank"
+                               className="text-white bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-md text-sm font-medium"   >
+                            Apply Now
+                          </a>
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>

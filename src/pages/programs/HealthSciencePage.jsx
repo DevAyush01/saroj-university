@@ -524,17 +524,9 @@ const HealthSciencesPage = () => {
                             </li>
                           ))}
                         </ul>
-                        <div className="mt-4 flex gap-4">
-                          <a
-                            href={`/programs/${program.id}`}
-                            className="text-green-600 hover:text-green-800 font-medium"
-                          >
-                            View Program Details →
-                          </a>
-                          <a
-                            href="/apply"
-                            className="text-white bg-green-600 hover:bg-green-700 px-4 py-2 rounded-md text-sm font-medium"
-                          >
+                       <div className="mt-4 flex gap-4">
+                              <a  href="https://siu.in8.nopaperforms.com/" target="_blank"
+                               className="text-white bg-green-600 hover:bg-green-700 px-4 py-2 rounded-md text-sm font-medium"   >
                             Apply Now
                           </a>
                         </div>
@@ -548,46 +540,7 @@ const HealthSciencesPage = () => {
             )}
           </div>
 
-          {/* Admission Info */}
-          <div className="px-8 py-6 bg-gray-50 border-t border-gray-200">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Admission Requirements</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-medium text-gray-700 mb-2">Undergraduate Programs:</h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
-                    <span>10+2 with Science (PCB/PCM) with minimum 50% marks</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
-                    <span>Entrance exam (if applicable)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
-                    <span>Personal interview</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-700 mb-2">Postgraduate/Doctoral Programs:</h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
-                    <span>Relevant bachelor's/master's degree with minimum 55% marks</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
-                    <span>Research proposal (for Ph.D)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
-                    <span>Entrance exam and interview</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      
 
           {/* CTA */}
           <div className="px-8 py-6 bg-green-50 border-t border-gray-200 text-center">
@@ -603,67 +556,8 @@ const HealthSciencesPage = () => {
             </a>
           </div>
         </div>
-
-        {/* Additional Info */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">Clinical Placements</h3>
-            <p className="text-gray-700">
-              Our students gain hands-on experience through partnerships with leading hospitals, research labs, and healthcare facilities across India.
-            </p>
-          </div>
-          <div className="bg-purple-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">Research Opportunities</h3>
-            <p className="text-gray-700">
-              Work with faculty on cutting-edge research projects in medical sciences, biotechnology, and public health.
-            </p>
-          </div>
-          <div className="bg-orange-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">Global Mode Option</h3>
-            <p className="text-gray-700">
-              Selected programs offer international study components with partner universities worldwide.
-            </p>
-          </div>
-        </div>
-
-        {/* Fee Information */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden p-8 mb-12">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Program Fees Structure</h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Program Level</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Regular Mode (Annual)</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Global Mode (Annual)</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium">B.Sc/BS</td>
-                  <td className="px-6 py-4 whitespace-nowrap">₹80,000</td>
-                  <td className="px-6 py-4 whitespace-nowrap">₹1,25,000</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium">M.Sc/MS</td>
-                  <td className="px-6 py-4 whitespace-nowrap">₹80,000</td>
-                  <td className="px-6 py-4 whitespace-nowrap">₹1,25,000</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium">Diploma</td>
-                  <td className="px-6 py-4 whitespace-nowrap">₹60,000</td>
-                  <td className="px-6 py-4 whitespace-nowrap">-</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium">Ph.D</td>
-                  <td className="px-6 py-4 whitespace-nowrap">₹1,00,000</td>
-                  <td className="px-6 py-4 whitespace-nowrap">₹1,50,000</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="text-sm text-gray-500 mt-4">* Fees are approximate and subject to change. Additional charges may apply for lab work, field trips, and international components.</p>
-        </div>
+ 
+ 
       </div>
     </Layout>
   );

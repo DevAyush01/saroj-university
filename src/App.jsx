@@ -39,13 +39,13 @@ import DPharmaPage from "./pages/programs/Pharma/Dpharma";
 import BscFilmMakingPage from "./pages/programs/film/BscFilmMaking";
 import BscScriptWritingPage from "./pages/programs/film/BscScriptWriting";
 import BBAPage from "./pages/programs/Business/BBA";
-import BBAfinancePage from "./pages/programs/Business/BBAfinance";    
+import BBAfinancePage from "./pages/programs/Business/BBAfinance";
 import BtechCsePage from "./pages/programs/Btech/Cse";
 import BtechItPage from "./pages/programs/Btech/It";
 import MsSportsSciencePage from "./pages/programs/SportsScience/Ms";
 import BsSportsSciencePage from "./pages/programs/SportsScience/Bs";
 import BscPhysicsPage from "./pages/programs/HealthSciences/BscPhysics";
-import BscChemistryPage from "./pages/programs/HealthSciences/BscChemistry"; 
+import BscChemistryPage from "./pages/programs/HealthSciences/BscChemistry";
 
 // Administration Pages
 import ChancellorPage from "./pages/administration/Chancellor";
@@ -76,89 +76,128 @@ import PharmacyCouncil from "./pages/about/PharmacyCouncilofIndia";
 import Committees from "./pages/about/Committees";
 import AICTEApproval from "./pages/about/AICTEApproval";
 import BBAFinancePage from "./pages/programs/Business/BBAfinance";
-
+import TempPage from "./pages/tempPage";
 
 function App() {
   return (
     <Routes>
       {/* Fallback */}
-      <Route path="*" element={<ErrorPage />} />
+      <Route path='*' element={<ErrorPage />} />
 
       {/* Home */}
-      <Route path="/" element={<HomePage />} />
+      <Route path='/' element={<HomePage />} />
 
       {/* Programs Overview */}
-      <Route path="/programs" element={<Courses />} />
-      
+      <Route path='/programs' element={<Courses />} />
 
       {/* About */}
-      <Route path="/about/about-siu" element={<AboutSIU />} />
-      <Route path="/about/history" element={<HistoryPage />} />
-      <Route path="/about/vision-mission" element={<VisionMissionPage />} />
-      <Route path="/about/acts" element={<Acts />} />
-      <Route path="/about/approvals-documents" element={<ApprovalsDocuments />} />
-      <Route path="/about/annual-reports" element={<AnnualReport />} />
-      <Route path="/about/boards" element={<Boards /> } />
-      <Route path="/about/deans" element={<Deans /> } />
-      <Route path="/about/public-self-disclosure" element={<PublicSelfDisclosure/> } />
-      <Route path="/about/recognition" element={<Recognition /> } />
-      <Route path="/about/lip-pharmacy-council" element={<PharmacyCouncil /> } />
-      <Route path="/about/aicte-approval" element={<AICTEApproval /> } />
-      <Route path="/about/committees" element={<Committees /> } />
+      <Route path='/about/about-siu' element={<AboutSIU />} />
+      <Route path='/about/history' element={<HistoryPage />} />
+      <Route path='/about/vision-mission' element={<VisionMissionPage />} />
+      {/* 1 */}
+      <Route path='/act-statutes-and-ordinances/' element={<Acts />} />   
+      <Route path='/about/approvals-documents' element={<ApprovalsDocuments />} />
+      {/* 2 */}
+      <Route path='/annual-account' element={<AnnualReport />} /> 
+      <Route path='/about/boards' element={<Boards />} />
+      
+      <Route path='/about/deans' element={<Deans />} />
+      <Route path='/about/public-self-disclosure' element={<PublicSelfDisclosure />} />
+      <Route path='/about/recognition' element={<Recognition />} />
+      <Route path='/about/lip-pharmacy-council' element={<PharmacyCouncil />} />
+      <Route path='/about/aicte-approval' element={<AICTEApproval />} />
+      <Route path='/about/committees' element={<Committees />} />
+
+      {/* ----TEMP----  */}
+      {/* 3 */}
+      <Route path='/insituional-development-plan-2' element={<TempPage heading='Insituional Development Plan' />} />
+      <Route path='/registrar' element={<TempPage heading='Registrar' />} />
+      <Route path='/controller-of-examination' element={<TempPage heading='Controller Of Examination' />} />
+      <Route path='/ombudsperson/' element={<TempPage heading='Ombudsperson' />} />
+      <Route path='/internal-qualityassurance-cell-iqac/' element={<TempPage heading='Internal Quality Assurance Cell (IQAC)' />} />
+      <Route path='/library/' element={<TempPage heading='Library' />} />
+      <Route path='/academiccollaboration/' element={<TempPage heading='Academic Collaborations' />} />
+      <Route path='/prospects' element={<TempPage heading='Prospects' />} />
+      <Route path='/refund-policy' element={<TempPage heading='Refund Policy' />} />
+      <Route path='/research-and-development-cell' element={<TempPage heading='Research And Development Cell' />} />
+      <Route path='/innovation-center' element={<TempPage heading='Innovation Center' />} />
+      <Route path='/campus-facilities' element={<TempPage heading='Campus Facilities' />} />
+      <Route path='/sports' element={<TempPage heading='Sports' />} />
+      <Route path='/hostel-details' element={<TempPage heading='Hostel Details' />} />
+      <Route path='/placement-cell' element={<TempPage heading='Placement Cell' />} />
+      <Route path='/health-facilities' element={<TempPage heading='Health Facilities' />} />
+      <Route path='/alumni-connect/' element={<TempPage heading='Alumni Connect' />} />
+      <Route path='/rti/' element={<TempPage heading='RTI' />} />
+      <Route path='/circular-notice' element={<TempPage heading='Circular Notice' />} />
+      <Route path='/announcements' element={<TempPage heading='Announcements' />} />
+      <Route path='/news-letter' element={<TempPage heading='News Letter' />} />
+      <Route path='/admissions-overview' element={<TempPage heading='Admissions Overview' />} />
+      <Route path='/why-study-global-mode' element={<TempPage heading='Why Study Global Mode' />} />
+      <Route path='/image-gallery' element={<TempPage heading='Image Gallery' />} />
+      <Route path='/facilities-for-differently-abled/' element={<TempPage heading='Facili-es for Differently Abled (e.g., Barrier-Free Environment)' />} />
+      <Route path='/socioeconomically-disadvantaged-groups-cell-sedg/' element={<TempPage heading='Health Facilities' />} />
+      <Route path='/details-of-student-grievance-redressal-committee' element={<TempPage heading='Socio-Economically Disadvantaged Groups Cell (SEDG)' />} />
+
+
+
+      {/* <Route path='/controller-of-examination' element={<TempPage heading='Chief Vigilance Officer' />} /> */}
+      
 
       {/* Academics */}
-      <Route path="/academics/academic-calendar" element={<AcademicCalendar />} />
-      <Route path="/academics/statutes" element={<Statutes />} />
-      <Route path="/academics/faculty" element={<Faculty /> } />
+      <Route path='/academics/academic-calendar' element={<AcademicCalendar />} />
+      <Route path='/academics/statutes' element={<Statutes />} />
+      <Route path='/faculty-2' element={<Faculty />} />
 
       {/* Admissions */}
-      <Route path="/admissions/admission-criteria" element={<AdmissionCriteria />} />
-      <Route path="/admissions/scholarship" element={<ScholarshipPage />} />
-      <Route path="/admissions/admission-process" element={<AdmissionProcess />} />
-      <Route path="/admissions/fee-structure" element={<SIUFeeStructure />} />
+      <Route path='/admissions/admission-criteria' element={<AdmissionCriteria />} />
+      <Route path='/admissions/scholarship' element={<ScholarshipPage />} />
+
+      {/* changes  */}
+      <Route path='/admission-flow' element={<AdmissionProcess />} />
+      <Route path='/admissions/fee-structure' element={<SIUFeeStructure />} />
 
       {/* Program Categories */}
-      <Route path="/programs/artificial-intelligence-technology" element={<AiAndTechPage />} />
-      <Route path="/programs/health-sciences" element={<HealthSciencesPage />} />
-      <Route path="/programs/humanities-education" element={<HumanitiesPage />} />
-      <Route path="/programs/entrepreneurship-and-business" element={<EntrepreneurshipAndBusiness />} />
-      <Route path="/programs/film-fashion" element={<FilmsAndFashion />} />
-      <Route path="/programs/management-and-tech" element={<ManagementAndTechPage />} />
-      <Route path="/programs/pharmacy" element={<PharmacyPage />} />
-      <Route path="/programs/sports-science" element={<SportsScience />} />
-      
+      <Route path='/programs/artificial-intelligence-technology' element={<AiAndTechPage />} />
+      <Route path='/programs/health-sciences' element={<HealthSciencesPage />} />
+      <Route path='/programs/humanities-education' element={<HumanitiesPage />} />
+      <Route path='/programs/entrepreneurship-and-business' element={<EntrepreneurshipAndBusiness />} />
+      <Route path='/programs/film-fashion' element={<FilmsAndFashion />} />
+      <Route path='/programs/management-and-tech' element={<ManagementAndTechPage />} />
+      <Route path='/programs/pharmacy' element={<PharmacyPage />} />
+      <Route path='/programs/sports-science' element={<SportsScience />} />
 
       {/* Program Sub-Pages */}
-      <Route path="/programs/btech-ai-ml" element={<BtechAIMLPage />} />
-      <Route path="/programs/btech-data-science" element={<BtechDataSciencePage />} />
-      <Route path="/programs/ba" element={<BAPage />} />
-      <Route path="/programs/bs-international-relations" element={<BSPage />} />
-      <Route path="/programs/bpharm" element={<BPharmaPage />} />
-      <Route path="/programs/dpharm" element={<DPharmaPage />} />
-      <Route path="/programs/bsc-film-making" element={<BscFilmMakingPage />} />
-       <Route path="/programs/bsc-script-writing" element={<BscScriptWritingPage/>} />
-      <Route path="/programs/bba-general" element={<BBAPage />} />
-      <Route path="/programs/bba-banking-finance" element={<BBAFinancePage />} />
-      <Route path="/programs/btech-cse" element={<BtechCsePage />} />
-      <Route path="/programs/btech-it" element={<BtechItPage />} />
-      <Route path="/programs/ms-sports-science" element={<MsSportsSciencePage/>} />
-      <Route path="/programs/bs-sports-science" element={<BsSportsSciencePage/>} />
-      <Route path="/programs/bsc-physics" element={<BscPhysicsPage />} />
-      <Route path="/programs/bsc-Chemistry" element={<BscChemistryPage />} />
-      
+      <Route path='/programs/btech-ai-ml' element={<BtechAIMLPage />} />
+      <Route path='/programs/btech-data-science' element={<BtechDataSciencePage />} />
+      <Route path='/programs/ba' element={<BAPage />} />
+      <Route path='/programs/bs-international-relations' element={<BSPage />} />
+      <Route path='/programs/bpharm' element={<BPharmaPage />} />
+      <Route path='/programs/dpharm' element={<DPharmaPage />} />
+      <Route path='/programs/bsc-film-making' element={<BscFilmMakingPage />} />
+      <Route path='/programs/bsc-script-writing' element={<BscScriptWritingPage />} />
+      <Route path='/programs/bba-general' element={<BBAPage />} />
+      <Route path='/programs/bba-banking-finance' element={<BBAFinancePage />} />
+      <Route path='/programs/btech-cse' element={<BtechCsePage />} />
+      <Route path='/programs/btech-it' element={<BtechItPage />} />
+      <Route path='/programs/ms-sports-science' element={<MsSportsSciencePage />} />
+      <Route path='/programs/bs-sports-science' element={<BsSportsSciencePage />} />
+      <Route path='/programs/bsc-physics' element={<BscPhysicsPage />} />
+      <Route path='/programs/bsc-Chemistry' element={<BscChemistryPage />} />
 
       {/* Administration */}
-      <Route path="/administration/chancellor" element={<ChancellorPage />} />
-      <Route path="/administration/vice-chancellor" element={<ViceChancellorPage />} />
-      <Route path="/administration/academic-council" element={<AcademicCouncil />} />
-      <Route path="/administration/executive-council" element={<ExecutiveCouncil />} />
-      <Route path="/administration/internal-complaint" element={<InternalComplaint />} />
-      <Route path="/administration/finance-commitee" element={<FinanceCommitee />} />
+      {/* 4 */}
+      <Route path='/chancellor' element={<ChancellorPage />} />
+      {/* 5 */}
+      <Route path='/vice-chancellor' element={<ViceChancellorPage />} />
+      <Route path='/administration/academic-council' element={<AcademicCouncil />} />
+      <Route path='/administration/executive-council' element={<ExecutiveCouncil />} />
+      <Route path='/administration/internal-complaint' element={<InternalComplaint />} />
+      <Route path='/finance-officer' element={<FinanceCommitee />} />
 
       {/* Contact & Legal */}
-      <Route path="/contact-us" element={<Contact />} />
-      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+      <Route path='/contact-us' element={<Contact />} />
+      <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+      <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
     </Routes>
   );
 }
