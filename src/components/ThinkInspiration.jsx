@@ -91,28 +91,7 @@ const ThinkInspirationSection = () => {
             ))}
           </ul>
 
-          <a
-            href="#discover-more"
-            className="inline-flex items-center text-white font-semibold hover:underline text-sm sm:text-base md:text-lg transition-all hover:translate-x-1 group"
-            aria-label="Discover more about Saroj International University"
-          >
-            <span>Discover the Spirit of Saroj International University</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 sm:h-5 sm:w-5 ml-1 transition-transform duration-300 group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </a>
-        </div>
+                </div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import logo from "../assets/logo.png";
-import { useState,  useRef } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import programsData from "../assets/json/programs.json";
@@ -84,11 +84,10 @@ const navItems = [
       { title: "Eligibility Criteria", path: "/admissions/admission-criteria" },
       { title: "Fee Structure", path: "/admissions/fee-structure" },
       { title: "Scholarship", path: "/admissions/scholarship" },
-      { title: "Admission Helpdesk", path: "/admissions/helpdesk" },
     ],
   },
-  { title: "Research and development", path: "/rnd" },
- 
+  // { title: "Research and development", path: "/rnd" },
+
   { title: "Contact Us", path: "/contact-us" },
 ];
 
@@ -114,7 +113,7 @@ function Header() {
   };
 
   return (
-    <div ref={navRef} className="sticky top-0 z-[9999]">
+    <div ref={navRef} className='sticky top-0 z-[9999]'>
       <nav className='  bg-white text-gray-600 shadow-md'>
         <div className='max-w-8xl mx-auto px-4 py-2'>
           <div className='flex items-center justify-between'>
@@ -174,7 +173,7 @@ function Header() {
                       {item.megaMenu && item.title === "Programs" && (
                         <div
                           // Apply scroll to the entire mega menu container
-                          className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"} max-h-[700px] overflow-y-auto`}>
+                          className={`absolute left-1/2 -translate-x-2/3 mt-1 w-[1200px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"} max-h-[700px] overflow-y-auto`}>
                           <div className='absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white'></div>
 
                           <div className='grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4'>
@@ -217,7 +216,7 @@ function Header() {
                             </div>
 
                             {/* Right column: College Courses (main program categories) */}
-                            <div className='grid grid-cols-2 gap-x-8 gap-y-4'>
+                            <div className='grid grid-cols-2 gap-x-8 gap-y-2'>
                               {item.columns.map(
                                 (column, colIndex) =>
                                   column.heading !== "COLLABORATION" &&
@@ -233,7 +232,7 @@ function Header() {
                                           <li key={`${subItem.path}-${subItemIndex}`} className='mb-1'>
                                             <Link to={subItem.path} className='text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group' onClick={closeAllMenus}>
                                               <div className='flex items-start'>
-                                                <span className='w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200'></span>
+                                                <span className='w-1 h-1 bg-orange-500 rounded-full mt-1 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200'></span>
                                                 {subItem.title}
                                               </div>
                                               <ArrowRight size={16} color='orange' className='opacity-0 group-hover:opacity-100 transition-opacity duration-200' />
@@ -242,7 +241,7 @@ function Header() {
                                         ))}
                                         {/* View all programs section for each individual category (only if more than 2 items) */}
                                         {column.items.length > 2 && (
-                                          <li key={`${column.heading}-view-all-desktop-right`} className='mt-2 text-sm '>
+                                          <li key={`${column.heading}-view-all-desktop-right`} className=' text-sm '>
                                             <Link
                                               to={`/programs/${column.heading.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`} // Dynamic link based on heading
                                               className='text-orange-500 hover:underline flex items-center'
@@ -277,7 +276,7 @@ function Header() {
                       {/* // ACADEMIA LAYOUT */}
                       {item.megaMenu && item.title === "Academics" && (
                         // ACADEMIA LAYOUT
-                        <div className={`absolute left-1/2 -translate-x-1/2 mt-1 w-[1100px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"} max-h-[600px] overflow-y-auto`}>
+                        <div className={`absolute left-1/2 -translate-x-3/4 mt-1 w-[1100px] bg-white rounded-md shadow-lg p-6 z-50 border border-gray-200 ${openSubmenu === index ? "block" : "hidden"} max-h-[600px] overflow-y-auto`}>
                           <div className='absolute -top-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white'></div>
                           <div className='grid grid-cols-3 gap-x-8 gap-y-4'>
                             {item.columns.map((column, colIndex) => (
@@ -344,6 +343,12 @@ function Header() {
                   )}
                 </li>
               ))}
+              {/* Apply Now Button - Desktop */}
+              <li className='ml-4'>
+                <a href='https://siu.in8.nopaperforms.com/' target='_blank' rel='noopener noreferrer' className='bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded-md transition duration-300 inline-block cursor-pointer'>
+                  Apply Now
+                </a>
+              </li>
             </ul>
 
             <button className='xl:hidden p-2 rounded-md hover:bg-gray-100' onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}>
@@ -353,137 +358,90 @@ function Header() {
 
           {/* Mobile Menu (unchanged for these specific requests) */}
           <div className={`xl:hidden fixed inset-0 bg-white z-[888] transition-all duration-300 ease-in-out overflow-y-auto ${mobileMenuOpen ? "translate-y-20 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
-          <ul className="pt-4 pb-20 px-4 space-y-2 ">
-    {navItems.map((item, index) => (
-      <li key={`${item.path}-${index}-mobile`} className="">
-        {/* For Programs (megaMenu), show as simple link */}
-        {item.megaMenu && item.title === "Programs" ? (
-          <Link
-            to={item.path}
-            className="block px-3 py-3 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium"
-            onClick={closeAllMenus}
-          >
-            {item.title}
-          </Link>
-        ) : 
-        /* For Academics (megaMenu), show expanded menu */
-        item.megaMenu && item.title === "Academics" ? (
-          <>
-            <button
-              onClick={() => toggleMobileSubmenu(index)}
-              className="flex items-center justify-between w-full px-3 py-3 hover:bg-gray-50 rounded-md transition-colors duration-200"
-              aria-haspopup="true"
-              aria-expanded={openMobileSubmenu === index}
-            >
-              <span className="font-medium">{item.title}</span>
-              <ChevronDown
-                className={`w-5 h-5 transition-transform duration-300 ${
-                  openMobileSubmenu === index ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-            <div
-              className={`${
-                openMobileSubmenu === index ? "max-h-[2000px]" : "max-h-0"
-              } overflow-hidden transition-all duration-300 ease-in-out`}
-            >
-              <div className="pl-4 mt-1 space-y-4">
-                {item.columns.map((column, colIndex) => (
-                  <div key={`${column.heading}-${colIndex}-mobile`} className="space-y-2">
-                    <h4 className="font-bold text-sm text-blue-800 border-b border-orange-500 pb-1">
-                      {column.heading}
-                    </h4>
-                    <ul className="space-y-1">
-                      {column.items.map((subItem, subItemIndex) => (
-                        <li key={`${subItem.path}-${subItemIndex}-mobile`}>
-                          <Link
-                            to={subItem.path || '#'} // Fallback to '#' if path is undefined
-                            className="block px-3 py-2 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                            onClick={closeAllMenus}
-                          >
-                            <div className="flex items-center justify-between">
-                              <span>
-                                {subItem.title}
-                                {subItem.approval && (
-                                  <span className="ml-2 text-xs text-green-600 font-medium">
-                                    ({subItem.approval})
-                                  </span>
-                                )}
-                              </span>
-                              <ArrowRight size={16} className="text-orange-500 opacity-70" />
+            <ul className='pt-4 pb-20 px-4 space-y-2 '>
+              {navItems.map((item, index) => (
+                <li key={`${item.path}-${index}-mobile`} className=''>
+                  {/* For Programs (megaMenu), show as simple link */}
+                  {item.megaMenu && item.title === "Programs" ? (
+                    <Link to={item.path} className='block px-3 py-3 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium' onClick={closeAllMenus}>
+                      {item.title}
+                    </Link>
+                  ) : /* For Academics (megaMenu), show expanded menu */
+                  item.megaMenu && item.title === "Academics" ? (
+                    <>
+                      <button onClick={() => toggleMobileSubmenu(index)} className='flex items-center justify-between w-full px-3 py-3 hover:bg-gray-50 rounded-md transition-colors duration-200' aria-haspopup='true' aria-expanded={openMobileSubmenu === index}>
+                        <span className='font-medium'>{item.title}</span>
+                        <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openMobileSubmenu === index ? "rotate-180" : ""}`} />
+                      </button>
+                      <div className={`${openMobileSubmenu === index ? "max-h-[2000px]" : "max-h-0"} overflow-hidden transition-all duration-300 ease-in-out`}>
+                        <div className='pl-4 mt-1 space-y-4'>
+                          {item.columns.map((column, colIndex) => (
+                            <div key={`${column.heading}-${colIndex}-mobile`} className='space-y-2'>
+                              <h4 className='font-bold text-sm text-blue-800 border-b border-orange-500 pb-1'>{column.heading}</h4>
+                              <ul className='space-y-1'>
+                                {column.items.map((subItem, subItemIndex) => (
+                                  <li key={`${subItem.path}-${subItemIndex}-mobile`}>
+                                    <Link
+                                      to={subItem.path || "#"} // Fallback to '#' if path is undefined
+                                      className='block px-3 py-2 hover:bg-gray-50 rounded-md transition-colors duration-200'
+                                      onClick={closeAllMenus}>
+                                      <div className='flex items-center justify-between'>
+                                        <span>
+                                          {subItem.title}
+                                          {subItem.approval && <span className='ml-2 text-xs text-green-600 font-medium'>({subItem.approval})</span>}
+                                        </span>
+                                        <ArrowRight size={16} className='text-orange-500 opacity-70' />
+                                      </div>
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
                             </div>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </>
-        ) : 
-        /* For regular items with submenus */
-        item.subItems ? (
-          <>
-            <button
-              onClick={() => toggleMobileSubmenu(index)}
-              className="flex items-center justify-between w-full px-3 py-3 hover:bg-gray-50 rounded-md transition-colors duration-200"
-              aria-haspopup="true"
-              aria-expanded={openMobileSubmenu === index}
-            >
-              <span className="font-medium">{item.title}</span>
-              <ChevronDown
-                className={`w-5 h-5 transition-transform duration-300 ${
-                  openMobileSubmenu === index ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-            <div
-              className={`${
-                openMobileSubmenu === index ? "max-h-screen" : "max-h-0"
-              } overflow-hidden transition-all duration-300 ease-in-out`}
-            >
-              <ul className="pl-4 mt-1 space-y-1">
-                {item.subItems.map((subItem, subIndex) => (
-                  <li key={`${subItem.path}-${subIndex}-mobile`}>
-                    {subItem.target ? (
-                      <a
-                        href={subItem.path}
-                        target={subItem.target}
-                        rel={subItem.rel}
-                        className="block px-3 py-2 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                        onClick={closeAllMenus}
-                      >
-                        {subItem.title}
-                      </a>
-                    ) : (
-                      <Link
-                        to={subItem.path}
-                        className="block px-3 py-2 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                        onClick={closeAllMenus}
-                      >
-                        {subItem.title}
-                      </Link>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </>
-        ) : (
-          /* For simple items without submenus */
-          <Link
-            to={item.path}
-            className="block px-3 py-3 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium"
-            onClick={closeAllMenus}
-          >
-            {item.title}
-          </Link>
-        )}
-      </li>
-    ))}
-  </ul>
-</div>
+                          ))}
+                        </div>
+                      </div>
+                    </>
+                  ) : /* For regular items with submenus */
+                  item.subItems ? (
+                    <>
+                      <button onClick={() => toggleMobileSubmenu(index)} className='flex items-center justify-between w-full px-3 py-3 hover:bg-gray-50 rounded-md transition-colors duration-200' aria-haspopup='true' aria-expanded={openMobileSubmenu === index}>
+                        <span className='font-medium'>{item.title}</span>
+                        <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openMobileSubmenu === index ? "rotate-180" : ""}`} />
+                      </button>
+                      <div className={`${openMobileSubmenu === index ? "max-h-screen" : "max-h-0"} overflow-hidden transition-all duration-300 ease-in-out`}>
+                        <ul className='pl-4 mt-1 space-y-1'>
+                          {item.subItems.map((subItem, subIndex) => (
+                            <li key={`${subItem.path}-${subIndex}-mobile`}>
+                              {subItem.target ? (
+                                <a href={subItem.path} target={subItem.target} rel={subItem.rel} className='block px-3 py-2 hover:bg-gray-50 rounded-md transition-colors duration-200' onClick={closeAllMenus}>
+                                  {subItem.title}
+                                </a>
+                              ) : (
+                                <Link to={subItem.path} className='block px-3 py-2 hover:bg-gray-50 rounded-md transition-colors duration-200' onClick={closeAllMenus}>
+                                  {subItem.title}
+                                </Link>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  ) : (
+                    /* For simple items without submenus */
+                    <Link to={item.path} className='block px-3 py-3 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium' onClick={closeAllMenus}>
+                      {item.title}
+                    </Link>
+                  )}
+                </li>
+              ))}
+              {/* Apply Now Button - Mobile */}
+              <li className='mt-4'>
+                <a href='https://siu.in8.nopaperforms.com/' target='_blank' rel='noopener noreferrer'>
+                  <button className='w-full bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-md transition duration-300'>Apply Now</button>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </div>

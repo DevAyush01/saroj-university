@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { BellIcon } from "lucide-react";
 
 const FloatingAdmissionAlert = () => {
-  const deadline = new Date("June 30, 2025 23:59:59").getTime();
+  const deadline = new Date("July 30, 2025 23:59:59").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -129,7 +129,7 @@ const FloatingAdmissionAlert = () => {
               </div>
               <div className="text-gray-700 mb-3">
                 Don’t miss out! Apply by{" "}
-                <span className="text-red-600 font-medium">June 30</span> and
+                <span className="text-red-600 font-medium">July 30</span> and
                 grab a{" "}
                 <span className="font-semibold text-green-700">
                   100% scholarship

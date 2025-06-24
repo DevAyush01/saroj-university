@@ -3,11 +3,11 @@ import { Phone, Mail } from 'lucide-react';
 
 const TopNav = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white shadow-sm font-funneldisplay">
+    <div className="bg-gradient-to-r  from-blue-900 to-blue-800 text-white shadow-sm font-funneldisplay">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row justify-between items-center py-1 gap-2 sm:gap-0">
+        <div className="md:flex md:flex-row hidden  justify-between items-center py-1 gap-2 sm:gap-0">
           {/* Contact Info - Wrapped for better mobile display */}
-          <div className=" flex-wrap hidden md:flex items-center justify-center sm:justify-start gap-x-4 gap-y-1 text-sm">
+          <div className=" flex-wrap flex items-center justify-center sm:justify-start gap-x-4 gap-y-1 text-sm">
             <div className="flex items-center space-x-1">
               <a 
                 href="tel:+91-522-311-6178" 
