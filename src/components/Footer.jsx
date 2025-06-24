@@ -18,21 +18,19 @@ const Footer = () => {
               Committed to excellence in education, empowering the future.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white  hover:text-yellow-400 transition-colors  duration-300 ">
+              <a href="https://www.facebook.com/siulucknow" 
+              target="_blank" rel="noopener noreferrer"
+              className="text-white  hover:text-yellow-400 transition-colors  duration-300 ">
                 <FaFacebook size={20} />
               </a>
-              <a href="#" className="text-white hover:text-yellow-400 transition-colors  duration-300 ">
-                <FaTwitter size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">
-                <FaLinkedin size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">
+             
+             
+              <a href="https://www.instagram.com/siulucknow/"
+              target="_blank" rel="noopener noreferrer"
+              className="text-white hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">
                 <FaInstagram size={20} />
               </a>
-              <a href="#" className="text-white hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">
-                <FaYoutube size={20} />
-              </a>
+            
             </div>
           </div>
 
@@ -60,7 +58,7 @@ const Footer = () => {
             </ul>
             
             <h3 className="text-xl font-bold mt-6 mb-4 relative pb-2">
-              Quick Links
+              Links
               <span className="absolute bottom-0 left-0 w-12 h-1 bg-yellow-400"></span>
             </h3>
             <ul className="space-y-2">
@@ -72,7 +70,7 @@ const Footer = () => {
           {/* Quick Contact */}
           <div>
             <h3 className="text-xl font-bold mb-4 relative pb-2">
-              Quick Contact
+             Contact
               <span className="absolute bottom-0 left-0 w-12 h-1 bg-yellow-400"></span>
             </h3>
             <ul className="space-y-3">

@@ -67,7 +67,7 @@ import TermsAndConditions from "./pages/TermsConditions";
 import CoursePage from "./components/ShowPrograms";
 import BoardOfGovernance from "./pages/about/Boards";
 import Boards from "./pages/about/Boards";
-import Deans from "./pages/about/dean";
+import Deans from "./pages/about/Dean";
 import FinanceCommitee from "./pages/administration/FinanceCommitee";
 import PublicSelfDisclosure from "./pages/about/PublicSelfDisclosure";
 import Recognition from "./pages/about/Recognition";

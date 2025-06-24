@@ -8,6 +8,10 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
 
+import Hero1 from "../assets/Hero1.jpeg";
+import Hero2 from "../assets/Hero2.jpeg";
+import Hero3 from "../assets/Hero3.jpeg";
+
 const HeroSection = () => {
   const primaryBlue = "#214A9A";
   const accentYellow = "#F08F07";
@@ -17,19 +21,19 @@ const HeroSection = () => {
     {
       title: "World-Class Campus",
       description: "Experience our state-of-the-art facilities designed for innovation and collaboration",
-      image: "https://bridge-u.com/wp-content/uploads/2023/06/campus-or-city-university-blog-post-featured-image.jpg",
+      image: Hero1,
       icon: <GraduationCap size={24} />
     },
     {
       title: "Global Opportunities",
       description: "Join our international network of students and faculty across 50+ countries",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsuXRnQ3CpVnxNhQMdK1BBwcNzf39PdPC_Og&s",
+      image: Hero2,
       icon: <Globe size={24} />
     },
     {
       title: "Cutting-Edge Research",
       description: "Work alongside leading researchers in fields that shape tomorrow's world",
-      image: "https://img2.storyblok.com//f/64062/992x657/de15b07cbe/yale-university.jpg",
+      image: Hero3,
       icon: <BookOpen size={24} />
     },
   ];

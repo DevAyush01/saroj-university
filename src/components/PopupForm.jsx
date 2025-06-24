@@ -6,7 +6,6 @@ const PopupForm = () => {
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
-    // Load the script only once
     if (scriptLoaded) return;
 
     const script1 = document.createElement("script");
@@ -16,27 +15,25 @@ const PopupForm = () => {
 
     script1.onload = () => {
       setScriptLoaded(true);
-      
-      // Initialize the widget
+
       const initScript = document.createElement("script");
       initScript.innerHTML = `
-        window.npfWidgetInstance = new NpfWidgetsInit({
-          widgetId: "c4686ca3db50effadb9f24fc7ca22401",
+        window.npfW3f2146898ee4a1d0cd203acd0a7c0dc7 = new NpfWidgetsInit({
+          widgetId: "3f2146898ee4a1d0cd203acd0a7c0dc7",
           baseurl: "widgets.in8.nopaperforms.com",
           formTitle: "Enquiry Form",
           titleColor: "#FF0033",
           backgroundColor: "#ddd",
           iframeHeight: "500px",
           buttonbgColor: "#4c79dc",
-          buttonTextColor: "#FFF",
+          buttonTextColor: "#FFF"
         });
       `;
       document.body.appendChild(initScript);
 
-      // Show popup on initial homepage load
       if (location.pathname === '/' && !sessionStorage.getItem('popupShown')) {
         setTimeout(() => {
-          const btn = document.querySelector(".npfWidgetButton.npfWidget-c4686ca3db50effadb9f24fc7ca22401");
+          const btn = document.querySelector(".npfWidgetButton.npfWidget-3f2146898ee4a1d0cd203acd0a7c0dc7");
           if (btn) {
             btn.click();
             sessionStorage.setItem('popupShown', 'true');
@@ -53,24 +50,24 @@ const PopupForm = () => {
   return (
     <button
       type="button"
-      className="npfWidgetButton npfWidget-c4686ca3db50effadb9f24fc7ca22401"
+      className="npfWidgetButton npfWidget-3f2146898ee4a1d0cd203acd0a7c0dc7"
       style={{
         position: "fixed",
         right: "-55px",
         top: "50%",
         transform: "translateY(-50%) rotate(-90deg)",
         cursor: "pointer",
-        backgroundColor: "red",
-        color: "#fff", 
+        backgroundColor: "#4c79dc",
+        color: "#fff",
         padding: "0.6rem 2rem",
-        borderRadius: "0.375rem 0.375rem 0 0.375rem", 
-        boxShadow: "0 10px 15px -3px rgba(220, 38, 38, 0.5), 0 4px 6px -2px rgba(220, 38, 38, 0.25)", 
-        transition: "background-color 0.3s ease", 
+        borderRadius: "0.375rem 0.375rem 0 0.375rem",
+        boxShadow: "0 10px 15px -3px rgba(76, 121, 220, 0.5), 0 4px 6px -2px rgba(76, 121, 220, 0.25)",
+        transition: "background-color 0.3s ease",
         zIndex: 30,
       }}
       aria-label="Open enquiry form"
     >
-      Apply Now!
+      Enquire Now!
     </button>
   );
 };
