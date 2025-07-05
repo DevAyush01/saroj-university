@@ -54,7 +54,7 @@
         {
           "title": "Information Security - Practitioner's Perspective [TCS]",
           "path": "/programs/tcs/information-security",
-          "collaboration_link": "https://www.careers360.com/courses-certifications/tcs-ion-digital-learning-hub-information-security-practitioners-perspective-course#:~:text=The%20%E2%80%98Information%20Security%20-%20Practitioner's%20Perspective%E2%80%99%20online%20certification,protecting,%20and%20securing%20the%20data%20of%20the%20organization."
+          "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/information-security/"
         }
      
 
@@ -66,31 +66,31 @@
       "items": [
         {
           "title": "B.Tech - CSE with AI & ML [Microsoft]",
-          "path": "/programs/btech-cse-ai-ml-microsoft"
+          "path": "/"
         },
         {
           "title": "B.Tech - CSE with Data Science [Google]",
-          "path": "/programs/btech-cse-data-science-google"
+          "path": "/"
         },
         {
           "title": "B.Tech - CSE Cyber Security [CNS/CFS]",
-          "path": "/programs/btech-cse-cyber-security"
+          "path": "/"
         },
         {
           "title": "B.Tech - CSE with Cloud Computing [Google]",
-          "path": "/programs/btech-cse-cloud-computing"
+          "path": "/"
         },
         {
           "title": "M.Tech - CSE with AI & ML [CSES]",
-          "path": "/programs/mtech-cse-ai-ml"
+          "path": "/"
         },
         {
           "title": "BBA(H) - Business Analytics [KPMG]",
-          "path": "/programs/bba-business-analytics"
+          "path": "/"
         },
         {
           "title": "MBA - Global Business Management [KPMG]",
-          "path": "/programs/mba-global-business"
+          "path": "/"
         }
       ],
       "comment": "Total Collaboration Programs: 7"

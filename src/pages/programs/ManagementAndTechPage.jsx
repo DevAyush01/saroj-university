@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Layout from '../../components/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaLaptopCode, FaBusinessTime, FaChartBar, FaNetworkWired, FaChevronDown, FaFileAlt, FaFilter, FaLightbulb, FaTools } from 'react-icons/fa'; // Added FaTools for the main icon
+import { FaMicrochip, FaRobot, FaDatabase,FaLaptopCode, FaBusinessTime, FaChartBar, FaNetworkWired, FaChevronDown, FaFileAlt, FaFilter, FaLightbulb, FaTools } from 'react-icons/fa'; // Added FaTools for the main icon
+import { MdPrecisionManufacturing, MdSecurity, MdElectricalServices, MdScience, MdOutlineDevicesOther } from 'react-icons/md';
+
 import { Helmet } from 'react-helmet';
 
 const ManagementAndTechPage = () => {
@@ -13,137 +15,274 @@ const ManagementAndTechPage = () => {
   });
 
   const allPrograms = [
-    // BBA Programs (Updated to reflect "Business & Entrepreneurship")
+    // B.Tech Programs
     {
-      id: 'bba-entrepreneurship',
-      title: 'BBA in Entrepreneurship',
+      id: 'btech-cse',
+      title: 'B.Tech - CSE',
       level: 'undergraduate',
-      category: 'business',
+      category: 'tech',
       duration: '4 Years',
-      icon: <FaLightbulb className="text-orange-400 text-xl" />, // Smaller, orange icon for consistency
-      description: 'A comprehensive program designed to cultivate entrepreneurial mindset and skills.',
-      highlights: [
-        'Startup ecosystem understanding',
-        'Business model canvas',
-        'Venture capital & funding',
-        'Innovation and design thinking',
-        'Marketing and sales strategies'
-      ]
+      icon: <FaLaptopCode className="text-blue-500 text-xl" />,
+      description: 'Focus on computer systems, programming, and software development.',
+      highlights: ['Programming', 'Data Structures', 'Algorithms', 'Databases', 'AI & ML']
     },
     {
-      id: 'bba-finance',
-      title: 'BBA in Finance',
+      id: 'btech-it',
+      title: 'B.Tech - IT',
       level: 'undergraduate',
-      category: 'business',
-      duration: '3 Years',
-      icon: <FaLightbulb className="text-orange-400 text-xl" />,
-      description: 'Focus on financial markets, investment, and corporate finance.',
-      highlights: [
-        'Financial accounting',
-        'Investment analysis',
-        'Risk management',
-        'Corporate finance',
-        'Financial modeling'
-      ]
+      category: 'tech',
+      duration: '4 Years',
+      icon: <FaNetworkWired className="text-blue-500 text-xl" />,
+      description: 'Study of information systems, networking, and technology infrastructure.',
+      highlights: ['Networks', 'Database Systems', 'Web Technologies', 'Cloud', 'Cybersecurity']
     },
     {
-      id: 'bba-marketing',
-      title: 'BBA in Marketing',
+      id: 'btech-cyber-security',
+      title: 'B.Tech - Cyber Security',
       level: 'undergraduate',
-      category: 'business',
-      duration: '3 Years',
-      icon: <FaLightbulb className="text-orange-400 text-xl" />,
-      description: 'Develop skills in market research, branding, and sales strategies.',
-      highlights: [
-        'Consumer behavior',
-        'Digital marketing',
-        'Brand management',
-        'Marketing research',
-        'Sales management'
-      ]
+      category: 'tech',
+      duration: '4 Years',
+      icon: <MdSecurity className="text-red-500 text-xl" />,
+      description: 'Training in protecting systems from cyber threats and attacks.',
+      highlights: ['Ethical Hacking', 'Information Security', 'Cryptography', 'Firewalls', 'Forensics']
     },
-    // MBA Programs
     {
-      id: 'mba-general',
-      title: 'MBA - General Management',
+      id: 'btech-iot',
+      title: 'B.Tech - IOT',
+      level: 'undergraduate',
+      category: 'tech',
+      duration: '4 Years',
+      icon: <MdOutlineDevicesOther className="text-green-500 text-xl" />,
+      description: 'Learn about interconnected devices and smart technologies.',
+      highlights: ['Embedded Systems', 'Wireless Sensor Networks', 'IoT Platforms', 'Cloud Integration']
+    },
+    {
+      id: 'btech-ece',
+      title: 'B.Tech - Electronics & Communication',
+      level: 'undergraduate',
+      category: 'tech',
+      duration: '4 Years',
+      icon: <FaMicrochip className="text-purple-500 text-xl" />,
+      description: 'Electronics and communication systems design and analysis.',
+      highlights: ['Signal Processing', 'Analog/Digital Electronics', 'VLSI', 'Telecom Systems']
+    },
+    {
+      id: 'btech-mechanical',
+      title: 'B.Tech - Mechanical Engineering',
+      level: 'undergraduate',
+      category: 'tech',
+      duration: '4 Years',
+      icon: <MdPrecisionManufacturing className="text-gray-600 text-xl" />,
+      description: 'Design, manufacture, and maintenance of mechanical systems.',
+      highlights: ['Thermodynamics', 'CAD/CAM', 'Mechanics', 'Fluid Dynamics']
+    },
+    {
+      id: 'btech-civil',
+      title: 'B.Tech - Civil Engineering',
+      level: 'undergraduate',
+      category: 'tech',
+      duration: '4 Years',
+      icon: <FaDatabase className="text-green-800 text-xl" />,
+      description: 'Design and development of infrastructure and construction projects.',
+      highlights: ['Structural Engineering', 'Surveying', 'Construction Management', 'Geotech']
+    },
+    {
+      id: 'btech-mechtronics',
+      title: 'B.Tech - Mechtronics',
+      level: 'undergraduate',
+      category: 'tech',
+      duration: '4 Years',
+      icon: <FaRobot className="text-indigo-500 text-xl" />,
+      description: 'Integration of mechanical, electronic, and software engineering.',
+      highlights: ['Robotics', 'Control Systems', 'Sensors & Actuators', 'AI Integration']
+    },
+    {
+      id: 'btech-biotech',
+      title: 'B.Tech - Bio-Tech',
+      level: 'undergraduate',
+      category: 'tech',
+      duration: '4 Years',
+      icon: <MdScience className="text-pink-500 text-xl" />,
+      description: 'Biological and technological studies applied to medicine and agriculture.',
+      highlights: ['Genetics', 'Microbiology', 'Bioprocess', 'Bioinformatics']
+    },
+    {
+      id: 'btech-electrical',
+      title: 'B.Tech - Electrical Engineering',
+      level: 'undergraduate',
+      category: 'tech',
+      duration: '4 Years',
+      icon: <MdElectricalServices className="text-yellow-600 text-xl" />,
+      description: 'Study of electrical systems, machines, and power generation.',
+      highlights: ['Power Systems', 'Control Engineering', 'Circuit Analysis', 'Energy Systems']
+    },
+  
+    // M.Tech Programs
+    {
+      id: 'mtech-cse',
+      title: 'M.Tech - CSE',
       level: 'postgraduate',
-      category: 'business',
+      category: 'tech',
       duration: '2 Years',
-      icon: <FaLightbulb className="text-yellow-600 text-xl" />, // Different shade for PG
-      description: 'Broad-based management education for leadership roles.',
-      highlights: [
-        'Strategic management',
-        'Organizational behavior',
-        'Operations management',
-        'Business analytics',
-        'Leadership development'
-      ]
+      icon: <FaLaptopCode className="text-blue-700 text-xl" />,
+      description: 'Advanced computer science with focus on research and specialization.',
+      highlights: ['Machine Learning', 'Advanced Algorithms', 'Big Data', 'AI Research']
     },
     {
-      id: 'mba-hr',
-      title: 'MBA - Human Resources',
+      id: 'mtech-it',
+      title: 'M.Tech - IT',
       level: 'postgraduate',
-      category: 'business',
+      category: 'tech',
       duration: '2 Years',
-      icon: <FaLightbulb className="text-yellow-600 text-xl" />,
-      description: 'Specialization in human resource management and organizational development.',
-      highlights: [
-        'Talent acquisition',
-        'Performance management',
-        'Compensation & benefits',
-        'Labor laws',
-        'HR analytics'
-      ]
+      icon: <FaNetworkWired className="text-blue-700 text-xl" />,
+      description: 'Deep dive into IT systems, architecture, and innovation.',
+      highlights: ['IT Governance', 'Cybersecurity', 'Cloud Systems', 'Enterprise Solutions']
     },
-    // Diploma Programs (if applicable for business)
     {
-      id: 'diploma-business',
-      title: 'Diploma in Business Administration',
+      id: 'mtech-cyber-security',
+      title: 'M.Tech - Cyber Security',
+      level: 'postgraduate',
+      category: 'tech',
+      duration: '2 Years',
+      icon: <MdSecurity className="text-red-700 text-xl" />,
+      description: 'Advanced techniques in cybersecurity, threat detection, and response.',
+      highlights: ['Network Security', 'Pen Testing', 'Data Privacy', 'Cyber Laws']
+    },
+    {
+      id: 'mtech-iot',
+      title: 'M.Tech - IOT',
+      level: 'postgraduate',
+      category: 'tech',
+      duration: '2 Years',
+      icon: <MdOutlineDevicesOther className="text-green-700 text-xl" />,
+      description: 'Design and management of smart, connected IoT systems.',
+      highlights: ['IoT Architectures', 'Edge Computing', 'AI in IoT', 'Security in IoT']
+    },
+    {
+      id: 'mtech-ece',
+      title: 'M.Tech - Electronics & Communication',
+      level: 'postgraduate',
+      category: 'tech',
+      duration: '2 Years',
+      icon: <FaMicrochip className="text-purple-700 text-xl" />,
+      description: 'Specialized ECE studies in VLSI, telecom, and embedded systems.',
+      highlights: ['Digital Signal Processing', 'VLSI Design', 'Embedded Systems']
+    },
+    {
+      id: 'mtech-mechanical',
+      title: 'M.Tech - Mechanical Engineering',
+      level: 'postgraduate',
+      category: 'tech',
+      duration: '2 Years',
+      icon: <MdPrecisionManufacturing className="text-gray-700 text-xl" />,
+      description: 'In-depth mechanical systems, thermal sciences, and R&D.',
+      highlights: ['Finite Element Analysis', 'Heat Transfer', 'Design Optimization']
+    },
+    {
+      id: 'mtech-civil',
+      title: 'M.Tech - Civil Engineering',
+      level: 'postgraduate',
+      category: 'tech',
+      duration: '2 Years',
+      icon: <FaDatabase className="text-green-900 text-xl" />,
+      description: 'Specialized topics in structural, water resource, and transportation engineering.',
+      highlights: ['Advanced Structural Design', 'GIS & Remote Sensing', 'Soil Mechanics']
+    },
+    {
+      id: 'mtech-mechtronics',
+      title: 'M.Tech - Mechtronics',
+      level: 'postgraduate',
+      category: 'tech',
+      duration: '2 Years',
+      icon: <FaRobot className="text-indigo-700 text-xl" />,
+      description: 'Interdisciplinary robotics, automation, and intelligent systems.',
+      highlights: ['AI & Robotics', 'Automation Systems', 'IoT in Mechatronics']
+    },
+    {
+      id: 'mtech-biotech',
+      title: 'M.Tech - Bio-Tech',
+      level: 'postgraduate',
+      category: 'tech',
+      duration: '2 Years',
+      icon: <MdScience className="text-pink-700 text-xl" />,
+      description: 'Advanced biotechnology techniques in healthcare and agriculture.',
+      highlights: ['Genomics', 'Biopharma', 'Industrial Biotech']
+    },
+    {
+      id: 'mtech-electrical',
+      title: 'M.Tech - Electrical Engineering',
+      level: 'postgraduate',
+      category: 'tech',
+      duration: '2 Years',
+      icon: <MdElectricalServices className="text-yellow-700 text-xl" />,
+      description: 'Advanced research in power systems and electrical design.',
+      highlights: ['Smart Grids', 'Advanced Control Systems', 'Sustainable Energy']
+    },
+  
+    // Diploma Programs
+    {
+      id: 'diploma-civil',
+      title: 'Diploma - Civil Engineering',
       level: 'diploma',
-      category: 'business',
-      duration: '1 Year', // Example duration
-      icon: <FaLightbulb className="text-yellow-400 text-xl" />, // Different shade for Diploma
-      description: 'Foundational understanding of business principles.',
-      highlights: [
-        'Business communication',
-        'Basic accounting',
-        'Marketing fundamentals',
-        'Business law basics',
-        'Office administration'
-      ]
+      category: 'tech',
+      duration: '3 Years',
+      icon: <FaDatabase className="text-green-600 text-xl" />,
+      description: 'Foundation in construction and infrastructure technology.',
+      highlights: ['Surveying', 'Structural Basics', 'Construction Materials']
     },
-    // Added Tech Programs for "Management & Tech" context
     {
-      id: 'bsc-cs',
-      title: 'BSc in Computer Science',
+      id: 'diploma-electrical',
+      title: 'Diploma - Electrical Engineering',
+      level: 'diploma',
+      category: 'tech',
+      duration: '3 Years',
+      icon: <MdElectricalServices className="text-yellow-500 text-xl" />,
+      description: 'Basics of electric circuits, machines, and systems.',
+      highlights: ['Basic Circuits', 'Transformers', 'Motors & Generators']
+    },
+    {
+      id: 'diploma-mechanical',
+      title: 'Diploma - Mechanical Engineering',
+      level: 'diploma',
+      category: 'tech',
+      duration: '3 Years',
+      icon: <MdPrecisionManufacturing className="text-gray-500 text-xl" />,
+      description: 'Mechanical systems and manufacturing fundamentals.',
+      highlights: ['Engineering Drawing', 'Workshop Tech', 'Mechanics']
+    },
+    {
+      id: 'diploma-cs',
+      title: 'Diploma - Computer Science',
+      level: 'diploma',
+      category: 'tech',
+      duration: '3 Years',
+      icon: <FaLaptopCode className="text-blue-400 text-xl" />,
+      description: 'Introductory computing, coding, and system design.',
+      highlights: ['Programming Basics', 'OOP', 'Database Fundamentals']
+    },
+  
+    // BCA Program
+    {
+      id: 'bca-ai-ml-cyber',
+      title: 'BCA - AI, ML, Cyber Security',
       level: 'undergraduate',
       category: 'tech',
       duration: '3 Years',
-      icon: <FaLaptopCode className="text-orange-600 text-xl" />,
-      description: 'Foundational study of computing and programming.',
-      highlights: [
-        'Programming languages',
-        'Data structures',
-        'Algorithms',
-        'Operating systems',
-        'Database management'
-      ]
+      icon: <FaLaptopCode className="text-blue-600 text-xl" />,
+      description: 'Computer applications with a focus on AI, ML, and cybersecurity.',
+      highlights: ['Python Programming', 'AI Basics', 'Machine Learning', 'Cyber Laws']
     },
+  
+    // MCA Program
     {
-      id: 'msc-it',
-      title: 'MSc in Information Technology',
+      id: 'mca-ai-ml-cyber',
+      title: 'MCA - AI, ML, Cyber Security',
       level: 'postgraduate',
       category: 'tech',
       duration: '2 Years',
-      icon: <FaNetworkWired className="text-teal-600 text-xl" />,
-      description: 'Advanced studies in IT infrastructure and management.',
-      highlights: [
-        'Network security',
-        'Cloud computing',
-        'IT project management',
-        'Data analytics',
-        'Software engineering'
-      ]
+      icon: <FaLaptopCode className="text-blue-800 text-xl" />,
+      description: 'Advanced computer applications with AI, ML, and security focus.',
+      highlights: ['Deep Learning', 'AI Project Development', 'Security Auditing']
     },
   ];
 
@@ -205,8 +344,8 @@ const ManagementAndTechPage = () => {
             <div className="flex items-center">
               <FaBusinessTime className="text-3xl text-white mr-4" /> {/* Icon changed */}
               <div>
-                <h2 className="text-2xl font-bold">Our Business & Entrepreneurship Programs</h2> {/* Text updated */}
-                <p className="text-gray-300 mt-1">Building the next generation of business innovators and strategists</p> {/* Text updated */}
+                <h2 className="text-2xl font-bold">Our Management & Technology  Programs</h2> {/* Text updated */}
+                <p className="text-gray-300 mt-1">Building the next generation of technology leaders and innovators through industry-aligned education.</p> {/* Text updated */}
               </div>
             </div>
           </div>

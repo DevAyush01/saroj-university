@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const TopNav = () => {
   return (
@@ -31,6 +32,7 @@ const TopNav = () => {
               </a>
               <span className="text-blue-300 mx-1 hidden sm:inline">|</span>
             </div>
+
             
             <a 
               href="mailto:info@sarojuniversity.edu.in" 
@@ -40,6 +42,26 @@ const TopNav = () => {
               <Mail className="h-3.5 w-3.5 mr-1 flex-shrink-0" />
               <span className="whitespace-nowrap">info@sarojuniversity.edu.in</span>
             </a>
+            <div className="flex space-x-4">
+              <a href="https://www.facebook.com/siulucknow" 
+              target="_blank" rel="noopener noreferrer"
+              className="text-white  hover:text-yellow-400 transition-colors  duration-300 ">
+                <FaFacebook size={20} />
+              </a>
+              <a href="https://www.linkedin.com/company/siulucknow/" 
+              target="_blank" rel="noopener noreferrer"
+              className="text-white  hover:text-yellow-400 transition-colors  duration-300 ">
+                <FaLinkedin size={20} />
+              </a>
+             
+             
+              <a href="https://www.instagram.com/siulucknow/"
+              target="_blank" rel="noopener noreferrer"
+              className="text-white hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">
+                <FaInstagram size={20} />
+              </a>
+            
+            </div>
           </div>
 
           {/* SIUET Form Button with Enhanced Blinking Effect */}
