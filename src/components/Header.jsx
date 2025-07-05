@@ -113,7 +113,7 @@ function Header() {
   };
 
   return (
-    <div ref={navRef} className='sticky top-0 z-[9999]'>
+    <div ref={navRef} className='sticky top-0 z-[999]'>
       <nav className='  bg-white text-gray-600 shadow-md'>
         <div className='max-w-8xl mx-auto px-4 py-2'>
           <div className='flex items-center justify-between'>

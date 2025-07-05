@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone, Send, Loader2, Globe } from 'lucide-react';
 import { toast, Toaster } from 'react-hot-toast';
 import Layout from '../../components/Layout';
 import { Helmet } from 'react-helmet';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
@@ -19,7 +20,10 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+  // Initialize EmailJS
   useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_USER_ID);
+    
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -44,7 +48,23 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
+      // Send email via EmailJS
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+          college: formData.college
+        },
+        import.meta.env.VITE_EMAILJS_USER_ID
+      );
+
+      // Optional: Submit to Google Sheets
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
         headers: {
@@ -63,7 +83,7 @@ const Contact = () => {
         college: 'Saroj International University'
       });
     } catch (error) {
-      console.error("Error!", error.message);
+      console.error("Error!", error);
       toast.error("Something went wrong. Please try again later.");
     } finally {
       setIsSubmitting(false);
@@ -78,9 +98,9 @@ const Contact = () => {
   return (
     <Layout>
       <Helmet>
-  <title>Contact Us | Saroj International University</title>
-  <meta name="description" content="Get in touch with Saroj International University for inquiries, support, admissions, and general information." />
-</Helmet>
+        <title>Contact Us | Saroj International University</title>
+        <meta name="description" content="Get in touch with Saroj International University for inquiries, support, admissions, and general information." />
+      </Helmet>
 
       <div className="min-h-screen relative overflow-hidden">
         {/* Animated background elements */}
@@ -225,8 +245,9 @@ const Contact = () => {
                 </form>
               </div>
               
-              {/* Contact Information */}
+              {/* Right Column - Contact Info + Map */}
               <div className="space-y-8">
+                {/* Contact Information */}
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-2xl p-8 transform transition-all hover:shadow-2xl hover:-translate-y-1">
                   <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
                     <span className="w-4 h-4 bg-blue-500 rounded-full mr-3"></span>
@@ -302,13 +323,28 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                
+                {/* Google Map */}
+                <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-2xl overflow-hidden transform transition-all hover:shadow-2xl hover:-translate-y-1">
+                  
+                  <div className="aspect-w-16 aspect-h-9 w-full h-58 ">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.173324304345!2d81.0798900752192!3d26.770744476732116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be76246cd85e5%3A0xf68400cf231026d6!2sSaroj%20International%20University!5e0!3m2!1sen!2sin!4v1751712043473!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="rounded-b-xl"
+                    ></iframe>
+                  </div>
+                 
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Add this to your global CSS or in a style tag */}
         <style jsx>{`
           @keyframes float {
             0%, 100% {
