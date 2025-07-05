@@ -78,6 +78,15 @@ import AICTEApproval from "./pages/about/AICTEApproval";
 import BBAFinancePage from "./pages/programs/Business/BBAfinance";
 import TempPage from "./pages/tempPage";
 
+import InstituteFilmFashion from "./pages/InstitutePages/FilmFashion";
+import InstitutePharmacy from "./pages/InstitutePages/Pharmacy";
+import InstituteEntrepreneurshipBusiness from "./pages/InstitutePages/Business";
+import InstituteSportsScience from "./pages/InstitutePages/SportsScience";
+import InstituteHumanitiesEducation from "./pages/InstitutePages/Humanities";
+import InstituteBasicHealthSciences from "./pages/InstitutePages/HealthScience";
+import InstituteManagementTechnology from "./pages/InstitutePages/ManagementTech";
+import InstituteArtificialIntelligence from "./pages/InstitutePages/Ai";
+
 function App() {
   return (
     <Routes>
@@ -89,6 +98,19 @@ function App() {
 
       {/* Programs Overview */}
       <Route path='/programs' element={<Courses />} />
+
+      {/* Institute pages */}
+       <Route path='/academics/Saroj-Institute-of-Film-and-Fashion' element={< InstituteFilmFashion/>} />
+       <Route path='/academics/Lucknow-Institute-of-Pharmacy' element={< InstitutePharmacy/>} />
+        <Route path='/academics/Saroj-Insitute-of-Entrepreneurship-and-Business' element={< InstituteEntrepreneurshipBusiness/>} />
+        <Route path='/academics/Saroj-Institute-of-Sports-Science-and-Research' element={< InstituteSportsScience/>} />
+               <Route path='/academics/Saroj-Institute-of-Humanities-and-Education' element={< InstituteHumanitiesEducation/>} />
+       <Route path='/academics/Saroj-Institute-of-Basic-and-Health-Sciences' element={< InstituteBasicHealthSciences/>} />
+       <Route path='/academics/Saroj-Institute-of-Management-and-Technology' element={< InstituteManagementTechnology/>} />
+       <Route path='/academics/Saroj-Institute-of-Artificial-Intelligence' element={< InstituteArtificialIntelligence/>} />
+
+
+
 
       {/* About */}
       <Route path='/about/about-siu' element={<AboutSIU />} />
