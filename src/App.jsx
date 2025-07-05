@@ -15,8 +15,8 @@ import Courses from "./pages/programs/Courses";
 
 // Admission Pages
 import AdmissionCriteria from "./pages/Admission/AdmissionCriteria";
-import AdmissionProcess from "./pages/admission/AdmissionProcess";
-import ScholarshipPage from "./pages/admission/ScholarshipPage";
+import AdmissionProcess from "./pages/Admission/AdmissionProcess";
+import ScholarshipPage from "./pages/Admission/ScholarshipPage";
 import SIUFeeStructure from "./pages/Admission/FeeStructure";
 
 // Program Categories
