@@ -49,7 +49,6 @@ import BscChemistryPage from "./pages/programs/HealthSciences/BscChemistry";
 
 // Administration Pages
 import ChancellorPage from "./pages/administration/Chancellor";
-import ViceChancellorPage from "./pages/administration/ViceChancellor";
 import AcademicCouncil from "./pages/administration/AcademicCouncil";
 import ExecutiveCouncil from "./pages/administration/ExecutiveCouncil";
 import InternalComplaint from "./pages/administration/InternalComplaint";
@@ -146,14 +145,15 @@ function App() {
       {/* Academics */}
       <Route path='/academics/academic-calendar' element={<AcademicCalendar />} />
       <Route path='/academics/statutes' element={<Statutes />} />
-      <Route path='/faculty-2' element={<Faculty />} />
+      <Route path='/academics/faculty' element={<Faculty />} />
 
       {/* Admissions */}
+
       <Route path='/admissions/admission-criteria' element={<AdmissionCriteria />} />
       <Route path='/admissions/scholarship' element={<ScholarshipPage />} />
 
       {/* changes  */}
-      <Route path='/admission-flow' element={<AdmissionProcess />} />
+      <Route path='/admissions/admission-process' element={<AdmissionProcess />} />
       <Route path='/admissions/fee-structure' element={<SIUFeeStructure />} />
 
       {/* Program Categories */}
@@ -188,8 +188,8 @@ function App() {
       {/* 4 */}
       <Route path='/chancellor' element={<ChancellorPage />} />
       {/* 5 */}
-      <Route path='/vice-chancellor' element={<ViceChancellorPage />} />
       <Route path='/administration/academic-council' element={<AcademicCouncil />} />
+      <Route path='/administration/finance-commitee' element={<FinanceCommitee/>}/>
       <Route path='/administration/executive-council' element={<ExecutiveCouncil />} />
       <Route path='/administration/internal-complaint' element={<InternalComplaint />} />
       <Route path='/finance-officer' element={<FinanceCommitee />} />

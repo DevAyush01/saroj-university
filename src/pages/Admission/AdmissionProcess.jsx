@@ -269,9 +269,12 @@ const AdmissionProcess = () => {
             </div>
 
             <div className="mt-8 text-center">
-              <button className="px-8 py-3 bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg transition-colors duration-300 shadow-md">
+              <a href='https://siu.in8.nopaperforms.com/'
+               target='_blank'
+                rel='noopener noreferrer'
+              className="px-8 py-3 bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg transition-colors duration-300 shadow-md">
                 Begin Your Application
-              </button>
+              </a>
               <p className="mt-3 text-gray-500 text-sm">
                 Have questions? Contact our <a href="#" className="text-blue-600 hover:underline">Admissions Office</a>
               </p>

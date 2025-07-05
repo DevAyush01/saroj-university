@@ -207,17 +207,7 @@ const AdmissionCriteria = () => {
                 ))}
               </div>
 
-              <div className="mt-6 pt-5 border-t border-gray-200">
-                <div className="flex flex-wrap items-center justify-between gap-4">
-                  <div>
-                    <h4 className="text-sm font-medium text-gray-700 mb-2">Need assistance?</h4>
-                    <p className="text-sm text-gray-600">Contact our admission office for queries</p>
-                  </div>
-                  <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-md">
-                    Contact Admissions
-                  </button>
-                </div>
-              </div>
+           
             </div>
           </motion.div>
 
@@ -228,12 +218,14 @@ const AdmissionCriteria = () => {
               whileTap={{ scale: 0.98 }}
               className="inline-block"
             >
-              <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all">
+              <a href='https://siu.in8.nopaperforms.com/'
+               target='_blank'
+                rel='noopener noreferrer' className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all">
                 Begin Your Application
-              </button>
+              </a>
             </motion.div>
             <p className="mt-4 text-gray-600 text-sm">
-              Applications for 2024 intake are now open
+              Applications for 2025 intake are now open
             </p>
           </div>
         </div>
