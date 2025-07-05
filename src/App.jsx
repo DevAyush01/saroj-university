@@ -30,7 +30,7 @@ import PharmacyPage from "./pages/programs/PharmacyPage";
 import SportsScience from "./pages/programs/SportsScience";
 
 // Program Subpages
-import BtechAIMLPage from "./pages/programs/AiAndTech/BTechAiPage";
+import BtechAIMLPage from "./pages/programs/AiAndTech/BtechAiPage";
 import BtechDataSciencePage from "./pages/programs/AiAndTech/BtechDataScience";
 import BAPage from "./pages/programs/Humanities/BA";
 import BSPage from "./pages/programs/Humanities/BS";
