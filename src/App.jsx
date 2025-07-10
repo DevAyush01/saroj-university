@@ -85,6 +85,7 @@ import InstituteHumanitiesEducation from "./pages/InstitutePages/Humanities";
 import InstituteBasicHealthSciences from "./pages/InstitutePages/HealthScience";
 import InstituteManagementTechnology from "./pages/InstitutePages/ManagementTech";
 import InstituteArtificialIntelligence from "./pages/InstitutePages/Ai";
+import SarojCollegeOfLaw from "./pages/Academics/Scp";
 
 function App() {
   return (
@@ -107,6 +108,8 @@ function App() {
        <Route path='/academics/Saroj-Institute-of-Basic-and-Health-Sciences' element={< InstituteBasicHealthSciences/>} />
        <Route path='/academics/Saroj-Institute-of-Management-and-Technology' element={< InstituteManagementTechnology/>} />
        <Route path='/academics/Saroj-Institute-of-Artificial-Intelligence' element={< InstituteArtificialIntelligence/>} />
+
+        <Route path='/academics/saroj-college-of-law' element={< SarojCollegeOfLaw/>} />
 
 
 
