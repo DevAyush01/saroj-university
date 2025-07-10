@@ -191,7 +191,7 @@ function Header() {
                                         {column.items.map((subItem, subItemIndex) => (
                                           <li key={`${subItem.path}-${subItemIndex}`} className='mb-1'>
                                             {subItem.collaboration_link ? (
-                                              <a href={subItem.collaboration_link} target='_blank' rel='noopener noreferrer' className='text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group' onClick={closeAllMenus}>
+                                              <a href={subItem.path} target='_blank' rel='noopener noreferrer' className='text-gray-700 hover:text-orange-500 transition-colors duration-200 text-sm flex items-center justify-between group' onClick={closeAllMenus}>
                                                 <div className='flex items-start'>
                                                   <span className='w-1 h-1 bg-orange-500 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200'></span>
                                                   {subItem.title}

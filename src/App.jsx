@@ -85,6 +85,11 @@ import InstituteHumanitiesEducation from "./pages/InstitutePages/Humanities";
 import InstituteBasicHealthSciences from "./pages/InstitutePages/HealthScience";
 import InstituteManagementTechnology from "./pages/InstitutePages/ManagementTech";
 import InstituteArtificialIntelligence from "./pages/InstitutePages/Ai";
+import DesignThinkingPage from "./pages/tcs/DesignThinking";
+import InnovationEntrepreneurshipPage from "./pages/tcs/InnovationEntrepreneurship";
+import ArtificialIntelligencePage from "./pages/tcs/Artificial-Intelligence";
+import MachineLearningPage from "./pages/tcs/MachineLearning";
+import StatisticsPage from "./pages/tcs/Statistics";
 
 function App() {
   return (
@@ -177,6 +182,15 @@ function App() {
       {/* changes  */}
       <Route path='/admissions/admission-process' element={<AdmissionProcess />} />
       <Route path='/admissions/fee-structure' element={<SIUFeeStructure />} />
+
+      {/* TCS Programs */}
+      <Route path='programs/design-thinking' element={<DesignThinkingPage />} />
+      <Route path='programs/innovation-entrepreneurship' element={<InnovationEntrepreneurshipPage />} />
+      <Route path='programs/artificial-intelligence-real-world' element={<ArtificialIntelligencePage />} />
+      <Route path='programs/machine-learning-real-world' element={<MachineLearningPage />} />
+      <Route path='programs/statistics' element={<StatisticsPage />} />
+
+
 
       {/* Program Categories */}
       <Route path='/programs/artificial-intelligence-technology' element={<AiAndTechPage />} />
