@@ -153,33 +153,7 @@ const SarojCollegeOfLaw = () => {
            
           </motion.div>
           
-          {/* Animated background elements */}
-          <motion.div 
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -50, 0],
-              rotate: [0, 5, 0]
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            className="absolute top-20 left-20 w-16 h-16 rounded-full bg-blue-600 opacity-20"
-          />
-          <motion.div 
-            animate={{
-              x: [0, -100, 0],
-              y: [0, 50, 0],
-              rotate: [0, -5, 0]
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            className="absolute bottom-10 right-10 w-24 h-24 rounded-full bg-blue-600 opacity-20"
-          />
+        
         </section>
 
         {/* About Section */}
