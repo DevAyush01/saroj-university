@@ -49,7 +49,6 @@ function Home() {
       <Layout>
       
         <PopupForm/>
-        <LatestNews/>
         <FloatingAdmissionAlert/>
         <HeroSection/>
         <LightAIBanner/>
