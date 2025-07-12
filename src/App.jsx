@@ -192,13 +192,13 @@ function App() {
       <Route path='/admissions/fee-structure' element={<SIUFeeStructure />} />
 
       {/* TCS Programs */}
-      <Route path='programs/design-thinking' element={<DesignThinkingPage />} />
-      <Route path='programs/innovation-entrepreneurship' element={<InnovationEntrepreneurshipPage />} />
-      <Route path='programs/artificial-intelligence-real-world' element={<ArtificialIntelligencePage />} />
-      <Route path='programs/machine-learning-real-world' element={<MachineLearningPage />} />
-      <Route path='programs/statistics-r-python' element={<StatisticsPage />} />
-      <Route path='programs/information-security' element={<InformationSecurityPage />} />
-      <Route path='programs/cloud-development' element={<CloudDevelopmentPage />} />
+      <Route path='/programs/design-thinking' element={<DesignThinkingPage />} />
+      <Route path='/programs/innovation-entrepreneurship' element={<InnovationEntrepreneurshipPage />} />
+      <Route path='/programs/artificial-intelligence-real-world' element={<ArtificialIntelligencePage />} />
+      <Route path='/programs/machine-learning-real-world' element={<MachineLearningPage />} />
+      <Route path='/programs/statistics-r-python' element={<StatisticsPage />} />
+      <Route path='/programs/information-security' element={<InformationSecurityPage />} />
+      <Route path='/programs/cloud-development' element={<CloudDevelopmentPage />} />
       <Route path='/programs/deep-learning-neural-networks' element={<DlPage />} />
       <Route path='/programs/advanced-cyber-security' element={<CyberSecurityPage />} />
       <Route path='/programs/cryptography' element={<CryptographyPage />} />
