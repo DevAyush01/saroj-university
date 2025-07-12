@@ -68,14 +68,14 @@ const InformationSecurityPage = () => {
       {
         name: "Ajit Menon",
         role: "Chief Security Officer, Tata Consultancy Services | Industry Expert",
-        image: "/src/pages/tcs/tcsMentors/Ajit_Menon.jpg", // Assumes image is in public/tcs/
+        image: "/tcsMentors/Ajit_Menon.jpg", // Assumes image is in public/tcs/
         description:
           "Ajit Menon has been with TCS for nearly 20 years and is the Chief Security Officer, responsible for the strategy, design, deployment and governance of controls to safeguard TCS’ business interests. He is also responsible for ensuring the continuity of TCS’ business operations and customer service delivery. Under his leadership, TCS has become one of the first companies to be assessed under the ISO 27001:2013 standard.",
       },
       {
         name: "Alok Tripathi",
         role: "HoD (Tech) & Chief Controller of Examination National Institute of Electronics & Information Technology (NIELIT), HQ New Delhi | Academic Expert",
-        image: "/src/pages/tcs/tcsMentors/Alok_tripathi.jpg", // Assumes image is in public/tcs/
+        image: "/tcsMentors/Alok_tripathi.jpg", // Assumes image is in public/tcs/
         description:
           "Alok Tripathi has more than 25 years of teaching and research experience in the areas of Information Security. He teaches semester courses on Cryptography, Network Security, Penetration Testing, Operating System Hardening, and Security Audit in NIELIT Patna. His research areas include Virtual Training Environment (VTE) for information security, and analysis and optimisation of secure fingerprinting codes for digital watermarking. He has published more than 20 research papers in reputed Journals and Conferences. He was nominated by the E-Security Division of Department of Electronics and Information Technology, Government of India, for attending expert-level trainings on information security, advance information security, and incident handling and cyber forensics at Software Engineering Institute - Carnegie Mellon University (CMU), Pittsburgh (USA).",
       },

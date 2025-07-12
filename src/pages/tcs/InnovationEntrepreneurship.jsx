@@ -92,14 +92,14 @@ const InnovationEntrepreneurshipPage1 = () => {
       {
         name: "Karmjitsinh Bihola",
         role: "Founder, Innodesk Designovation Services | Industry Expert",
-        image: "/src/pages/tcs/tcsMentors/Bihola.jpg", // Assumes image is in public/tcs/
+        image: "/tcsMentors/Bihola.jpg", // Assumes image is in public/tcs/
         description:
           "Karmjitsinh Bihola is a Design Thinker at mindset and an Entrepreneur at heart, having a Master’s degree in Mechanical Engineering with a specialisation in Product Design from Stevens Institute of Technology, New Jersey, USA. Mr. Bihola is working as an evangelist to develop, implement and spread the awareness about the concept of Design Thinking, Innovation & Entrepreneurship in higher education and corporate. He has mentored 2000+ aspiring entrepreneurs and innovators to identify market needs through customer engagements, creating and validating innovative ideas through Competitive Analysis, Product Development & Testing, Value Proposition and Business Models for creating successful start-ups in their journey from Mind to Market through his very innovative initiations like Innovation Jam (Technology + Design + Management), Design Wednesday, Design Weekend, Start-up Roundtables and more. He has worked as an Assistant Professor in PG Research Centre for Industrial Design (Open Design School) at Gujarat Technological University, Ahmedabad, Gujarat from October 2014 to February 2020. He has been training faculty members for Design Thinking from Basic to Advanced level and till date he has trained 4000+ faculty members of engineering through 54 Faculty Development Program (FDP) of four days each. Mr. Bihola is an expert in curriculum and workshop modules development based on contextual needs of the stakeholders. He has developed, organised and mentored 80+ workshops like Design Weekend for students, Design Clinic for Industry, Summer and Winter School, Hack-a-thons, Design Demo Day, Design and Innovation Bootcamp for Students/Start-ups/Faculty members/Industry individuals and Government officials. He was also nominated as a Mentor of Change (MoC) for Atal Tinkering Lab, an initiative of Atal Innovation Mission. His areas of research interest include building a strong Ecosystem between Academia, Industry and Government systems through Human-Centered Design (Design Thinking), Strategic Design, Innovation and Entrepreneurship along with Children Creativity, System Thinking, Biomimicry, Product Design & Development (R&D).",
       },
       {
         name: "Dr. Prakash Apte",
         role: "Founder and President, APTennovate (ROBUST Innovation Training and Consultancy) | Academic Expert",
-        image: "/src/pages/tcs/tcsMentors/Apte.jpg", // Assumes image is in public/tcs/
+        image: "/tcsMentors/Apte.jpg", // Assumes image is in public/tcs/
         description:
           "Dr. Prakash Apte has 50+ years of industry and academic experience as a Scientist and Innovation Catalyst. He has held prestigious positions in esteemed institutions like Indian Institute of Technology Bombay (IIT Bombay) and Tata Institute of Fundamental Research (TIRF), Mumbai. Dr. Prakash has been credited with the Design and Fabrication of first Integrated Circuit TTL-7420 in India (1972) and MEMS sensor in India (1979).",
       },

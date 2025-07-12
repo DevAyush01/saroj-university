@@ -79,14 +79,14 @@ const MachineLearningPage = () => {
       {
         name: "Dr. Gaurav Harit",
         role: "Associate Professor Department of Computer Science and Engineering, IIT Jodhpur | Academic Expert",
-        image: "/src/pages/tcs/tcsMentors/Gaurav.jpg", // Assumes image is in public/tcs/
+        image: "/tcsMentors/Gaurav.jpg", // Assumes image is in public/tcs/
         description:
           "Dr. Gaurav Harit is currently an Associate Professor in the Department of Computer Science and Engineering at IIT Jodhpur since 2010. He worked as a faculty member of Department of Computer Science and Engineering at IIT Kharagpur from 2008-2010. He holds a B.E. (Electrical) degree from Jai Narayan Vyas University, Jodhpur, and M.Tech and PhD degrees from the Department of Electrical Engineering at IIT Delhi. His research interests include applications of machine learning to image and video analysis. He has over 60 publications in various conferences and journals. More details are available at http://home.iitj.ac.in/~gharit/",
       },
       {
         name: "Sangameshwar Patil",
         role: "Senior Scientist TCS Research | Industry Expert",
-        image: "/src/pages/tcs/tcsMentors/Sangameshwar_Patil.jpg", // Assumes image is in public/tcs/
+        image: "/tcsMentors/Sangameshwar_Patil.jpg", // Assumes image is in public/tcs/
         description:
           "Sangameshwar Patil is currently a Senior Scientist at TRDDC, TCS Research, Pune. He had earlier stints as a software engineer at IBM and Motorola and Project Leader at C-DAC. He received his M.Tech (Computer Science) from Indian Statistical Institute, Kolkata and B.E. (Mechanical Engg.) from Govt. College of Engg., Pune. His research interests are in Machine Learning, Natural Language Processing, and Software Analytics. He has received TCS Young Innovator Award and TCS SRL Star Award for his work. He has multiple patents as well as research publications in reputed conferences and journals. Their details are available on his Google Scholar profile. https://scholar.google.co.in/citations?user=PEzAWAwAAAAJ&hl=en",
       },
