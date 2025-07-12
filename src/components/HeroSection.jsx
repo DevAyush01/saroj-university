@@ -84,11 +84,11 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start">
           {/* Left Content (30%) */}
           <div className="w-full lg:w-[30%] pt-0 sm:pt-8">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-blue-900">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 text-center sm:mb-6 text-blue-900">
               Your Future Starts Here
             </h2>
 
-            <p className="text-sm sm:text-base text-gray-700 mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-700 mb-6 text-justify sm:mb-8 leading-relaxed">
               Join a vibrant community of learners and innovators at one of
               the world's most forward-looking universities with
               state-of-the-art facilities and global opportunities.
