@@ -94,6 +94,8 @@ import SarojCollegeOfLaw from "./pages/Academics/Scp";
 import CloudDevelopmentPage from "./pages/tcs/CloudDevelopment";
 import InformationSecurityPage from "./pages/tcs/InfoSecurity";
 import DlPage from "./pages/tcs/dl";
+import CyberSecurityPage from "./pages/tcs/CyberSecurity";
+import CryptographyPage from "./pages/tcs/Cryptography";
 
 function App() {
   return (
@@ -198,7 +200,8 @@ function App() {
       <Route path='programs/information-security' element={<InformationSecurityPage />} />
       <Route path='programs/cloud-development' element={<CloudDevelopmentPage />} />
       <Route path='/programs/deep-learning-neural-networks' element={<DlPage />} />
-
+      <Route path='/programs/advanced-cyber-security' element={<CyberSecurityPage />} />
+      <Route path='/programs/cryptography' element={<CryptographyPage />} />
 
 
 
