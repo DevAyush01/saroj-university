@@ -93,7 +93,7 @@ import StatisticsPage from "./pages/tcs/Statistics";
 import SarojCollegeOfLaw from "./pages/Academics/Scp";
 import CloudDevelopmentPage from "./pages/tcs/CloudDevelopment";
 import InformationSecurityPage from "./pages/tcs/InfoSecurity";
-import DlPage from "./pages/tcs/dl";
+import DlPage from "./pages/tcs/Dl";
 import CyberSecurityPage from "./pages/tcs/CyberSecurity";
 import CryptographyPage from "./pages/tcs/Cryptography";
 
