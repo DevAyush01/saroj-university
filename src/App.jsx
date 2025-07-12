@@ -90,6 +90,10 @@ import InnovationEntrepreneurshipPage from "./pages/tcs/InnovationEntrepreneursh
 import ArtificialIntelligencePage from "./pages/tcs/Artificial-Intelligence";
 import MachineLearningPage from "./pages/tcs/MachineLearning";
 import StatisticsPage from "./pages/tcs/Statistics";
+import SarojCollegeOfLaw from "./pages/Academics/Scp";
+import CloudDevelopmentPage from "./pages/tcs/CloudDevelopment";
+import InformationSecurityPage from "./pages/tcs/InfoSecurity";
+import DlPage from "./pages/tcs/dl";
 
 function App() {
   return (
@@ -112,6 +116,8 @@ function App() {
        <Route path='/academics/Saroj-Institute-of-Basic-and-Health-Sciences' element={< InstituteBasicHealthSciences/>} />
        <Route path='/academics/Saroj-Institute-of-Management-and-Technology' element={< InstituteManagementTechnology/>} />
        <Route path='/academics/Saroj-Institute-of-Artificial-Intelligence' element={< InstituteArtificialIntelligence/>} />
+
+        <Route path='/academics/saroj-college-of-law' element={< SarojCollegeOfLaw/>} />
 
 
 
@@ -188,7 +194,13 @@ function App() {
       <Route path='programs/innovation-entrepreneurship' element={<InnovationEntrepreneurshipPage />} />
       <Route path='programs/artificial-intelligence-real-world' element={<ArtificialIntelligencePage />} />
       <Route path='programs/machine-learning-real-world' element={<MachineLearningPage />} />
-      <Route path='programs/statistics' element={<StatisticsPage />} />
+      <Route path='programs/statistics-r-python' element={<StatisticsPage />} />
+      <Route path='programs/information-security' element={<InformationSecurityPage />} />
+      <Route path='programs/cloud-development' element={<CloudDevelopmentPage />} />
+      <Route path='/programs/deep-learning-neural-networks' element={<DlPage />} />
+
+
+
 
 
 
