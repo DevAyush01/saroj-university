@@ -1,10 +1,13 @@
 // src/pages/tcs/DesignThinkingPage.jsx
 
-import React from 'react';
-import { BookOpen, Clock, User, BarChart2, Briefcase, ChevronRight, Award, BriefcaseBusiness, Globe, Check } from 'lucide-react';
+import React, { useState } from 'react';
+import { BookOpen, Clock, User, BarChart2, Briefcase, ChevronRight, Award, BriefcaseBusiness, Globe, Check, X } from 'lucide-react'; // Added X for close icon
 import Layout from '../../components/Layout'; // Adjust path if your Layout component is elsewhere
 
 const DesignThinkingPage = () => {
+  const [showMentorModal, setShowMentorModal] = useState(false);
+  const [selectedMentor, setSelectedMentor] = useState(null);
+
   const courseData = {
     id: "design-thinking",
     title: "Design Thinking - Practitioner's Perspective",
@@ -69,13 +72,13 @@ const DesignThinkingPage = () => {
       {
         name: "Dr. Susmita Sharma",
         role: "Design Consultant | Academic Expert",
-        image: "/src/pages/tcs/tcsMentors/Susmita.jpg", // Updated path to public/tcs/
+        image: "/src/pages/tcs/tcsMentors/Susmita.jpg", // Corrected path
         description: "Dr. Susmita Sharma holds a Doctorate from Industrial Design Centre (IDC) School of Design, IIT Bombay. Her PhD thesis deals with conducting and analysing eye tracking methodology to evaluate visual perception of users for design use. Her areas of expertise include Design Research, Design and Human Computer Interaction (HCI), User Studies, Visual Perception, Form Studies, Aesthetics and Art. As an independent Design Consultant and Researcher, she has chaired sessions, organised and conducted courses/workshops at international conferences and design institutions on User Perception and Design Thinking. She uses a mixed bag of research methods for Creative Thinking, Industrial Design, User Experience Design and Information Design. Her unique blend of expertise brings forth a multidisciplinary approach to problem solving. She has published several research papers and given invited talks at various conferences and institutions. Previously, she worked at Tata Interactive Systems (TIS) as a Senior Specialist in Graphic Design; and had also been a visiting educator at various design and art schools. Currently, she is working on projects that focus on technology use for social impact, mentoring startups and academia.",
       },
       {
         name: "Karmjitsinh Bihola",
         role: "Founder, Innodesk Designovation Services | Industry Expert",
-        image: "/src/pages/tcs/tcsMentors/Bihola.jpg", // Updated path to public/tcs/
+        image: "/src/pages/tcs/tcsMentors/Bihola.jpg", // Corrected path
         description: "Karmjitsinh Bihola is a Design Thinker at mindset and an Entrepreneur at heart, having a Master's degree in Mechanical Engineering with a specialisation in Product Design from Stevens Institute of Technology, New Jersey, USA. Mr. Bihola is working as an evangelist to develop, implement and spread the awareness about the concept of Design Thinking, Innovation & Entrepreneurship in higher education and corporate. He has mentored 2000+ aspiring entrepreneurs and innovators to identify market needs through customer engagements, creating and validating innovative ideas through Competitive Analysis, Product Development & Testing, Value Proposition and Business Models for creating successful start-ups in their journey from Mind to Market through his very innovative initiations like Innovation Jam (Technology + Design + Management), Design Wednesday, Design Weekend, Start-up Roundtables and more. He has worked as an Assistant Professor in PG Research Centre for Industrial Design (Open Design School) at Gujarat Technological University, Ahmedabad, Gujarat from October 2014 to February 2020. He has been training faculty members for Design Thinking from Basic to Advanced level and till date he has trained 4000+ faculty members of engineering through 54 Faculty Development Program (FDP) of four days each. Mr. Bihola is an expert in curriculum and workshop modules development based on contextual needs of the stakeholders. He has developed, organised and mentored 80+ workshops like Design Weekend for students, Design Clinic for Industry, Summer and Winter School, Hack-a-thons, Design Demo Day, Design and Innovation Bootcamp for Students/Start-ups/Faculty members/Industry individuals and Government officials. He was also nominated as a Mentor of Change (MoC) for Atal Tinkering Lab, an initiative of Atal Innovation Mission. His areas of research interest include building a strong Ecosystem between Academia, Industry and Government systems through Human-Centered Design (Design Thinking), Strategic Design, Innovation and Entrepreneurship along with Children Creativity, System Thinking, Biomimicry, Product Design & Development (R&D).",
       },
     ],
@@ -108,6 +111,16 @@ const DesignThinkingPage = () => {
       title: "Specialisation in Generative AI"
     }
   ];
+
+  const openMentorModal = (mentor) => {
+    setSelectedMentor(mentor);
+    setShowMentorModal(true);
+  };
+
+  const closeMentorModal = () => {
+    setShowMentorModal(false);
+    setSelectedMentor(null);
+  };
 
   return (
     <Layout>
@@ -144,7 +157,7 @@ const DesignThinkingPage = () => {
                   <div className="absolute -top-6 -left-6 w-32 h-32 bg-yellow-400 rounded-lg opacity-20 animate-pulse"></div>
                   <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-400 rounded-lg opacity-20 animate-pulse delay-300"></div>
                   <img
-                  src="https://images.pexels.com/photos/7120871/pexels-photo-7120871.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                    src="https://images.pexels.com/photos/7120871/pexels-photo-7120871.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
                     alt={courseData.title}
                     className="relative z-10 w-full h-auto rounded-lg shadow-2xl border-4 border-white"
                   />
@@ -174,7 +187,7 @@ const DesignThinkingPage = () => {
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Main Content */}
-            <div className="md:col-span-2">
+            <div className="md:col-span-3"> {/* Changed to col-span-3 as everything is now in main content */}
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Course Details</h2>
 
               {/* Course Overview (No Dropdown) */}
@@ -191,7 +204,6 @@ const DesignThinkingPage = () => {
                 <div className="space-y-4">
                   {courseData.syllabus.map((module, index) => (
                     <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                      {/* Removed button and ChevronRight for direct display */}
                       <div className="w-full flex justify-between items-center p-4 bg-gray-50">
                         <div className="flex items-center">
                           <span className="mr-3 text-blue-600 font-semibold">{index + 1}.</span>
@@ -218,65 +230,110 @@ const DesignThinkingPage = () => {
                 <h3 className="text-2xl font-bold mb-4 text-gray-900">Prerequisites</h3>
                 <p className="text-gray-700">{courseData.prerequisites}</p>
               </div>
-            </div>
 
-            {/* Sidebar */}
-            <div className="md:col-span-1">
-              {/* Mentors */}
-              <div className="bg-gray-50 p-6 rounded-lg shadow-sm mb-8">
-                <h3 className="text-xl font-bold mb-4 flex items-center">
-                  <User className="mr-2 h-5 w-5 text-blue-600" />
-                  Mentors
-                </h3>
-                <div className="space-y-6">
-                  {courseData.mentors.map((mentor, index) => (
-                    <div key={index} className="flex items-start">
-                      <img
-                        src={mentor.image}
-                        alt={mentor.name}
-                        className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-white shadow"
-                      />
-                      <div>
-                        <h4 className="font-bold text-gray-900">{mentor.name}</h4>
-                        <p className="text-sm text-blue-600 mb-1">{mentor.role}</p>
-                        <p className="text-sm text-gray-600 line-clamp-3">{mentor.description}</p>
+              {/* Mentors - NEW LAYOUT */}
+              {courseData.mentors && courseData.mentors.length > 0 && (
+                <div className="mb-12">
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900 flex items-center">
+                    <User className="mr-2 h-6 w-6 text-blue-600" />
+                    Our Mentors
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {courseData.mentors.map((mentor, index) => (
+                      <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                        <div className="p-6 flex flex-col items-center text-center">
+                          <img
+                            src={mentor.image}
+                            alt={mentor.name}
+                            className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-100 shadow-md"
+                          />
+                          <h4 className="text-xl font-bold text-gray-900 mb-1">{mentor.name}</h4>
+                          <p className="text-md text-blue-700 mb-3">{mentor.role}</p>
+                          <p className="text-gray-700 text-sm mb-4 line-clamp-3">
+                            {mentor.description}
+                          </p>
+                          <button
+                            onClick={() => openMentorModal(mentor)}
+                            className="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
+                          >
+                            Read More
+                            <ChevronRight className="ml-1 h-4 w-4" />
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Career Outlook */}
-              <div className="bg-gray-50 p-6 rounded-lg shadow-sm mb-8">
-                <h3 className="text-xl font-bold mb-4 flex items-center">
-                  <BarChart2 className="mr-2 h-5 w-5 text-blue-600" />
-                  Career Outlook
-                </h3>
-                <ul className="space-y-3">
-                  {courseData.careerOutlook.map((outlook, index) => (
-                    <li key={index} className="text-sm text-gray-700">{outlook}</li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Job Roles */}
-              <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold mb-4 flex items-center">
-                  <Briefcase className="mr-2 h-5 w-5 text-blue-600" />
-                  Potential Job Roles
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {courseData.jobRoles.map((role, index) => (
-                    <span key={index} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
-                      {role}
-                    </span>
-                  ))}
+              {courseData.careerOutlook && courseData.careerOutlook.length > 0 && (
+                <div className="mb-12">
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900 flex items-center">
+                    <BarChart2 className="mr-2 h-6 w-6 text-blue-600" />
+                    Career Outlook
+                  </h3>
+                  <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <ul className="space-y-3">
+                      {courseData.careerOutlook.map((outlook, index) => (
+                        <li key={index} className="text-gray-700 text-base">
+                          <Check className="h-5 w-5 text-green-500 mr-2 inline-block align-top" />
+                          {outlook}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              )}
+
+              {/* Job Roles - MOVED HERE */}
+              {courseData.jobRoles && courseData.jobRoles.length > 0 && (
+                <div className="mb-12">
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900 flex items-center">
+                    <Briefcase className="mr-2 h-6 w-6 text-blue-600" />
+                    Potential Job Roles
+                  </h3>
+                  <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div className="flex flex-wrap gap-3">
+                      {courseData.jobRoles.map((role, index) => (
+                        <span key={index} className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-md font-medium">
+                          {role}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </div>
+
+      {/* Mentor Detail Modal */}
+      {showMentorModal && selectedMentor && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative p-6">
+            <button
+              onClick={closeMentorModal}
+              className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 transition"
+            >
+              <X className="h-7 w-7" />
+            </button>
+            <div className="flex flex-col items-center text-center mb-6">
+              <img
+                src={selectedMentor.image}
+                alt={selectedMentor.name}
+                className="w-40 h-40 rounded-full object-cover mb-4 border-4 border-blue-200 shadow-lg"
+              />
+              <h3 className="text-3xl font-bold text-gray-900 mb-1">{selectedMentor.name}</h3>
+              <p className="text-xl text-blue-700 mb-4">{selectedMentor.role}</p>
+            </div>
+            <div className="prose max-w-none text-gray-800 leading-relaxed">
+              <p>{selectedMentor.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </Layout>
   );
 };
