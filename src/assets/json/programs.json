@@ -8,22 +8,22 @@
       "items": [
         {
           "title": "Design Thinking - Practitioner's Perspective [TCS]",
-          "path": "programs/design-thinking",
+          "path": "/programs/design-thinking",
           "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/design-thinking/"
         },
         {
           "title": "Innovation and Entrepreneurship [TCS]",
-          "path": "programs/innovation-entrepreneurship",
+          "path": "/programs/innovation-entrepreneurship",
           "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/entrepreneurship-innovation/"
         },
         {
           "title": "Artificial Intelligence for Real-World Application [TCS]",
-          "path": "programs/artificial-intelligence-real-world",
+          "path": "/programs/artificial-intelligence-real-world",
           "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/artificial-intelligence/"
         },
         {
           "title": "Machine Learning for Real-World Application [TCS]",
-          "path": "programs/machine-learning-real-world",
+          "path": "/programs/machine-learning-real-world",
           "collaboration_link": "https://www.tcsion.com/courses/industry-honour-course/machine-learning/"
         },
         {
