@@ -102,11 +102,11 @@ const DlPage = () => {
     },
     {
       icon: <Award className="w-8 h-8 text-blue-600" />,
-      title: "Microsoft Global Certifications"
+      title: "TCS Certifications"
     },
     {
       icon: <Globe className="w-8 h-8 text-blue-600" />,
-      title: "Specialisation in Generative AI"
+      title: "Specialisation in Deep Learning"
     }
   ];
 

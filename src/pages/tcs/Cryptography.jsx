@@ -88,7 +88,7 @@ const CryptographyPage = () => {
       "Managerial roles in software industry (Cryptography and Information Security)",
       "R&D roles in Cryptography and Information Security sector",
     ],
-    courseurl: "#", // Placeholder
+    courseurl: "https://www.tcsion.com/courses/industry-honour-course/cryptography/", // Placeholder
     courseBanner: 'https://cdn.pixabay.com/photo/2021/05/29/15/55/ethereum-6293700_640.jpg', // Placeholder, assuming you will add this image
   };
 
@@ -100,11 +100,11 @@ const CryptographyPage = () => {
     },
     {
       icon: <Award className="w-8 h-8 text-blue-600" />,
-      title: "Microsoft Global Certifications"
+      title: "TCS Certifications"
     },
     {
       icon: <Globe className="w-8 h-8 text-blue-600" />,
-      title: "Specialisation in Generative AI"
+      title: "Specialisation in Cryptography"
     }
   ];
 

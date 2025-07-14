@@ -111,7 +111,7 @@ const CyberSecurityPage = () => {
       "As per Fortune Business Insights, the global Cyber Security market size was valued at US$172.24 billion in 2023. The market is projected to grow from US$193.73 billion in 2024 to US$562.72 billion by 2032, exhibiting a CAGR of 14.3% during the forecast period."
     ],
     jobRoles: ["Cyber Security Analyst", "Information Security Officer", "Security Consultant", "Penetration Tester", "Security Architect"], // Added example job roles as it was an empty array
-    courseurl: "#", // Placeholder
+    courseurl: "https://www.tcsion.com/courses/industry-honour-course/cyber-security-advance/", // Placeholder
     courseBanner: 'https://cdn.pixabay.com/photo/2018/05/18/11/03/cyber-security-3410923_640.jpg', // Placeholder, assuming you will add this image
   };
 
@@ -123,11 +123,11 @@ const CyberSecurityPage = () => {
     },
     {
       icon: <Award className="w-8 h-8 text-blue-600" />,
-      title: "Microsoft Global Certifications"
+      title: "TCS Certifications"
     },
     {
       icon: <Globe className="w-8 h-8 text-blue-600" />,
-      title: "Specialisation in Generative AI"
+      title: "Specialisation in Cyber Security"
     }
   ];
 
