@@ -135,10 +135,7 @@ const InformationSecurityPage = () => {
                     <BookOpen className="mr-2 h-5 w-5" />
                     <span>{courseData.degree}</span>
                   </div>
-                  <div className="flex items-center bg-white/20 px-4 py-2 rounded-full">
-                    <Clock className="mr-2 h-5 w-5" />
-                    <span>Semester {courseData.semester}</span>
-                  </div>
+                 
                 </div>
                 <a
                   href={courseData.courseurl}
