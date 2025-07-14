@@ -93,14 +93,14 @@ const ArtificialIntelligencePage = () => {
       {
         name: "Dr. Manjira Sinha",
         role: "Senior Scientist,Tata Consultancy Services | Industry Expert",
-        image: "/src/pages/tcs/tcsMentors/Sinha.jpg", // Corrected path
+        image: "/tcsMentors/Sinha.jpg", // Corrected path
         description:
           "Dr. Manjira Sinha serves as a senior scientist at TCS Research and Innovation, where she leverages her training as an Natural Language Processing (NLP) researcher to address various industry challenges related to text mining, as well as to explore research areas such as language comprehension and psycholinguistics. In addition to her research, she teaches courses on Machine Learning and Natural Language Processing and is deeply passionate about assistive and augmentative technologies. Her work spans both research and development in this field, and she also instructs a course aimed at raising awareness among young engineering students about disabilities, emphasising how their technical skills can be utilised to develop innovative assistive solutions.",
       },
       {
         name: "Dr. Sachin Tripathi",
         role: "Associate Professor, Department of Computer Science and Engineering, IIT Dhanbad | Academic Expert",
-        image: "/src/pages/tcs/tcsMentors/Tripathi.jpg", // Corrected path
+        image: "/tcsMentors/Tripathi.jpg", // Corrected path
         description:
           "Dr. Sachin Tripathi holds a B.Tech degree in CSE from Kanpur University, India. He completed his M.Tech and PhD in computer science and engineering from the esteemed Indian Institute of Technology (ISM), Dhanbad, India. Currently, he serves as an Associate Professor and also holds the position of Head of the Department of CSE Department at the Indian Institute of Technology (ISM), Dhanbad, India. With over eighteen years of experience in teaching computer science subjects, he specialises in Artificial Intelligence. Throughout his career, he has made significant contributions to the field of research and has authored more than 100 research papers, which have been published in prestigious journals like IEEE Transactions on Industrial Informatics, IEEE Transactions on Wireless Communications, IEEE Transactions on Instrumentation and Measurement, and Applied Soft Computing, among others. Additionally, he has authored a book titled 'Enhancements on Internet Applications: Multicast, Secure E-Mail Messaging, and E-Business'. He also holds the position of an Associate Editor at 'International Journal of Communication Systems,' published by Wiley. His research interests primarily revolve around Artificial Intelligence, Network security, ad-hoc and Sensor Networks.",
       },

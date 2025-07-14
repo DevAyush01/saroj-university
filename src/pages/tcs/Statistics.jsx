@@ -80,14 +80,14 @@ const StatisticsPage = () => {
       {
         name: "Dr. Jeeva Jose",
         role: "Associate Professor Baselios Poulose II Catholicos College | Academic Expert",
-        image: "/src/pages/tcs/tcsMentors/Jeeva.jpg", // Assumes image is in public/tcs/
+        image: "/tcsMentors/Jeeva.jpg", // Assumes image is in public/tcs/
         description:
           "Dr. Jeeva Jose is the author of 15 technical books and a well-known trainer for various programming languages and data science. Her books are mainly in the areas of data mining, C, Java, Python, R Programming, Android, PHP and MySQL, Machine Learning and Internet of Things. The books 'Introduction to Computing and Problem Solving with Python', 'Taming Python by Programming', 'Internet of Things', 'Machine Learning using Python' and 'Beginner's Guide for Data Analysis Using R Programming' are recommended by AICTE in their model curriculum. More than 75 universities and a few autonomous colleges are using these books as their recommended book of study in the syllabus. She is in the higher education field since 2000 with good national and international exposure. She was the Principal Investigator for two research projects funded by UGC and one funded by KSCSTE. She has published 25 research papers in various refereed journals and conference proceedings. She has been a key resource for more than 100 training programmes, which includes, International, national and state level workshops, conferences and short-term courses. She is a recipient of the ACM-W Scholarship provided by Association for Computing Machinery, New York for Young Women Research Scholars from developing countries. She is providing her service to many universities and autonomous colleges as a member in board of academic committee, chairperson for question paper setting, subject expert for sanctioning new courses and faculty recruitments.",
       },
       {
         name: "Ankur Sharma",
         role: "Data Science Architect and Quant Consultant, Tata Consultancy Services | Industry Expert",
-        image: "/src/pages/tcs/tcsMentors/Ankur_Sharma.jpg", // Assumes image is in public/tcs/
+        image: "/tcsMentors/Ankur_Sharma.jpg", // Assumes image is in public/tcs/
         description:
           "Ankur Sharma has 20+ years of experience working in BFSI, Utilities, Telecom and Retail. Currently, he is working as a Data Science Architect and Principal Quant at Tata Consultancy Services, Gandhinagar. During his tenure, he has worked in various roles in companies like ITC Limited and Bharti Airtel Limited and has provided consultancy to various fortune 500 companies. He is a certified Professional Scrum Master. He has earned his M.Tech degree in Data Analytics from BITS, Pilani and holds a Postgraduate Diploma in Enterprise Management from IIT Delhi and gained an Executive MBA degree from Karnatak University. He has earned his MBB (Advance and Applied Statistics) certification from Indian Institute of Statistics, Bangalore and Project Management professional certification from PMI, USA.",
       },

@@ -95,14 +95,14 @@ const CyberSecurityPage = () => {
       {
         name: "Alok Tripathi",
         role: "HoD (Tech) & Chief Controller of Examination National Institute of Electronics & Information Technology (NIELIT), HQ New Delhi | Academic Expert",
-        image: "/src/pages/tcs/tcsMentors/Alok_tripathi.jpg", // Corrected relative path
+        image: "/tcsMentors/Alok_tripathi.jpg", // Corrected relative path
         description:
           "Alok Tripathi has more than 25 years of teaching and research experience in the areas of Information Security. He teaches semester courses on Cryptography, Network Security, Penetration Testing, Operating System, Distributed Systems, Compiler Design, and Discrete Mathematics. He has authored a book on “Object-Oriented Programming with C++” and published a number of research papers in international journals and conferences. He has been involved in the design and development of various software projects for government and private organizations. He is also a consultant to various government organizations in the area of cyber security.",
       },
       {
         name: "Prince Komal Boonila",
         role: "Founder & Director Synergy Systems | Industry Expert",
-        image: "/src/pages/tcs/tcsMentors/Prince.PNG", // Corrected relative path and assumed .jpeg extension
+        image: "/tcsMentors/Prince.PNG", // Corrected relative path and assumed .jpeg extension
         description:
           "Prince Komal Boonila authored the book \"System forensics\" back in the year 2009 which deals with the in-depth investigation of a standalone system. He is also the editor-in-chief of the only digital forensics magazine available in India. He is a Certified Ethical Hacker (CEH), Certified Hacking Forensic Investigator (CHFI), and a Certified Security Analyst (ECSA). He has conducted various training programs and workshops on cyber security and digital forensics for law enforcement agencies, corporate houses, and educational institutions across India. He has also been a speaker at various national and international conferences on cyber security.",
       },

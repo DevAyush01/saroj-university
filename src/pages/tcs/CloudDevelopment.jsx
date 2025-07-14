@@ -105,14 +105,14 @@ const CloudDevelopmentPage = () => {
       {
         name: "Deval Bhavsar",
         role: "Cloud Automation and DevOps Consultant, Tata Consultancy Services | Industry Expert",
-        image: "/src/pages/tcs/tcsMentors/Deval.jpg", // Corrected path
+        image: "/tcsMentors/Deval.jpg", // Corrected path
         description:
           "In his 20 year career, Deval Bhavsar has worked on multi-million dollar cloud assessments and migration initiatives for major customers in the US, UK and Canada, including strategic initiatives like DevOps Modernization, DevSecOps Implementation and Cloud Migration of legacy systems.He has enabled CXOs to enhance organisational landscape for technology upgrades, cost optimisation and service desk optimisation with AI/ML offering of Cloud PaaS Services.With certifications from Microsoft and Google, he has handled different technology stacks and Cloud service providers including Microsoft Azure, AWS and Google Cloud in his work tenure.",
       }, 
       {
         name: "Dr. Tarachand Amgoth",
         role: "Assistant Professor, IIT Dhanbad | Academic Expert",
-        image: "/src/pages/tcs/tcsMentors/Tarachand.jpg", // Corrected path
+        image: "/tcsMentors/Tarachand.jpg", // Corrected path
         description:
           "Dr. Tarachand Amgoth has completed his B.Tech degree in Computer Science and Engineering from the Jawaharlal Nehru Technological University (JNTU) Hyderabad in 2002, M.Tech in Computer Science Engineering from the National Institute of Technology (NIT), Rourkela in 2006, and PhD from the Indian Institute of Technology (Indian School of Mines), Dhanbad in 2015. Presently, he is an Assistant Professor in the Department of Computer Science and Engineering, IIT (ISM), Dhanbad. His current research interests include Wireless Sensor Networks (WSNs), Cloud Computing, Fog/Edge Computing, Serverless Computing and Internet of Things (IoT). He has contributed more than 50 publications in reputed international journals and conferences. Currently, he is working on a project titled 'Interoperability Issues in Fog-Cloud Infrastructure for IoT Applications', sponsored by the Department of Science and Technology (DST), Science and Engineering Research Board (SERB), Government of India. He has published several journals on IoT and Cloud Computing. He has about 15 years of teaching experience and has taught courses on Internet of Things and Cloud Computing to B.Tech and M.Tech students.",
       },

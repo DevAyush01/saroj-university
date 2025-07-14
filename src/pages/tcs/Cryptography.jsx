@@ -68,14 +68,14 @@ const CryptographyPage = () => {
       {
         name: "Dr. Somitra Sanadhya",
         role: "Professor in the Department of Computer Science and Engineering, Dean for Digital Transformation, and the Chief Information Security Officer at IIT Jodhpur | Academic Expert",
-        image: "/src/pages/tcs/tcsMentors/Somitra.PNG", // Corrected path and extension
+        image: "/tcsMentors/Somitra.PNG", // Corrected path and extension
         description:
           "Dr. Somitra Sanadhya is a professor in the Department of Computer Science and Engineering, Dean for Digital Transformation, and the Chief Information Security Officer at IIT Jodhpur. He completed his B.Tech. degree in Computer Science and Engineering from the Indian Institute of Technology (IIT), Kanpur, in 2000, and his M.S. and Ph.D. degrees in Electrical and Computer Engineering from the University of California, Santa Barbara, in 2002 and 2005, respectively. Before joining IIT Jodhpur, he worked as a Postdoctoral Researcher at the Technion – Israel Institute of Technology, Haifa, Israel. His research interests include Cryptography, network security, and secure computation.",
       },
       {
         name: "Dr. Rajan M A",
         role: "Senior Scientist, TCS Research and Innovation | Industry Expert",
-        image: "/src/pages/tcs/tcsMentors/Rajan1.PNG", // Corrected path and extension
+        image: "/tcsMentors/Rajan1.PNG", // Corrected path and extension
         description:
           "Dr. Rajan M A is a senior scientist in the Cyber Security and Privacy Research area at TCS Research, Bangalore since 2010. He has 22+ years of experience in the area of Cryptography, Computer networks, and formal methods. Before joining TCS Research, he worked as a Senior Research Fellow at Nanyang Technological University, Singapore, and a Postdoctoral Fellow at the National University of Singapore. He completed his Ph.D. in Computer Science from the Chennai Mathematical Institute in 2010. His research interests include Cryptography, formal methods, and privacy-enhancing technologies. He has published over 30 research papers in international journals and conferences.",
       },
