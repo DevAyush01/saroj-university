@@ -215,10 +215,10 @@ const MachineLearningPage = () => {
                 <div className="space-y-4">
                   {courseData.syllabus.map((module, index) => (
                     <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                      <div className="w-full flex justify-between items-center p-4 bg-gray-50">
+                      <div className="w-full flex justify-between items-center p-4 bg-black">
                         <div className="flex items-center">
-                          <span className="mr-3 text-blue-600 font-semibold">{index + 1}.</span>
-                          <h4 className="text-lg font-medium text-left">{module.title}</h4>
+                          <span className="mr-3 text-white font-semibold">{index + 1}.</span>
+                          <h4 className="text-lg font-medium text-left text-white">{module.title}</h4>
                         </div>
                       </div>
                       <div className="p-4 border-t border-gray-200">

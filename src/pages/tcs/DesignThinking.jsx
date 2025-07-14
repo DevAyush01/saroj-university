@@ -99,15 +99,15 @@ const DesignThinkingPage = () => {
   // Features data for the icon section
   const features = [
     {
-      icon: <BriefcaseBusiness className="w-8 h-8 text-blue-600" />,
+      icon: <BriefcaseBusiness className="w-8 h-8 text-orange-600" />,
       title: "Assured Internship and Placement"
     },
     {
-      icon: <Award className="w-8 h-8 text-blue-600" />,
+      icon: <Award className="w-8 h-8 text-orange-600" />,
       title: "TCS Certifications"
     },
     {
-      icon: <Globe className="w-8 h-8 text-blue-600" />,
+      icon: <Globe className="w-8 h-8 text-orange-600" />,
       title: "Specialisation in Design Thinking"
     }
   ];
@@ -167,16 +167,24 @@ const DesignThinkingPage = () => {
         {/* Features Icon Section */}
         <div className="bg-gray-50 py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition">
-                  <div className="mb-4 p-3 bg-blue-50 rounded-full">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-lg font-medium text-gray-900">{feature.title}</h3>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+  {features.map((feature, index) => (
+        <div
+    
+      key={index}
+      className="group border-orange-600 border-l-2 flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm transition hover:bg-orange-50 hover:text-orange-800 hover:shadow-md"
+    >
+      <div className="mb-4 p-3 rounded-full bg-orange-50 transition group-hover:bg-orange-100">
+        {feature.icon}
+      </div>
+      <h3 className="text-lg font-medium text-gray-900 transition group-hover:text-orange-700">
+        {feature.title}
+      </h3>
+    </div>
+  ))}
+</div>
+
+
           </div>
         </div>
 
@@ -201,10 +209,10 @@ const DesignThinkingPage = () => {
                 <div className="space-y-4">
                   {courseData.syllabus.map((module, index) => (
                     <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                      <div className="w-full flex justify-between items-center p-4 bg-gray-50">
+                      <div className="w-full flex justify-between items-center p-4 bg-black">
                         <div className="flex items-center">
-                          <span className="mr-3 text-blue-600 font-semibold">{index + 1}.</span>
-                          <h4 className="text-lg font-medium text-left">{module.title}</h4>
+                          <span className="mr-3 text-white font-semibold">{index + 1}.</span>
+                          <h4 className="text-lg font-medium text-left text-white">{module.title}</h4>
                         </div>
                       </div>
                       <div className="p-4 border-t border-gray-200">
