@@ -6,7 +6,7 @@ import HeroSection from "../components/HeroSection.jsx";
 import Happenings from "../components/Happenings.jsx";
 import CompaniesTieUps from "../components/Tieups.jsx";
 import NewsSection from "../components/NewsAndEvents.jsx";
-import FloatingAdmissionAlert from "../components/FloatingAdmissionAlert.jsx";
+import FloatingAdmissionAlert from "../components/FloatingSocialMediaIcons.jsx";
 import TestimonialSlider from "../components/Testimonial.jsx";
 import CircleSlider from "../components/CompanyTieUps.jsx";
 import SemiCircularLogoSlider from "../components/CompanyTieUps.jsx";
@@ -49,7 +49,6 @@ function Home() {
       <Layout>
       
         <PopupForm/>
-        <FloatingAdmissionAlert/>
         <HeroSection/>
         <LightAIBanner/>
         <CompaniesTieUps/>

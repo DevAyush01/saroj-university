@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/SocialMediaIcons.css';
 
-const FloatingAdmissionAlert = () => {
+const FloatingSocialMediaIcons = () => {
   return (
     <div className="fixed top-1/2 left-0 -translate-y-1/2 z-50">
         <div className="bg-white py-2 rounded-lg shadow-lg">
@@ -88,4 +88,4 @@ const FloatingAdmissionAlert = () => {
   );
 };
 
-export default FloatingAdmissionAlert;
+export default FloatingSocialMediaIcons;

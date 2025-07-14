@@ -162,15 +162,17 @@ const ArtificialIntelligencePage = () => {
                   </div>
                  
                 </div>
-                <a
-                  href={courseData.courseurl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-white text-blue-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition"
-                >
-                  Enroll Now
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </a>
+             <div class="button-slide">    
+                            <a 
+                              href={courseData.courseurl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center bg-white text-blue-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition"
+                              >
+                              Enroll Now
+                              <ChevronRight className="ml-2 h-5 w-5" />
+                            </a>
+                                </div>
               </div>
               <div className="md:w-1/2 flex justify-center">
                 <div className="relative w-full max-w-md">
@@ -179,7 +181,7 @@ const ArtificialIntelligencePage = () => {
                   <img
                     src="https://cdn.pixabay.com/photo/2022/04/04/16/41/technology-7111795_640.jpg"
                     alt={courseData.title}
-                    className="relative z-10 w-full h-auto rounded-lg shadow-2xl border-4 border-white"
+                    className="relative z-10 w-full h-auto rounded-lg shadow-2xl border-4 border-white slide-up"
                   />
                 </div>
               </div>
@@ -192,7 +194,7 @@ const ArtificialIntelligencePage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                  <div
+                 <div
     
       key={index}
       className="group border-orange-600 border-l-2 flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm transition hover:bg-orange-50 hover:text-orange-800 hover:shadow-md"
@@ -232,7 +234,7 @@ const ArtificialIntelligencePage = () => {
                 <div className="space-y-4">
                   {courseData.syllabus.map((module, index) => (
                     <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                      <div className="w-full flex justify-between items-center p-4 bg-black">
+                      <div className="w-full flex justify-between items-center p-4 bg-gradient-to-r from-orange-800 to-orange-600">
                         <div className="flex items-center">
                           <span className="mr-3 text-white font-semibold">{index + 1}.</span>
                           <h4 className="text-lg font-medium text-left text-white">{module.title}</h4>

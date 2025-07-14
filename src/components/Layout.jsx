@@ -1,6 +1,7 @@
 import Header from './Header'
 import Footer from './Footer'
 import TopNav from './Topnav';
+import FloatingSocialMediaIcons from './FloatingSocialMediaIcons';
 
 
 
@@ -11,7 +12,7 @@ function Layout({children}){
           
             <TopNav/>
             <Header  />
-            
+            <FloatingSocialMediaIcons />
             <div className="flex-1 overflow-hidden ">
                 {children}
             </div>

@@ -139,16 +139,19 @@ const DesignThinkingPage = () => {
                   </div>
                   
                 </div>
-                <a
+                <div className="button-slide">    
+                <a 
                   href={courseData.courseurl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center bg-white text-blue-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition"
-                >
+                  >
                   Enroll Now
                   <ChevronRight className="ml-2 h-5 w-5" />
                 </a>
+                    </div>
               </div>
+                  
               <div className="md:w-1/2 flex justify-center">
                 <div className="relative w-full max-w-md">
                   <div className="absolute -top-6 -left-6 w-32 h-32 bg-yellow-400 rounded-lg opacity-20 animate-pulse"></div>
@@ -156,7 +159,7 @@ const DesignThinkingPage = () => {
                   <img
                     src="https://images.pexels.com/photos/7120871/pexels-photo-7120871.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
                     alt={courseData.title}
-                    className="relative z-10 w-full h-auto rounded-lg shadow-2xl border-4 border-white"
+                    className="relative z-10 w-full h-auto rounded-lg shadow-2xl border-4 border-white slide-up"
                   />
                 </div>
               </div>
@@ -209,7 +212,7 @@ const DesignThinkingPage = () => {
                 <div className="space-y-4">
                   {courseData.syllabus.map((module, index) => (
                     <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                      <div className="w-full flex justify-between items-center p-4 bg-black">
+                      <div className="w-full flex justify-between items-center p-4 bg-gradient-to-r from-orange-800 to-orange-600">
                         <div className="flex items-center">
                           <span className="mr-3 text-white font-semibold">{index + 1}.</span>
                           <h4 className="text-lg font-medium text-left text-white">{module.title}</h4>

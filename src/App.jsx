@@ -48,7 +48,9 @@ import BscPhysicsPage from "./pages/programs/HealthSciences/BscPhysics";
 import BscChemistryPage from "./pages/programs/HealthSciences/BscChemistry";
 
 // Administration Pages
+import ViceChancellorPage from "./pages/administration/ViceChancellor";
 import ChancellorPage from "./pages/administration/Chancellor";
+
 import AcademicCouncil from "./pages/administration/AcademicCouncil";
 import ExecutiveCouncil from "./pages/administration/ExecutiveCouncil";
 import InternalComplaint from "./pages/administration/InternalComplaint";
@@ -238,6 +240,9 @@ function App() {
       {/* Administration */}
       {/* 4 */}
       <Route path='/chancellor' element={<ChancellorPage />} />
+      <Route path='/vice-chancellor' element={<ViceChancellorPage />} />
+
+
       {/* 5 */}
       <Route path='/administration/academic-council' element={<AcademicCouncil />} />
       <Route path='/administration/finance-commitee' element={<FinanceCommitee/>}/>
