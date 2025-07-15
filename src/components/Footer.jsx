@@ -87,10 +87,7 @@ const Footer = () => {
                 <FaPhone className="text-yellow-400" />
                 <a href="tel:+919513731275" className="hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">+91 95137-31275</a>
               </li>
-              <li className="flex items-center gap-2">
-                <FaPhone className="text-yellow-400" />
-                <a href="tel:+915223116178" className="hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">+91-522-311-6178</a>
-              </li>
+              
               <li className="flex items-center gap-2">
                 <FaEnvelope className="text-yellow-400" />
                 <a href="mailto:info@sarojuniversity.edu.in" className="hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">info@sarojuniversity.edu.in</a>
