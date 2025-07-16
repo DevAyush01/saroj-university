@@ -9,17 +9,6 @@ const TopNav = () => {
         <div className="md:flex md:flex-row hidden  justify-between items-center py-1 gap-2 sm:gap-0">
           {/* Contact Info - Wrapped for better mobile display */}
           <div className=" flex-wrap flex items-center justify-center sm:justify-start gap-x-4 gap-y-1 text-sm">
-            <div className="flex items-center space-x-1">
-              <a 
-                href="tel:+91-522-311-6178" 
-                className="flex items-center hover:text-blue-200 transition-colors duration-200 group"
-                aria-label="Call main university number"
-              >
-                <Phone className="h-3.5 w-3.5 mr-1 flex-shrink-0" />
-                <span className="whitespace-nowrap">+91-522-311-6178</span>
-              </a>
-              <span className="text-blue-300 mx-1 hidden sm:inline">|</span>
-            </div>
             
             <div className="flex items-center space-x-1">
               <a 
@@ -33,6 +22,17 @@ const TopNav = () => {
               <span className="text-blue-300 mx-1 hidden sm:inline">|</span>
             </div>
 
+            <div className="flex items-center space-x-1">
+              <a 
+                href="tel:+91-522-311-6178" 
+                className="flex items-center hover:text-blue-200 transition-colors duration-200 group"
+                aria-label="Call main university number"
+              >
+                <Phone className="h-3.5 w-3.5 mr-1 flex-shrink-0" />
+                <span className="whitespace-nowrap">+91 9151038001-005</span>
+              </a>
+              <span className="text-blue-300 mx-1 hidden sm:inline">|</span>
+            </div>
             
             <a 
               href="mailto:info@sarojuniversity.edu.in" 
