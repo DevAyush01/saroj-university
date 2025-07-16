@@ -262,9 +262,7 @@ const Contact = () => {
                       <div>
                         <h3 className="text-lg font-medium text-gray-800">Address</h3>
                         <p className="text-gray-600">
-                          Purvanchal Expressway, Sultanpur Road<br />
-                          Chandsarai, Gosaiganj<br />
-                          Lucknow, Uttar Pradesh - 226022
+                        12th Km Stone, Sultanpur Road, <br/>Near Purvanchal Expressway, <br/>Gosaiganj, Lucknow, Uttar Pradesh - 226022
                         </p>
                       </div>
                     </div>

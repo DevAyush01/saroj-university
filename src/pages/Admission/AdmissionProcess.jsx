@@ -276,7 +276,7 @@ const AdmissionProcess = () => {
                 Begin Your Application
               </a>
               <p className="mt-3 text-gray-500 text-sm">
-                Have questions? Contact our <a href="#" className="text-blue-600 hover:underline">Admissions Office</a>
+                Have questions? Call us at <a href="tel:+919513731275" className="hover:text-blue-600 transition-colors duration-300 text-md">+91 9513731275</a>
               </p>
             </div>
           </div>
