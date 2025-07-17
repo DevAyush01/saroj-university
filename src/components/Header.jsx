@@ -344,11 +344,15 @@ function Header() {
                 </li>
               ))}
               {/* Apply Now Button - Desktop */}
-              <li className='ml-4'>
-                <a href='https://siu.in8.nopaperforms.com/' target='_blank' rel='noopener noreferrer' className='bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded-md transition duration-300 inline-block cursor-pointer'>
-                  Apply Now
-                </a>
+              <li className='ml-4 flex items-center justify-center'>
+                <a href='https://siu.in8.nopaperforms.com/' target='_blank' rel='noopener noreferrer' className='flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded-md transition duration-300 cursor-pointer'>
+                 <span >Apply Now</span>
+               <ArrowRight className="h-6 w-6 text-white ml-2" />
+                </a> 
+               
               </li>
+            
+                
             </ul>
 
             <button className='xl:hidden p-2 rounded-md hover:bg-gray-100' onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}>
