@@ -126,7 +126,10 @@ const SarojCollegeOfLaw = () => {
       <div className="font-sans text-gray-800 overflow-x-hidden">
         
         {/* Hero Section */}
-        <section id="home" className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-32 relative overflow-hidden">
+        <div className='block md:flex '>
+          {/* <motion.img src='https://images.pexels.com/photos/6077797/pexels-photo-6077797.jpeg' /> */}
+          <motion.img src="https://cdn.pixabay.com/photo/2019/12/18/13/05/right-4703926_640.jpg" className='w-300'   />
+        <div id="home" className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-32 relative overflow-hidden md:w-450 ">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <motion.div 
             initial={{ opacity: 0 }}
@@ -150,11 +153,10 @@ const SarojCollegeOfLaw = () => {
             >
               Premier legal education with a perfect blend of theory and practice since 1995
             </motion.p>
-           
           </motion.div>
           
-        
-        </section>
+          </div>
+        </div>
 
         {/* About Section */}
         <section id="about" className="py-20 bg-gray-50">
@@ -377,7 +379,7 @@ const SarojCollegeOfLaw = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-blue-800 text-white">
+        <section className="py-20 bg-[#e6f0ff] ">
           <div className="container mx-auto px-6">
             <motion.div 
               initial={{ opacity: 0 }}
@@ -392,14 +394,14 @@ const SarojCollegeOfLaw = () => {
                 whileInView={{ width: "6rem" }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="w-24 h-1.5 bg-white mx-auto"
+                className="w-24 h-1.5 bg-blue-600 mx-auto"
               />
-              <p className="mt-6 text-blue-200 max-w-3xl mx-auto text-lg">
+              <p className="mt-6 text-gray-700 max-w-3xl mx-auto text-lg">
                 Hear from our students and alumni about their experiences at Saroj College of Law
               </p>
             </motion.div>
             
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto text-white">
               <div className="relative">
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -422,7 +424,7 @@ const SarojCollegeOfLaw = () => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={tapEffect}
                   onClick={prevTestimonial}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 bg-white text-blue-800 p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 border-2 text-blue-800 p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300"
                   aria-label="Previous testimonial"
                 >
                   <FaArrowLeft className="text-xl" />
@@ -432,7 +434,7 @@ const SarojCollegeOfLaw = () => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={tapEffect}
                   onClick={nextTestimonial}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 bg-white text-blue-800 p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 bg-white text-blue-800 p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 border-2"
                   aria-label="Next testimonial"
                 >
                   <FaArrowRight className="text-xl" />
@@ -461,7 +463,7 @@ const SarojCollegeOfLaw = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
+        <section className="py-20 bg-[#f09007] text-white">
           <div className="container mx-auto px-6 text-center">
             <motion.div 
               initial={{ opacity: 0, y: 50 }}

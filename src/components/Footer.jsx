@@ -1,11 +1,11 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaPhone, FaMapMarkerAlt, FaEnvelope, FaArrowUp } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaInstagram, FaPhone, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 
 const Footer = () => {
 
   return (
-    <footer className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-700 text-white py-8">
+    <footer className="bg-black text-white py-8">
       <div className="container mx-auto px-6 lg:px-8 ">
         <div className="grid grid-cols-1 md:grid-cols-2 py-4 lg:grid-cols-5 gap-8 ">
           {/* University Info */}

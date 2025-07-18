@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import bgImg from '../assets/blurBg.png';
 
 const HiringPartnersSection = () => {
   const logos = [

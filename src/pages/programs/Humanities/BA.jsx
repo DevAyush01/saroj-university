@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout'; // Default import for Layout
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, number, createScopedAnimate, numberValueTypes } from 'framer-motion';
 import {
   FaBookReader, // Main icon for Arts/Humanities
   FaGraduationCap, // General academic
@@ -18,6 +18,8 @@ import {
   FaChartLine // Icon for economics/analytics
 } from 'react-icons/fa';
 import { Helmet } from 'react-helmet';
+import { useReducer } from 'react';
+import { AppleIcon, Diff, Navigation, Origami } from 'lucide-react';
 
 const BAPage = () => {
   const [expandedSections, setExpandedSections] = useState({
@@ -437,3 +439,4 @@ const BAPage = () => {
 };
 
 export default BAPage;
+

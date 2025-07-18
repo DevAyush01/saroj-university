@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination, Navigation } from "swiper/modules";
-import { ArrowRight, Play, Rocket, GraduationCap, Globe, BookOpen } from "lucide-react";
+import { ArrowRight, GraduationCap, Globe, BookOpen } from "lucide-react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";

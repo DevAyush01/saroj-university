@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet';
 import Layout from '../../components/Layout';
+import {FileText } from 'lucide-react'
 
 const SIUFeeStructure = () => {
   // Transform the JSON data into table-friendly format
@@ -174,9 +175,13 @@ const SIUFeeStructure = () => {
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl max-w-6xl w-full">
           <div className="p-8">
             <div className="text-center mb-8">
+
+  <div className='flex items-center justify-center '>
+  <FileText className='hidden md:block w-10 h-10 text-black mr-3' />
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-2">
                 SAROJ INTERNATIONAL UNIVERSITY, LUCKNOW
               </h2>
+  </div>
               <h3 className="text-2xl text-blue-600 mt-2">
                 Fee Structure for Session 2025–2026
               </h3>

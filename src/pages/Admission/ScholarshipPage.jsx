@@ -18,7 +18,7 @@ const ScholarshipPage = () => {
           {/* Page Heading */}
           <div className="text-center mb-12">
             <div className='flex items-center justify-center'>
-              <GraduationCap className='h-10 w-10 mr-3' />
+              <GraduationCap className='hidden md:block h-10 w-10 mr-3' />
             <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
               <span className="text-gray-900">SCHOLARSHIP </span>
               <span className="text-blue-600">PROGRAM</span>
@@ -68,7 +68,7 @@ const ScholarshipPage = () => {
 
             {/* Card: Recognition */}
             <div className="bg-white shadow-xl rounded-xl p-6">
-              <div className='flex text-center justify-center mb-4'>
+              <div className='flex items-center justify-center mb-4'>
              <Medal className='h-10 w-10 text-blue-600 mr-3' />
               <h3 className="text-blue-600 font-semibold text-2xl mb-2">Recognition of Achievement</h3>
               </div>
