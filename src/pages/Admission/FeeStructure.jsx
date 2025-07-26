@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import {Helmet } from 'react-helmet';
 import Layout from '../../components/Layout';
 import {FileText } from 'lucide-react'
 
@@ -27,106 +27,209 @@ const SIUFeeStructure = () => {
   const regularPrograms = [];
   const globalPrograms = [];
   
-  const institutes = [
-    {
-      name: "Saroj Institute of Management & Technology",
-      programs: [
-        { degree: "B.Tech", specializations: "CSE, IT, Cyber Security, IOT, EC, ME, Civil, Mechatronics, Bio-Tech, Electrical Engg", fees: { year1: 110000, year2: 110000, year3: 110000, year4: 110000, total: 440000 } },
-        { degree: "M.Tech", specializations: "CSE, IT, Cyber Security, IOT, EC, ME, Civil, Mechatronics, Bio-Tech, Electrical Engg", fees: { year1: 125000, year2: 125000, total: 250000 } },
-        { degree: "BCA", specializations: "AI, ML, Cyber Security", fees: { year1: 100000, year2: 100000, year3: 100000, total: 300000 } },
-        { degree: "MCA", specializations: "AI, ML, Cyber Security", fees: null },
-        { degree: "Diploma Engg.", specializations: "All fields", fees: { year1: 60000, year2: 60000, year3: 60000, total: 180000 } }
-      ]
-    },
-    {
-      name: "Saroj Institute of Basic & Health Sciences",
-      programs: [
-        { degree: "B.Sc", specializations: "Physics, Chemistry, Biology, Mathematics", fees: { year1: 80000, year2: 80000, year3: 80000, total: 240000 } },
-        { degree: "BS", specializations: "Data Sciences, Physiotherapy, Forensic Science, Radiology & Imaging, Medical Lab Technology", fees: { year1: 80000, year2: 80000, year3: 80000, total: 240000 } },
-        { degree: "M.Sc", specializations: "Physics, Biology, Chemistry, Mathematics", fees: { year1: 80000, year2: 80000, total: 160000 } },
-        { degree: "MS", specializations: "Data Sciences, Physiotherapy, Forensic Science, Radiology & Imaging, Medical Lab Technology", fees: { year1: 80000, year2: 80000, total: 160000 } },
-        { degree: "Diploma", specializations: "Public Health", fees: { year1: 60000, total: 60000 } },
-        { degree: "Ph.D", specializations: "All disciplines", fees: { year1: 100000, year2: 100000, year3: 100000, total: 300000 } }
-      ]
-    },
-    {
-      name: "Lucknow Institute of Pharmacy",
-      programs: [
-        { degree: "B.Pharm", specializations: "Pharmacology, Pharmaceutical Chemistry, Pharmaceutics, Pharmaceutical Analysis, Clinical Pharmacy, Pharmaceutical Biotechnology, Regulatory Affairs", fees: { year1: 100000, year2: 100000, year3: 100000, year4: 100000, total: 400000 } },
-        { degree: "D.Pharm", specializations: "Pharmacology, Pharmaceutical Chemistry, Pharmaceutics, Pharmaceutical Analysis, Clinical Pharmacy, Pharmaceutical Biotechnology, Regulatory Affairs", fees: { year1: 90000, year2: 90000, total: 180000 } },
-        { degree: "M.Pharm", specializations: "Pharmacology", fees: { year1: 100000, year2: 100000, total: 200000 } },
-        { degree: "M.Pharm", specializations: "Medical Chemistry", fees: { year1: 90000, year2: 90000, total: 180000 } }
-      ]
-    },
-    {
-      name: "Saroj Institute of Sports Science & Research",
-      programs: [
-        { degree: "BS", specializations: "Sports Management, Applied Sports Psychology, Sports Nutritionist, Sports Coaching & Fitness", fees: { year1: 90000, year2: 90000, year3: 90000, total: 270000 } },
-        { degree: "MS", specializations: "Sports Management, Applied Sports Psychology, Sports Nutritionist, Sports Coaching & Fitness", fees: { year1: 90000, year2: 90000, total: 180000 } }
-      ]
-    },
-    {
-      name: "Saroj Institute of Film & Fashion",
-      programs: [
-        { degree: "B.Design", specializations: "Fashion Design, Interior Design, Visual Communication Design, Animation & Game Design", fees: { year1: 100000, year2: 100000, year3: 100000, year4: 100000, total: 400000 } },
-        { degree: "B.Sc", specializations: "Film Making, Script, Direction, Audiography, Script Writing, Cinematography", fees: { year1: 100000, year2: 100000, year3: 100000, total: 300000 } },
-        { degree: "BA", specializations: "Acting & Drama, Advertising, Journalism, PR Events", fees: { year1: 100000, year2: 100000, year3: 100000, total: 300000 } },
-        { degree: "M.Design", specializations: "Fashion Design, Visual Communication Design, Animation & Game Design", fees: { year1: 100000, year2: 100000, total: 200000 } },
-        { degree: "M.Sc", specializations: "Film Making, Script Writing, Cinematography", fees: { year1: 100000, year2: 100000, total: 200000 } },
-        { degree: "MA", specializations: "Acting & Drama, Advertising, Journalism, PR Events", fees: { year1: 100000, year2: 100000, total: 200000 } },
-        { degree: "Diploma", specializations: "Film/Drama/Media", fees: { year1: 100000, total: 100000 } }
-      ]
-    }
-  ];
+const institutes = [
+  {
+    name: "Saroj Institute of Management & Technology",
+    programs: [
+      { degree: "B.Tech", specializations: "CSE, IT, Cyber Security, IOT, EC, ME, Civil, Mechatronics, Bio-Tech, Electrical Engg", fees: { year1: 110000, year2: 110000, year3: 110000, year4: 110000, total: 440000 } },
+      { degree: "M.Tech", specializations: "CSE, IT, Cyber Security, IOT, EC, ME, Civil, Mechatronics, Bio-Tech, Electrical Engg", fees: { year1: 125000, year2: 125000, total: 250000 } },
+      { degree: "BCA", specializations: "AI, ML, Cyber Security", fees: { year1: 100000, year2: 100000, year3: 100000, total: 300000 } },
+      { degree: "MCA", specializations: "AI, ML, Cyber Security", fees: { year1: 120000, year2: 120000, total: 240000 }},
+      { degree: "Diploma Engg.", specializations: "All fields", fees: { year1: 60000, year2: 60000, year3: 60000, total: 180000 } }
+    ]
+  },
+  {
+    name: "Saroj Institute of Basic & Health Sciences",
+    programs: [
+      { degree: "B.Sc", specializations: "Physics, Chemistry, Biology, Mathematics", fees: { year1: 80000, year2: 80000, year3: 80000, total: 240000 } },
+      { degree: "BS", specializations: "Data Sciences, Physiotherapy, Forensic Science, Radiology & Imaging, Medical Lab Technology", fees: { year1: 80000, year2: 80000, year3: 80000, total: 240000 } },
+      { degree: "M.Sc", specializations: "Physics, Biology, Chemistry, Mathematics", fees: { year1: 80000, year2: 80000, total: 160000 } },
+      { degree: "MS", specializations: "Data Sciences, Physiotherapy, Forensic Science, Radiology & Imaging, Medical Lab Technology", fees: { year1: 80000, year2: 80000, total: 160000 } },
+      { degree: "Diploma", specializations: "Public Health", fees: { year1: 60000, total: 60000 } },
+      { degree: "Ph.D", specializations: "All disciplines", fees: { year1: 100000, year2: 100000, year3: 100000, total: 300000 } }
+    ]
+  },
+  {
+    name: "Lucknow Institute of Pharmacy",
+    programs: [
+      { degree: "B.Pharm", specializations: "Pharmacology, Pharmaceutical Chemistry, Pharmaceutics, Pharmaceutical Analysis, Clinical Pharmacy, Pharmaceutical Biotechnology, Regulatory Affairs", fees: { year1: 100000, year2: 100000, year3: 100000, year4: 100000, total: 400000 } },
+      { degree: "D.Pharm", specializations: "Pharmacology, Pharmaceutical Chemistry, Pharmaceutics, Pharmaceutical Analysis, Clinical Pharmacy, Pharmaceutical Biotechnology, Regulatory Affairs", fees: { year1: 90000, year2: 90000, total: 180000 } },
+      { degree: "M.Pharm", specializations: "Pharmacology", fees: { year1: 100000, year2: 100000, total: 200000 } },
+      { degree: "M.Pharm", specializations: "Medical Chemistry", fees: { year1: 90000, year2: 90000, total: 180000 } }
+    ]
+  },
+  {
+    name: "Saroj Institute of Sports Science & Research",
+    programs: [
+      { degree: "BS", specializations: "Sports Management, Applied Sports Psychology, Sports Nutritionist, Sports Coaching & Fitness", fees: { year1: 90000, year2: 90000, year3: 90000, total: 270000 } },
+      { degree: "MS", specializations: "Sports Management, Applied Sports Psychology, Sports Nutritionist, Sports Coaching & Fitness", fees: { year1: 90000, year2: 90000, total: 180000 } }
+    ]
+  },
+  {
+    name: "Saroj Institute of Film & Fashion",
+    programs: [
+      { degree: "B.Design", specializations: "Fashion Design, Interior Design, Visual Communication Design, Animation & Game Design", fees: { year1: 100000, year2: 100000, year3: 100000, year4: 100000, total: 400000 } },
+      { degree: "B.Sc", specializations: "Film Making, Script, Direction, Audiography, Script Writing, Cinematography", fees: { year1: 100000, year2: 100000, year3: 100000, total: 300000 } },
+      { degree: "BA", specializations: "Acting & Drama, Advertising, Journalism, PR Events", fees: { year1: 100000, year2: 100000, year3: 100000, total: 300000 } },
+      { degree: "M.Design", specializations: "Fashion Design, Visual Communication Design, Animation & Game Design", fees: { year1: 100000, year2: 100000, total: 200000 } },
+      { degree: "M.Sc", specializations: "Film Making, Script Writing, Cinematography", fees: { year1: 100000, year2: 100000, total: 200000 } },
+      { degree: "MA", specializations: "Acting & Drama, Advertising, Journalism, PR Events", fees: { year1: 100000, year2: 100000, total: 200000 } },
+      { degree: "Diploma", specializations: "Film/Drama/Media", fees: { year1: 100000, total: 100000 } }
+    ]
+  },
+  {
+    name: "Saroj Institute of Artificial Intelligence",
+    programs: [
+      { 
+        degree: "B.Tech", 
+        specializations: "Artificial Intelligence & Machine Learning, Data Science, Robotics, Computer Science & Engineering", 
+        fees: { year1: 110000, year2: 110000, year3: 110000, year4: 110000, total: 440000 } 
+      },
+      { 
+        degree: "M.Tech", 
+        specializations: "Artificial Intelligence & Machine Learning, Data Science, Robotics, Computer Science & Engineering", 
+        fees: { year1: 125000, year2: 125000, total: 250000 } 
+      }
+    ]
+  },
+  {
+    name: "Saroj Institute of Humanities & Education",
+    programs: [
+      { 
+        degree: "BA/BS/B.Com", 
+        specializations: "General, International Relations", 
+        fees: { year1: 60000, year2: 60000, year3: 60000, total: 180000 } 
+      },
+      { 
+        degree: "B.Ed", 
+        specializations: "Education", 
+        fees: { year1: 60000, year2: 60000, year3: 60000, total: 180000 } 
+      },
+      { 
+        degree: "MA/MS/M.Com", 
+        specializations: "General, International Relations", 
+        fees: { year1: 60000, year2: 60000, total: 120000 } ,
+      },
+      { 
+        degree: "M.Ed", 
+        specializations: "Education", 
+        fees:  { year1: 60000, year2: 60000, total: 120000 } ,
+      }
+    ]
+  },
+  {
+    name: "Saroj Institute of Entrepreneurship and Business",
+    programs: [
+      { 
+        degree: "BBA", 
+        specializations: "General, Banking Finance, International Business, Marketing, Insurance, Digital Marketing, Logistics & SCM HR, IT, Entrepreneurship, Retail & Start-Ups", 
+        fees: { year1: 110000, year2: 110000, year3: 110000, total: 330000 } 
+      },
+      { 
+        degree: "MBA", 
+        specializations: "General Business Administration", 
+        fees: { year1: 120000, year2: 120000, total: 240000 }
+      }
+    ]
+  }
+];
 
-  const globalInstitutes = [
-    {
-      name: "Saroj Institute of Management & Technology",
-      programs: [
-        { degree: "B.Tech", specializations: "CSE, IT, Cyber Security, IOT, EC, ME, Civil, Mechatronics, Bio-Tech, Electrical Engg", fees: { year1: 160000, year2: 160000, year3: 160000, year4: 160000, total: 640000 } },
-        { degree: "M.Tech / MCA", specializations: "M.Tech (CSE, IT, Cyber Security, IOT, EC, ME, Civil, Mechatronics, Bio-Tech, Electrical Engg), MCA (AI, ML, Cyber Security)", fees: { year1: 150000, year2: 150000, year3: 150000, total: 450000 } },
-        { degree: "BCA", specializations: "AI, ML, Cyber Security", fees: { year1: 150000, year2: 150000, total: 300000 } }
-      ]
-    },
-    {
-      name: "Saroj Institute of Basic & Health Sciences",
-      programs: [
-        { degree: "B.Sc", specializations: "Physics, Biology, Chemistry, Mathematics", fees: { year1: 125000, year2: 125000, year3: 125000, total: 375000 } },
-        { degree: "BS", specializations: "Data Sciences, Physiotherapy, Forensic Science, Radiology, Imaging, Medical Lab Technology", fees: { year1: 125000, year2: 125000, year3: 125000, total: 375000 } },
-        { degree: "M.Sc", specializations: "Physics, Biology, Chemistry, Mathematics", fees: { year1: 125000, year2: 125000, total: 250000 } },
-        { degree: "MS", specializations: "Data Sciences, Physiotherapy, Forensic Science, Radiology, Imaging, Medical Lab Technology", fees: { year1: 125000, year2: 125000, total: 250000 } },
-        { degree: "Ph.D", specializations: "Physics, Chemistry, Mathematics & Biology", fees: { year1: 150000, year2: 150000, year3: 150000, total: 450000 } },
-        { degree: "Ph.D", specializations: "Data Analytics", fees: { year1: 150000, year2: 150000, year3: 150000, total: 450000 } }
-      ]
-    },
-    {
-      name: "Lucknow Institute of Pharmacy",
-      programs: [
-        { degree: "B.Pharm", specializations: "Pharmacology, Pharmaceutical Chemistry, Pharmaceutics, Pharmaceutical Analysis, Clinical Pharmacy, Pharmaceutical Biotechnology, Regulatory Affairs", fees: { year1: 150000, year2: 150000, year3: 150000, year4: 150000, total: 600000 } },
-        { degree: "D.Pharm", specializations: "Pharmacology, Pharmaceutical Chemistry, Pharmaceutics, Pharmaceutical Analysis, Clinical Pharmacy, Pharmaceutical Biotechnology, Regulatory Affairs", fees: { year1: 140000, year2: 140000, total: 280000 } },
-        { degree: "M.Pharm", specializations: "Pharmacology", fees: { year1: 150000, year2: 150000, total: 300000 } },
-        { degree: "M.Pharm", specializations: "Medical Chemistry", fees: { year1: 140000, year2: 140000, total: 280000 } }
-      ]
-    },
-    {
-      name: "Saroj Institute of Sports Science & Research",
-      programs: [
-        { degree: "BS", specializations: "Sports Management, Applied Sports Psychology, Sports Nutritionist, Sports Coaching & Fitness", fees: { year1: 140000, year2: 140000, year3: 140000, total: 420000 } },
-        { degree: "MS", specializations: "Sports Management, Applied Sports Psychology, Sports Nutritionist, Sports Coaching & Fitness", fees: { year1: 140000, year2: 140000, total: 280000 } }
-      ]
-    },
-    {
-      name: "Saroj Institute of Film & Fashion",
-      programs: [
-        { degree: "B.Design", specializations: "Fashion Design, Interior Design, Visual Communication Design, Animation & Game Design", fees: { year1: 150000, year2: 150000, year3: 150000, year4: 150000, total: 600000 } },
-        { degree: "B.Sc", specializations: "Film Making, Script, Direction, Audiography, Script Writing, Cinematography", fees: { year1: 150000, year2: 150000, year3: 150000, total: 450000 } },
-        { degree: "BA", specializations: "Acting & Drama, Advertising, Journalism, PR Events", fees: { year1: 150000, year2: 150000, year3: 150000, total: 450000 } },
-        { degree: "M.Design", specializations: "Fashion Design, Visual Communication Design, Animation & Game Design", fees: { year1: 150000, year2: 150000, total: 300000 } },
-        { degree: "M.Sc", specializations: "Film Making, Script Writing, Cinematography", fees: { year1: 150000, year2: 150000, total: 300000 } },
-        { degree: "MA", specializations: "Acting & Drama, Advertising, Journalism, PR Events", fees: { year1: 150000, year2: 150000, total: 300000 } }
-      ]
-    }
-  ];
+const globalInstitutes = [
+  {
+    name: "Saroj Institute of Management & Technology",
+    programs: [
+      { degree: "B.Tech", specializations: "CSE, IT, Cyber Security, IOT, EC, ME, Civil, Mechatronics, Bio-Tech, Electrical Engg", fees: { year1: 160000, year2: 160000, year3: 160000, year4: 160000, total: 640000 } },
+      { degree: "M.Tech / MCA", specializations: "M.Tech (CSE, IT, Cyber Security, IOT, EC, ME, Civil, Mechatronics, Bio-Tech, Electrical Engg), MCA (AI, ML, Cyber Security)", fees: { year1: 150000, year2: 150000, year3: 150000, total: 450000 } },
+      { degree: "BCA", specializations: "AI, ML, Cyber Security", fees: { year1: 150000, year2: 150000, total: 300000 } }
+    ]
+  },
+  {
+    name: "Saroj Institute of Basic & Health Sciences",
+    programs: [
+      { degree: "B.Sc", specializations: "Physics, Biology, Chemistry, Mathematics", fees: { year1: 125000, year2: 125000, year3: 125000, total: 375000 } },
+      { degree: "BS", specializations: "Data Sciences, Physiotherapy, Forensic Science, Radiology, Imaging, Medical Lab Technology", fees: { year1: 125000, year2: 125000, year3: 125000, total: 375000 } },
+      { degree: "M.Sc", specializations: "Physics, Biology, Chemistry, Mathematics", fees: { year1: 125000, year2: 125000, total: 250000 } },
+      { degree: "MS", specializations: "Data Sciences, Physiotherapy, Forensic Science, Radiology, Imaging, Medical Lab Technology", fees: { year1: 125000, year2: 125000, total: 250000 } },
+      { degree: "Ph.D", specializations: "Physics, Chemistry, Mathematics & Biology", fees: { year1: 150000, year2: 150000, year3: 150000, total: 450000 } },
+      { degree: "Ph.D", specializations: "Data Analytics", fees: { year1: 150000, year2: 150000, year3: 150000, total: 450000 } }
+    ]
+  },
+  {
+    name: "Lucknow Institute of Pharmacy",
+    programs: [
+      { degree: "B.Pharm", specializations: "Pharmacology, Pharmaceutical Chemistry, Pharmaceutics, Pharmaceutical Analysis, Clinical Pharmacy, Pharmaceutical Biotechnology, Regulatory Affairs", fees: { year1: 150000, year2: 150000, year3: 150000, year4: 150000, total: 600000 } },
+      { degree: "D.Pharm", specializations: "Pharmacology, Pharmaceutical Chemistry, Pharmaceutics, Pharmaceutical Analysis, Clinical Pharmacy, Pharmaceutical Biotechnology, Regulatory Affairs", fees: { year1: 140000, year2: 140000, total: 280000 } },
+      { degree: "M.Pharm", specializations: "Pharmacology", fees: { year1: 150000, year2: 150000, total: 300000 } },
+      { degree: "M.Pharm", specializations: "Medical Chemistry", fees: { year1: 140000, year2: 140000, total: 280000 } }
+    ]
+  },
+  {
+    name: "Saroj Institute of Sports Science & Research",
+    programs: [
+      { degree: "BS", specializations: "Sports Management, Applied Sports Psychology, Sports Nutritionist, Sports Coaching & Fitness", fees: { year1: 140000, year2: 140000, year3: 140000, total: 420000 } },
+      { degree: "MS", specializations: "Sports Management, Applied Sports Psychology, Sports Nutritionist, Sports Coaching & Fitness", fees: { year1: 140000, year2: 140000, total: 280000 } }
+    ]
+  },
+  {
+    name: "Saroj Institute of Film & Fashion",
+    programs: [
+      { degree: "B.Design", specializations: "Fashion Design, Interior Design, Visual Communication Design, Animation & Game Design", fees: { year1: 150000, year2: 150000, year3: 150000, year4: 150000, total: 600000 } },
+      { degree: "B.Sc", specializations: "Film Making, Script, Direction, Audiography, Script Writing, Cinematography", fees: { year1: 150000, year2: 150000, year3: 150000, total: 450000 } },
+      { degree: "BA", specializations: "Acting & Drama, Advertising, Journalism, PR Events", fees: { year1: 150000, year2: 150000, year3: 150000, total: 450000 } },
+      { degree: "M.Design", specializations: "Fashion Design, Visual Communication Design, Animation & Game Design", fees: { year1: 150000, year2: 150000, total: 300000 } },
+      { degree: "M.Sc", specializations: "Film Making, Script Writing, Cinematography", fees: { year1: 150000, year2: 150000, total: 300000 } },
+      { degree: "MA", specializations: "Acting & Drama, Advertising, Journalism, PR Events", fees: { year1: 150000, year2: 150000, total: 300000 } }
+    ]
+  },
+  {
+    name: "Saroj Institute of Artificial Intelligence",
+    programs: [
+      { 
+        degree: "B.Tech", 
+        specializations: "Artificial Intelligence & Machine Learning, Data Science, Robotics, Computer Science & Engineering", 
+        fees: { year1: 160000, year2: 160000, year3: 160000, year4: 160000, total: 640000 } 
+      },
+      { 
+        degree: "M.Tech", 
+        specializations: "Artificial Intelligence & Machine Learning, Data Science, Robotics, Computer Science & Engineering", 
+        fees: { year1: 175000, year2: 175000, total: 350000 } 
+      }
+    ]
+  },
+  {
+    name: "Saroj Institute of Humanities & Education",
+    programs: [
+      { 
+        degree: "BA/BS/B.Com", 
+        specializations: "General, International Relations", 
+        fees: { year1: 110000, year2: 110000, year3: 110000, total: 330000 } ,
+        note: "Global mode details not specified in document",
+      },
+      { 
+        degree: "MA/MS/M.Com", 
+        specializations: "General, International Relations", 
+        fees: { year1: 110000, year2: 110000, total: 220000 } ,
+        note: "Global mode details not specified in document" 
+      }
+    ]
+  },
+  {
+    name: "Saroj Institute of Entrepreneurship and Business",
+    programs: [
+      { 
+        degree: "BBA", 
+        specializations: "General, Banking Finance, International Business, Marketing, Insurance, Digital Marketing, Logistics & SCM HR, IT, Entrepreneurship, Retail & Start-Ups", 
+        fees: { year1: 160000, year2: 160000, year3: 160000, total: 480000 } 
+      },
+      { 
+        degree: "MBA", 
+        specializations: "General Business Administration", 
+        fees: { year1: 170000, year2: 170000, total: 340000 },
+        note: "Global mode details not specified in document" ,
+      }
+    ]
+  }
+];
 
   // Combine all regular and global programs
   institutes.forEach(institute => {
