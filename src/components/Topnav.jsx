@@ -17,7 +17,7 @@ const TopNav = () => {
                 aria-label="Call admission helpline"
               >
                 <Phone className="h-3.5 w-3.5 mr-1 flex-shrink-0" />
-                <span className="whitespace-nowrap">+91-9513731275</span>
+                <span className="whitespace-nowrap">+91-522-311-6178</span>
               </a>
               <span className="text-blue-300 mx-1 hidden sm:inline">|</span>
             </div>
@@ -29,7 +29,7 @@ const TopNav = () => {
                 aria-label="Call main university number"
               >
                 <Phone className="h-3.5 w-3.5 mr-1 flex-shrink-0" />
-                <span className="whitespace-nowrap">+91 9151038001-005</span>
+                <span className="whitespace-nowrap">+91-9513731275</span>
               </a>
               <span className="text-blue-300 mx-1 hidden sm:inline">|</span>
             </div>
@@ -42,6 +42,27 @@ const TopNav = () => {
               <Mail className="h-3.5 w-3.5 mr-1 flex-shrink-0" />
               <span className="whitespace-nowrap">info@sarojuniversity.edu.in</span>
             </a>
+
+              <div className="flex space-x-4">
+                          <a href="https://www.facebook.com/siulucknow" 
+                          target="_blank" rel="noopener noreferrer"
+                          className="text-white  hover:text-yellow-400 transition-colors  duration-300 ">
+                            <FaFacebook size={20} />
+                          </a>
+                          <a href="https://www.linkedin.com/company/siulucknow/" 
+                          target="_blank" rel="noopener noreferrer"
+                          className="text-white  hover:text-yellow-400 transition-colors  duration-300 ">
+                            <FaLinkedin size={20} />
+                          </a>
+                         
+                         
+                          <a href="https://www.instagram.com/siulucknow/"
+                          target="_blank" rel="noopener noreferrer"
+                          className="text-white hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">
+                            <FaInstagram size={20} />
+                          </a>
+                        
+                        </div>
             
           </div>
 
