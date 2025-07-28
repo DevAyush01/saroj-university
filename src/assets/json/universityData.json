@@ -607,6 +607,7 @@
         {
           "degree": "M.Pharm (Pharmacology)",
           "mode": "Global Mode",
+           "specializations": [ "Pharmacology" ],
           "duration_in_yrs": 2,
           "fees": {
             "year1": 150000,
@@ -617,6 +618,7 @@
         {
           "degree": "M.Pharm (Medical Chemistry)",
           "mode": "Global Mode",
+          "specializations": [ "Medical Chemistry" ],
           "duration_in_yrs": 2,
           "fees": {
             "year1": 140000,
