@@ -64,7 +64,7 @@ const SIUFeeStructure = () => {
       domain: "Pharmacy",
       programs: [
         { degree: "B.Pharm", specializations: "Pharmacology, Pharmaceutical Chemistry, Pharmaceutics, Pharmaceutical Analysis, Clinical Pharmacy, Pharmaceutical Biotechnology, Regulatory Affairs", fees: { year1: 100000, year2: 100000, year3: 100000, year4: 100000, total: 400000 } },
-        { degree: "D.Pharm", specializations: "General Diploma in Pharmacy", fees: { year1: 90000, year2: 90000, total: 180000 } },
+        { degree: "D.Pharm", specializations: "General Diploma in Pharmacy", fees: { year1: 100000, year2: 100000, total: 200000 } },
         { degree: "M.Pharm", specializations: "Pharmacology", fees: { year1: 100000, year2: 100000, total: 200000 } },
         { degree: "M.Pharm", specializations: "Medical Chemistry", fees: { year1: 90000, year2: 90000, total: 180000 } }
       ]
@@ -384,9 +384,19 @@ const groupedFilteredPrograms = useMemo( ()=>{
                 <td className="px-4 py-2 text-gray-700">{total}</td>
                 <td className="px-4 py-2 text-gray-700">{tuition}</td>
               </tr>
+              
             ))}
-          </tbody>
-        </table>
+          </tbody>   
+          
+          <div className='m-5'>
+            <a href='https://siu.in8.nopaperforms.com/' target='_blank' rel='noopener noreferrer' className="mt-4 bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-blue-700 
+            text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl w-22 whitespace-nowrap">Apply Now</a>
+            <a href='/admissions/scholarship ' target='_blank' rel='noopener noreferrer' className=" bg-white border  border-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-blue-70
+            
+            text-blue-700 -m-1 font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl w-28 whitespace-nowrap ml-4">Get Scholarship!</a>
+            </div>
+             
+      </table>
       </div>
     );
   };

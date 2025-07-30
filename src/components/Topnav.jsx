@@ -8,7 +8,7 @@ const TopNav = () => {
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="md:flex md:flex-row hidden  justify-between items-center py-1 gap-2 sm:gap-0">
           {/* Contact Info - Wrapped for better mobile display */}
-          <div className=" flex-wrap flex items-center justify-center sm:justify-start gap-x-4 gap-y-1 text-sm">
+          <div className=" flex-wrap flex items-center justify-center sm:justify-start gap-x-4 gap-y-1 text-sm m-2">
             
             <div className="flex items-center space-x-1">
               <a 
@@ -63,6 +63,13 @@ const TopNav = () => {
                           </a>
                         
                         </div>
+
+                       <button class="relative bg-white text-blue-700 px-4 py-1 rounded ">
+  What’s New
+  <sup class="absolute -top-2 right-2 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">3</sup>
+</button>
+
+
             
           </div>
 
