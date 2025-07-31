@@ -66,7 +66,7 @@ const SIUFeeStructure = () => {
         { degree: "B.Pharm", specializations: "Pharmacology, Pharmaceutical Chemistry, Pharmaceutics, Pharmaceutical Analysis, Clinical Pharmacy, Pharmaceutical Biotechnology, Regulatory Affairs", fees: { year1: 100000, year2: 100000, year3: 100000, year4: 100000, total: 400000 } },
         { degree: "D.Pharm", specializations: "General Diploma in Pharmacy", fees: { year1: 100000, year2: 100000, total: 200000 } },
         { degree: "M.Pharm", specializations: "Pharmacology", fees: { year1: 100000, year2: 100000, total: 200000 } },
-        { degree: "M.Pharm", specializations: "Medical Chemistry", fees: { year1: 90000, year2: 90000, total: 180000 } }
+        { degree: "M.Pharm", specializations: "Medical Chemistry", fees: { year1: 100000, year2: 100000, total: 200000 } }
       ]
     },
     {

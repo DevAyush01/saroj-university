@@ -64,11 +64,7 @@ const TopNav = () => {
                         
                         </div>
 
-                       <button class="relative bg-white text-blue-700 px-4 py-1 rounded ">
-  What’s New
-  <sup class="absolute -top-2 right-2 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">3</sup>
-</button>
-
+                       
 
             
           </div>
