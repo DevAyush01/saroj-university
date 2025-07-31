@@ -49,7 +49,7 @@ const InstagramFeed = () => {
           <div className="inline-flex items-center justify-center p-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 shadow-lg shadow-purple-500/20 mb-4">
             <FiInstagram className="text-2xl text-white" />
           </div>
-          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 mb-3">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-800 to-purple-500 mb-3">
             Campus Chronicles
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto text-lg">
