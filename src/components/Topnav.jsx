@@ -42,6 +42,16 @@ const TopNav = () => {
               <Mail className="h-3.5 w-3.5 mr-1 flex-shrink-0" />
               <span className="whitespace-nowrap">info@sarojuniversity.edu.in</span>
             </a>
+            <span>|</span>
+
+             <a 
+              href="mailto:hr@sarojuniversity.edu.in" 
+              className="flex items-center hover:text-blue-200 transition-colors duration-200 group"
+              aria-label="Email university"
+            >
+              <Mail className="h-3.5 w-3.5 mr-1 flex-shrink-0" />
+              <span className="whitespace-nowrap">hr@sarojuniversity.edu.in</span>
+            </a>
 
               <div className="flex space-x-4">
                           <a href="https://www.facebook.com/siulucknow" 
