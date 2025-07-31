@@ -28,6 +28,8 @@ import PopupForm from "../components/PopupForm.jsx";
 import TopScrollButton from "../components/ScrollTopButton.jsx";
 import LatestNews from "../components/LatestNews.jsx";
 import { Helmet } from "react-helmet";
+// import InstagramEmbedComponent from "../components/InstagramFeed.jsx";
+import InstagramFeed from "../components/InstagramFeed.jsx";
 
 function Home() {
   const logos = [
@@ -54,11 +56,13 @@ function Home() {
         <CompaniesTieUps/>
         <StatsSection/>
         <HiringPartnersSection />
+        <InstagramFeed />
         <ApprovalsSection />
        <ThinkInspirationSection/>
         <ProgramsSection />
         <NewsSection/>
         <TestimonialSlider />
+      
         
         
       </Layout>
