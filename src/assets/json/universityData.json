@@ -75,10 +75,10 @@
         "specializations": "General, International Relations",
         "duration_in_yrs": 3,
         "fees": {
-          "year1": 80000,
-          "year2": 80000,
-          "year3": 80000,
-          "total": 240000
+          "year1": 60000,
+          "year2": 60000,
+          "year3": 60000,
+          "total": 180000
         }
       },
       {
@@ -532,9 +532,9 @@
           ],
           "duration_in_yrs": 2,
           "fees": {
-            "year1": 90000,
-            "year2": 90000,
-            "total": 180000
+            "year1": 100000,
+            "year2": 100000,
+            "total": 200000
           }
         },
         {
@@ -558,9 +558,9 @@
           ],
           "duration_in_yrs": 2,
           "fees": {
-            "year1": 90000,
-            "year2": 90000,
-            "total": 180000
+            "year1": 100000,
+            "year2": 100000,
+            "total": 200000
           }
         },
         {
