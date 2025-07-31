@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Worker, Viewer, SpecialZoomLevel } from '@react-pdf-viewer/core';
 import { searchPlugin } from '@react-pdf-viewer/search';
-import { FiX, FiSearch, FiBookmark, FiShare2, FiZoomIn, FiZoomOut } from 'react-icons/fi';
+import { FiX, } from 'react-icons/fi';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 
 function PdfViewerModal({ fileUrl, onClose, fileName }) {

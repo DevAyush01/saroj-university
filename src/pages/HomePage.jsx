@@ -6,7 +6,7 @@ import HeroSection from "../components/HeroSection.jsx";
 import Happenings from "../components/Happenings.jsx";
 import CompaniesTieUps from "../components/Tieups.jsx";
 import NewsSection from "../components/NewsAndEvents.jsx";
-import FloatingAdmissionAlert from "../components/FloatingAdmissionAlert.jsx";
+import FloatingAdmissionAlert from "../components/FloatingSocialMediaIcons.jsx";
 import TestimonialSlider from "../components/Testimonial.jsx";
 import CircleSlider from "../components/CompanyTieUps.jsx";
 import SemiCircularLogoSlider from "../components/CompanyTieUps.jsx";
@@ -28,6 +28,8 @@ import PopupForm from "../components/PopupForm.jsx";
 import TopScrollButton from "../components/ScrollTopButton.jsx";
 import LatestNews from "../components/LatestNews.jsx";
 import { Helmet } from "react-helmet";
+// import InstagramEmbedComponent from "../components/InstagramFeed.jsx";
+import InstagramFeed from "../components/InstagramFeed.jsx";
 
 function Home() {
   const logos = [
@@ -49,17 +51,18 @@ function Home() {
       <Layout>
       
         <PopupForm/>
-        <FloatingAdmissionAlert/>
         <HeroSection/>
         <LightAIBanner/>
         <CompaniesTieUps/>
         <StatsSection/>
         <HiringPartnersSection />
+        <InstagramFeed />
         <ApprovalsSection />
        <ThinkInspirationSection/>
         <ProgramsSection />
         <NewsSection/>
         <TestimonialSlider />
+      
         
         
       </Layout>

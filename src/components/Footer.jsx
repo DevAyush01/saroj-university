@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaPhone, FaMapMarkerAlt, FaEnvelope, FaArrowUp } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaInstagram, FaPhone, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -81,16 +81,18 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <FaMapMarkerAlt className="mt-1 text-yellow-400" />
-                <span>12th Km Stone, Sultanpur Road, Near Purvanchal Expressway, Gosaiganj, Lucknow, Uttar Pradesh - 226 022</span>
+                <span>12th Km Stone, Sultanpur Road, Near Purvanchal Expressway, Gosaiganj, Lucknow, Uttar Pradesh - 226022</span>
               </li>
               <li className="flex items-center gap-2">
                 <FaPhone className="text-yellow-400" />
                 <a href="tel:+919513731275" className="hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">+91 95137-31275</a>
               </li>
-              <li className="flex items-center gap-2">
+              
+               <li className="flex items-center gap-2">
                 <FaPhone className="text-yellow-400" />
-                <a href="tel:+915223116178" className="hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">+91-522-311-6178</a>
+                <a href="tel:+919513731275" className="hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">+91 9151038001-005</a>
               </li>
+             
               <li className="flex items-center gap-2">
                 <FaEnvelope className="text-yellow-400" />
                 <a href="mailto:info@sarojuniversity.edu.in" className="hover:text-yellow-400 hover:underline hover:underline-offset-8 transition-colors duration-300">info@sarojuniversity.edu.in</a>

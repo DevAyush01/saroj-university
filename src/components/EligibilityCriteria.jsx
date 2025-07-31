@@ -1,4 +1,4 @@
-import { GraduationCap, BookOpen, Atom, Cpu, BrainCircuit, CheckCircle } from 'lucide-react';
+import { GraduationCap, BookOpen, Atom, CheckCircle } from 'lucide-react';
 
 const EligibilityCriteria = () => {
   return (

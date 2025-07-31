@@ -111,23 +111,23 @@ const CyberSecurityPage = () => {
       "As per Fortune Business Insights, the global Cyber Security market size was valued at US$172.24 billion in 2023. The market is projected to grow from US$193.73 billion in 2024 to US$562.72 billion by 2032, exhibiting a CAGR of 14.3% during the forecast period."
     ],
     jobRoles: ["Cyber Security Analyst", "Information Security Officer", "Security Consultant", "Penetration Tester", "Security Architect"], // Added example job roles as it was an empty array
-    courseurl: "#", // Placeholder
+    courseurl: "https://www.tcsion.com/courses/industry-honour-course/cyber-security-advance/", // Placeholder
     courseBanner: 'https://cdn.pixabay.com/photo/2018/05/18/11/03/cyber-security-3410923_640.jpg', // Placeholder, assuming you will add this image
   };
 
   // Generic features (can be adapted if specific ones for this course are provided later)
   const features = [
     {
-      icon: <BriefcaseBusiness className="w-8 h-8 text-blue-600" />,
+      icon: <BriefcaseBusiness className="w-8 h-8 text-orange-600" />,
       title: "Assured Internship and Placement"
     },
     {
-      icon: <Award className="w-8 h-8 text-blue-600" />,
-      title: "Microsoft Global Certifications"
+      icon: <Award className="w-8 h-8 text-orange-600" />,
+      title: "TCS Certifications"
     },
     {
-      icon: <Globe className="w-8 h-8 text-blue-600" />,
-      title: "Specialisation in Generative AI"
+      icon: <Globe className="w-8 h-8 text-orange-600" />,
+      title: "Specialisation in Cyber Security"
     }
   ];
 
@@ -157,20 +157,19 @@ const CyberSecurityPage = () => {
                     <BookOpen className="mr-2 h-5 w-5" />
                     <span>{courseData.degree}</span>
                   </div>
-                  <div className="flex items-center bg-white/20 px-4 py-2 rounded-full">
-                    <Clock className="mr-2 h-5 w-5" />
-                    <span>Semester {courseData.semester}</span>
-                  </div>
+                 
                 </div>
-                <a
-                  href={courseData.courseurl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-white text-blue-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition"
-                >
-                  Enroll Now
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </a>
+               <div class="button-slide">    
+                              <a 
+                                href={courseData.courseurl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center bg-white text-blue-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition"
+                                >
+                                Enroll Now
+                                <ChevronRight className="ml-2 h-5 w-5" />
+                              </a>
+                                  </div>
               </div>
               <div className="md:w-1/2 flex justify-center">
                 <div className="relative w-full max-w-md">
@@ -179,7 +178,7 @@ const CyberSecurityPage = () => {
                   <img
                     src={courseData.courseBanner}
                     alt={courseData.title}
-                    className="relative z-10 w-full h-auto rounded-lg shadow-2xl border-4 border-white"
+                    className="relative z-10 w-full h-auto rounded-lg shadow-2xl border-4 border-white slide-up"
                   />
                 </div>
               </div>
@@ -192,12 +191,18 @@ const CyberSecurityPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition">
-                  <div className="mb-4 p-3 bg-blue-50 rounded-full">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-lg font-medium text-gray-900">{feature.title}</h3>
-                </div>
+                <div
+    
+      key={index}
+      className="group border-orange-600 border-l-2 flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm transition hover:bg-orange-50 hover:text-orange-800 hover:shadow-md"
+    >
+      <div className="mb-4 p-3 rounded-full bg-orange-50 transition group-hover:bg-orange-100">
+        {feature.icon}
+      </div>
+      <h3 className="text-lg font-medium text-gray-900 transition group-hover:text-orange-700">
+        {feature.title}
+      </h3>
+    </div>
               ))}
             </div>
           </div>
@@ -226,10 +231,10 @@ const CyberSecurityPage = () => {
                 <div className="space-y-4">
                   {courseData.syllabus.map((module, index) => (
                     <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                      <div className="w-full flex justify-between items-center p-4 bg-gray-50">
+                      <div className="w-full flex justify-between items-center p-4 bg-gradient-to-r from-orange-800 to-orange-600">
                         <div className="flex items-center">
-                          <span className="mr-3 text-blue-600 font-semibold">{index + 1}.</span>
-                          <h4 className="text-lg font-medium text-left">{module.title}</h4>
+                          <span className="mr-3 text-white font-semibold">{index + 1}.</span>
+                          <h4 className="text-lg font-medium text-left text-white">{module.title}</h4>
                         </div>
                       </div>
                       <div className="p-4 border-t border-gray-200">

@@ -26,7 +26,7 @@ const EntrepreneurshipAndBusiness = () => {
     {
       id: 'bba-entrepreneurship',
       title: 'BBA in Entrepreneurship',
-      duration: '4 Years',
+      duration: '3 Years',
       level: 'undergraduate', // Added level for filtering
       icon: <FaLightbulb className="text-yellow-500 text-2xl" />,
       description: 'Develop comprehensive business acumen and practical skills to launch and grow successful ventures from ideation to execution.',

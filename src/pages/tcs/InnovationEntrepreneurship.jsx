@@ -120,16 +120,16 @@ const InnovationEntrepreneurshipPage1 = () => {
   // Features data (reused from your DesignThinkingPage structure)
   const features = [
     {
-      icon: <BriefcaseBusiness className="w-8 h-8 text-blue-600" />,
+      icon: <BriefcaseBusiness className="w-8 h-8 text-orange-600" />,
       title: "Assured Internship and Placement"
     },
     {
-      icon: <Award className="w-8 h-8 text-blue-600" />,
-      title: "Microsoft Global Certifications"
+      icon: <Award className="w-8 h-8 text-orange-600" />,
+      title: "TCS Certifications"
     },
     {
-      icon: <Globe className="w-8 h-8 text-blue-600" />,
-      title: "Specialisation in Generative AI"
+      icon: <Globe className="w-8 h-8 text-orange-600" />,
+      title: "Specialisation in Innovation & Entrepreneurship"
     }
   ];
 
@@ -158,20 +158,19 @@ const InnovationEntrepreneurshipPage1 = () => {
                     <BookOpen className="mr-2 h-5 w-5" />
                     <span>{courseData.degree}</span>
                   </div>
-                  <div className="flex items-center bg-white/20 px-4 py-2 rounded-full">
-                    <Clock className="mr-2 h-5 w-5" />
-                    <span>Semester {courseData.semester}</span>
-                  </div>
+                 
                 </div>
-                <a
-                  href={courseData.courseurl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-white text-blue-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition"
-                >
-                  Enroll Now
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </a>
+                 <div class="button-slide">    
+                                <a 
+                                  href={courseData.courseurl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center bg-white text-blue-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition"
+                                  >
+                                  Enroll Now
+                                  <ChevronRight className="ml-2 h-5 w-5" />
+                                </a>
+                                    </div>
               </div>
               <div className="md:w-1/2 flex justify-center">
                 <div className="relative w-full max-w-md">
@@ -180,7 +179,7 @@ const InnovationEntrepreneurshipPage1 = () => {
                   <img
                     src={courseData.courseBanner} // Using the provided course banner
                     alt={courseData.title}
-                    className="relative z-10 w-full h-auto rounded-lg shadow-2xl border-4 border-white"
+                    className="relative z-10 w-full h-auto rounded-lg shadow-2xl border-4 border-white slide-up"
                   />
                 </div>
               </div>
@@ -193,12 +192,18 @@ const InnovationEntrepreneurshipPage1 = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition">
-                  <div className="mb-4 p-3 bg-blue-50 rounded-full">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-lg font-medium text-gray-900">{feature.title}</h3>
-                </div>
+ <div
+    
+      key={index}
+      className="group border-orange-600 border-l-2 flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm transition hover:bg-orange-50 hover:text-orange-800 hover:shadow-md"
+    >
+      <div className="mb-4 p-3 rounded-full bg-orange-50 transition group-hover:bg-orange-100">
+        {feature.icon}
+      </div>
+      <h3 className="text-lg font-medium text-gray-900 transition group-hover:text-orange-700">
+        {feature.title}
+      </h3>
+    </div>
               ))}
             </div>
           </div>
@@ -227,10 +232,10 @@ const InnovationEntrepreneurshipPage1 = () => {
                 <div className="space-y-4">
                   {courseData.syllabus.map((module, index) => (
                     <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                      <div className="w-full flex justify-between items-center p-4 bg-gray-50">
+                      <div className="w-full flex justify-between items-center p-4 bg-gradient-to-r from-orange-800 to-orange-600">
                         <div className="flex items-center">
-                          <span className="mr-3 text-blue-600 font-semibold">{index + 1}.</span>
-                          <h4 className="text-lg font-medium text-left">{module.title}</h4>
+                          <span className="mr-3 text-white font-semibold">{index + 1}.</span>
+                          <h4 className="text-lg font-medium text-left text-white">{module.title}</h4>
                         </div>
                       </div>
                       <div className="p-4 border-t border-gray-200">

@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Mail, MapPin, Phone, Send, Loader2, Globe } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Loader2, Globe, Navigation, Dessert } from 'lucide-react';
 import { toast, Toaster } from 'react-hot-toast';
 import Layout from '../../components/Layout';
 import { Helmet } from 'react-helmet';
 import emailjs from '@emailjs/browser';
+import { delay } from 'framer-motion';
 
 const Contact = () => {
   const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
@@ -262,9 +263,7 @@ const Contact = () => {
                       <div>
                         <h3 className="text-lg font-medium text-gray-800">Address</h3>
                         <p className="text-gray-600">
-                          Purvanchal Expressway, Sultanpur Road<br />
-                          Chandsarai, Gosaiganj<br />
-                          Lucknow, Uttar Pradesh - 226022
+                        12th Km Stone, Sultanpur Road, <br/>Near Purvanchal Expressway, <br/>Gosaiganj, Lucknow, Uttar Pradesh - 226022
                         </p>
                       </div>
                     </div>
@@ -326,7 +325,7 @@ const Contact = () => {
                 {/* Google Map */}
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-2xl overflow-hidden transform transition-all hover:shadow-2xl hover:-translate-y-1">
                   
-                  <div className="aspect-w-16 aspect-h-9 w-full h-58 ">
+                <div className="aspect-w-16 aspect-h-9 w-full h-60 border-white border-6">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.173324304345!2d81.0798900752192!3d26.770744476732116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be76246cd85e5%3A0xf68400cf231026d6!2sSaroj%20International%20University!5e0!3m2!1sen!2sin!4v1751712043473!5m2!1sen!2sin"
                       width="100%"
