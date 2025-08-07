@@ -518,7 +518,7 @@ const SIUFeeStructure = () => {
                 <li>All fees are in Indian Rupees (₹)</li>
                 <li>Fees are subject to change as per university policies</li>
                 <li>Additional charges may apply for specific programs</li>
-                <li>The "Law" domain is not included as no data was provided for it in the original dataset.</li>
+                
               </ul>
             </div>
           </div>

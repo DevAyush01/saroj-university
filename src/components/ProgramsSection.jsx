@@ -21,396 +21,397 @@ import {
 import { Link } from "react-router-dom";
 
 const ProgramsSection = () => {
-  const programs = [
-    {
-      id: 1,
-      title: "Artificial Intelligence & Technology",
-      description:
-        "Cutting-edge programs in AI, ML, Data Science, and Robotics",
-      degrees: [
-        {
-          name: "B.Tech (AI, ML, Data Science, Robotics)",
-          duration: "4 Years",
-          fee: "₹1,10,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "10+2 with Physics, Chemistry, Mathematics",
-            "Minimum 50% marks",
-            "Entrance exam scores may be required",
-          ],
-        },
-        {
-          name: "B.Tech Computer Science & Engineering",
-          duration: "4 Years",
-          fee: "₹1,10,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "10+2 with Physics, Chemistry, Mathematics",
-            "Minimum 50% marks",
-            "Entrance exam scores may be required",
-          ],
-        },
-        {
-          name: "M.Tech (AI, ML, Data Science, Robotics)",
-          duration: "2 Years",
-          fee: "₹1,25,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "B.Tech/B.E. in relevant field",
-            "Minimum 50% marks",
-            "Professional certifications may be considered",
-          ],
-        },
-        {
-          name: "M.Tech Computer Science & Engineering",
-          duration: "2 Years",
-          fee: "₹1,25,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "B.Tech/B.E. in relevant field",
-            "Minimum 50% marks",
-            "Professional certifications may be considered",
-          ],
-        },
-      ],
-      icon: <Cpu className="w-5 h-5" />,
-      color: "bg-blue-100 text-blue-800",
-      borderColor: "border-blue-200",
-      bgColor: "from-blue-50 to-blue-100",
-      buttonColor:
-        "from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900",
-    },
-    {
-      id: 2,
-      title: "Management & Technology",
-      description: "Programs blending technology with business management",
-      degrees: [
-        {
-          name: "B.Tech (CSE, IT, Cyber Security, IoT)",
-          duration: "4 Years",
-          fee: "₹1,10,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "10+2 with Physics, Chemistry, Mathematics",
-            "Minimum 50% marks",
-            "Entrance exam scores may be required",
-          ],
-        },
-        {
-          name: "BCA (AI, ML, Cyber Security)",
-          duration: "3 Years",
-          fee: "₹1,00,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "10+2 from recognized board",
-            "Minimum 50% marks",
-            "Basic computer knowledge preferred",
-          ],
-        },
-        {
-          name: "MCA (AI, ML, Cyber Security)",
-          duration: "2 Years",
-          fee: "₹1,25,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "Bachelor's degree in any discipline",
-            "Minimum 50% marks",
-            "Mathematics in 10+2 preferred",
-          ],
-        },
-        {
-          name: "M.Tech (CSE, IT, Cyber Security, IoT)",
-          duration: "2 Years",
-          fee: "₹1,25,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "B.Tech/B.E. in relevant field",
-            "Minimum 50% marks",
-            "Entrance exam scores may be required",
-          ],
-        },
-      ],
-      icon: <Briefcase className="w-5 h-5" />,
-      color: "bg-purple-100 text-purple-800",
-      borderColor: "border-purple-200",
-      bgColor: "from-purple-50 to-purple-100",
-      buttonColor:
-        "from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900",
-    },
-    {
-      id: 3,
-      title: "Entrepreneurship & Business",
-      description:
-        "Programs designed for future business leaders and entrepreneurs",
-      degrees: [
-        {
-          name: "BBA (General, Banking, Marketing)",
-          duration: "3 Years",
-          fee: "₹1,10,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "10+2 from recognized board",
-            "Minimum 50% marks",
-            "Entrance exam scores may be required",
-          ],
-        },
-        {
-          name: "BBA (Logistics, HR, IT, Entrepreneurship)",
-          duration: "3 Years",
-          fee: "₹1,10,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "10+2 from recognized board",
-            "Minimum 50% marks",
-            "Entrance exam scores may be required",
-          ],
-        },
-        {
-          name: "BBA (Insurance, Retail, Start-Ups)",
-          duration: "3 Years",
-          fee: "₹1,10,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "10+2 from recognized board",
-            "Minimum 50% marks",
-            "Entrance exam scores may be required",
-          ],
-        },
-        {
-          name: "MBA",
-          duration: "2 Years",
-          fee: "₹1,25,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "Bachelor's degree in any discipline",
-            "Minimum 50% marks",
-            "Entrance exam scores may be required",
-          ],
-        },
-      ],
-      icon: <Briefcase className="w-5 h-5" />,
-      color: "bg-green-100 text-green-800",
-      borderColor: "border-green-200",
-      bgColor: "from-green-50 to-green-100",
-      buttonColor:
-        "from-green-600 to-green-800 hover:from-green-700 hover:to-green-900",
-    },
-    {
-      id: 4,
-      title: "Humanities & Education",
-      description: "Programs in arts, commerce, and education",
-      degrees: [
-        {
-          name: "BA",
-          duration: "3 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular/Global",
-          criteria: ["10+2 from recognized board", "Minimum 50% marks"],
-        },
-        {
-          name: "B.Com",
-          duration: "3 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular/Global",
-          criteria: ["10+2 from recognized board", "Minimum 50% marks"],
-        },
-        {
-          name: "B.Ed",
-          duration: "2 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular",
-          criteria: [
-            "Bachelor's degree in any discipline",
-            "Minimum 50% marks",
-          ],
-        },
-        {
-          name: "MA",
-          duration: "2 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "Bachelor's degree in any discipline",
-            "Minimum 50% marks",
-          ],
-        },
-      ],
-      icon: <School className="w-5 h-5" />,
-      color: "bg-yellow-100 text-yellow-800",
-      borderColor: "border-yellow-200",
-      bgColor: "from-yellow-50 to-yellow-100",
-      buttonColor:
-        "from-yellow-600 to-yellow-800 hover:from-yellow-700 hover:to-yellow-900",
-    },
-    {
-      id: 5,
-      title: "Basic & Health Sciences",
-      description: "Programs in pure sciences and health-related fields",
-      degrees: [
-        {
-          name: "B.Sc (Physics, Chemistry, Biology, Math)",
-          duration: "3 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "10+2 with relevant science subjects",
-            "Minimum 50% marks",
-          ],
-        },
-        {
-          name: "BS (Data Science, Physiotherapy)",
-          duration: "3 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular/Global",
-          criteria: ["10+2 with relevant subjects", "Minimum 50% marks"],
-        },
-        {
-          name: "M.Sc (Physics, Chemistry, Biology, Math)",
-          duration: "2 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular/Global",
-          criteria: ["B.Sc in relevant subject", "Minimum 50% marks"],
-        },
-        {
-          name: "MS (Data Science, Physiotherapy)",
-          duration: "2 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular/Global",
-          criteria: [
-            "Bachelor's degree in relevant field",
-            "Minimum 50% marks",
-          ],
-        },
-      ],
-      icon: <FlaskConical className="w-5 h-5" />,
-      color: "bg-red-100 text-red-800",
-      borderColor: "border-red-200",
-      bgColor: "from-red-50 to-red-100",
-      buttonColor:
-        "from-red-600 to-red-800 hover:from-red-700 hover:to-red-900",
-    },
-    {
-      id: 6,
-      title: "Pharmacy",
-      description: "Programs in pharmaceutical sciences",
-      degrees: [
-        {
-          name: "B.Pharm",
-          duration: "4 Years",
-          fee: "₹1,10,000/yr",
-          mode: "Regular",
-          criteria: [
-            "10+2 with Physics, Chemistry, Biology/Mathematics",
-            "Minimum 50% marks",
-          ],
-        },
-        {
-          name: "D.Pharm",
-          duration: "2 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular",
-          criteria: [
-            "10+2 with Physics, Chemistry, Biology/Mathematics",
-            "Minimum 50% marks",
-          ],
-        },
-        {
-          name: "M.Pharm",
-          duration: "2 Years",
-          fee: "₹1,25,000/yr",
-          mode: "Regular",
-          criteria: ["B.Pharm degree", "Minimum 50% marks"],
-        },
-        {
-          name: "Ph.D (Pharmacy)",
-          duration: "3-5 Years",
-          fee: "₹1,00,000/yr",
-          mode: "Regular",
-          criteria: ["M.Pharm or equivalent", "Minimum 55% marks"],
-        },
-      ],
-      icon: <Pill className="w-5 h-5" />,
-      color: "bg-indigo-100 text-indigo-800",
-      borderColor: "border-indigo-200",
-      bgColor: "from-indigo-50 to-indigo-100",
-      buttonColor:
-        "from-indigo-600 to-indigo-800 hover:from-indigo-700 hover:to-indigo-900",
-    },
-    {
-      id: 7,
-      title: "Sports Science",
-      description: "Programs in sports science and research",
-      degrees: [
-        {
-          name: "BS (Sports Science)",
-          duration: "3 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular",
-          criteria: ["10+2 from recognized board", "Minimum 50% marks"],
-        },
-        {
-          name: "MS (Sports Science)",
-          duration: "2 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular",
-          criteria: [
-            "Bachelor's degree in any discipline",
-            "Minimum 50% marks",
-          ],
-        },
-      ],
-      icon: <Dumbbell className="w-5 h-5" />,
-      color: "bg-orange-100 text-orange-800",
-      borderColor: "border-orange-200",
-      bgColor: "from-orange-50 to-orange-100",
-      buttonColor:
-        "from-orange-600 to-orange-800 hover:from-orange-700 hover:to-orange-900",
-    },
-    {
-      id: 8,
-      title: "Film & Fashion",
-      description: "Creative programs in film, fashion, and media",
-      degrees: [
-        {
-          name: "B.Sc (Film Making, Cinematography)",
-          duration: "3 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular",
-          criteria: ["10+2 from recognized board", "Minimum 50% marks"],
-        },
-        {
-          name: "BA (Acting, Journalism, PR)",
-          duration: "3 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular",
-          criteria: ["10+2 from recognized board", "Minimum 50% marks"],
-        },
-        {
-          name: "Diploma (Film Making, Acting)",
-          duration: "1 Year",
-          fee: "₹1,00,000",
-          mode: "Regular",
-          criteria: ["10+2 from recognized board", "Minimum 50% marks"],
-        },
-        {
-          name: "M.Sc (Film Making, Cinematography)",
-          duration: "2 Years",
-          fee: "₹80,000/yr",
-          mode: "Regular",
-          criteria: [
-            "Bachelor's degree in any discipline",
-            "Minimum 50% marks",
-          ],
-        },
-      ],
-      icon: <Film className="w-5 h-5" />,
-      color: "bg-pink-100 text-pink-800",
-      borderColor: "border-pink-200",
-      bgColor: "from-pink-50 to-pink-100",
-      buttonColor:
-        "from-pink-600 to-pink-800 hover:from-pink-700 hover:to-pink-900",
-    },
-  ];
+const programs = [
+  {
+    id: 1,
+    title: "Artificial Intelligence & Technology",
+    description:
+      "Cutting-edge programs in AI, ML, Data Science, and Robotics",
+    degrees: [
+      {
+        name: "B.Tech (AI, ML, Data Science, Robotics)",
+        duration: "4 Years",
+        fee: "₹1,10,000/yr",
+        mode: "Regular",
+        criteria: [
+          "10+2 with Physics, Chemistry, Mathematics",
+          "Minimum 50% marks",
+          "Entrance exam scores may be required",
+        ],
+      },
+      {
+        name: "B.Tech Computer Science & Engineering",
+        duration: "4 Years",
+        fee: "₹1,10,000/yr",
+        mode: "Regular",
+        criteria: [
+          "10+2 with Physics, Chemistry, Mathematics",
+          "Minimum 50% marks",
+          "Entrance exam scores may be required",
+        ],
+      },
+      {
+        name: "M.Tech (AI, ML, Data Science, Robotics)",
+        duration: "2 Years",
+        fee: "₹1,25,000/yr",
+        mode: "Regular",
+        criteria: [
+          "B.Tech/B.E. in relevant field",
+          "Minimum 50% marks",
+          "Professional certifications may be considered",
+        ],
+      },
+      {
+        name: "M.Tech Computer Science & Engineering",
+        duration: "2 Years",
+        fee: "₹1,25,000/yr",
+        mode: "Regular",
+        criteria: [
+          "B.Tech/B.E. in relevant field",
+          "Minimum 50% marks",
+          "Professional certifications may be considered",
+        ],
+      },
+    ],
+    icon: <Cpu className="w-5 h-5" />,
+    color: "bg-blue-100 text-blue-800",
+    borderColor: "border-blue-200",
+    bgColor: "from-blue-50 to-blue-100",
+    buttonColor:
+      "from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900",
+  },
+  {
+    id: 2,
+    title: "Management & Technology",
+    description: "Programs blending technology with business management",
+    degrees: [
+      {
+        name: "B.Tech (CSE, IT, Cyber Security, IoT)",
+        duration: "4 Years",
+        fee: "₹1,10,000/yr",
+        mode: "Regular",
+        criteria: [
+          "10+2 with Physics, Chemistry, Mathematics",
+          "Minimum 50% marks",
+          "Entrance exam scores may be required",
+        ],
+      },
+      {
+        name: "BCA (AI, ML, Cyber Security)",
+        duration: "3 Years",
+        fee: "₹1,00,000/yr",
+        mode: "Regular",
+        criteria: [
+          "10+2 from recognized board",
+          "Minimum 50% marks",
+          "Basic computer knowledge preferred",
+        ],
+      },
+      {
+        name: "MCA (AI, ML, Cyber Security)",
+        duration: "2 Years",
+        fee: "₹1,20,000/yr",
+        mode: "Regular",
+        criteria: [
+          "Bachelor's degree in any discipline",
+          "Minimum 50% marks",
+          "Mathematics in 10+2 preferred",
+        ],
+      },
+      {
+        name: "M.Tech (CSE, IT, Cyber Security, IoT)",
+        duration: "2 Years",
+        fee: "₹1,25,000/yr",
+        mode: "Regular",
+        criteria: [
+          "B.Tech/B.E. in relevant field",
+          "Minimum 50% marks",
+          "Entrance exam scores may be required",
+        ],
+      },
+    ],
+    icon: <Briefcase className="w-5 h-5" />,
+    color: "bg-purple-100 text-purple-800",
+    borderColor: "border-purple-200",
+    bgColor: "from-purple-50 to-purple-100",
+    buttonColor:
+      "from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900",
+  },
+  {
+    id: 3,
+    title: "Entrepreneurship & Business",
+    description:
+      "Programs designed for future business leaders and entrepreneurs",
+    degrees: [
+      {
+        name: "BBA (General, Banking, Marketing)",
+        duration: "3 Years",
+        fee: "₹1,10,000/yr",
+        mode: "Regular",
+        criteria: [
+          "10+2 from recognized board",
+          "Minimum 50% marks",
+          "Entrance exam scores may be required",
+        ],
+      },
+      {
+        name: "BBA (Logistics, HR, IT, Entrepreneurship)",
+        duration: "3 Years",
+        fee: "₹1,10,000/yr",
+        mode: "Regular",
+        criteria: [
+          "10+2 from recognized board",
+          "Minimum 50% marks",
+          "Entrance exam scores may be required",
+        ],
+      },
+      {
+        name: "BBA (Insurance, Retail, Start-Ups)",
+        duration: "3 Years",
+        fee: "₹1,10,000/yr",
+        mode: "Regular",
+        criteria: [
+          "10+2 from recognized board",
+          "Minimum 50% marks",
+          "Entrance exam scores may be required",
+        ],
+      },
+      {
+        name: "MBA",
+        duration: "2 Years",
+        fee: "₹1,20,000/yr",
+        mode: "Regular",
+        criteria: [
+          "Bachelor's degree in any discipline",
+          "Minimum 50% marks",
+          "Entrance exam scores may be required",
+        ],
+      },
+    ],
+    icon: <Briefcase className="w-5 h-5" />,
+    color: "bg-green-100 text-green-800",
+    borderColor: "border-green-200",
+    bgColor: "from-green-50 to-green-100",
+    buttonColor:
+      "from-green-600 to-green-800 hover:from-green-700 hover:to-green-900",
+  },
+  {
+    id: 4,
+    title: "Humanities & Education",
+    description: "Programs in arts, commerce, and education",
+    degrees: [
+      {
+        name: "BA",
+        duration: "3 Years",
+        fee: "₹60,000/yr",
+        mode: "Regular",
+        criteria: ["10+2 from recognized board", "Minimum 50% marks"],
+      },
+      {
+        name: "B.Com",
+        duration: "3 Years",
+        fee: "₹60,000/yr",
+        mode: "Regular",
+        criteria: ["10+2 from recognized board", "Minimum 50% marks"],
+      },
+      {
+        name: "B.Ed",
+        duration: "2 Years",
+        fee: "₹60,000/yr",
+        mode: "Regular",
+        criteria: [
+          "Bachelor's degree in any discipline",
+          "Minimum 50% marks",
+        ],
+      },
+      {
+        name: "MA",
+        duration: "2 Years",
+        fee: "₹60,000/yr",
+        mode: "Regular",
+        criteria: [
+          "Bachelor's degree in any discipline",
+          "Minimum 50% marks",
+        ],
+      },
+    ],
+    icon: <School className="w-5 h-5" />,
+    color: "bg-yellow-100 text-yellow-800",
+    borderColor: "border-yellow-200",
+    bgColor: "from-yellow-50 to-yellow-100",
+    buttonColor:
+      "from-yellow-600 to-yellow-800 hover:from-yellow-700 hover:to-yellow-900",
+  },
+  {
+    id: 5,
+    title: "Basic & Health Sciences",
+    description: "Programs in pure sciences and health-related fields",
+    degrees: [
+      {
+        name: "B.Sc (Physics, Chemistry, Biology, Math)",
+        duration: "3 Years",
+        fee: "₹80,000/yr",
+        mode: "Regular",
+        criteria: [
+          "10+2 with relevant science subjects",
+          "Minimum 50% marks",
+        ],
+      },
+      {
+        name: "BS (Data Science, Physiotherapy)",
+        duration: "3 Years",
+        fee: "₹80,000/yr",
+        mode: "Regular",
+        criteria: ["10+2 with relevant subjects", "Minimum 50% marks"],
+      },
+      {
+        name: "M.Sc (Physics, Chemistry, Biology, Math)",
+        duration: "2 Years",
+        fee: "₹80,000/yr",
+        mode: "Regular",
+        criteria: ["B.Sc in relevant subject", "Minimum 50% marks"],
+      },
+      {
+        name: "MS (Data Science, Physiotherapy)",
+        duration: "2 Years",
+        fee: "₹80,000/yr",
+        mode: "Regular",
+        criteria: [
+          "Bachelor's degree in relevant field",
+          "Minimum 50% marks",
+        ],
+      },
+    ],
+    icon: <FlaskConical className="w-5 h-5" />,
+    color: "bg-red-100 text-red-800",
+    borderColor: "border-red-200",
+    bgColor: "from-red-50 to-red-100",
+    buttonColor:
+      "from-red-600 to-red-800 hover:from-red-700 hover:to-red-900",
+  },
+  {
+    id: 6,
+       title: "Pharmacy",
+    description: "Programs in pharmaceutical sciences",
+    degrees: [
+      {
+        name: "B.Pharm",
+        duration: "4 Years",
+        fee: "₹1,00,000/yr",
+        mode: "Regular",
+        criteria: [
+          "10+2 with Physics, Chemistry, Biology/Mathematics",
+          "Minimum 50% marks",
+        ],
+      },
+      {
+        name: "D.Pharm",
+        duration: "2 Years",
+        fee: "₹1,00,000/yr",
+        mode: "Regular",
+        criteria: [
+          "10+2 with Physics, Chemistry, Biology/Mathematics",
+          "Minimum 50% marks",
+        ],
+      },
+      {
+        name: "M.Pharm",
+        duration: "2 Years",
+        fee: "₹1,00,000/yr",
+        mode: "Regular",
+        criteria: ["B.Pharm degree", "Minimum 50% marks"],
+      },
+      {
+        name: "Ph.D (Pharmacy)",
+        duration: "3-5 Years",
+        fee: "₹1,00,000/yr",
+        mode: "Regular",
+        criteria: ["M.Pharm or equivalent", "Minimum 55% marks"],
+      },
+    ],
+    icon: <Pill className="w-5 h-5" />,
+    color: "bg-indigo-100 text-indigo-800",
+    borderColor: "border-indigo-200",
+    bgColor: "from-indigo-50 to-indigo-100",
+    buttonColor:
+      "from-indigo-600 to-indigo-800 hover:from-indigo-700 hover:to-indigo-900",
+  },
+  {
+    id: 7,
+    title: "Sports Science",
+    description: "Programs in sports science and research",
+    degrees: [
+      {
+        name: "BS (Sports Science)",
+        duration: "3 Years",
+        fee: "₹90,000/yr",
+        mode: "Regular",
+        criteria: ["10+2 from recognized board", "Minimum 50% marks"],
+      },
+      {
+        name: "MS (Sports Science)",
+        duration: "2 Years",
+        fee: "₹90,000/yr",
+        mode: "Regular",
+        criteria: [
+          "Bachelor's degree in any discipline",
+          "Minimum 50% marks",
+        ],
+      },
+    ],
+    icon: <Dumbbell className="w-5 h-5" />,
+    color: "bg-orange-100 text-orange-800",
+    borderColor: "border-orange-200",
+    bgColor: "from-orange-50 to-orange-100",
+    buttonColor:
+      "from-orange-600 to-orange-800 hover:from-orange-700 hover:to-orange-900",
+  },
+  {
+    id: 8,
+    title: "Film & Fashion",
+    description: "Creative programs in film, fashion, and media",
+    degrees: [
+      {
+        name: "B.Sc (Film Making, Cinematography)",
+        duration: "3 Years",
+        fee: "₹1,00,000/yr",
+        mode: "Regular",
+        criteria: ["10+2 from recognized board", "Minimum 50% marks"],
+      },
+      {
+        name: "BA (Acting, Journalism, PR)",
+        duration: "3 Years",
+        fee: "₹1,00,000/yr",
+        mode: "Regular",
+        criteria: ["10+2 from recognized board", "Minimum 50% marks"],
+      },
+      {
+        name: "Diploma (Film Making, Acting)",
+        duration: "1 Year",
+        fee: "₹1,00,000",
+        mode: "Regular",
+        criteria: ["10+2 from recognized board", "Minimum 50% marks"],
+      },
+      {
+        name: "M.Sc (Film Making, Cinematography)",
+        duration: "2 Years",
+        fee: "₹1,00,000/yr",
+        mode: "Regular",
+        criteria: [
+          "Bachelor's degree in any discipline",
+          "Minimum 50% marks",
+        ],
+      },
+    ],
+    icon: <Film className="w-5 h-5" />,
+    color: "bg-pink-100 text-pink-800",
+    borderColor: "border-pink-200",
+    bgColor: "from-pink-50 to-pink-100",
+    buttonColor:
+      "from-pink-600 to-pink-800 hover:from-pink-700 hover:to-pink-900",
+  },
+];
+
 
   const [activeTab, setActiveTab] = useState(programs[0].id);
   const [hoveredProgram, setHoveredProgram] = useState(null);
