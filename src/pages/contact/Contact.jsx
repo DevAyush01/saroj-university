@@ -386,7 +386,7 @@ const Contact = () => {
                             href="mailto:info@sarojuniversity.edu.in"
                             className="hover:text-blue-600 transition-colors duration-300"
                           >
-                            info@sarojuniversity.edu.in
+                            For Information : info@sarojuniversity.edu.in
                           </a>
                         </p>
                         <p className="text-gray-600 hover:text-blue-600 transition-colors duration-300">
@@ -394,7 +394,7 @@ const Contact = () => {
                             href="mailto:hr@sarojuniversity.edu.in"
                             className="hover:text-blue-600 transition-colors duration-300"
                           >
-                            hr@sarojuniversity.edu.in
+                           For Jobs(Send Cv) : hr@sarojuniversity.edu.in
                           </a>
                         </p>
                       </div>
