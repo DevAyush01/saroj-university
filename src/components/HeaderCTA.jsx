@@ -2,8 +2,8 @@ import React from 'react';
 
 const HeaderCTA = () => {
   return (
-    <div className="relative overflow-hidden bg-blue-50 py-2 ">
-      <div className="whitespace-nowrap text-center text-md tracking-tight transition-all duration-300 animate-[pulse_1.5s_infinite] whitespace-nowrap">
+    <div className="relative overflow-hidden hidden md:block bg-blue-50 py-2 ">
+      <div className="whitespace-nowrap  text-center text-md tracking-tight transition-all duration-300 animate-[pulse_1.5s_infinite] whitespace-nowrap">
        🔴 Admissions closing soon! Secure your seat at Saroj International University
       </div>
 

@@ -45,6 +45,10 @@ const Contact = () => {
       .required("Message is required")
       .min(10, "Message must be at least 10 characters"),
     college: yup.string().default("Saroj International University"),
+    consent: yup
+      .boolean()
+      .oneOf([true], "You must agree to the contact terms")
+      .required("You must agree to the contact terms"),
   });
 
   const {
@@ -56,6 +60,7 @@ const Contact = () => {
     resolver: yupResolver(schema),
     defaultValues: {
       college: "Saroj International University",
+      consent: false,
     },
   });
 
@@ -89,6 +94,7 @@ const Contact = () => {
           subject: data.subject,
           message: data.message,
           college: data.college,
+          consent: data.consent ? "Yes" : "No",
         },
         import.meta.env.VITE_EMAILJS_USER_ID
       );
@@ -120,6 +126,7 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Toaster position="top-center" />
       <Helmet>
         <title>Contact Us | Saroj International University</title>
         <meta
@@ -142,7 +149,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyMTUsMjE1LDIxNSwwLjEpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+')] opacity-30"></div>
 
         <div className="relative z-10 py-12 px-4 sm:px-6 lg:px-8">
-          <Toaster position="top-center" />
+          
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-blue-800 mb-4 relative inline-block">
@@ -282,6 +289,30 @@ const Contact = () => {
                   </div>
 
                   <input type="hidden" {...register("college")} />
+
+                  {/* Consent Checkbox */}
+                  <div className="mb-6">
+                    <div className="flex items-start">
+                      <div className="flex items-center h-5">
+                        <input
+                          id="consent"
+                          type="checkbox"
+                          {...register("consent")}
+                          className="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
+                        />
+                      </div>
+                      <div className="ml-3 text-sm">
+                        <label htmlFor="consent" className="text-gray-700">
+                          I authorise Saroj Educational Group & its representatives to contact me with updates and notifications via Email/SMS/WhatsApp/Call. This will override DND/NDNC. *
+                        </label>
+                        {errors.consent && (
+                          <p className="mt-1 text-sm text-red-600">
+                            {errors.consent.message}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
 
                   <button
                     type="submit"

@@ -45,8 +45,18 @@ const PrivacyPolicy = () => {
               Information We Collect
             </h2>
             <p>
-              We may collect personal information that you voluntarily provide
-              to us when you:
+              When you voluntarily send us electronic mail or fill up a form on our
+              website, we will keep a record of this information so that we can
+              respond to you. We only collect information from you when you
+              register on our site or fill out a form. When filling out a form,
+              you may be asked to enter your name, e-mail address, or phone number.
+              You may, however, visit our site anonymously.
+            </p>
+            <p>
+              In case you have submitted your personal information and contact
+              details, we reserve the right to Call, SMS, Email, or WhatsApp you
+              about our products and offers, even if your number has DND/NDNC
+              activated on it.
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Register for an account on our website</li>
@@ -55,12 +65,6 @@ const PrivacyPolicy = () => {
               <li>Participate in surveys or feedback forms</li>
               <li>Contact us via email, phone, or other channels</li>
             </ul>
-            <p>
-              If you have submitted your personal information and contact
-              details, we reserve the right to contact you via Call, SMS, Email,
-              or WhatsApp about our products and offers, even if your number
-              has DND activated.
-            </p>
             <div className="bg-gray-50 p-4 rounded-lg grid grid-cols-1 md:grid-cols-2 gap-2">
               {[
                 'Name and contact details',
