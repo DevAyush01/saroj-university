@@ -356,7 +356,7 @@ const SIUFeeStructure = () => {
 
     const IconComponent = domainIcons[data[0].domain];
     return (
-      <div className="overflow-x-auto bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col h-full">
+      <div className="overflow-x-auto bg-gray-50 p-6 rounded-xl  border border-gray-200 shadow-sm flex flex-col h-full">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
           {IconComponent && <IconComponent className="mr-2 w-5 h-5 text-blue-600" />}
           {data[0].instituteName}
@@ -371,10 +371,10 @@ const SIUFeeStructure = () => {
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {transformProgramsToTableData(data).map(([course, total, tuition], i) => (
-              <tr key={i}>
-                <td className="px-4 py-2 text-gray-900">{course}</td>
-                <td className="px-4 py-2 text-gray-700">{total}</td>
-                <td className="px-4 py-2 text-gray-700">{tuition}</td>
+              <tr key={i} className='hover:bg-blue-100'>
+                <td className="px-4 py-2 text-gray-900 ">{course}</td>
+                <td className="px-4 py-2 text-gray-700  ">{total}</td>
+                <td className="px-4 py-2 text-gray-700 ">{tuition}</td>
               </tr>
             ))}
           </tbody>
