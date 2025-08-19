@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import SearchBar from './SearchBar';
 
 const TopNav = () => {
   return (
@@ -52,6 +53,9 @@ const TopNav = () => {
               <Mail className="h-3.5 w-3.5 mr-1 flex-shrink-0" />
               <span className="whitespace-nowrap">For Jobs(Send Cv) : hr@sarojuniversity.edu.in</span>
             </a>
+
+            <span>|</span>
+            <SearchBar />
 
           </div>
 
