@@ -27,7 +27,7 @@ const navItems = [
     path: "/administration",
     subItems: [
       { title: "Chancellor", path: "/chancellor" },
-      
+      { title: "Vice Chancellor", path: "/vice-chancellor" },
       { title: "Finance Commitee", path: "/administration/finance-commitee" },
       {
         title: "Academic Council",
